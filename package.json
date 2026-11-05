@@ -1,0 +1,18 @@
+{
+  "name": "net-zero-grid",
+  "version": "20.0.0",
+  "private": true,
+  "description": "多园区共享综合能源系统：能源仿真、协同调度、SST 对比与三维客户参观",
+  "repository": { "type": "git", "url": "https://github.com/monapaopao/Net-Zero-Grid.git" },
+  "license": "UNLICENSED",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node NetZero-GridToChip-v20-VisitorPresentation/build.cjs --verify",
+    "test": "npm run test:engine && npm run test:dispatch && npm run test:sst && npm run test:startup",
+    "test:engine": "cd NetZero-GridToChip-v20-VisitorPresentation && node tests/engine.test.cjs",
+    "test:dispatch": "cd NetZero-GridToChip-v20-VisitorPresentation && node tests/dispatch-v18.test.cjs",
+    "test:sst": "cd NetZero-GridToChip-v20-VisitorPresentation && node tests/sst-simulation.test.cjs",
+    "test:startup": "cd NetZero-GridToChip-v20-VisitorPresentation && node tests/vehicles-startup.test.cjs",
+    "check:offline": "cd NetZero-GridToChip-v20-VisitorPresentation && node tests/offline-source-v20.cjs"
+  }
+}
