@@ -1,0 +1,1 @@
+{"release":"v20","refinement":"Compact single green-compute card and undistorted HTML chart labels","backup":"backups/v20-before-compact-green-card","checks":{"green-compute-dashboard.test.cjs":4,"cloud-auto-v20.test.cjs":22,"offline-source-v20.cjs":8,"build":13},"liveBrowserVerified":false}

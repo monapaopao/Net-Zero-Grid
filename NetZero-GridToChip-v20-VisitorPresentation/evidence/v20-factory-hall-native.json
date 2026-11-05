@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "checks": {
+    "sharedHallMatchesRegistryAndFitsAllFiveRows": true,
+    "twoLongSideAislesRemainClearAtOperatingHeight": true,
+    "endWarehousesAndCrossAislesAreInsideHall": true,
+    "roofPVAndUpperWallsFadeWithoutLiftingOrBlocking": true,
+    "openingRoofLeavesMechanismMaterialsAndDetailsUnchanged": true,
+    "openTourCameraHasNoArchitecturalOcclusion": true,
+    "actualWallAndGlandBoresLeaveServiceCentrelinesClear": true,
+    "serviceBranchesStayAboveBothLogisticsAisles": true
+  },
+  "details": {
+    "sideAisles": [
+      {
+        "min": [
+          254.14999961853027,
+          0.35749998688697815,
+          -77
+        ],
+        "max": [
+          261.8500003814697,
+          0.3824999928474426,
+          113
+        ]
+      },
+      {
+        "min": [
+          298.1499996185303,
+          0.35749998688697815,
+          -77
+        ],
+        "max": [
+          305.8500003814697,
+          0.3824999928474426,
+          113
+        ]
+      }
+    ],
+    "visibility": {
+      "payout": [],
+      "treatment": [],
+      "wash": [],
+      "takeup": []
+    }
+  },
+  "build": {
+    "partCount": 850,
+    "displayedLineParts": 4250,
+    "hallPartCount": 2563,
+    "lineCount": 5,
+    "workcellFootprint": [
+      36,
+      19.8
+    ],
+    "staticMeshBuckets": 44,
+    "dynamicMeshBuckets": 36,
+    "dynamicMeshes": 180,
+    "wireMeshes": 2,
+    "movingGlints": 60,
+    "meshCount": 227,
+    "uniqueGeometries": 83,
+    "sharedDynamicGeometries": 36,
+    "preservedRoot": "0f1d1dc2-5555-4a8b-af2d-3bb1558f0791",
+    "roofPVModules": 192
+  },
+  "note": "Actual Three.js merged vertices and ray intersections in Node; no browser, pixels, frame-rate or live playback validation."
+}

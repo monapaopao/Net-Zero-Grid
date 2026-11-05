@@ -1,0 +1,27 @@
+{
+  "checks": [
+    "coordinationStartsAutomatically",
+    "coordinationNoManualGateBeforeExecution",
+    "coordinationAutomaticDecision",
+    "coordinationShowsOutcomeWithoutOpeningDetails",
+    "coordinationFinishesAt90Seconds",
+    "coordinationPauseAndReplay",
+    "coordinationRestoresMainModelAndView",
+    "green-computeStartsAutomatically",
+    "green-computeNoManualGateBeforeExecution",
+    "green-computeAutomaticDecision",
+    "green-computeShowsOutcomeWithoutOpeningDetails",
+    "green-computeFinishesAt90Seconds",
+    "green-computePauseAndReplay",
+    "green-computeRestoresMainModelAndView",
+    "strategyStartsAutomatically",
+    "strategyNoManualGateBeforeExecution",
+    "strategyAutomaticDecision",
+    "strategyShowsOutcomeWithoutOpeningDetails",
+    "strategyFinishesAt90Seconds",
+    "strategyPauseAndReplay",
+    "strategyRestoresMainModelAndView"
+  ],
+  "passed": 21,
+  "liveBrowserVerified": false
+}

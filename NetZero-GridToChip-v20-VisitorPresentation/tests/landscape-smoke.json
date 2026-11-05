@@ -1,0 +1,6 @@
+{
+  "windSelectionOnTerrain": true,
+  "roadSurfaceAboveTerrain": true,
+  "postHealthy": true,
+  "glError": 0
+}

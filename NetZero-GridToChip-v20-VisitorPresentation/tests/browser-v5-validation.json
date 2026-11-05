@@ -1,0 +1,22 @@
+{
+  "version": "5.0.0",
+  "date": "2026-10-03",
+  "standbyLive": "常用进线 125.7 MW · 燃机备用 50.0 MW · 数据楼 175.7 MW",
+  "checks": {
+    "smrNavigation": true,
+    "gasEnclosureOpenClose": true,
+    "mvRoomOpenClose": true,
+    "powerWide": true,
+    "industrialLinks": true,
+    "gasScenario50MW": true,
+    "A1BuildingEntry": true
+  },
+  "desktopLayout": {
+    "height": 720,
+    "infraPanelVisible": true,
+    "scrollOverflow": false,
+    "width": 1280
+  },
+  "errors": [],
+  "finalErrors": []
+}

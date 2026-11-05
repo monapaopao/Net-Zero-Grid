@@ -1,0 +1,16 @@
+'use strict';
+const fs=require('fs'),path=require('path'),crypto=require('crypto'),assert=require('assert/strict');
+const root=path.join(__dirname,'..'),base=path.join(root,'../NetZero-GridToChip-v12-NacelleEnergyFlows');
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'evidence/v12-preserved-manifest.json'),'utf8'));
+for(const file of manifest)assert.equal(hash(path.join(base,file.file)),file.sha256,file.file);
+const product=JSON.parse(fs.readFileSync(path.join(root,'evidence/v13-nacelle-flows.json'),'utf8'));
+const tour=JSON.parse(fs.readFileSync(path.join(root,'evidence/v13-tour-continuity.json'),'utf8'));
+const offline=JSON.parse(fs.readFileSync(path.join(root,'evidence/v13-offline.json'),'utf8'));
+const regression=JSON.parse(fs.readFileSync(path.join(root,'evidence/v13-regression.json'),'utf8'));
+for(const r of [product,tour,regression])assert(Object.values(r.checks).every(Boolean));
+assert.equal(offline.summary.fail,0);
+const files=['src/premium.js','src/renewable-landscape-plan.js','src/campus-layout.js','src/campus-detail.js','src/renewable-landscape.js','dist/Net-Zero-grid-premium.html','src/engine.js','src/config.js','src/wind-product.js','src/campus-flows.js','导览文案.json','导览文字.txt','导览文字.md'];
+const report={version:'13.0.0',generatedAt:new Date().toISOString(),backup:{version:'v12',checkedFiles:manifest.length,changedFiles:0},checks:{product:Object.keys(product.checks).length,tour:Object.keys(tour.checks).length,offline:offline.summary.pass,regression:Object.keys(regression.checks).length},routes:product.flows.routes.length,poolSlots:product.flows.totalAllocated,artifacts:files.map(file=>({file,sha256:hash(path.join(root,file))}))};
+fs.writeFileSync(path.join(root,'evidence/v13-release.json'),JSON.stringify(report,null,2));
+console.log(JSON.stringify(report));

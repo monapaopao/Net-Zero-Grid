@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "checks": {
+    "existingRootAndLoadPreserved": true,
+    "wholeHallMeshPickingWithoutOversizedFallback": true,
+    "fiveOriginalWorkcellsShareDynamicGeometry": true,
+    "allRowsMoveAtSameTimeAndKeepWireHorizontal": true,
+    "tourAnimationRunsWithFrozenKernelThenPauseFreezesAll": true,
+    "tourExitRestoresFreeExplorationState": true,
+    "warehouseSelectionOpensSameHallWithoutStealingCamera": true,
+    "freeModeCamerasMatchSpatialRegistry": true,
+    "reducedMotionAndResetStayStill": true,
+    "farInactiveFactoryCullsAnimation": true
+  },
+  "build": {
+    "partCount": 850,
+    "displayedLineParts": 4250,
+    "hallPartCount": 2563,
+    "lineCount": 5,
+    "workcellFootprint": [
+      36,
+      19.8
+    ],
+    "staticMeshBuckets": 44,
+    "dynamicMeshBuckets": 36,
+    "dynamicMeshes": 180,
+    "wireMeshes": 2,
+    "movingGlints": 60,
+    "meshCount": 227,
+    "uniqueGeometries": 83,
+    "sharedDynamicGeometries": 36,
+    "preservedRoot": "6171dbce-b4f9-4da4-9a68-a74771242fda",
+    "roofPVModules": 192
+  },
+  "note": "Native bundled Three.js, no renderer/browser/screenshots; tests validate actual merged meshes and API motion."
+}

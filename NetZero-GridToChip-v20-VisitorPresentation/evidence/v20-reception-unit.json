@@ -1,0 +1,25 @@
+{
+  "checks": [
+    "independent180secondTimeline",
+    "noCaptionGapsAndNoFlashSentences",
+    "normalSpeedBuildingExcerpt",
+    "narrationFitsReadingBudget",
+    "scopeAndSourceUnchanged",
+    "newRuntimeSyntax",
+    "viewRestoresAllPreferencesAndFrozenState",
+    "receptionUsesRealSameConditionCalculation",
+    "startsAtFixedPanorama",
+    "pauseStopsReceptionClock",
+    "opensRepresentativeBuildingRange",
+    "buildingAndCaptionPauseTogether",
+    "buildingHandsBackToFactory",
+    "sameSiteEquipmentChange",
+    "sstPreviewRestoresOutsideChapter",
+    "routeExitRestoresState",
+    "automaticEnding",
+    "buildingFailureContinuesWithoutManualAction"
+  ],
+  "passed": 18,
+  "routeSeconds": 180,
+  "liveBrowserVerified": false
+}

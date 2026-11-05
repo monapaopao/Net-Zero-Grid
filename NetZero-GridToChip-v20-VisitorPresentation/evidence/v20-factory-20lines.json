@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "checks": [
+    "twenty half-size cells form two columns and ten rows",
+    "compact warehouses and clear logistics aisles",
+    "shared instancing keeps moving mechanisms bounded",
+    "scaled wires remain horizontal with no opaque obstruction",
+    "waste plant clears fire yard roads and factory",
+    "waste observation flows pause and restore with tour",
+    "roof has individual textured-panel geometry and access bands",
+    "navigation order changed independently of tour sequence",
+    "engine and building app sources unchanged this round"
+  ],
+  "build": {
+    "partCount": 850,
+    "displayedLineParts": 17000,
+    "hallPartCount": 11465,
+    "lineCount": 20,
+    "workcellFootprint": [
+      18,
+      9.9
+    ],
+    "staticMeshBuckets": 65,
+    "dynamicMeshBuckets": 36,
+    "dynamicMeshes": 36,
+    "wireMeshes": 2,
+    "movingGlints": 240,
+    "meshCount": 104,
+    "uniqueGeometries": 104,
+    "sharedDynamicGeometries": 36,
+    "preservedRoot": "d8083840-7483-4c34-8714-b357100116eb",
+    "roofPVModules": 1320
+  },
+  "liveBrowserVerified": false
+}

@@ -1,0 +1,26 @@
+'use strict';
+const fs=require('fs'),path=require('path'),crypto=require('crypto'),assert=require('assert/strict');
+const root=path.join(__dirname,'..'),base=path.join(root,'../NetZero-GridToChip-v14-TourPacing');
+const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'),manifestFile=path.join(root,'evidence/v14-preserved-manifest.json');
+if(!fs.existsSync(manifestFile)){
+  const files=[];function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const file=path.join(dir,e.name);if(e.isDirectory())walk(file);else files.push({file:path.relative(base,file).replace(/\\/g,'/'),sha256:hash(file)});}}walk(base);files.sort((a,b)=>a.file.localeCompare(b.file));fs.writeFileSync(manifestFile,JSON.stringify(files,null,2));
+}
+const manifest=JSON.parse(fs.readFileSync(manifestFile,'utf8'));for(const f of manifest)assert.equal(hash(path.join(base,f.file)),f.sha256,'v14 backup: '+f.file);
+if(process.argv.includes('--snapshot')){console.log('v14 backup manifest:',manifest.length,'files');process.exit(0);}
+const preserved=['src/engine.js','src/solar-site.js','src/solar-site-plan.js','src/renewable-landscape.js','src/renewable-landscape-plan.js','src/wind-product.js','src/dcdt.js','src/vendor/dcdt-v11/app.js','assets/XIBILI_Logo_Primary_DeepTeal_V1.2.svg','导览文案.json','导览文字.txt','导览文字.md'];
+for(const file of preserved)assert.equal(hash(path.join(root,file)),hash(path.join(base,file)),file);
+const before=require(path.join(base,'src/config.js')),after=require(path.join(root,'src/config.js'));assert.deepEqual({...before,version:null},{...after,version:null});assert.equal(after.version,'15.0.0');
+const tourSection=file=>{const s=fs.readFileSync(file,'utf8');return s.slice(s.indexOf('  const TOUR_HOME ='),s.indexOf('  /* 14. 启动'));};assert.equal(tourSection(path.join(root,'src/premium.js')),tourSection(path.join(base,'src/premium.js')));
+const browser=JSON.parse(fs.readFileSync(path.join(root,'evidence/v15-browser.json'),'utf8')),offline=JSON.parse(fs.readFileSync(path.join(root,'evidence/v15-offline.json'),'utf8')),tour=JSON.parse(fs.readFileSync(path.join(root,'evidence/v15-tour-continuity.json'),'utf8')),engine=JSON.parse(fs.readFileSync(path.join(root,'tests/results.json'),'utf8'));
+for(const [name,result]of Object.entries({browser,tour}))assert(Object.values(result.checks).every(Boolean),name);assert.equal(offline.summary.fail,0);assert.equal(engine.summary.fail,0);
+const labels=JSON.parse(fs.readFileSync(path.join(root,'evidence/v15-process-labels.json'),'utf8'));assert(Object.values(labels.checks).every(Boolean),'process labels');
+const charging=JSON.parse(fs.readFileSync(path.join(root,'evidence/v15-charging-routing.json'),'utf8'));assert(Object.values(charging.checks).every(Boolean),'charging and routing');
+const stageBackup=JSON.parse(fs.readFileSync(path.join(root,'evidence/v15-charging-routing-backup.json'),'utf8'));for(const f of stageBackup)assert.equal(hash(path.join(root,'backups/v15-before-charging-and-orthogonal-lines',f.file)),f.sha256,'v15 stage backup: '+f.file);
+const files=['dist/Net-Zero-grid-premium.html','src/chemical-campus-plan.js','src/chemical-campus.js','src/chemical-process-labels.js','src/multi-campus-plan.js','src/multi-campus.js','src/campus-layout.js','src/campus-detail.js','src/campus-infrastructure.js','src/campus-environment-plan.js','src/campus-environment.js','src/campus-flows.js','README-v15.md','关键工艺标签与核对清单-v15.md','停车分区与直角走线v15视觉对照.html','氢氨工艺深化v15说明.md','氢氨工艺深化v15视觉对照.html'];
+const report={version:after.version,generatedAt:new Date().toISOString(),backup:{version:'v14',checkedFiles:manifest.length,changedFiles:0,parkingAndRoutingStageFiles:stageBackup.length},checks:{chemicalBrowser:Object.keys(browser.checks).length,processLabels:Object.keys(labels.checks).length,chargingAndRouting:Object.keys(charging.checks).length,tour:Object.keys(tour.checks).length,offline:offline.summary.pass,engine:engine.summary.pass,preservedFiles:preserved.length,physicalParametersUnchanged:true,tourCodeUnchanged:true},firstMovementSeconds:tour.firstMovementSeconds,artifacts:files.map(file=>({file,sha256:hash(path.join(root,file))}))};
+const fireFile=path.join(root,'evidence/v15-fire-station.json');
+if(fs.existsSync(fireFile)){const fire=JSON.parse(fs.readFileSync(fireFile,'utf8'));assert(Object.values(fire.checks).every(Boolean),'fire station relocation');report.checks.fireStation=Object.keys(fire.checks).length;}
+const flows=JSON.parse(fs.readFileSync(path.join(root,'evidence/v15-flow-layers.json'),'utf8'));assert(Object.values(flows.checks).every(Boolean),'flow layers');report.checks.flowLayers=Object.keys(flows.checks).length;
+const token=JSON.parse(fs.readFileSync(path.join(root,'evidence/v15-token-meter.json'),'utf8'));assert(Object.values(token.checks).every(Boolean),'token meter');report.checks.tokenMeter=Object.keys(token.checks).length;
+for(const file of ['src/premium.js','src/grid-to-chip.js','src/flow-renderer.js','src/token-meter.js','src/token-meter.css','build.cjs'])report.artifacts.push({file,sha256:hash(path.join(root,file))});
+fs.writeFileSync(path.join(root,'evidence/v15-release.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));

@@ -1,0 +1,479 @@
+[
+  {
+    "name": "Eight shared cloud and main scenarios",
+    "pass": true
+  },
+  {
+    "name": "Every scenario full 24h: power, hydrogen, inventories, tasks and meters",
+    "pass": true,
+    "detail": [
+      {
+        "id": "park",
+        "power": 2.2737367544323206e-13,
+        "h2": 0,
+        "buy": 2865.760238555317,
+        "soc": 70.11610822867307,
+        "production": [
+          {
+            "key": "zinc",
+            "unit": "MWh",
+            "target": 2400,
+            "done": 2400,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 0.3815580192735476,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 200,
+            "impossible": false,
+            "missedTasks": 0
+          },
+          {
+            "key": "factory",
+            "unit": "MWh",
+            "target": 1200,
+            "done": 1200,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 0.4409249291053252,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 100,
+            "impossible": false,
+            "missedTasks": 0
+          }
+        ]
+      },
+      {
+        "id": "surplus",
+        "power": 2.2737367544323206e-13,
+        "h2": 0,
+        "buy": 0,
+        "soc": 95,
+        "production": [
+          {
+            "key": "zinc",
+            "unit": "MWh",
+            "target": 2600,
+            "done": 2600,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 1.6072295300539012,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 200,
+            "impossible": false,
+            "missedTasks": 0
+          },
+          {
+            "key": "factory",
+            "unit": "MWh",
+            "target": 1300,
+            "done": 1300,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 1.6321739946376503,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 100,
+            "impossible": false,
+            "missedTasks": 0
+          }
+        ]
+      },
+      {
+        "id": "night",
+        "power": 1.7053025658242404e-13,
+        "h2": 0,
+        "buy": 4598.598599898114,
+        "soc": 25,
+        "production": [
+          {
+            "key": "zinc",
+            "unit": "MWh",
+            "target": 2400,
+            "done": 2400,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 0.07222222222222241,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 200,
+            "impossible": false,
+            "missedTasks": 0
+          },
+          {
+            "key": "factory",
+            "unit": "MWh",
+            "target": 1200,
+            "done": 1200,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 0.06944444444444443,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 100,
+            "impossible": false,
+            "missedTasks": 0
+          }
+        ]
+      },
+      {
+        "id": "lowwind",
+        "power": 1.7053025658242404e-13,
+        "h2": 0,
+        "buy": 8174.386862311094,
+        "soc": 15,
+        "production": [
+          {
+            "key": "zinc",
+            "unit": "MWh",
+            "target": 2400,
+            "done": 2400,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 0.07222222222222228,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 200,
+            "impossible": false,
+            "missedTasks": 0
+          },
+          {
+            "key": "factory",
+            "unit": "MWh",
+            "target": 1200,
+            "done": 1200,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 0.06944444444444443,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 100,
+            "impossible": false,
+            "missedTasks": 0
+          }
+        ]
+      },
+      {
+        "id": "tankfull",
+        "power": 2.2737367544323206e-13,
+        "h2": 0,
+        "buy": 0,
+        "soc": 95,
+        "production": [
+          {
+            "key": "zinc",
+            "unit": "MWh",
+            "target": 2400,
+            "done": 2400,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 1.609147812760712,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 200,
+            "impossible": false,
+            "missedTasks": 0
+          },
+          {
+            "key": "factory",
+            "unit": "MWh",
+            "target": 1200,
+            "done": 1200,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 1.6293727370300068,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 100,
+            "impossible": false,
+            "missedTasks": 0
+          }
+        ]
+      },
+      {
+        "id": "gasbackup",
+        "power": 1.1368683772161603e-13,
+        "h2": 0,
+        "buy": 5048.285220008436,
+        "soc": 10,
+        "production": [
+          {
+            "key": "zinc",
+            "unit": "MWh",
+            "target": 2400,
+            "done": 2400,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 0.07222222222222224,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 200,
+            "impossible": false,
+            "missedTasks": 0
+          },
+          {
+            "key": "factory",
+            "unit": "MWh",
+            "target": 1200,
+            "done": 1200,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 0.06944444444444443,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 100,
+            "impossible": false,
+            "missedTasks": 0
+          }
+        ]
+      },
+      {
+        "id": "smr",
+        "power": 2.2737367544323206e-13,
+        "h2": 0,
+        "buy": 1936.5108673559403,
+        "soc": 47.1435333771154,
+        "production": [
+          {
+            "key": "zinc",
+            "unit": "MWh",
+            "target": 2400,
+            "done": 2400,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 0.3989387611663412,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 200,
+            "impossible": false,
+            "missedTasks": 0
+          },
+          {
+            "key": "factory",
+            "unit": "MWh",
+            "target": 1200,
+            "done": 1156.5538837456513,
+            "remaining": 43.44611625434868,
+            "overdue": 43.44611625434868,
+            "completionPct": 96.3794903121376,
+            "extra": 0,
+            "nextDeadline": 129600,
+            "requiredMW": 156406.01851565525,
+            "capacityMW": 100,
+            "impossible": true,
+            "missedTasks": 1
+          }
+        ]
+      },
+      {
+        "id": "deadline",
+        "power": 1.7053025658242404e-13,
+        "h2": 0,
+        "buy": 5135.291749223598,
+        "soc": 25,
+        "production": [
+          {
+            "key": "zinc",
+            "unit": "MWh",
+            "target": 2700,
+            "done": 2700,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 0.07222222222222247,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 200,
+            "impossible": false,
+            "missedTasks": 0
+          },
+          {
+            "key": "factory",
+            "unit": "MWh",
+            "target": 1380,
+            "done": 1380,
+            "remaining": 0,
+            "overdue": 0,
+            "completionPct": 100,
+            "extra": 0.06944444444444445,
+            "nextDeadline": null,
+            "requiredMW": 0,
+            "capacityMW": 100,
+            "impossible": false,
+            "missedTasks": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Three days: no duplicate tasks, crossed deadlines retained",
+    "pass": true,
+    "detail": [
+      {
+        "key": "zinc",
+        "unit": "MWh",
+        "target": 9600,
+        "done": 0.000022048647257833888,
+        "remaining": 9599.999977951353,
+        "overdue": 7199.999977951353,
+        "completionPct": 2.2967340893576965e-7,
+        "extra": 0,
+        "nextDeadline": 169200,
+        "requiredMW": 25919999.92062487,
+        "capacityMW": 200,
+        "impossible": true,
+        "missedTasks": 3
+      },
+      {
+        "key": "factory",
+        "unit": "MWh",
+        "target": 4800,
+        "done": 1.1875544914725142e-14,
+        "remaining": 4800,
+        "overdue": 3600,
+        "completionPct": 2.4740718572344045e-16,
+        "extra": 0,
+        "nextDeadline": 169200,
+        "requiredMW": 12960000,
+        "capacityMW": 100,
+        "impossible": true,
+        "missedTasks": 3
+      }
+    ]
+  },
+  {
+    "name": "Timely imports improve deadline delivery versus fixed rule",
+    "pass": true,
+    "detail": {
+      "baseline": [
+        {
+          "key": "zinc",
+          "unit": "MWh",
+          "target": 2700,
+          "done": 0.000925925925925926,
+          "remaining": 2699.999074074074,
+          "overdue": 299.9990740740741,
+          "completionPct": 0.00003429355281207133,
+          "extra": 0,
+          "nextDeadline": 86400,
+          "requiredMW": 1079996.6666666667,
+          "capacityMW": 200,
+          "impossible": true,
+          "missedTasks": 1
+        },
+        {
+          "key": "factory",
+          "unit": "MWh",
+          "target": 1380,
+          "done": 39.936111111111,
+          "remaining": 1340.063888888889,
+          "overdue": 140.06388888888898,
+          "completionPct": 2.893921095008044,
+          "extra": 0,
+          "nextDeadline": 86400,
+          "requiredMW": 504230.00000000035,
+          "capacityMW": 100,
+          "impossible": true,
+          "missedTasks": 1
+        }
+      ],
+      "delivery": [
+        {
+          "key": "zinc",
+          "unit": "MWh",
+          "target": 2700,
+          "done": 354.92270381235596,
+          "remaining": 2345.077296187644,
+          "overdue": 0,
+          "completionPct": 13.145285326383554,
+          "extra": 0,
+          "nextDeadline": 165600,
+          "requiredMW": 106.59442255398382,
+          "capacityMW": 200,
+          "impossible": false,
+          "missedTasks": 0
+        },
+        {
+          "key": "factory",
+          "unit": "MWh",
+          "target": 1380,
+          "done": 142.78295433765558,
+          "remaining": 1237.2170456623444,
+          "overdue": 37.21704566234442,
+          "completionPct": 10.346590894033012,
+          "extra": 0,
+          "nextDeadline": 86400,
+          "requiredMW": 133981.36438443992,
+          "capacityMW": 100,
+          "impossible": true,
+          "missedTasks": 1
+        }
+      ],
+      "imports": [
+        267.532990728949,
+        768.0516118418964
+      ]
+    }
+  },
+  {
+    "name": "Impossible task visible at zero import without erasing work",
+    "pass": true
+  },
+  {
+    "name": "Full hydrogen tank does not create fixed-plan hydrogen debt",
+    "pass": true
+  },
+  {
+    "name": "Reserve floor, explicit force-discharge and SOC limits",
+    "pass": true
+  },
+  {
+    "name": "Tick at 1x preserves subsecond remainder and pause freezes",
+    "pass": true
+  },
+  {
+    "name": "Reset clears meters, tasks and orders with new run identity",
+    "pass": true
+  },
+  {
+    "name": "Simulated orders reserve distinct usage, no auto revenue or duplicate settlement",
+    "pass": true
+  },
+  {
+    "name": "Isolated cloud uses main scenario seeds and same native model",
+    "pass": true,
+    "detail": 1.3836433180462966
+  },
+  {
+    "name": "Fair native scenario comparison retains identical weather",
+    "pass": true,
+    "detail": {
+      "sameInitial": true,
+      "sameTasks": true,
+      "sameWeather": true,
+      "durationSeconds": 7200,
+      "trajectoryHash": "3e312eae",
+      "note": "差值为候选减基准；库存、任务交付与待完成生产任务同时展示，不预设优胜策略。"
+    }
+  },
+  {
+    "name": "Ammonia physical ramp cannot compound across solver iterations",
+    "pass": true
+  }
+]

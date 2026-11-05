@@ -1,0 +1,692 @@
+{
+  "title": "三分钟快速认识",
+  "duration": 180,
+  "chapters": [
+    {
+      "id": "welcome",
+      "title": "认识多园区系统",
+      "duration": 15,
+      "context": "overview",
+      "labels": [
+        "wind",
+        "solar",
+        "substation",
+        "dc",
+        "nh3",
+        "factory",
+        "smr"
+      ],
+      "flows": [],
+      "scope": "多园区协同 · 系统方案能力",
+      "cues": [
+        {
+          "id": "quick-welcome",
+          "duration": 15,
+          "move": 0,
+          "shot": "home",
+          "text": "这里连接数据中心、化工与电冶金、智能工厂及小型模块化反应堆研究园区。三分钟内，我们沿能源与用能链路，认识西比里的关键产品与协同方案。",
+          "start": 0,
+          "end": 15,
+          "chapter": 0,
+          "title": "认识多园区系统",
+          "readingRate": 4
+        }
+      ],
+      "index": 0,
+      "start": 0,
+      "end": 15
+    },
+    {
+      "id": "generation",
+      "title": "从发电到输送",
+      "duration": 25,
+      "context": "wind",
+      "labels": [
+        "windNacelle",
+        "line",
+        "solar"
+      ],
+      "flows": [
+        "power"
+      ],
+      "scope": "关键产品 · 干式变压器与架空线",
+      "cues": [
+        {
+          "id": "quick-wind",
+          "duration": 13,
+          "move": 5,
+          "shot": "windClose",
+          "wind": true,
+          "text": "机舱里的关键装备是西比里陶瓷基耐电晕干式变压器，采用铝绕组与陶瓷膜包复合绝缘材料，面向宽频电应力与电晕侵蚀工况设计。",
+          "start": 15,
+          "end": 28,
+          "chapter": 1,
+          "title": "从发电到输送",
+          "readingRate": 4.230769230769231
+        },
+        {
+          "id": "quick-line",
+          "duration": 8,
+          "move": 5,
+          "shot": "line",
+          "text": "架空线关注电晕损耗，并面向日晒风沙、覆冰与腐蚀工况设计。接着看电力如何送往用能端。",
+          "start": 28,
+          "end": 36,
+          "chapter": 1,
+          "title": "从发电到输送",
+          "readingRate": 4.625
+        },
+        {
+          "id": "quick-solar",
+          "duration": 4,
+          "move": 3,
+          "shot": "solar",
+          "text": "风电与光伏经能源枢纽，为各园区供电。",
+          "start": 36,
+          "end": 40,
+          "chapter": 1,
+          "title": "从发电到输送",
+          "readingRate": 4
+        }
+      ],
+      "index": 1,
+      "start": 15,
+      "end": 40
+    },
+    {
+      "id": "compute",
+      "title": "高效供电，支撑算力",
+      "duration": 35,
+      "context": "compute",
+      "labels": [
+        "dc",
+        "token",
+        "cooling"
+      ],
+      "flows": [
+        "power",
+        "data",
+        "cooling"
+      ],
+      "scope": "关键产品 · 高效直流供电",
+      "cues": [
+        {
+          "id": "quick-dc-entry",
+          "duration": 6,
+          "move": 5,
+          "shot": "dcEntry",
+          "text": "来到数据中心。沿供电链路进入楼内，看看电力如何支撑算力。",
+          "start": 40,
+          "end": 46,
+          "chapter": 2,
+          "title": "高效供电，支撑算力",
+          "readingRate": 4.166666666666667
+        },
+        {
+          "id": "quick-dc-power",
+          "duration": 12,
+          "move": 0,
+          "shot": "dcEntry",
+          "inside": true,
+          "text": "新一代高效直流供电方案优化变换与配电链路，提升端到端供电效率，为高密度算力提供支撑。画面展示中压配电与直流供电设备。",
+          "start": 46,
+          "end": 58,
+          "chapter": 2,
+          "title": "高效供电，支撑算力",
+          "readingRate": 4.5
+        },
+        {
+          "id": "quick-dc-server",
+          "duration": 11,
+          "move": 0,
+          "shot": "dcEntry",
+          "inside": true,
+          "text": "电力经直流母排、列头柜与机架配电到达服务器。高效供电与制冷系统共同支撑运行，供电改善不直接等同于整楼同比例节能。",
+          "start": 58,
+          "end": 69,
+          "chapter": 2,
+          "title": "高效供电，支撑算力",
+          "readingRate": 4.7272727272727275
+        },
+        {
+          "id": "quick-dc-chip",
+          "duration": 6,
+          "move": 0,
+          "shot": "dcEntry",
+          "inside": true,
+          "text": "电力最终驱动 CPU 与 GPU，推理产出为模型估算。",
+          "start": 69,
+          "end": 75,
+          "chapter": 2,
+          "title": "高效供电，支撑算力",
+          "readingRate": 3.6666666666666665
+        }
+      ],
+      "index": 2,
+      "start": 40,
+      "end": 75
+    },
+    {
+      "id": "factory",
+      "title": "西比里铝基新型导线智能工厂",
+      "duration": 26,
+      "context": "factory",
+      "labels": [
+        "factory",
+        "factoryraw",
+        "factoryproduct"
+      ],
+      "flows": [
+        "power",
+        "control",
+        "data"
+      ],
+      "scope": "工业应用 · 铝线陶瓷化生产与智能监测",
+      "cues": [
+        {
+          "id": "quick-factory-overview",
+          "duration": 7,
+          "move": 7,
+          "shot": "factory",
+          "factoryRoof": "open",
+          "text": "工厂整合原料与包装，二十条产线按两列十排布置。",
+          "start": 75,
+          "end": 82,
+          "chapter": 3,
+          "title": "西比里铝基新型导线智能工厂",
+          "readingRate": 3
+        },
+        {
+          "id": "quick-factory-process",
+          "duration": 9,
+          "move": 5,
+          "shot": "factoryClose",
+          "factoryRoof": "open",
+          "text": "铝线水平通过陶瓷化处理与清洗段；废液分类收集处理。",
+          "start": 82,
+          "end": 91,
+          "chapter": 3,
+          "title": "西比里铝基新型导线智能工厂",
+          "readingRate": 2.5555555555555554
+        },
+        {
+          "id": "quick-factory-monitor",
+          "duration": 10,
+          "move": 5,
+          "shot": "factoryLink",
+          "factoryRoof": "open",
+          "text": "管廊连接工厂与处理配套，循环液旁滤回槽，废液分类收集；张力监测与产品追溯贯穿生产。",
+          "factoryMode": "waste",
+          "start": 91,
+          "end": 101,
+          "chapter": 3,
+          "title": "西比里铝基新型导线智能工厂",
+          "readingRate": 3.7
+        }
+      ],
+      "index": 3,
+      "start": 75,
+      "end": 101
+    },
+    {
+      "id": "charging",
+      "title": "新能源超充与储能调节",
+      "duration": 14,
+      "context": "public",
+      "labels": [
+        "supercharge",
+        "panamaSc",
+        "storage"
+      ],
+      "flows": [
+        "power",
+        "control"
+      ],
+      "scope": "关键产品与应用 · 光储充供电",
+      "cues": [
+        {
+          "id": "quick-charge",
+          "duration": 7,
+          "move": 5,
+          "shot": "charge",
+          "text": "超充站结合直流供电、光伏与固定储能，缓冲充电功率需求。车辆作为充电负荷。",
+          "start": 101,
+          "end": 108,
+          "chapter": 4,
+          "title": "新能源超充与储能调节",
+          "readingRate": 4.571428571428571
+        },
+        {
+          "id": "quick-storage",
+          "duration": 7,
+          "move": 0,
+          "shot": "charge",
+          "text": "固定储能与电网双向调节。满足本地用能和备用约束后，富余电能按调度要求回馈。",
+          "start": 108,
+          "end": 115,
+          "chapter": 4,
+          "title": "新能源超充与储能调节",
+          "readingRate": 4.857142857142857
+        }
+      ],
+      "index": 4,
+      "start": 101,
+      "end": 115
+    },
+    {
+      "id": "coordination",
+      "title": "一次变化，多园区响应",
+      "duration": 24,
+      "context": "overview",
+      "labels": [
+        "storage",
+        "dc",
+        "factory",
+        "nh3"
+      ],
+      "flows": [
+        "power",
+        "control",
+        "data"
+      ],
+      "scope": "协同方案能力 · 24 秒回放 2 小时推演",
+      "cues": [
+        {
+          "id": "quick-coordination-event",
+          "duration": 11,
+          "move": 5,
+          "shot": "collaboration",
+          "text": "预设情境中，风光先回落再恢复。系统评估储能、算力任务和工业用能边界，优先保障关键负荷，再安排可调节部分。",
+          "start": 115,
+          "end": 126,
+          "chapter": 5,
+          "title": "一次变化，多园区响应",
+          "readingRate": 4.181818181818182
+        },
+        {
+          "id": "quick-coordination-result",
+          "duration": 13,
+          "move": 0,
+          "shot": "collaboration",
+          "text": "这里回放两小时计算，观看时长不代表控制响应速度。结果核对购电、任务交付与末态库存；约束未满足时如实说明，不把库存消耗当作收益。",
+          "start": 126,
+          "end": 139,
+          "chapter": 5,
+          "title": "一次变化，多园区响应",
+          "readingRate": 4.384615384615385
+        }
+      ],
+      "index": 5,
+      "start": 115,
+      "end": 139
+    },
+    {
+      "id": "sst",
+      "title": "下一代 SST 能源路由",
+      "duration": 24,
+      "context": "public",
+      "labels": [
+        "panamaSc",
+        "panamaSc2"
+      ],
+      "flows": [
+        "power",
+        "control"
+      ],
+      "scope": "SST · 下一代装备方案／前瞻研究演示",
+      "cues": [
+        {
+          "id": "quick-sst-existing",
+          "duration": 8,
+          "move": 6,
+          "shot": "sstCharge",
+          "scheme": "existing",
+          "text": "再看装备演进。充电站前端承担隔离与整流，输出保护和终端保留。现在切换同一位置的 SST 方案。",
+          "start": 139,
+          "end": 147,
+          "chapter": 6,
+          "title": "下一代 SST 能源路由",
+          "readingRate": 5.125
+        },
+        {
+          "id": "quick-sst-change",
+          "duration": 8,
+          "move": 0,
+          "shot": "sstCharge",
+          "scheme": "sst",
+          "text": "绿色 SST 集成所选变换功能，按指令分配功率。主变、储能 PCS 与电解锌沿用既有设备。",
+          "start": 147,
+          "end": 155,
+          "chapter": 6,
+          "title": "下一代 SST 能源路由",
+          "readingRate": 4.625
+        },
+        {
+          "id": "quick-sst-result",
+          "duration": 8,
+          "move": 0,
+          "shot": "sstCharge",
+          "scheme": "sst",
+          "text": "比较变换损耗、接入点峰值与库存代价。这是两小时代表支路计算，结果不外推为全园区收益。",
+          "start": 155,
+          "end": 163,
+          "chapter": 6,
+          "title": "下一代 SST 能源路由",
+          "readingRate": 4.75
+        }
+      ],
+      "index": 6,
+      "start": 139,
+      "end": 163
+    },
+    {
+      "id": "closing",
+      "title": "关键产品与系统方案",
+      "duration": 17,
+      "context": "overview",
+      "labels": [
+        "wind",
+        "substation",
+        "dc",
+        "supercharge"
+      ],
+      "flows": [],
+      "scope": "产品展示 · 系统方案 · 前瞻演进",
+      "cues": [
+        {
+          "id": "quick-review",
+          "duration": 9,
+          "move": 9,
+          "shot": "home",
+          "text": "回到全景：干式变压器、架空线与高效直流供电是关键产品，能源共享、柔性调度和算电协同构成系统方案。",
+          "start": 163,
+          "end": 172,
+          "chapter": 7,
+          "title": "关键产品与系统方案",
+          "readingRate": 4.777777777777778
+        },
+        {
+          "id": "quick-ending",
+          "duration": 8,
+          "move": 0,
+          "shot": "home",
+          "text": "SST 展示能源路由的演进方向。可继续查看装备、协同情境或 SST 专题，了解结构与计算边界。",
+          "start": 172,
+          "end": 180,
+          "chapter": 7,
+          "title": "关键产品与系统方案",
+          "readingRate": 5
+        }
+      ],
+      "index": 7,
+      "start": 163,
+      "end": 180
+    }
+  ],
+  "timeline": [
+    {
+      "id": "quick-welcome",
+      "duration": 15,
+      "move": 0,
+      "shot": "home",
+      "text": "这里连接数据中心、化工与电冶金、智能工厂及小型模块化反应堆研究园区。三分钟内，我们沿能源与用能链路，认识西比里的关键产品与协同方案。",
+      "start": 0,
+      "end": 15,
+      "chapter": 0,
+      "title": "认识多园区系统",
+      "readingRate": 4
+    },
+    {
+      "id": "quick-wind",
+      "duration": 13,
+      "move": 5,
+      "shot": "windClose",
+      "wind": true,
+      "text": "机舱里的关键装备是西比里陶瓷基耐电晕干式变压器，采用铝绕组与陶瓷膜包复合绝缘材料，面向宽频电应力与电晕侵蚀工况设计。",
+      "start": 15,
+      "end": 28,
+      "chapter": 1,
+      "title": "从发电到输送",
+      "readingRate": 4.230769230769231
+    },
+    {
+      "id": "quick-line",
+      "duration": 8,
+      "move": 5,
+      "shot": "line",
+      "text": "架空线关注电晕损耗，并面向日晒风沙、覆冰与腐蚀工况设计。接着看电力如何送往用能端。",
+      "start": 28,
+      "end": 36,
+      "chapter": 1,
+      "title": "从发电到输送",
+      "readingRate": 4.625
+    },
+    {
+      "id": "quick-solar",
+      "duration": 4,
+      "move": 3,
+      "shot": "solar",
+      "text": "风电与光伏经能源枢纽，为各园区供电。",
+      "start": 36,
+      "end": 40,
+      "chapter": 1,
+      "title": "从发电到输送",
+      "readingRate": 4
+    },
+    {
+      "id": "quick-dc-entry",
+      "duration": 6,
+      "move": 5,
+      "shot": "dcEntry",
+      "text": "来到数据中心。沿供电链路进入楼内，看看电力如何支撑算力。",
+      "start": 40,
+      "end": 46,
+      "chapter": 2,
+      "title": "高效供电，支撑算力",
+      "readingRate": 4.166666666666667
+    },
+    {
+      "id": "quick-dc-power",
+      "duration": 12,
+      "move": 0,
+      "shot": "dcEntry",
+      "inside": true,
+      "text": "新一代高效直流供电方案优化变换与配电链路，提升端到端供电效率，为高密度算力提供支撑。画面展示中压配电与直流供电设备。",
+      "start": 46,
+      "end": 58,
+      "chapter": 2,
+      "title": "高效供电，支撑算力",
+      "readingRate": 4.5
+    },
+    {
+      "id": "quick-dc-server",
+      "duration": 11,
+      "move": 0,
+      "shot": "dcEntry",
+      "inside": true,
+      "text": "电力经直流母排、列头柜与机架配电到达服务器。高效供电与制冷系统共同支撑运行，供电改善不直接等同于整楼同比例节能。",
+      "start": 58,
+      "end": 69,
+      "chapter": 2,
+      "title": "高效供电，支撑算力",
+      "readingRate": 4.7272727272727275
+    },
+    {
+      "id": "quick-dc-chip",
+      "duration": 6,
+      "move": 0,
+      "shot": "dcEntry",
+      "inside": true,
+      "text": "电力最终驱动 CPU 与 GPU，推理产出为模型估算。",
+      "start": 69,
+      "end": 75,
+      "chapter": 2,
+      "title": "高效供电，支撑算力",
+      "readingRate": 3.6666666666666665
+    },
+    {
+      "id": "quick-factory-overview",
+      "duration": 7,
+      "move": 7,
+      "shot": "factory",
+      "factoryRoof": "open",
+      "text": "工厂整合原料与包装，二十条产线按两列十排布置。",
+      "start": 75,
+      "end": 82,
+      "chapter": 3,
+      "title": "西比里铝基新型导线智能工厂",
+      "readingRate": 3
+    },
+    {
+      "id": "quick-factory-process",
+      "duration": 9,
+      "move": 5,
+      "shot": "factoryClose",
+      "factoryRoof": "open",
+      "text": "铝线水平通过陶瓷化处理与清洗段；废液分类收集处理。",
+      "start": 82,
+      "end": 91,
+      "chapter": 3,
+      "title": "西比里铝基新型导线智能工厂",
+      "readingRate": 2.5555555555555554
+    },
+    {
+      "id": "quick-factory-monitor",
+      "duration": 10,
+      "move": 5,
+      "shot": "factoryLink",
+      "factoryRoof": "open",
+      "text": "管廊连接工厂与处理配套，循环液旁滤回槽，废液分类收集；张力监测与产品追溯贯穿生产。",
+      "factoryMode": "waste",
+      "start": 91,
+      "end": 101,
+      "chapter": 3,
+      "title": "西比里铝基新型导线智能工厂",
+      "readingRate": 3.7
+    },
+    {
+      "id": "quick-charge",
+      "duration": 7,
+      "move": 5,
+      "shot": "charge",
+      "text": "超充站结合直流供电、光伏与固定储能，缓冲充电功率需求。车辆作为充电负荷。",
+      "start": 101,
+      "end": 108,
+      "chapter": 4,
+      "title": "新能源超充与储能调节",
+      "readingRate": 4.571428571428571
+    },
+    {
+      "id": "quick-storage",
+      "duration": 7,
+      "move": 0,
+      "shot": "charge",
+      "text": "固定储能与电网双向调节。满足本地用能和备用约束后，富余电能按调度要求回馈。",
+      "start": 108,
+      "end": 115,
+      "chapter": 4,
+      "title": "新能源超充与储能调节",
+      "readingRate": 4.857142857142857
+    },
+    {
+      "id": "quick-coordination-event",
+      "duration": 11,
+      "move": 5,
+      "shot": "collaboration",
+      "text": "预设情境中，风光先回落再恢复。系统评估储能、算力任务和工业用能边界，优先保障关键负荷，再安排可调节部分。",
+      "start": 115,
+      "end": 126,
+      "chapter": 5,
+      "title": "一次变化，多园区响应",
+      "readingRate": 4.181818181818182
+    },
+    {
+      "id": "quick-coordination-result",
+      "duration": 13,
+      "move": 0,
+      "shot": "collaboration",
+      "text": "这里回放两小时计算，观看时长不代表控制响应速度。结果核对购电、任务交付与末态库存；约束未满足时如实说明，不把库存消耗当作收益。",
+      "start": 126,
+      "end": 139,
+      "chapter": 5,
+      "title": "一次变化，多园区响应",
+      "readingRate": 4.384615384615385
+    },
+    {
+      "id": "quick-sst-existing",
+      "duration": 8,
+      "move": 6,
+      "shot": "sstCharge",
+      "scheme": "existing",
+      "text": "再看装备演进。充电站前端承担隔离与整流，输出保护和终端保留。现在切换同一位置的 SST 方案。",
+      "start": 139,
+      "end": 147,
+      "chapter": 6,
+      "title": "下一代 SST 能源路由",
+      "readingRate": 5.125
+    },
+    {
+      "id": "quick-sst-change",
+      "duration": 8,
+      "move": 0,
+      "shot": "sstCharge",
+      "scheme": "sst",
+      "text": "绿色 SST 集成所选变换功能，按指令分配功率。主变、储能 PCS 与电解锌沿用既有设备。",
+      "start": 147,
+      "end": 155,
+      "chapter": 6,
+      "title": "下一代 SST 能源路由",
+      "readingRate": 4.625
+    },
+    {
+      "id": "quick-sst-result",
+      "duration": 8,
+      "move": 0,
+      "shot": "sstCharge",
+      "scheme": "sst",
+      "text": "比较变换损耗、接入点峰值与库存代价。这是两小时代表支路计算，结果不外推为全园区收益。",
+      "start": 155,
+      "end": 163,
+      "chapter": 6,
+      "title": "下一代 SST 能源路由",
+      "readingRate": 4.75
+    },
+    {
+      "id": "quick-review",
+      "duration": 9,
+      "move": 9,
+      "shot": "home",
+      "text": "回到全景：干式变压器、架空线与高效直流供电是关键产品，能源共享、柔性调度和算电协同构成系统方案。",
+      "start": 163,
+      "end": 172,
+      "chapter": 7,
+      "title": "关键产品与系统方案",
+      "readingRate": 4.777777777777778
+    },
+    {
+      "id": "quick-ending",
+      "duration": 8,
+      "move": 0,
+      "shot": "home",
+      "text": "SST 展示能源路由的演进方向。可继续查看装备、协同情境或 SST 专题，了解结构与计算边界。",
+      "start": 172,
+      "end": 180,
+      "chapter": 7,
+      "title": "关键产品与系统方案",
+      "readingRate": 5
+    }
+  ],
+  "building": {
+    "at": 46,
+    "until": 75,
+    "from": 33,
+    "to": 62
+  },
+  "collaboration": {
+    "id": "coordination",
+    "initialSoc": 55,
+    "gridLimitMW": 400,
+    "strategy": "renewable"
+  },
+  "readingLimit": 5.2
+}

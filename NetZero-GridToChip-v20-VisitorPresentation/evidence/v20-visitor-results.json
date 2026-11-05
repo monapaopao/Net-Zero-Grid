@@ -1,0 +1,30 @@
+{
+  "checks": [
+    "threeSeparateResultsWithExplicitScope",
+    "equipmentAndControlRemainDistinct",
+    "inventoryCurtailmentAndServiceAreNotHidden",
+    "adverseResultsAreReportedAsIncrease",
+    "summaryDoesNotMutateModel",
+    "sstAndTokenSyntax"
+  ],
+  "summary": {
+    "scope": "两小时代表支路 · 参数为演示假设 · 不外推全园区",
+    "cards": [
+      {
+        "title": "装备变化 A → B",
+        "value": "0.320 → 0.262 MWh",
+        "detail": "变换损耗减少 0.059 MWh。相同调度下比较装备假设；损耗降幅不是全园区节能率。"
+      },
+      {
+        "title": "协同变化 B → C",
+        "value": "4.0 → 2.8 MW",
+        "detail": "接入点峰值减少 1.200 MW。天气、需求、初始库存和设备容量保持一致。"
+      },
+      {
+        "title": "库存、弃电与交付代价",
+        "value": "5.158 → 4.268 MWh",
+        "detail": "末态电池如上；弃电增加 0.194 MWh。IT交付 10.00 → 10.00 MWh；充电交付 2.30 → 2.30 MWh；C方案 IT缺供 0.000、截止未交付 0.000 MWh。库存消耗不能当作节能。"
+      }
+    ]
+  }
+}

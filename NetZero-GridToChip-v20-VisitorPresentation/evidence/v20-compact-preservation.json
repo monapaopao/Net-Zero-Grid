@@ -1,0 +1,26 @@
+[
+  {
+    "path": "src/reception.js",
+    "unchanged": true
+  },
+  {
+    "path": "src/premium.js",
+    "unchanged": true
+  },
+  {
+    "path": "导览文案.json",
+    "unchanged": true
+  },
+  {
+    "path": "三分钟接待文案.json",
+    "unchanged": true
+  },
+  {
+    "path": "src/vendor/dcdt-v11/app.js",
+    "unchanged": true
+  },
+  {
+    "path": "src/vendor/dcdt-v11/style.css",
+    "unchanged": true
+  }
+]

@@ -1,0 +1,180 @@
+{
+  "passed": true,
+  "checks": [
+    "four real pipe paths join the factory and service equipment",
+    "classified collection endpoints meet separate tank side ports",
+    "representative circulation starts and ends on actual process ports",
+    "four wall penetrations have open sleeves and no cladding cap",
+    "bridge leaves a continuous passage under its clear span",
+    "factory fence leaves the service corridor open",
+    "selected and narrated views show all four flow directions and restore",
+    "protection corridor and narrative preserve scene timing"
+  ],
+  "links": [
+    {
+      "id": "工艺废液分类收集",
+      "points": [
+        [
+          -19,
+          -0.4,
+          -76
+        ],
+        [
+          -19,
+          6.6,
+          -76
+        ],
+        [
+          -55,
+          6.6,
+          -76
+        ],
+        [
+          -55,
+          2.4,
+          -76
+        ],
+        [
+          -57,
+          2.4,
+          -76
+        ]
+      ],
+      "mat": "waste"
+    },
+    {
+      "id": "清洗废水分类收集",
+      "points": [
+        [
+          -19,
+          -0.7,
+          -72
+        ],
+        [
+          -19,
+          6.6,
+          -72
+        ],
+        [
+          -55,
+          6.6,
+          -72
+        ],
+        [
+          -55,
+          2.4,
+          -72
+        ],
+        [
+          -57,
+          2.4,
+          -72
+        ]
+      ],
+      "mat": "clean"
+    },
+    {
+      "id": "工艺循环液旁滤回液",
+      "points": [
+        [
+          -12.8,
+          0.725,
+          -58.599999999999994
+        ],
+        [
+          -12.8,
+          -0.95,
+          -58.599999999999994
+        ],
+        [
+          -19,
+          -0.95,
+          -58.599999999999994
+        ],
+        [
+          -19,
+          -0.95,
+          -80
+        ],
+        [
+          -19,
+          6.6,
+          -80
+        ],
+        [
+          -55,
+          6.6,
+          -80
+        ],
+        [
+          -55,
+          2.3,
+          -80
+        ],
+        [
+          -72,
+          2.3,
+          -80
+        ],
+        [
+          -72,
+          2.3,
+          -81.3
+        ]
+      ],
+      "mat": "teal"
+    },
+    {
+      "id": "工艺循环液过滤回槽",
+      "points": [
+        [
+          -68,
+          2.3,
+          -82.7
+        ],
+        [
+          -68,
+          2.3,
+          -84
+        ],
+        [
+          -55,
+          2.3,
+          -84
+        ],
+        [
+          -55,
+          6.6,
+          -84
+        ],
+        [
+          -19,
+          6.6,
+          -84
+        ],
+        [
+          -19,
+          -1.2,
+          -84
+        ],
+        [
+          -19,
+          -1.2,
+          -58.599999999999994
+        ],
+        [
+          -14.3,
+          -1.2,
+          -58.599999999999994
+        ],
+        [
+          -14.3,
+          0.725,
+          -58.599999999999994
+        ]
+      ],
+      "mat": "teal"
+    }
+  ],
+  "liveBrowserVerified": false
+}

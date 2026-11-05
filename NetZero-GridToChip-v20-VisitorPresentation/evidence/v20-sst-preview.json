@@ -1,0 +1,15 @@
+{
+  "checks": [
+    "NativeNodesAndPortGraph",
+    "PreviewReplacesOnlyConversion",
+    "PreviewReturnsAllExistingEquipment",
+    "MissingBuildingHasAutomaticFallback",
+    "EquipmentDiagramMatchesSchemeAndScope",
+    "OperationalChartsUseSynchronizedActualFrame",
+    "SummaryUsesThreeRecordedResultCards",
+    "StoryStopsAndRestoresNodes"
+  ],
+  "passed": 8,
+  "liveBrowserVerified": false,
+  "nativeThreeGeometry": true
+}

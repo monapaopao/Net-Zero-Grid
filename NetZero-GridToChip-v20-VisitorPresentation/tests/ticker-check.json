@@ -1,0 +1,90 @@
+{
+  "generatedAt": "2026-09-28T04:09:28.064Z",
+  "artifact": "dist/Net-Zero-grid-premium.html",
+  "checks": [
+    {
+      "name": "信息流只有两份副本（无缝循环的前提）",
+      "ok": true,
+      "state": "pass",
+      "info": "2 份"
+    },
+    {
+      "name": "条目文案已填充（不是一排占位符）",
+      "ok": true,
+      "state": "pass",
+      "info": "11 条：新疆 · xibili 零碳园区 · ☀ 白天 / 第 1 天 12:01:04 / 风光储产业园（默认） / 499.5 MW"
+    },
+    {
+      "name": "两份副本文案一致",
+      "ok": true,
+      "state": "pass",
+      "info": ""
+    },
+    {
+      "name": "顶部那块会闪的「地区 · 昼夜」文字与日月弧已不在",
+      "ok": true,
+      "state": "pass",
+      "info": "0 处残留"
+    },
+    {
+      "name": "位移随时间推进（信息流在滚）",
+      "ok": true,
+      "state": "pass",
+      "info": "1.2 s 内位移 56.8 px ≈ 47 px/s（组宽 2264 px）"
+    },
+    {
+      "name": "位移不超过一个组宽（到点归零，不会滑空）",
+      "ok": true,
+      "state": "pass",
+      "info": "x=-69.1，组宽 2264"
+    },
+    {
+      "name": "暂停物理后信息流仍在播报",
+      "ok": true,
+      "state": "pass",
+      "info": "running=false，位移继续 32.9 px"
+    },
+    {
+      "name": "「减少动态」下信息流停住且复位到起点",
+      "ok": true,
+      "state": "pass",
+      "info": "reduce=true，x=0"
+    },
+    {
+      "name": "「减少动态」可恢复（重新开始滚动）",
+      "ok": true,
+      "state": "pass",
+      "info": ""
+    },
+    {
+      "name": "同一条提示不会重复堆叠（同文案去重生效）",
+      "ok": true,
+      "state": "pass",
+      "info": "连点两次同一情景后 toast 里 3 条（上限 3），其中重复 0 条：[\"演示模式：只留画面与摘要，参数在「运行」模式调整\",\"已载入情景：夜间保供（22:00、6 m/s，光伏自然为 0）\",\"电解锌车间全停（当日第 1/2 次，最长 2.0 h），压减电量计入欠账池\"]"
+    },
+    {
+      "name": "求解器诊断只进事件页、不弹顶部提示",
+      "ok": true,
+      "state": "pass",
+      "info": "账本里 179 条诊断，toast 里 0 条"
+    },
+    {
+      "name": "全程无未捕获异常",
+      "ok": true,
+      "state": "pass",
+      "info": "0 条"
+    },
+    {
+      "name": "全程无 console.error",
+      "ok": true,
+      "state": "pass",
+      "info": "0 条"
+    }
+  ],
+  "pass": 13,
+  "fail": 0,
+  "untested": 0,
+  "total": 13,
+  "errors": [],
+  "consoleErrors": []
+}

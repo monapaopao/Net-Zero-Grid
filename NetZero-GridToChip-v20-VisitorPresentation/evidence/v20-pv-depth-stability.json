@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": [
+    "all 1320 modules have perimeter bars without a solid bright backing",
+    "PV has local depth bias and no thin-surface shadow acne path",
+    "real roof clone retains its distance-detail shader",
+    "production texture setup respects renderer anisotropy limits",
+    "rays hit the active face at overhead and oblique viewing angles",
+    "open-close and tour restore keep depth/shader settings stable",
+    "unrelated model and scene parameters remain unchanged"
+  ],
+  "panelCount": 1320,
+  "minRailGap": 0.15,
+  "shaderHookVerified": true,
+  "liveWebGLCompileVerified": false,
+  "liveBrowserVerified": false
+}

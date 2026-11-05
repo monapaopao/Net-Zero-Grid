@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": {
+    "openSharedRoofDoesNotInterceptRawWarehousePicking": true,
+    "openSharedRoofDoesNotInterceptPackingWarehousePicking": true,
+    "closedRoofStillSelectsWholeFactory": true,
+    "hiddenRetiredModelAncestorDoesNotPick": true,
+    "individuallyHiddenOldMeshDoesNotPick": true,
+    "fullyTransparentMeshDoesNotBlockVisibleContent": true,
+    "materialVisibilityIsRespected": true,
+    "materialArraysUseTheIntersectedFace": true,
+    "translucentVisibleSurfaceStillPicks": true
+  },
+  "note": "Actual premium.js hit-selection loop and bundled Three.js scene/raycast geometry in Node; no pixels, browser or live playback validation."
+}

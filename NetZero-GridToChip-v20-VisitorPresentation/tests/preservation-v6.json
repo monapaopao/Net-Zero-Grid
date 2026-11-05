@@ -1,0 +1,19 @@
+{
+  "originalFilesChecked": 40,
+  "changedOriginalFiles": [],
+  "dataBuildingPreserved": true,
+  "smrBoundsPreserved": true,
+  "enginePreserved": true,
+  "sceneChecks": 30,
+  "allSceneChecksPassed": true,
+  "gasGeometry": {
+    "v5": {
+      "triangles": 31700,
+      "meshes": 44
+    },
+    "v6": {
+      "triangles": 78452,
+      "meshes": 99
+    }
+  }
+}

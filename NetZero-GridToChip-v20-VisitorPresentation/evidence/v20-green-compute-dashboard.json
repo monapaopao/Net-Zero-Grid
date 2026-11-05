@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "early": {
+    "batchMW": 32.26694102112151,
+    "gridMW": 100
+  },
+  "rich": {
+    "batchMW": 80,
+    "gridMW": 0
+  },
+  "simulationChanged": false,
+  "liveBrowserVerified": false
+}

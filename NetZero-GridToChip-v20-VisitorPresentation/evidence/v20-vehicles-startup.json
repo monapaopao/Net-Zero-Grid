@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": 3,
+  "spritesTested": 0,
+  "nonSolidTested": 0,
+  "hiddenTested": 0,
+  "vehicles": 23,
+  "chargingConnections": 9,
+  "browserVerified": false,
+  "note": "Native Three.js initialization regression with campus sprite and particle object types; not a full browser startup or pixel test."
+}

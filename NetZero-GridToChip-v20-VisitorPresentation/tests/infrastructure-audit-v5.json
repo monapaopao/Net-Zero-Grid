@@ -1,0 +1,1275 @@
+{
+  "version": "5.0.0",
+  "dataBuilding": {
+    "position": [
+      134,
+      0,
+      -10
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bounds": [
+      31.072500228881836,
+      15.919999599456787,
+      24
+    ]
+  },
+  "rectifierBounds": {
+    "min": [
+      107.48000001907349,
+      2.4139882093265897e-9,
+      73.92000007629395
+    ],
+    "max": [
+      110.51999998092651,
+      3.29400007724762,
+      78.07999992370605
+    ]
+  },
+  "indoorProcess": true,
+  "indoorRectifier": true,
+  "closedWorkshop": true,
+  "exteriorDataRectifierLabels": 0,
+  "turbines": [
+    {
+      "hub": [
+        -188,
+        27.6,
+        -72
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -146,
+        27.6,
+        -72
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -104,
+        27.6,
+        -72
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -62,
+        27.6,
+        -72
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -175,
+        27.6,
+        -24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -133,
+        27.6,
+        -24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -91,
+        27.6,
+        -24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -49,
+        27.6,
+        -24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -188,
+        27.6,
+        24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -146,
+        27.6,
+        24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -104,
+        27.6,
+        24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -62,
+        27.6,
+        24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    }
+  ],
+  "minTurbineDistance": 42,
+  "rotorDiameter": 24.599999999999998,
+  "buildings": {
+    "factory": [
+      36,
+      7.5,
+      19.80000000000001
+    ],
+    "logistics": [
+      44,
+      6.6000000000000005,
+      22
+    ],
+    "fire": [
+      22.399999999999977,
+      6.875,
+      13.5
+    ]
+  },
+  "conveyorPositions": [
+    [
+      168.06,
+      1.6500000000000001,
+      92.51999999999998
+    ],
+    [
+      177.66000000000003,
+      1.6500000000000001,
+      92.51999999999998
+    ],
+    [
+      169.26,
+      1.6500000000000001,
+      92.51999999999998
+    ]
+  ],
+  "socBarPosition": [
+    26.489201365926366,
+    0.63,
+    36.14
+  ],
+  "currentDeviceLabels": 30,
+  "edges": [
+    {
+      "key": "wind",
+      "length": 81.22655639408005,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "solar",
+      "length": 193.96249898721985,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "trans",
+      "length": 97.53479083096349,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "tr2dc",
+      "length": 12.519232870953555,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "metalE",
+      "length": 14,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "panZnAc",
+      "length": 24,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "panZnDc",
+      "length": 33,
+      "finite": true,
+      "tubeMatchesParticles": true
+    }
+  ],
+  "checks": {
+    "animatedObjectsStayInFacility": true,
+    "fixedA1": true,
+    "indoorProcess": true,
+    "indoorRectifier": true,
+    "closedWorkshop": true,
+    "noExteriorRectifier": true,
+    "turbinesClear": true,
+    "routeContinuity": true,
+    "smrBehindA1": true,
+    "smrSeparateFromRenewables": true,
+    "smrFitsIndependentSite": true,
+    "smrIslandComparableToA1": true,
+    "gasOutsideA1AndSmr": true,
+    "gasFeedTerminatesAtMV": true,
+    "dataFeedEntersA1": true,
+    "threePhasePhysicalRoutes": true,
+    "compensationIsParallel": true,
+    "sourceDisplayAllocation": true,
+    "allNewRoutesContinuous": true,
+    "gasEnclosureClosed": true,
+    "mvRoomClosed": true,
+    "smrDefaultOff": true
+  },
+  "infrastructure": {
+    "sites": {
+      "smr": {
+        "x": 160,
+        "z": -100,
+        "w": 106,
+        "d": 74
+      },
+      "genset": {
+        "x": 184,
+        "z": -8,
+        "w": 46,
+        "d": 26
+      },
+      "dcfeed": {
+        "x": 110,
+        "z": -10,
+        "w": 12,
+        "d": 19
+      }
+    },
+    "ports": {
+      "smr": [
+        187,
+        7,
+        -88
+      ],
+      "genset": [
+        204,
+        1.15,
+        0.5
+      ],
+      "normalA": [
+        104,
+        1.15,
+        -15
+      ],
+      "normalB": [
+        104,
+        1.15,
+        -5
+      ],
+      "roomGas": [
+        116,
+        1.15,
+        -9
+      ],
+      "dcA": [
+        119,
+        1.15,
+        -15
+      ],
+      "dcB": [
+        119,
+        1.15,
+        -5
+      ],
+      "bus": [
+        75.8,
+        8.6,
+        -10
+      ]
+    },
+    "routes": {
+      "svgShunt": [
+        [
+          78,
+          1.5,
+          37
+        ],
+        [
+          97,
+          1.5,
+          37
+        ],
+        [
+          97,
+          1.5,
+          30
+        ],
+        [
+          99.6,
+          1.5,
+          30
+        ]
+      ],
+      "genset": [
+        [
+          204,
+          1.15,
+          0.5
+        ],
+        [
+          211,
+          1.15,
+          0.5
+        ],
+        [
+          211,
+          1.15,
+          13
+        ],
+        [
+          115.5,
+          1.15,
+          13
+        ],
+        [
+          115.5,
+          1.15,
+          -9
+        ],
+        [
+          116,
+          1.15,
+          -9
+        ]
+      ],
+      "smr": [
+        [
+          187,
+          7,
+          -88
+        ],
+        [
+          187,
+          10,
+          -58
+        ],
+        [
+          133,
+          10,
+          -58
+        ],
+        [
+          78,
+          10,
+          -58
+        ],
+        [
+          78,
+          8.6,
+          -10
+        ]
+      ],
+      "bus2tr": [
+        [
+          75.8,
+          8.6,
+          -10
+        ],
+        [
+          86,
+          7,
+          -10
+        ],
+        [
+          92,
+          5.3,
+          -10
+        ]
+      ],
+      "tr2dc": [
+        [
+          95,
+          2.5,
+          -18.25
+        ],
+        [
+          100,
+          2.5,
+          -18.25
+        ],
+        [
+          100,
+          1.15,
+          -15
+        ],
+        [
+          104,
+          1.15,
+          -15
+        ]
+      ],
+      "tr2dcB": [
+        [
+          95,
+          2.5,
+          -1.75
+        ],
+        [
+          100,
+          2.5,
+          -1.75
+        ],
+        [
+          100,
+          1.15,
+          -5
+        ],
+        [
+          104,
+          1.15,
+          -5
+        ]
+      ],
+      "dcA": [
+        [
+          116,
+          1.15,
+          -15
+        ],
+        [
+          119,
+          1.15,
+          -15
+        ]
+      ],
+      "dcB": [
+        [
+          116,
+          1.15,
+          -5
+        ],
+        [
+          119,
+          1.15,
+          -5
+        ]
+      ],
+      "bus2dist": [
+        [
+          75.8,
+          8.6,
+          -10
+        ],
+        [
+          67,
+          7,
+          22
+        ],
+        [
+          78,
+          5.3,
+          22
+        ]
+      ],
+      "feedIn": [
+        [
+          78,
+          1.4,
+          34.9
+        ],
+        [
+          78,
+          1.5,
+          37
+        ],
+        [
+          78,
+          1.5,
+          52
+        ]
+      ],
+      "trans": [
+        [
+          56,
+          3.45,
+          -19.2
+        ],
+        [
+          56,
+          6,
+          -18
+        ],
+        [
+          50,
+          13.2,
+          -39
+        ],
+        [
+          70,
+          13.2,
+          -39
+        ],
+        [
+          90,
+          13.2,
+          -39
+        ],
+        [
+          78,
+          8.6,
+          -10
+        ]
+      ]
+    },
+    "physical": [
+      {
+        "key": "industrialSecondary14.3",
+        "pts": [
+          [
+            81,
+            2.5,
+            14.3
+          ],
+          [
+            84,
+            2.5,
+            14.3
+          ],
+          [
+            84,
+            1.4,
+            34.9
+          ],
+          [
+            78,
+            1.4,
+            34.9
+          ]
+        ],
+        "phaseCount": 3
+      },
+      {
+        "key": "industrialSecondary22",
+        "pts": [
+          [
+            81,
+            2.5,
+            22
+          ],
+          [
+            84,
+            2.5,
+            22
+          ],
+          [
+            84,
+            1.4,
+            34.9
+          ],
+          [
+            78,
+            1.4,
+            34.9
+          ]
+        ],
+        "phaseCount": 3
+      },
+      {
+        "key": "industrialSecondary29.7",
+        "pts": [
+          [
+            81,
+            2.5,
+            29.7
+          ],
+          [
+            84,
+            2.5,
+            29.7
+          ],
+          [
+            84,
+            1.4,
+            34.9
+          ],
+          [
+            78,
+            1.4,
+            34.9
+          ]
+        ],
+        "phaseCount": 3
+      },
+      {
+        "key": "industrialFeed",
+        "pts": [
+          [
+            78,
+            1.4,
+            34.9
+          ],
+          [
+            78,
+            1.5,
+            37
+          ],
+          [
+            78,
+            1.5,
+            52
+          ]
+        ],
+        "phaseCount": 3
+      },
+      {
+        "key": "svgShunt",
+        "pts": [
+          [
+            78,
+            1.5,
+            37
+          ],
+          [
+            97,
+            1.5,
+            37
+          ],
+          [
+            97,
+            1.5,
+            30
+          ],
+          [
+            99.6,
+            1.5,
+            30
+          ]
+        ],
+        "phaseCount": 3
+      },
+      {
+        "key": "tr2dc-18.25",
+        "pts": [
+          [
+            95,
+            2.5,
+            -18.25
+          ],
+          [
+            100,
+            2.5,
+            -18.25
+          ],
+          [
+            100,
+            1.15,
+            -15
+          ],
+          [
+            104,
+            1.15,
+            -15
+          ]
+        ],
+        "phaseCount": 3
+      },
+      {
+        "key": "tr2dc-10",
+        "pts": [
+          [
+            95,
+            2.5,
+            -10
+          ],
+          [
+            100,
+            2.5,
+            -10
+          ],
+          [
+            100,
+            1.15,
+            -15
+          ],
+          [
+            104,
+            1.15,
+            -15
+          ]
+        ],
+        "phaseCount": 3
+      },
+      {
+        "key": "tr2dc-1.75",
+        "pts": [
+          [
+            95,
+            2.5,
+            -1.75
+          ],
+          [
+            100,
+            2.5,
+            -1.75
+          ],
+          [
+            100,
+            1.15,
+            -5
+          ],
+          [
+            104,
+            1.15,
+            -5
+          ]
+        ],
+        "phaseCount": 3
+      },
+      {
+        "key": "dcA",
+        "pts": [
+          [
+            116,
+            1.15,
+            -15
+          ],
+          [
+            119,
+            1.15,
+            -15
+          ]
+        ],
+        "phaseCount": 3
+      },
+      {
+        "key": "dcB",
+        "pts": [
+          [
+            116,
+            1.15,
+            -5
+          ],
+          [
+            119,
+            1.15,
+            -5
+          ]
+        ],
+        "phaseCount": 3
+      },
+      {
+        "key": "genset",
+        "pts": [
+          [
+            204,
+            1.15,
+            0.5
+          ],
+          [
+            211,
+            1.15,
+            0.5
+          ],
+          [
+            211,
+            1.15,
+            13
+          ],
+          [
+            115.5,
+            1.15,
+            13
+          ],
+          [
+            115.5,
+            1.15,
+            -9
+          ],
+          [
+            116,
+            1.15,
+            -9
+          ]
+        ],
+        "phaseCount": 3
+      },
+      {
+        "key": "smr",
+        "pts": [
+          [
+            187,
+            7,
+            -88
+          ],
+          [
+            187,
+            10,
+            -58
+          ],
+          [
+            133,
+            10,
+            -58
+          ],
+          [
+            78,
+            10,
+            -58
+          ],
+          [
+            78,
+            8.6,
+            -10
+          ]
+        ],
+        "phaseCount": 3
+      },
+      {
+        "key": "trans",
+        "pts": [
+          [
+            56,
+            6,
+            -18
+          ],
+          [
+            50,
+            13.2,
+            -39
+          ],
+          [
+            70,
+            13.2,
+            -39
+          ],
+          [
+            90,
+            13.2,
+            -39
+          ],
+          [
+            78,
+            8.6,
+            -10
+          ]
+        ],
+        "phaseCount": 3
+      }
+    ],
+    "gasOpen": false,
+    "mvOpen": false,
+    "normalMW": 175.32781336802893,
+    "backupMW": 0,
+    "dcMW": 175.32781336802893,
+    "smrPosition": [
+      160,
+      0,
+      -100
+    ],
+    "gensetPosition": [
+      184,
+      0,
+      -8
+    ]
+  },
+  "smrBounds": {
+    "min": [
+      107,
+      0,
+      -137
+    ],
+    "max": [
+      213,
+      21.349999994039536,
+      -63
+    ]
+  },
+  "smrIsland": [
+    24.600000381469727,
+    19.91500005722046,
+    23.600000381469727
+  ],
+  "gasBounds": {
+    "min": [
+      161,
+      0,
+      -21
+    ],
+    "max": [
+      207,
+      15,
+      5
+    ]
+  },
+  "flowCases": [
+    {
+      "g": 0,
+      "d": 176,
+      "normal": 176,
+      "backup": 0,
+      "balanced": true
+    },
+    {
+      "g": 50,
+      "d": 176,
+      "normal": 126,
+      "backup": 50,
+      "balanced": true
+    },
+    {
+      "g": 50,
+      "d": 50,
+      "normal": 0,
+      "backup": 50,
+      "balanced": true
+    },
+    {
+      "g": 50,
+      "d": 30,
+      "normal": 0,
+      "backup": 30,
+      "balanced": true
+    },
+    {
+      "g": 0,
+      "d": 58,
+      "normal": 58,
+      "backup": 0,
+      "balanced": true
+    },
+    {
+      "g": 20,
+      "d": 340,
+      "normal": 320,
+      "backup": 20,
+      "balanced": true
+    }
+  ],
+  "routedEdges": [
+    {
+      "key": "smr",
+      "points": [
+        [
+          187,
+          7,
+          -88
+        ],
+        [
+          187,
+          10,
+          -58
+        ],
+        [
+          133,
+          10,
+          -58
+        ],
+        [
+          78,
+          10,
+          -58
+        ],
+        [
+          78,
+          8.6,
+          -10
+        ]
+      ],
+      "power": 0,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "bus2tr",
+      "points": [
+        [
+          75.8,
+          8.6,
+          -10
+        ],
+        [
+          86,
+          7,
+          -10
+        ],
+        [
+          92,
+          5.3,
+          -10
+        ]
+      ],
+      "power": 175.32781336802893,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "tr2dc",
+      "points": [
+        [
+          95,
+          2.5,
+          -18.25
+        ],
+        [
+          100,
+          2.5,
+          -18.25
+        ],
+        [
+          100,
+          1.15,
+          -15
+        ],
+        [
+          104,
+          1.15,
+          -15
+        ]
+      ],
+      "power": 87.66390668401446,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "feedIn",
+      "points": [
+        [
+          78,
+          1.4,
+          34.9
+        ],
+        [
+          78,
+          1.5,
+          37
+        ],
+        [
+          78,
+          1.5,
+          52
+        ]
+      ],
+      "power": 310.2222697060353,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "genset",
+      "points": [
+        [
+          204,
+          1.15,
+          0.5
+        ],
+        [
+          211,
+          1.15,
+          0.5
+        ],
+        [
+          211,
+          1.15,
+          13
+        ],
+        [
+          115.5,
+          1.15,
+          13
+        ],
+        [
+          115.5,
+          1.15,
+          -9
+        ],
+        [
+          116,
+          1.15,
+          -9
+        ]
+      ],
+      "power": 0,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "tr2dcB",
+      "points": [
+        [
+          95,
+          2.5,
+          -1.75
+        ],
+        [
+          100,
+          2.5,
+          -1.75
+        ],
+        [
+          100,
+          1.15,
+          -5
+        ],
+        [
+          104,
+          1.15,
+          -5
+        ]
+      ],
+      "power": 87.66390668401446,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "dcA",
+      "points": [
+        [
+          116,
+          1.15,
+          -15
+        ],
+        [
+          119,
+          1.15,
+          -15
+        ]
+      ],
+      "power": 87.66390668401446,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "dcB",
+      "points": [
+        [
+          116,
+          1.15,
+          -5
+        ],
+        [
+          119,
+          1.15,
+          -5
+        ]
+      ],
+      "power": 87.66390668401446,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "bus2dist",
+      "points": [
+        [
+          75.8,
+          8.6,
+          -10
+        ],
+        [
+          67,
+          7,
+          22
+        ],
+        [
+          78,
+          5.3,
+          22
+        ]
+      ],
+      "power": 310.2222697060353,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "svgShunt",
+      "points": [
+        [
+          78,
+          1.5,
+          37
+        ],
+        [
+          97,
+          1.5,
+          37
+        ],
+        [
+          97,
+          1.5,
+          30
+        ],
+        [
+          99.6,
+          1.5,
+          30
+        ]
+      ],
+      "power": 0,
+      "finite": true,
+      "tubeMatchesParticles": true
+    }
+  ]
+}

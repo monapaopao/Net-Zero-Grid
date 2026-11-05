@@ -1,0 +1,12 @@
+'use strict';
+const fs=require('fs'),path=require('path'),crypto=require('crypto'),assert=require('assert/strict');
+const root=path.join(__dirname,'..'),base=path.join(root,'../NetZero-GridToChip-v13-WindProportionTour10s');
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const files=['src/engine.js','src/renewable-landscape-plan.js','src/campus-layout.js','src/campus-detail.js','src/renewable-landscape.js','src/campus-flows.js','src/solar-site.js','src/multi-campus.js','src/dcdt.js','src/vendor/dcdt-v11/app.js','assets/XIBILI_Logo_Primary_DeepTeal_V1.2.svg','导览文案.json'];
+for(const file of files)assert.equal(hash(path.join(root,file)),hash(path.join(base,file)),file);
+const old=require(path.join(base,'src/config.js')),next=require(path.join(root,'src/config.js'));
+assert.deepEqual({...old,version:null},{...next,version:null});
+const manifest=[];function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,entry.name);if(entry.isDirectory())walk(p);else manifest.push({file:path.relative(base,p).replace(/\\/g,'/'),sha256:hash(p)});}}walk(base);
+manifest.sort((a,b)=>a.file.localeCompare(b.file));fs.writeFileSync(path.join(root,'evidence/v13-preserved-manifest.json'),JSON.stringify(manifest,null,2));
+const report={checks:{engineAndGeometryUnchanged:true,physicalConfigurationUnchanged:true,buildingAndBrandUnchanged:true,approvedNarrationUnchanged:true},files,backupFiles:manifest.length};
+fs.writeFileSync(path.join(root,'evidence/v14-preservation.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));

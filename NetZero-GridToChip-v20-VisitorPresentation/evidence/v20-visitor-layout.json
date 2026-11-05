@@ -1,0 +1,37 @@
+{
+  "checks": [
+    "tourUsesOneSharedGuidePanel",
+    "tourPreservesWholeParagraphMetadataAndControls",
+    "tourRetainsAllMetricsNotesUnitsScopeAndLegend",
+    "tourKeepsMergedGuideAfterBuildingExit",
+    "tourRestoresCaptionAndFreeExplorationPreferences",
+    "tourToCloudKeepsOriginalTwoCardComposition",
+    "receptionUsesOneSharedGuidePanel",
+    "receptionPreservesWholeParagraphMetadataAndControls",
+    "receptionRetainsAllMetricsNotesUnitsScopeAndLegend",
+    "receptionKeepsMergedGuideAfterBuildingExit",
+    "receptionRestoresCaptionAndFreeExplorationPreferences",
+    "receptionToCloudKeepsOriginalTwoCardComposition",
+    "GuideOwnerSwitchRestoresEachOriginalCaptionHome",
+    "CompactRulesApplyOnlyToTwoGuideOwners",
+    "GuideWidthFollowsContentWithViewportAnd1500PixelLimit",
+    "GuideCaptionAndMetricsHaveNoIndependentCardsOrReservedHeight",
+    "GuideFullParagraphCannotFillReservedSpaceOrClip",
+    "GuideMetricsNotesAndLegendUseCompactInlineFlow",
+    "GuideControlsAndProgressShareOneCompactWrappingRow",
+    "BuildingUsesMeasuredGuideDockAndHeaderClearance",
+    "BuildingObservesCaptionAndDockChanges",
+    "ParagraphHeightChangesCoalesceAndRepositionBuilding",
+    "CloudKeepsExistingMeasuredDockGap",
+    "BuildingRetainsCaptionFallbackOutsideSharedDock",
+    "BuildingLayoutWatchCleansUpOnClose",
+    "HostPreservesAuthoredInnerSidebars"
+  ],
+  "passed": 26,
+  "owners": [
+    "tour",
+    "reception"
+  ],
+  "liveBrowserVerified": false,
+  "scope": "DOM lifecycle, content preservation, source layout contracts and measured host geometry; no pixel verification"
+}

@@ -1,0 +1,380 @@
+{
+  "generatedAt": "2026-09-28T03:56:49.015Z",
+  "artifact": "dist/Net-Zero-grid-premium.html",
+  "minutes": 5,
+  "size": "1920x1080",
+  "quality": "standard",
+  "sampleIntervalMs": 20000,
+  "tourRestarts": 0,
+  "samples": [
+    {
+      "elapsedS": 0,
+      "heapMB": 9.95,
+      "domNodes": 759,
+      "fps": 0,
+      "simTime": 43270,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": 0,
+      "containers": {
+        "engineEvents": 74,
+        "engineHistory": 1,
+        "engineDays": 0,
+        "uiEvents": 75,
+        "perfSamples": 0,
+        "eventQueue": 72
+      }
+    },
+    {
+      "elapsedS": 20,
+      "heapMB": 12.78,
+      "domNodes": 1106,
+      "fps": 119.6,
+      "simTime": 46754,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": 5.684341886080802e-14,
+      "containers": {
+        "engineEvents": 132,
+        "engineHistory": 59,
+        "engineDays": 0,
+        "uiEvents": 133,
+        "perfSamples": 10,
+        "eventQueue": 130
+      }
+    },
+    {
+      "elapsedS": 40,
+      "heapMB": 12.89,
+      "domNodes": 1106,
+      "fps": 109,
+      "simTime": 50146,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": -5.684341886080802e-14,
+      "containers": {
+        "engineEvents": 400,
+        "engineHistory": 115,
+        "engineDays": 0,
+        "uiEvents": 400,
+        "perfSamples": 10,
+        "eventQueue": 200
+      }
+    },
+    {
+      "elapsedS": 60,
+      "heapMB": 12.97,
+      "domNodes": 1106,
+      "fps": 122.5,
+      "simTime": 53515,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": -5.684341886080802e-14,
+      "containers": {
+        "engineEvents": 400,
+        "engineHistory": 171,
+        "engineDays": 0,
+        "uiEvents": 400,
+        "perfSamples": 10,
+        "eventQueue": 200
+      }
+    },
+    {
+      "elapsedS": 80,
+      "heapMB": 13.07,
+      "domNodes": 1106,
+      "fps": 127.5,
+      "simTime": 56811,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": 1.1368683772161603e-13,
+      "containers": {
+        "engineEvents": 400,
+        "engineHistory": 226,
+        "engineDays": 0,
+        "uiEvents": 400,
+        "perfSamples": 10,
+        "eventQueue": 200
+      }
+    },
+    {
+      "elapsedS": 100,
+      "heapMB": 12.87,
+      "domNodes": 1107,
+      "fps": 112.1,
+      "simTime": 60146,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": -2.842170943040401e-14,
+      "containers": {
+        "engineEvents": 400,
+        "engineHistory": 282,
+        "engineDays": 0,
+        "uiEvents": 400,
+        "perfSamples": 10,
+        "eventQueue": 200
+      }
+    },
+    {
+      "elapsedS": 120,
+      "heapMB": 12.96,
+      "domNodes": 1107,
+      "fps": 120,
+      "simTime": 63631,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": 0,
+      "containers": {
+        "engineEvents": 400,
+        "engineHistory": 340,
+        "engineDays": 0,
+        "uiEvents": 400,
+        "perfSamples": 10,
+        "eventQueue": 200
+      }
+    },
+    {
+      "elapsedS": 140,
+      "heapMB": 13.15,
+      "domNodes": 1107,
+      "fps": 123.5,
+      "simTime": 67095,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": 0,
+      "containers": {
+        "engineEvents": 400,
+        "engineHistory": 398,
+        "engineDays": 0,
+        "uiEvents": 400,
+        "perfSamples": 10,
+        "eventQueue": 200
+      }
+    },
+    {
+      "elapsedS": 160,
+      "heapMB": 13.09,
+      "domNodes": 1108,
+      "fps": 123,
+      "simTime": 70468,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": 0,
+      "containers": {
+        "engineEvents": 400,
+        "engineHistory": 454,
+        "engineDays": 0,
+        "uiEvents": 400,
+        "perfSamples": 10,
+        "eventQueue": 200
+      }
+    },
+    {
+      "elapsedS": 180,
+      "heapMB": 13.12,
+      "domNodes": 1107,
+      "fps": 121,
+      "simTime": 73773,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": 0,
+      "containers": {
+        "engineEvents": 400,
+        "engineHistory": 509,
+        "engineDays": 0,
+        "uiEvents": 400,
+        "perfSamples": 10,
+        "eventQueue": 200
+      }
+    },
+    {
+      "elapsedS": 200,
+      "heapMB": 13.11,
+      "domNodes": 1106,
+      "fps": 122.7,
+      "simTime": 76898,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": 2.842170943040401e-14,
+      "containers": {
+        "engineEvents": 400,
+        "engineHistory": 561,
+        "engineDays": 0,
+        "uiEvents": 400,
+        "perfSamples": 10,
+        "eventQueue": 200
+      }
+    },
+    {
+      "elapsedS": 220,
+      "heapMB": 13.2,
+      "domNodes": 1106,
+      "fps": 124.5,
+      "simTime": 80193,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": 5.684341886080802e-14,
+      "containers": {
+        "engineEvents": 400,
+        "engineHistory": 616,
+        "engineDays": 0,
+        "uiEvents": 400,
+        "perfSamples": 10,
+        "eventQueue": 200
+      }
+    },
+    {
+      "elapsedS": 240,
+      "heapMB": 13.22,
+      "domNodes": 1108,
+      "fps": 124,
+      "simTime": 83479,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": 0,
+      "containers": {
+        "engineEvents": 400,
+        "engineHistory": 671,
+        "engineDays": 0,
+        "uiEvents": 400,
+        "perfSamples": 10,
+        "eventQueue": 200
+      }
+    },
+    {
+      "elapsedS": 260,
+      "heapMB": 13.09,
+      "domNodes": 1109,
+      "fps": 123.6,
+      "simTime": 86772,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": 2.842170943040401e-14,
+      "containers": {
+        "engineEvents": 400,
+        "engineHistory": 726,
+        "engineDays": 1,
+        "uiEvents": 400,
+        "perfSamples": 10,
+        "eventQueue": 200
+      }
+    },
+    {
+      "elapsedS": 280,
+      "heapMB": 13.14,
+      "domNodes": 1107,
+      "fps": 127.1,
+      "simTime": 90027,
+      "tourOn": false,
+      "chap": "01 / 06",
+      "residualMW": 0,
+      "containers": {
+        "engineEvents": 400,
+        "engineHistory": 780,
+        "engineDays": 1,
+        "uiEvents": 400,
+        "perfSamples": 10,
+        "eventQueue": 200
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "页面完成启动",
+      "ok": true,
+      "state": "pass",
+      "info": ""
+    },
+    {
+      "name": "画质档已设为目标值",
+      "ok": true,
+      "state": "pass",
+      "info": "当前 standard"
+    },
+    {
+      "name": "导览全程保持运行（仅自动章节结束时被打点）",
+      "ok": false,
+      "state": "untested",
+      "info": "对照模式未发起导览 —— 不适用"
+    },
+    {
+      "name": "导览章节确实在推进（观察到多个不同章节号）",
+      "ok": false,
+      "state": "untested",
+      "info": "对照模式未发起导览 —— 不适用"
+    },
+    {
+      "name": "界面控制在 10 分钟内始终有响应",
+      "ok": true,
+      "state": "pass",
+      "info": "5 轮操作，失败 0 轮"
+    },
+    {
+      "name": "堆内存无失控增长（剔除启动期；阈值 <8 MB 且 <25%）",
+      "ok": true,
+      "state": "pass",
+      "info": "基线(t≥90s) 13.0MB → 末3次均值 13.2MB（+0.16MB，+1.2%）；斜率约 0.05 MB/分钟。含启动期口径：11.9MB → 13.2MB（+1.28MB），采样 15 个"
+    },
+    {
+      "name": "内部容器规模有界（不无界累积）",
+      "ok": true,
+      "state": "pass",
+      "info": "engineEvents 峰值 400/400，engineHistory 峰值 780/1440，uiEvents 峰值 400/400，perfSamples 峰值 10/30；逐日账本 1 条 = 仿真第 2 天（按设计不封顶）"
+    },
+    {
+      "name": "帧率无明显退化",
+      "ok": true,
+      "state": "pass",
+      "info": "前段均值 119.2 fps → 后段均值 123.7 fps（降幅 -3.8%），n=14"
+    },
+    {
+      "name": "DOM 节点数不膨胀（面板反复开合不泄漏节点）",
+      "ok": true,
+      "state": "pass",
+      "info": "基线(t=100s) 1107 → 末次 1107（+0）"
+    },
+    {
+      "name": "长时间运行无未捕获异常（导览阶段）",
+      "ok": true,
+      "state": "pass",
+      "info": "0 条"
+    },
+    {
+      "name": "长时间运行无 console.error",
+      "ok": true,
+      "state": "pass",
+      "info": "0 条"
+    },
+    {
+      "name": "上下文丢失后：常驻提示出现",
+      "ok": true,
+      "state": "pass",
+      "info": "#ctxWarn display=block"
+    },
+    {
+      "name": "上下文丢失后：物理暂停（画面定格）",
+      "ok": true,
+      "state": "pass",
+      "info": "contextLost=true，running=false"
+    },
+    {
+      "name": "上下文恢复后：提示撤掉、渲染继续（浏览器真实恢复路径）",
+      "ok": false,
+      "state": "untested",
+      "info": "等待 5000 ms 未收到 webglcontextrestored —— headless 下未触发，按**未测**计，不计通过"
+    },
+    {
+      "name": "上下文丢失/恢复期间无未捕获异常",
+      "ok": true,
+      "state": "pass",
+      "info": "0 条"
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "pass": 12,
+  "fail": 0,
+  "untested": 3,
+  "total": 15,
+  "stderrTail": "google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\r\n[30244:19216:0928/115117.876:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\r\n[30244:19216:0928/115311.396:ERROR:google_apis\\gcm\\engine\\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT\r\n"
+}

@@ -1,0 +1,990 @@
+{
+  "project": "多园区共享综合能源系统",
+  "campus": [
+    {
+      "id": "overview",
+      "group": "overview",
+      "title": "多园区共享综合能源系统",
+      "text": "这里是多园区共享综合能源系统，连接数据中心、化工与电冶金、智能制造及小型模块化反应堆研究园区。我们将沿发电、输配电和用能链路参观，查看设备结构、能源信息流与情境调度。先从风力与光伏发电，认识电源侧。",
+      "segments": [
+        {
+          "id": "intro-system",
+          "text": "这里是多园区共享综合能源系统，连接数据中心、化工与电冶金、智能制造及小型模块化反应堆研究园区。",
+          "duration": 10,
+          "shot": "home",
+          "move": 0,
+          "kind": "narration"
+        },
+        {
+          "id": "intro-explore",
+          "text": "我们将沿发电、输配电和用能链路参观，查看设备结构、能源信息流与情境调度。",
+          "duration": 10,
+          "shot": "home",
+          "move": 0,
+          "kind": "narration"
+        },
+        {
+          "id": "intro-next",
+          "text": "先从风力与光伏发电，认识电源侧。",
+          "duration": 4,
+          "shot": "home",
+          "move": 0,
+          "kind": "transition"
+        }
+      ]
+    },
+    {
+      "id": "windProduct",
+      "group": "generation",
+      "title": "风力发电与光伏电源",
+      "text": "风机将风能转化为电能，机舱升压装备连接发电与集电系统。这里的关键装备是西比里陶瓷基耐电晕干式变压器（铝绕组）。新型陶瓷膜包复合绝缘材料，面向宽频电应力与电晕侵蚀工况设计。提升绝缘耐受能力与长期运行稳定性，降低维护需求。光伏组件将太阳能转换为直流电，经配套汇集与变换设备接入区域供电系统。光伏阵列、汇集设备与检修通道共同组成发电区，与风电协同供能。接下来，沿输电线路前往共享能源枢纽。",
+      "segments": [
+        {
+          "id": "wind-enter",
+          "text": "风机将风能转化为电能，机舱升压装备连接发电与集电系统。",
+          "duration": 8,
+          "shot": "windWide",
+          "move": 5,
+          "kind": "narration",
+          "focus": "wind"
+        },
+        {
+          "id": "wind-product-name",
+          "text": "这里的关键装备是西比里陶瓷基耐电晕干式变压器（铝绕组）。",
+          "duration": 6,
+          "shot": "windClose",
+          "move": 5,
+          "kind": "equipment",
+          "equipment": "windTransformer"
+        },
+        {
+          "id": "wind-product-material",
+          "text": "新型陶瓷膜包复合绝缘材料，面向宽频电应力与电晕侵蚀工况设计。",
+          "duration": 9,
+          "shot": "windClose",
+          "move": 0,
+          "kind": "equipment",
+          "equipment": "windTransformer"
+        },
+        {
+          "id": "wind-product-function",
+          "text": "提升绝缘耐受能力与长期运行稳定性，降低维护需求。",
+          "duration": 6,
+          "shot": "windWide",
+          "move": 6,
+          "kind": "equipment",
+          "equipment": "windTransformer"
+        },
+        {
+          "id": "solar-enter",
+          "text": "光伏组件将太阳能转换为直流电，经配套汇集与变换设备接入区域供电系统。",
+          "duration": 9,
+          "shot": "solar",
+          "move": 7,
+          "kind": "narration",
+          "focus": "solar"
+        },
+        {
+          "id": "solar-connect",
+          "text": "光伏阵列、汇集设备与检修通道共同组成发电区，与风电协同供能。",
+          "duration": 7,
+          "shot": "solar",
+          "move": 0,
+          "kind": "narration"
+        },
+        {
+          "id": "generation-next",
+          "text": "接下来，沿输电线路前往共享能源枢纽。",
+          "duration": 5,
+          "shot": "solar",
+          "move": 0,
+          "kind": "transition"
+        }
+      ]
+    },
+    {
+      "id": "energy",
+      "group": "power",
+      "title": "架空线路与共享能源枢纽",
+      "text": "架空线路连接电源与能源枢纽，再将电力送往各园区的独立支路。西比里架空线可减少电晕放电损耗，抵御紫外线与风沙侵蚀，并具备抗覆冰特点，适应沙戈荒环境。共享能源枢纽汇集电源，完成升压配电与分区供能，计量纳入系统总账。储能通过充放电参与供需平衡，支撑不同园区之间的能源协调。电力抵达园区后，下面进入数据中心，观察终端供电。",
+      "segments": [
+        {
+          "id": "line-transfer",
+          "text": "架空线路连接电源与能源枢纽，再将电力送往各园区的独立支路。",
+          "duration": 7,
+          "shot": "line",
+          "move": 7,
+          "kind": "equipment",
+          "equipment": "overhead",
+          "focus": "line"
+        },
+        {
+          "id": "line-weather",
+          "text": "西比里架空线可减少电晕放电损耗，抵御紫外线与风沙侵蚀，并具备抗覆冰特点，适应沙戈荒环境。",
+          "duration": 11,
+          "shot": "line",
+          "move": 0,
+          "kind": "equipment",
+          "equipment": "overhead",
+          "focus": "line"
+        },
+        {
+          "id": "hub-supply",
+          "text": "共享能源枢纽汇集电源，完成升压配电与分区供能，计量纳入系统总账。",
+          "duration": 9,
+          "shot": "hub",
+          "move": 9,
+          "kind": "narration"
+        },
+        {
+          "id": "storage-balance",
+          "text": "储能通过充放电参与供需平衡，支撑不同园区之间的能源协调。",
+          "duration": 8,
+          "shot": "storage",
+          "move": 5,
+          "kind": "narration"
+        },
+        {
+          "id": "energy-next",
+          "text": "电力抵达园区后，下面进入数据中心，观察终端供电。",
+          "duration": 6,
+          "shot": "storage",
+          "move": 0,
+          "kind": "transition"
+        }
+      ]
+    },
+    {
+      "id": "compute",
+      "group": "compute",
+      "title": "数据中心与高效直流供电",
+      "text": "数据楼由集中冷站、后备电源与网络运维设施共同支撑，并预留后续机房扩展空间。西比里新一代高效直流供电方案优化供电链路、减少重复转换，提升端到端供电效率。高效供电与制冷支撑高密度算力。系统按模型估算推理产出，并以计量框架核对服务用量和交付。现在进入数据楼，沿供电链路探索直流配电、机柜与冷却设施。高效直流供电也服务工业生产。下一站，电解锌与氢氨园区。",
+      "segments": [
+        {
+          "id": "dc-campus",
+          "text": "数据楼由集中冷站、后备电源与网络运维设施共同支撑，并预留后续机房扩展空间。",
+          "duration": 10,
+          "shot": "dcCampus",
+          "move": 9,
+          "kind": "narration"
+        },
+        {
+          "id": "dc-scheme",
+          "text": "西比里新一代高效直流供电方案优化供电链路、减少重复转换，提升端到端供电效率。",
+          "duration": 10,
+          "shot": "dcPower",
+          "move": 6,
+          "kind": "equipment",
+          "equipment": "dcCompute",
+          "focus": "dc"
+        },
+        {
+          "id": "dc-density",
+          "text": "高效供电与制冷支撑高密度算力。系统按模型估算推理产出，并以计量框架核对服务用量和交付。",
+          "duration": 9,
+          "shot": "dcPower",
+          "move": 0,
+          "kind": "equipment",
+          "equipment": "dcCompute",
+          "focus": "dc"
+        },
+        {
+          "id": "dc-enter",
+          "text": "现在进入数据楼，沿供电链路探索直流配电、机柜与冷却设施。",
+          "duration": 7,
+          "shot": "dcEntry",
+          "move": 7,
+          "kind": "narration"
+        },
+        {
+          "id": "dc-next",
+          "text": "高效直流供电也服务工业生产。下一站，电解锌与氢氨园区。",
+          "duration": 7,
+          "shot": "dcEntry",
+          "move": 0,
+          "kind": "transition"
+        }
+      ]
+    },
+    {
+      "id": "chemical",
+      "group": "hydrogen",
+      "title": "化工与电冶金生产",
+      "text": "化工与电冶金园区独立布局，包含电解锌、制氢与合成氨，配套物流、公用工程与储运。电解锌持续使用大功率直流电，高效供电是生产节能的重要环节。西比里直流方案通过高效整流、优化大电流连接与精细输出控制，降低供电损耗，目标是降低吨锌电耗。制氢、储氢与合成氨分区衔接，配套气体处理、换热及产品储运，形成完整工艺流程。在化工环境中，西比里架空线的抗腐蚀能力为线路长期稳定运行提供支持。接下来，看看独立电源研究场景。",
+      "segments": [
+        {
+          "id": "chemical-layout",
+          "text": "化工与电冶金园区独立布局，包含电解锌、制氢与合成氨，配套物流、公用工程与储运。",
+          "duration": 10,
+          "shot": "chemical",
+          "move": 10,
+          "kind": "narration"
+        },
+        {
+          "id": "zinc-supply",
+          "text": "电解锌持续使用大功率直流电，高效供电是生产节能的重要环节。",
+          "duration": 7,
+          "shot": "zinc",
+          "move": 6,
+          "kind": "equipment",
+          "equipment": "dcZinc",
+          "focus": "zinc"
+        },
+        {
+          "id": "zinc-efficiency",
+          "text": "西比里直流方案通过高效整流、优化大电流连接与精细输出控制，降低供电损耗，目标是降低吨锌电耗。",
+          "duration": 11,
+          "shot": "zinc",
+          "move": 0,
+          "kind": "equipment",
+          "equipment": "dcZinc",
+          "focus": "zinc"
+        },
+        {
+          "id": "hydrogen-process",
+          "text": "制氢、储氢与合成氨分区衔接，配套气体处理、换热及产品储运，形成完整工艺流程。",
+          "duration": 9,
+          "shot": "hydrogen",
+          "move": 6,
+          "kind": "narration"
+        },
+        {
+          "id": "chemical-corrosion",
+          "text": "在化工环境中，西比里架空线的抗腐蚀能力为线路长期稳定运行提供支持。",
+          "duration": 8,
+          "shot": "chemicalLine",
+          "move": 7,
+          "kind": "equipment",
+          "equipment": "corrosion",
+          "focus": "chemical"
+        },
+        {
+          "id": "chemical-next",
+          "text": "接下来，看看独立电源研究场景。",
+          "duration": 5,
+          "shot": "chemicalLine",
+          "move": 0,
+          "kind": "transition"
+        }
+      ]
+    },
+    {
+      "id": "nuclear",
+      "group": "nuclear",
+      "title": "小型模块化反应堆研究园区",
+      "text": "小型模块化反应堆简称 SMR。研究园区独立布局，研究不同电源结构下的区域供能。该电源默认关闭，仅在研究情境中启用，实际出力以运行状态为准。用能侧也能灵活调整。下一站，铝基新型导线智能工厂。",
+      "segments": [
+        {
+          "id": "smr-research",
+          "text": "小型模块化反应堆简称 SMR。研究园区独立布局，研究不同电源结构下的区域供能。",
+          "duration": 10,
+          "shot": "nuclear",
+          "move": 10,
+          "kind": "narration"
+        },
+        {
+          "id": "smr-state",
+          "text": "该电源默认关闭，仅在研究情境中启用，实际出力以运行状态为准。",
+          "duration": 8,
+          "shot": "nuclear",
+          "move": 0,
+          "kind": "narration"
+        },
+        {
+          "id": "smr-next",
+          "text": "用能侧也能灵活调整。下一站，铝基新型导线智能工厂。",
+          "duration": 6,
+          "shot": "nuclear",
+          "move": 0,
+          "kind": "transition"
+        }
+      ]
+    },
+    {
+      "id": "factory",
+      "group": "loads",
+      "title": "西比里铝基新型导线智能工厂与新能源超充",
+      "text": "西比里铝基新型导线智能工厂设二十条半尺寸产线，按两列十排布局，两侧物流通道贯通。铝线放出后，水平通过含电解液的陶瓷化处理槽与清洗段，再卷绕收线；废液分类收集处理。管廊连接工厂与液体处理配套，循环液旁滤回槽，废液分类收集；同步控制张力、过程监测与产品追溯贯穿生产。超充站通过高效直流供电，协同光伏、固定储能与充电需求，优化转换与功率分配。固定储能经双向变流设备与电网交换电能，缓冲集中充电的功率需求。满足本地负荷与储能备用约束后，富余电能可按调度要求回馈电网；车辆在此作为充电负荷。这些电源、设施与用能需求，共同构成多园区协同系统。",
+      "segments": [
+        {
+          "id": "factory-demand",
+          "text": "西比里铝基新型导线智能工厂设二十条半尺寸产线，按两列十排布局，两侧物流通道贯通。",
+          "duration": 10,
+          "shot": "factory",
+          "move": 10,
+          "kind": "narration",
+          "factoryRoof": "open"
+        },
+        {
+          "id": "factory-process",
+          "text": "铝线放出后，水平通过含电解液的陶瓷化处理槽与清洗段，再卷绕收线；废液分类收集处理。",
+          "duration": 12,
+          "shot": "factoryClose",
+          "move": 7,
+          "kind": "narration",
+          "factoryRoof": "open"
+        },
+        {
+          "id": "factory-monitor",
+          "text": "管廊连接工厂与液体处理配套，循环液旁滤回槽，废液分类收集；同步控制张力、过程监测与产品追溯贯穿生产。",
+          "duration": 10,
+          "shot": "factoryLink",
+          "move": 5,
+          "kind": "narration",
+          "factoryRoof": "open",
+          "factoryMode": "waste"
+        },
+        {
+          "id": "charge-dc",
+          "text": "超充站通过高效直流供电，协同光伏、固定储能与充电需求，优化转换与功率分配。",
+          "duration": 9,
+          "shot": "charge",
+          "move": 9,
+          "kind": "equipment",
+          "equipment": "dcCharge",
+          "focus": "charge",
+          "mode": "charging"
+        },
+        {
+          "id": "charge-buffer",
+          "text": "固定储能经双向变流设备与电网交换电能，缓冲集中充电的功率需求。",
+          "duration": 8,
+          "shot": "charge",
+          "move": 0,
+          "kind": "equipment",
+          "equipment": "dcCharge",
+          "focus": "charge",
+          "mode": "buffer"
+        },
+        {
+          "id": "charge-return",
+          "text": "满足本地负荷与储能备用约束后，富余电能可按调度要求回馈电网；车辆在此作为充电负荷。",
+          "duration": 12,
+          "shot": "charge",
+          "move": 0,
+          "kind": "equipment",
+          "equipment": "dcCharge",
+          "focus": "charge",
+          "mode": "return"
+        },
+        {
+          "id": "factory-next",
+          "text": "这些电源、设施与用能需求，共同构成多园区协同系统。",
+          "duration": 6,
+          "shot": "charge",
+          "move": 0,
+          "kind": "transition"
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "group": "overview",
+      "title": "多园区协同回顾",
+      "text": "回到全景，从风机干式变压器、架空线路，到服务算力、充电与工业生产的高效直流供电。西比里关键产品与能源共享、智能调度方案，共同构成应用体系。接下来可在云参观看协同情境，或了解 SST 能源路由方案。",
+      "segments": [
+        {
+          "id": "review-overall",
+          "text": "回到全景，从风机干式变压器、架空线路，到服务算力、充电与工业生产的高效直流供电。",
+          "duration": 12,
+          "shot": "home",
+          "move": 12,
+          "kind": "narration"
+        },
+        {
+          "id": "review-equipment",
+          "text": "西比里关键产品与能源共享、智能调度方案，共同构成应用体系。",
+          "duration": 7,
+          "shot": "home",
+          "move": 0,
+          "kind": "narration"
+        },
+        {
+          "id": "review-next",
+          "text": "接下来可在云参观看协同情境，或了解 SST 能源路由方案。",
+          "duration": 7,
+          "shot": "home",
+          "move": 0,
+          "kind": "transition"
+        }
+      ]
+    }
+  ],
+  "building": [
+    {
+      "title": "建筑整体 · Campus overview",
+      "id": "building-01",
+      "start": 0,
+      "end": 1,
+      "text": "从建筑整体进入楼层，认识机房与供电布局。",
+      "equipment": null
+    },
+    {
+      "title": "建筑总览 · 园区设施",
+      "id": "building-02",
+      "start": 1,
+      "end": 2,
+      "text": "从建筑整体进入楼层，认识机房与供电布局。",
+      "equipment": null
+    },
+    {
+      "title": "外墙透视 · Reveal",
+      "id": "building-03",
+      "start": 2,
+      "end": 4,
+      "text": "从建筑整体进入楼层，认识机房与供电布局。",
+      "equipment": null
+    },
+    {
+      "title": "楼层分离 · Exploded view",
+      "id": "building-04",
+      "start": 4,
+      "end": 8,
+      "text": "楼层展开后，观察各层功能与设备位置。",
+      "equipment": null
+    },
+    {
+      "title": "选中 AI 机房层",
+      "id": "building-05",
+      "start": 8,
+      "end": 13,
+      "text": "进入 AI 机房层，沿电力通道查看直流供电设施。",
+      "equipment": null
+    },
+    {
+      "title": "进入 AI 机房",
+      "id": "building-06",
+      "start": 13,
+      "end": 18,
+      "text": "机柜、通道与液冷配套共同组成代表机房。",
+      "equipment": null
+    },
+    {
+      "title": "机柜与封闭通道",
+      "id": "building-07",
+      "start": 18,
+      "end": 24,
+      "text": "机架连接电力、数据与制冷路径。下面沿供电链路查看设备。",
+      "equipment": null
+    },
+    {
+      "title": "外部电网 · 园区全景",
+      "id": "building-08",
+      "start": 24,
+      "end": 27,
+      "text": "外部电网经园区母线送电，为后续降压配电提供电源。",
+      "equipment": null
+    },
+    {
+      "title": "220 kV 园区母线",
+      "id": "building-09",
+      "start": 27,
+      "end": 30,
+      "text": "外部电网经园区母线送电，为后续降压配电提供电源。",
+      "equipment": null
+    },
+    {
+      "title": "220 kV → 主变压器 → 10.5 kV",
+      "id": "building-10",
+      "start": 30,
+      "end": 33,
+      "text": "主变降压至中压等级；燃机通过独立备用支路参与保供。",
+      "equipment": null
+    },
+    {
+      "title": "园区燃机备用接口 · 10.5 kV 备用支路",
+      "id": "building-11",
+      "start": 33,
+      "end": 36,
+      "text": "主变降压至中压等级；燃机通过独立备用支路参与保供。",
+      "equipment": null
+    },
+    {
+      "title": "10.5 kV 进线与中压开关柜",
+      "id": "building-12",
+      "start": 36,
+      "end": 39,
+      "text": "中压进线经开关柜接入变换设备。",
+      "equipment": null
+    },
+    {
+      "title": "HVDC · 降压隔离与整流",
+      "id": "building-13",
+      "start": 39,
+      "end": 46,
+      "text": "HVDC 联柜集成降压隔离与整流，为后端直流配电供电。",
+      "equipment": "dcCompute"
+    },
+    {
+      "title": "240 V DC 主母排",
+      "id": "building-14",
+      "start": 46,
+      "end": 50,
+      "text": "直流电经母排和列头柜分配至机架，输出保护与后备电源保持各自职责。",
+      "equipment": "dcCompute"
+    },
+    {
+      "title": "直流列头柜 · 配电上下文",
+      "id": "building-15",
+      "start": 50,
+      "end": 54,
+      "text": "直流电经母排和列头柜分配至机架，输出保护与后备电源保持各自职责。",
+      "equipment": "dcCompute"
+    },
+    {
+      "title": "PSU 供电 · 机柜整体",
+      "id": "building-16",
+      "start": 54,
+      "end": 55,
+      "text": "电力经服务器电源到达 CPU 与 GPU。随后展开机架与芯片结构，认识算力用电端。",
+      "equipment": "dcCompute"
+    },
+    {
+      "title": "CPU / GPU · 机柜整体",
+      "id": "building-17",
+      "start": 55,
+      "end": 56,
+      "text": "电力经服务器电源到达 CPU 与 GPU。随后展开机架与芯片结构，认识算力用电端。",
+      "equipment": "dcCompute"
+    },
+    {
+      "title": "CPU / GPU · 爆炸拆解",
+      "id": "building-18",
+      "start": 56,
+      "end": 62,
+      "text": "电力经服务器电源到达 CPU 与 GPU。随后展开机架与芯片结构，认识算力用电端。",
+      "equipment": "dcCompute"
+    },
+    {
+      "title": "集中冷源 → CDU → 液冷 / 空气侧末端",
+      "id": "building-19",
+      "start": 62,
+      "end": 66,
+      "text": "液冷循环带走热量，维持设备稳定运行。",
+      "equipment": null
+    },
+    {
+      "title": "返回机房",
+      "id": "building-20",
+      "start": 66,
+      "end": 70,
+      "text": "回到机房，供电与制冷共同支撑运行。",
+      "equipment": null
+    },
+    {
+      "title": "返回建筑楼层",
+      "id": "building-21",
+      "start": 70,
+      "end": 74,
+      "text": "收起楼层，恢复进入时的观察方位。",
+      "equipment": null
+    },
+    {
+      "title": "建筑合拢 · 完整闭环",
+      "id": "building-22",
+      "start": 74,
+      "end": 77,
+      "text": "建筑合拢，返回园区继续参观。",
+      "equipment": null
+    }
+  ],
+  "messages": {
+    "enterDc": "进入数据楼，沿供电与冷却链路继续参观。",
+    "returnDc": "回到数据中心园区，继续前往化工与电冶金园区。"
+  },
+  "version": "20.0.0",
+  "timing": {
+    "charactersPerSecond": 4.2,
+    "minimumCueSeconds": 3,
+    "estimated": true,
+    "buildingInsert": {
+      "chapter": "compute",
+      "afterSegment": "dc-enter",
+      "from": 0,
+      "to": 66
+    }
+  },
+  "products": {
+    "windTransformer": {
+      "title": "西比里陶瓷基耐电晕干式变压器（铝绕组）",
+      "text": "西比里陶瓷基耐电晕干式变压器（铝绕组）。新型陶瓷膜包复合绝缘材料，面向宽频电应力与电晕侵蚀工况设计，提升绝缘耐受能力与长期运行稳定性，降低维护需求。",
+      "label": "西比里 · 风电关键装备",
+      "traits": [
+        "陶瓷基耐电晕",
+        "铝绕组",
+        "长期运行稳定性"
+      ],
+      "source": "用户提供的产品功能说明",
+      "hint": "关键装备：西比里陶瓷基耐电晕干式变压器（铝绕组）"
+    },
+    "overhead": {
+      "title": "西比里架空线",
+      "label": "西比里 · 输配电关键装备",
+      "traits": [
+        "减少电晕放电损耗",
+        "抗紫外线与风沙",
+        "抗覆冰"
+      ],
+      "source": "用户提供的产品功能说明",
+      "hint": "关键装备：西比里架空线 · 沙戈荒环境应用"
+    },
+    "corrosion": {
+      "title": "西比里架空线 · 化工环境应用",
+      "label": "西比里 · 复杂环境适应",
+      "traits": [
+        "耐腐蚀",
+        "支撑长期稳定运行"
+      ],
+      "source": "用户提供的产品功能说明",
+      "hint": "关键装备：西比里架空线 · 化工环境应用"
+    },
+    "dcCompute": {
+      "title": "新一代高效直流供电方案",
+      "label": "西比里 · 算力供电关键方案",
+      "traits": [
+        "优化供电链路",
+        "提升端到端供电效率",
+        "支撑高密度算力"
+      ],
+      "diagram": [
+        "电气入口",
+        "高效转换",
+        "直流配电",
+        "IT负载"
+      ],
+      "source": "方案功能说明；具体性能待配置",
+      "hint": "关键方案：西比里高效直流供电"
+    },
+    "dcZinc": {
+      "title": "电解锌高效直流供电方案",
+      "label": "西比里 · 工业直流用能",
+      "traits": [
+        "高效整流",
+        "减少连接损耗",
+        "精细输出控制"
+      ],
+      "diagram": [
+        "区域配电",
+        "高效整流",
+        "短距母排",
+        "电解槽"
+      ],
+      "source": "方案目标；吨锌电耗降幅待实测",
+      "hint": "关键方案：西比里工业直流供电"
+    },
+    "dcCharge": {
+      "title": "新能源超充 · 直流供电与双向调控",
+      "label": "西比里 · 光储充协同",
+      "traits": [
+        "功率分配",
+        "固定储能缓冲",
+        "储能与电网双向调节"
+      ],
+      "source": "固定储能经双向变流设备与电网交换电能；回馈受本地负荷、备用约束与调度要求限制；车辆作为充电负荷。",
+      "hint": "双向调节：固定储能 ↔ 电网"
+    }
+  },
+  "shots": {
+    "solar": {
+      "pos": [
+        -20,
+        125,
+        235
+      ],
+      "tgt": [
+        -130,
+        1,
+        112
+      ]
+    },
+    "line": {
+      "pos": [
+        104,
+        32,
+        7
+      ],
+      "tgt": [
+        67,
+        9,
+        -35
+      ]
+    },
+    "hub": {
+      "pos": [
+        78,
+        65,
+        92
+      ],
+      "tgt": [
+        36,
+        4,
+        -7
+      ]
+    },
+    "storage": {
+      "pos": [
+        77,
+        43,
+        97
+      ],
+      "tgt": [
+        35.5,
+        2.5,
+        39
+      ]
+    },
+    "dcCampus": {
+      "pos": [
+        236,
+        95,
+        174
+      ],
+      "tgt": [
+        145,
+        6,
+        48
+      ]
+    },
+    "dcPower": {
+      "pos": [
+        194,
+        53,
+        64
+      ],
+      "tgt": [
+        134,
+        7,
+        -10
+      ]
+    },
+    "dcEntry": {
+      "pos": [
+        188,
+        45,
+        54
+      ],
+      "tgt": [
+        134,
+        7,
+        -10
+      ]
+    },
+    "chemical": {
+      "pos": [
+        325,
+        128,
+        -65
+      ],
+      "tgt": [
+        200,
+        5,
+        -200
+      ]
+    },
+    "zinc": {
+      "pos": [
+        115,
+        36,
+        -185
+      ],
+      "tgt": [
+        131,
+        3,
+        -225
+      ]
+    },
+    "hydrogen": {
+      "pos": [
+        262,
+        59,
+        -105
+      ],
+      "tgt": [
+        216,
+        4,
+        -173
+      ]
+    },
+    "chemicalLine": {
+      "pos": [
+        260,
+        95,
+        -80
+      ],
+      "tgt": [
+        198,
+        5,
+        -200
+      ]
+    },
+    "nuclear": {
+      "pos": [
+        390,
+        112,
+        -205
+      ],
+      "tgt": [
+        280,
+        7,
+        -355
+      ]
+    },
+    "factory": {
+      "pos": [
+        365,
+        120,
+        200
+      ],
+      "tgt": [
+        280,
+        3,
+        18
+      ]
+    },
+    "charge": {
+      "pos": [
+        97,
+        9,
+        137
+      ],
+      "tgt": [
+        64,
+        1.5,
+        98
+      ]
+    },
+    "regional": {
+      "pos": [
+        470,
+        385,
+        560
+      ],
+      "tgt": [
+        60,
+        1,
+        -90
+      ]
+    },
+    "factoryClose": {
+      "pos": [
+        310,
+        19,
+        40
+      ],
+      "tgt": [
+        291,
+        1.6,
+        24.45
+      ]
+    },
+    "factoryLink": {
+      "pos": [
+        309,
+        100,
+        67
+      ],
+      "tgt": [
+        244,
+        3,
+        -23
+      ]
+    }
+  },
+  "notes": [
+    "所有字幕与时间点为配音制作估算，可在本文件中校准。",
+    "产品特性来自用户提供资料；节能率、吨锌电耗及算力密度提升未设实测数值。",
+    "超充双向调节指固定储能与电网之间的能量交换，车辆作为充电负荷；沿用既有储能容量和能源账本，不虚构回馈电量。"
+  ],
+  "buildingCaptions": [
+    {
+      "id": "building-caption-01",
+      "start": 0,
+      "end": 4,
+      "text": "从建筑整体进入楼层，认识机房与供电布局。"
+    },
+    {
+      "id": "building-caption-02",
+      "start": 4,
+      "end": 8,
+      "text": "楼层展开后，观察各层功能与设备位置。"
+    },
+    {
+      "id": "building-caption-03",
+      "start": 8,
+      "end": 13,
+      "text": "进入 AI 机房层，沿电力通道查看直流供电设施。"
+    },
+    {
+      "id": "building-caption-04",
+      "start": 13,
+      "end": 18,
+      "text": "机柜、通道与液冷配套共同组成代表机房。"
+    },
+    {
+      "id": "building-caption-05",
+      "start": 18,
+      "end": 24,
+      "text": "机架连接电力、数据与制冷路径。下面沿供电链路查看设备。"
+    },
+    {
+      "id": "building-caption-06",
+      "start": 24,
+      "end": 30,
+      "text": "外部电网经园区母线送电，为后续降压配电提供电源。"
+    },
+    {
+      "id": "building-caption-07",
+      "start": 30,
+      "end": 36,
+      "text": "主变降压至中压等级；燃机通过独立备用支路参与保供。"
+    },
+    {
+      "id": "building-caption-08",
+      "start": 36,
+      "end": 39,
+      "text": "中压进线经开关柜接入变换设备。"
+    },
+    {
+      "id": "building-caption-09",
+      "start": 39,
+      "end": 46,
+      "text": "HVDC 联柜集成降压隔离与整流，为后端直流配电供电。"
+    },
+    {
+      "id": "building-caption-10",
+      "start": 46,
+      "end": 54,
+      "text": "直流电经母排和列头柜分配至机架，输出保护与后备电源保持各自职责。"
+    },
+    {
+      "id": "building-caption-11",
+      "start": 54,
+      "end": 62,
+      "text": "电力经服务器电源到达 CPU 与 GPU。随后展开机架与芯片结构，认识算力用电端。"
+    },
+    {
+      "id": "building-caption-12",
+      "start": 62,
+      "end": 66,
+      "text": "液冷循环带走热量，维持设备稳定运行。"
+    },
+    {
+      "id": "building-caption-13",
+      "start": 66,
+      "end": 70,
+      "text": "回到机房，供电与制冷共同支撑运行。"
+    },
+    {
+      "id": "building-caption-14",
+      "start": 70,
+      "end": 74,
+      "text": "收起楼层，恢复进入时的观察方位。"
+    },
+    {
+      "id": "building-caption-15",
+      "start": 74,
+      "end": 77,
+      "text": "建筑合拢，返回园区继续参观。"
+    }
+  ]
+}

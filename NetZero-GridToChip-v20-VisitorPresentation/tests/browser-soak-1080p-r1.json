@@ -1,0 +1,1135 @@
+{
+  "t0": 1789635146883,
+  "checks": [
+    {
+      "name": "模型版本已声明",
+      "ok": true,
+      "info": "1.0.0"
+    },
+    {
+      "name": "标签节点数 = 场景标签数",
+      "ok": true,
+      "info": "30 vs 30"
+    },
+    {
+      "name": "设备拾取点已注册",
+      "ok": true,
+      "info": "30"
+    },
+    {
+      "name": "边线条数（含追加的数据流）≥ 25",
+      "ok": true,
+      "info": "25"
+    },
+    {
+      "name": "物理已开始推进",
+      "ok": true,
+      "info": "88 步"
+    },
+    {
+      "name": "政策状态为待核算",
+      "ok": true,
+      "info": "pending"
+    },
+    {
+      "name": "器件参数页已填充",
+      "ok": true,
+      "info": "7 个地区"
+    },
+    {
+      "name": "暂停按钮切换运行态",
+      "ok": true,
+      "info": "true→false"
+    },
+    {
+      "name": "再次点击恢复运行",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "倍速切换到 60×",
+      "ok": true,
+      "info": "60"
+    },
+    {
+      "name": "倍速切换到 1200×",
+      "ok": true,
+      "info": "1200"
+    },
+    {
+      "name": "倍速切换到 3600×",
+      "ok": true,
+      "info": "3600"
+    },
+    {
+      "name": "倍速切换到 240×",
+      "ok": true,
+      "info": "240"
+    },
+    {
+      "name": "自动环绕可开可关",
+      "ok": true,
+      "info": "true→false"
+    },
+    {
+      "name": "抽屉可打开",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "抽屉页签 params",
+      "ok": true,
+      "info": "params"
+    },
+    {
+      "name": "抽屉页签 devices",
+      "ok": true,
+      "info": "devices"
+    },
+    {
+      "name": "抽屉页签 ledger",
+      "ok": true,
+      "info": "ledger"
+    },
+    {
+      "name": "抽屉页签 events",
+      "ok": true,
+      "info": "events"
+    },
+    {
+      "name": "抽屉页签 policy",
+      "ok": true,
+      "info": "policy"
+    },
+    {
+      "name": "账本页无 NaN/undefined",
+      "ok": true,
+      "info": "10068 字符"
+    },
+    {
+      "name": "账本页含守恒残差行",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "事件页有记录",
+      "ok": true,
+      "info": "120 条"
+    },
+    {
+      "name": "边界页显式声明待核算",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "边界页列出 11 条已知边界",
+      "ok": true,
+      "info": "11"
+    },
+    {
+      "name": "来源清单含官方 URL",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "趋势面板可打开",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "趋势面板可关闭",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "减少动态模式生效",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "减少动态可恢复",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "运行模式 class 生效",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "演示模式 class 生效",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "开关 swSvg 可切换",
+      "ok": true,
+      "info": "true→false"
+    },
+    {
+      "name": "开关 swApf 可切换",
+      "ok": true,
+      "info": "true→false"
+    },
+    {
+      "name": "开关 swGenset 可切换",
+      "ok": true,
+      "info": "false→true"
+    },
+    {
+      "name": "开关 swFc 可切换",
+      "ok": true,
+      "info": "false→true"
+    },
+    {
+      "name": "展示光照 blue-hour 可渲染",
+      "ok": true,
+      "info": "blue-hour"
+    },
+    {
+      "name": "展示光照 day-lab 可渲染",
+      "ok": true,
+      "info": "day-lab"
+    },
+    {
+      "name": "展示光照 night 可渲染",
+      "ok": true,
+      "info": "night"
+    },
+    {
+      "name": "展示光照 follow 可渲染",
+      "ok": true,
+      "info": "follow"
+    },
+    {
+      "name": "画质档 compat 可渲染",
+      "ok": true,
+      "info": "compat"
+    },
+    {
+      "name": "compat 档不启用泛光",
+      "ok": true,
+      "info": "false"
+    },
+    {
+      "name": "画质档 high 可渲染",
+      "ok": true,
+      "info": "high"
+    },
+    {
+      "name": "精致档泛光与硬件能力一致",
+      "ok": true,
+      "info": "float=true enabled=true"
+    },
+    {
+      "name": "画质档 standard 可渲染",
+      "ok": true,
+      "info": "standard"
+    },
+    {
+      "name": "standard 档不启用泛光",
+      "ok": true,
+      "info": "false"
+    },
+    {
+      "name": "地区 xinjiang 可切换",
+      "ok": true,
+      "info": "xinjiang"
+    },
+    {
+      "name": "地区 neimenggu 可切换",
+      "ok": true,
+      "info": "neimenggu"
+    },
+    {
+      "name": "地区 gansu 可切换",
+      "ok": true,
+      "info": "gansu"
+    },
+    {
+      "name": "地区 qinghai 可切换",
+      "ok": true,
+      "info": "qinghai"
+    },
+    {
+      "name": "地区 jiangsu 可切换",
+      "ok": true,
+      "info": "jiangsu"
+    },
+    {
+      "name": "地区 sichuan 可切换",
+      "ok": true,
+      "info": "sichuan"
+    },
+    {
+      "name": "地区 guangdong 可切换",
+      "ok": true,
+      "info": "guangdong"
+    },
+    {
+      "name": "手动锁定风速生效",
+      "ok": true,
+      "info": "12"
+    },
+    {
+      "name": "IT 负载可调",
+      "ok": true,
+      "info": "300"
+    },
+    {
+      "name": "储能指令 charge",
+      "ok": true,
+      "info": "charge"
+    },
+    {
+      "name": "储能指令 discharge",
+      "ok": true,
+      "info": "discharge"
+    },
+    {
+      "name": "储能指令 auto",
+      "ok": true,
+      "info": "auto"
+    },
+    {
+      "name": "固定正午模式可切换",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "SMR 档位 2",
+      "ok": true,
+      "info": "2"
+    },
+    {
+      "name": "SMR 档位 1",
+      "ok": true,
+      "info": "1"
+    },
+    {
+      "name": "SMR 档位 0",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "设备树条目数 ≥ 25",
+      "ok": true,
+      "info": "28"
+    },
+    {
+      "name": "每个设备都能打开信息卡",
+      "ok": true,
+      "info": "28/28"
+    },
+    {
+      "name": "信息卡都有标题",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "信息卡不含未替换的占位符",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "信息卡可关闭",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "画布点选不抛错",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "快捷键 T 可发起导览",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "Escape 可退出导览",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "导览条出现",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "导览第 1 章可跳转",
+      "ok": true,
+      "info": "01 / 06"
+    },
+    {
+      "name": "导览第 2 章可跳转",
+      "ok": true,
+      "info": "02 / 06"
+    },
+    {
+      "name": "导览第 3 章可跳转",
+      "ok": true,
+      "info": "03 / 06"
+    },
+    {
+      "name": "导览第 4 章可跳转",
+      "ok": true,
+      "info": "04 / 06"
+    },
+    {
+      "name": "导览第 5 章可跳转",
+      "ok": true,
+      "info": "05 / 06"
+    },
+    {
+      "name": "导览第 6 章可跳转",
+      "ok": true,
+      "info": "06 / 06"
+    },
+    {
+      "name": "导览可暂停/继续",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "导览可退出",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "导览进度条归零",
+      "ok": true,
+      "info": "0%"
+    },
+    {
+      "name": "退出导览后相机受控",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「风光储产业园（默认）」24h 无 NaN",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「风光储产业园（默认）」母线残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「风光储产业园（默认）」氢质量残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「风光储产业园（默认）」求解收敛",
+      "ok": true,
+      "info": "迭代 2 轮"
+    },
+    {
+      "name": "情景「风光储产业园（默认）」库存不越界",
+      "ok": true,
+      "info": "SOC 10%, 氢 57.4 kg"
+    },
+    {
+      "name": "情景「风光储产业园（默认）」可再生占比在 0..1",
+      "ok": true,
+      "info": "0.8874"
+    },
+    {
+      "name": "情景「风光储产业园（默认）」24h 电量账本闭合（残差 < 0.01 MWh）",
+      "ok": true,
+      "info": "0.000000 MWh"
+    },
+    {
+      "name": "情景「风光储产业园（默认）」端用电来源成分与用电量一致（<0.01 MWh）",
+      "ok": true,
+      "info": "7389.72 vs 7389.72"
+    },
+    {
+      "name": "情景「风光储产业园（默认）」氢质量账本闭合（初 + 产 − 氨用 − 池用 = 末）",
+      "ok": true,
+      "info": "初 400 + 产 18728.2 − 氨用 19070.8 − 池用 0 = 末 57.4（余差 0 kg）"
+    },
+    {
+      "name": "情景「风光富余」24h 无 NaN",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「风光富余」母线残差在机器精度内",
+      "ok": true,
+      "info": "-1.1368683772161603e-13"
+    },
+    {
+      "name": "情景「风光富余」氢质量残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「风光富余」求解收敛",
+      "ok": true,
+      "info": "迭代 1 轮"
+    },
+    {
+      "name": "情景「风光富余」库存不越界",
+      "ok": true,
+      "info": "SOC 95%, 氢 10000 kg"
+    },
+    {
+      "name": "情景「风光富余」可再生占比在 0..1",
+      "ok": true,
+      "info": "1"
+    },
+    {
+      "name": "情景「风光富余」24h 电量账本闭合（残差 < 0.01 MWh）",
+      "ok": true,
+      "info": "-0.000000 MWh"
+    },
+    {
+      "name": "情景「风光富余」端用电来源成分与用电量一致（<0.01 MWh）",
+      "ok": true,
+      "info": "14683.27 vs 14683.27"
+    },
+    {
+      "name": "情景「风光富余」氢质量账本闭合（初 + 产 − 氨用 − 池用 = 末）",
+      "ok": true,
+      "info": "初 3000 + 产 59761 − 氨用 52761 − 池用 0 = 末 10000（余差 0 kg）"
+    },
+    {
+      "name": "情景「夜间保供」24h 无 NaN",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「夜间保供」母线残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「夜间保供」氢质量残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「夜间保供」求解收敛",
+      "ok": true,
+      "info": "迭代 1 轮"
+    },
+    {
+      "name": "情景「夜间保供」库存不越界",
+      "ok": true,
+      "info": "SOC 10%, 氢 0 kg"
+    },
+    {
+      "name": "情景「夜间保供」可再生占比在 0..1",
+      "ok": true,
+      "info": "0.6193"
+    },
+    {
+      "name": "情景「夜间保供」24h 电量账本闭合（残差 < 0.01 MWh）",
+      "ok": true,
+      "info": "0.000000 MWh"
+    },
+    {
+      "name": "情景「夜间保供」端用电来源成分与用电量一致（<0.01 MWh）",
+      "ok": true,
+      "info": "6101.06 vs 6101.06"
+    },
+    {
+      "name": "情景「夜间保供」氢质量账本闭合（初 + 产 − 氨用 − 池用 = 末）",
+      "ok": true,
+      "info": "初 2000 + 产 12731.7 − 氨用 14731.7 − 池用 0 = 末 0（余差 0 kg）"
+    },
+    {
+      "name": "情景「低风低光」24h 无 NaN",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「低风低光」母线残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「低风低光」氢质量残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「低风低光」求解收敛",
+      "ok": true,
+      "info": "迭代 1 轮"
+    },
+    {
+      "name": "情景「低风低光」库存不越界",
+      "ok": true,
+      "info": "SOC 10%, 氢 0 kg"
+    },
+    {
+      "name": "情景「低风低光」可再生占比在 0..1",
+      "ok": true,
+      "info": "0.3822"
+    },
+    {
+      "name": "情景「低风低光」24h 电量账本闭合（残差 < 0.01 MWh）",
+      "ok": true,
+      "info": "0.000000 MWh"
+    },
+    {
+      "name": "情景「低风低光」端用电来源成分与用电量一致（<0.01 MWh）",
+      "ok": true,
+      "info": "5674.18 vs 5674.18"
+    },
+    {
+      "name": "情景「低风低光」氢质量账本闭合（初 + 产 − 氨用 − 池用 = 末）",
+      "ok": true,
+      "info": "初 600 + 产 10019.7 − 氨用 10619.7 − 池用 0 = 末 0（余差 0 kg）"
+    },
+    {
+      "name": "情景「制氢受储罐约束」24h 无 NaN",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「制氢受储罐约束」母线残差在机器精度内",
+      "ok": true,
+      "info": "-1.1368683772161603e-13"
+    },
+    {
+      "name": "情景「制氢受储罐约束」氢质量残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「制氢受储罐约束」求解收敛",
+      "ok": true,
+      "info": "迭代 1 轮"
+    },
+    {
+      "name": "情景「制氢受储罐约束」库存不越界",
+      "ok": true,
+      "info": "SOC 95%, 氢 10000 kg"
+    },
+    {
+      "name": "情景「制氢受储罐约束」可再生占比在 0..1",
+      "ok": true,
+      "info": "1"
+    },
+    {
+      "name": "情景「制氢受储罐约束」24h 电量账本闭合（残差 < 0.01 MWh）",
+      "ok": true,
+      "info": "-0.000000 MWh"
+    },
+    {
+      "name": "情景「制氢受储罐约束」端用电来源成分与用电量一致（<0.01 MWh）",
+      "ok": true,
+      "info": "14455.77 vs 14455.77"
+    },
+    {
+      "name": "情景「制氢受储罐约束」氢质量账本闭合（初 + 产 − 氨用 − 池用 = 末）",
+      "ok": true,
+      "info": "初 9900 + 产 52861 − 氨用 52761 − 池用 0 = 末 10000（余差 0 kg）"
+    },
+    {
+      "name": "情景「燃气备用投入」24h 无 NaN",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「燃气备用投入」母线残差在机器精度内",
+      "ok": true,
+      "info": "-2.842170943040401e-14"
+    },
+    {
+      "name": "情景「燃气备用投入」氢质量残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「燃气备用投入」求解收敛",
+      "ok": true,
+      "info": "迭代 1 轮"
+    },
+    {
+      "name": "情景「燃气备用投入」库存不越界",
+      "ok": true,
+      "info": "SOC 10%, 氢 0 kg"
+    },
+    {
+      "name": "情景「燃气备用投入」可再生占比在 0..1",
+      "ok": true,
+      "info": "0.382"
+    },
+    {
+      "name": "情景「燃气备用投入」24h 电量账本闭合（残差 < 0.01 MWh）",
+      "ok": true,
+      "info": "0.000000 MWh"
+    },
+    {
+      "name": "情景「燃气备用投入」端用电来源成分与用电量一致（<0.01 MWh）",
+      "ok": true,
+      "info": "5672.51 vs 5672.51"
+    },
+    {
+      "name": "情景「燃气备用投入」氢质量账本闭合（初 + 产 − 氨用 − 池用 = 末）",
+      "ok": true,
+      "info": "初 300 + 产 10019.4 − 氨用 10319.4 − 池用 0 = 末 0（余差 0 kg）"
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」24h 无 NaN",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」母线残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」氢质量残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」求解收敛",
+      "ok": true,
+      "info": "迭代 2 轮"
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」库存不越界",
+      "ok": true,
+      "info": "SOC 10.93%, 氢 862.4 kg"
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」可再生占比在 0..1",
+      "ok": true,
+      "info": "0.8094"
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」24h 电量账本闭合（残差 < 0.01 MWh）",
+      "ok": true,
+      "info": "-0.000000 MWh"
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」端用电来源成分与用电量一致（<0.01 MWh）",
+      "ok": true,
+      "info": "7740.45 vs 7740.45"
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」氢质量账本闭合（初 + 产 − 氨用 − 池用 = 末）",
+      "ok": true,
+      "info": "初 400 + 产 20991.9 − 氨用 20529.5 − 池用 0 = 末 862.4（余差 0 kg）"
+    },
+    {
+      "name": "画质档 standard 帧率可测（>0）",
+      "ok": true,
+      "info": "95.4 fps"
+    },
+    {
+      "name": "画质档 high 帧率可测（>0）",
+      "ok": true,
+      "info": "89.6 fps"
+    },
+    {
+      "name": "画质档 compat 帧率可测（>0）",
+      "ok": true,
+      "info": "108.6 fps"
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "warnings": [],
+  "env": {
+    "three": "147",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "hw": "16 线程",
+    "gpu": "ANGLE (AMD, AMD Radeon RX 6900 XT (0x000073BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "webgl2": true,
+    "halfFloatRT": true,
+    "bloomAvailable": true,
+    "bloomReason": null,
+    "modelVersion": "1.0.0",
+    "viewport": "1898×982 @dpr1",
+    "sceneDrawCalls": 1247,
+    "sceneTriangles": 38158,
+    "scenePrograms": 11,
+    "cameraAtMeasure": {
+      "pos": [
+        202,
+        132,
+        218
+      ],
+      "target": [
+        42,
+        0,
+        46
+      ],
+      "autoRotate": false
+    }
+  },
+  "perf": {
+    "standard": {
+      "fps": 95.4,
+      "frames": 477,
+      "seconds": 5,
+      "renderMs": 6.01,
+      "draws": 1248,
+      "triangles": 38170,
+      "sceneDrawCalls": 1247,
+      "sceneTriangles": 38158,
+      "pixelRatio": 1,
+      "canvas": "1898×982",
+      "bloom": false,
+      "shadowMap": true
+    },
+    "high": {
+      "fps": 89.6,
+      "frames": 448,
+      "seconds": 5,
+      "renderMs": 5.92,
+      "draws": 1,
+      "triangles": 2,
+      "sceneDrawCalls": 1247,
+      "sceneTriangles": 38158,
+      "pixelRatio": 1,
+      "canvas": "1898×982",
+      "bloom": true,
+      "shadowMap": true
+    },
+    "compat": {
+      "fps": 108.6,
+      "frames": 543,
+      "seconds": 5,
+      "renderMs": 4.16,
+      "draws": 1252,
+      "triangles": 38218,
+      "sceneDrawCalls": 1247,
+      "sceneTriangles": 38158,
+      "pixelRatio": 1,
+      "canvas": "1898×982",
+      "bloom": false,
+      "shadowMap": false
+    },
+    "finalQuality": "standard",
+    "autoDegraded": false
+  },
+  "scenarios": [
+    {
+      "key": "park",
+      "label": "风光储产业园（默认）",
+      "steps": 86400,
+      "ms": 435,
+      "acc": {
+        "genMWh": 6557.92,
+        "loadMWh": 7389.72,
+        "buyMWh": 703.61,
+        "curtailMWh": 0,
+        "unservedMWh": 0,
+        "exportMWh": 0,
+        "chargeMWh": 0.38,
+        "dischargeMWh": 128.58,
+        "recircMWh": 128.583,
+        "nh3T": 108.07,
+        "h2StartKg": 400,
+        "h2BalanceKg": 0,
+        "h2ProducedKg": 18728.2,
+        "h2ToAmmoniaKg": 19070.8,
+        "h2ToFuelCellKg": 0,
+        "gridCO2T": 423.64,
+        "closureMWh": 7.275957614183426e-12,
+        "consumptionTotalMWh": 7389.72,
+        "consumptionRenewMWh": 6557.82
+      },
+      "soc": 10,
+      "h2Kg": 57.4,
+      "genMW": 564.84,
+      "gridBuyMW": 0,
+      "curtailMW": 0,
+      "unservedMW": 0,
+      "nh3TDay": 54.258,
+      "residualMW": 0,
+      "h2ResidualKg": 0,
+      "renewShare": 0.8874,
+      "cleanShare": 0.8874,
+      "solverIters": 2,
+      "converged": true,
+      "badEvents": 0,
+      "nan": false
+    },
+    {
+      "key": "surplus",
+      "label": "风光富余",
+      "steps": 86400,
+      "ms": 216,
+      "acc": {
+        "genMWh": 14699.06,
+        "loadMWh": 14683.27,
+        "buyMWh": 0,
+        "curtailMWh": 1157.73,
+        "unservedMWh": 0,
+        "exportMWh": 0,
+        "chargeMWh": 15.79,
+        "dischargeMWh": 0,
+        "recircMWh": 0,
+        "nh3T": 298.98,
+        "h2StartKg": 3000,
+        "h2BalanceKg": 0,
+        "h2ProducedKg": 59761,
+        "h2ToAmmoniaKg": 52761,
+        "h2ToFuelCellKg": 0,
+        "gridCO2T": 0,
+        "closureMWh": -1.0913936421275139e-11,
+        "consumptionTotalMWh": 14683.27,
+        "consumptionRenewMWh": 14683.27
+      },
+      "soc": 95,
+      "h2Kg": 10000,
+      "genMW": 605.11,
+      "gridBuyMW": 0,
+      "curtailMW": 312.16,
+      "unservedMW": 0,
+      "nh3TDay": 149.603,
+      "residualMW": -1.1368683772161603e-13,
+      "h2ResidualKg": 0,
+      "renewShare": 1,
+      "cleanShare": 1,
+      "solverIters": 1,
+      "converged": true,
+      "badEvents": 0,
+      "nan": false
+    },
+    {
+      "key": "night",
+      "label": "夜间保供",
+      "steps": 86400,
+      "ms": 214,
+      "acc": {
+        "genMWh": 3778.6,
+        "loadMWh": 6101.06,
+        "buyMWh": 2179.96,
+        "curtailMWh": 0,
+        "unservedMWh": 0,
+        "exportMWh": 0,
+        "chargeMWh": 0,
+        "dischargeMWh": 142.5,
+        "recircMWh": 142.5,
+        "nh3T": 83.48,
+        "h2StartKg": 2000,
+        "h2BalanceKg": 0,
+        "h2ProducedKg": 12731.7,
+        "h2ToAmmoniaKg": 14731.7,
+        "h2ToFuelCellKg": 0,
+        "gridCO2T": 1312.56,
+        "closureMWh": 1.3642420526593924e-11,
+        "consumptionTotalMWh": 6101.06,
+        "consumptionRenewMWh": 3778.6
+      },
+      "soc": 10,
+      "h2Kg": 0,
+      "genMW": 67.13,
+      "gridBuyMW": 150.13,
+      "curtailMW": 0,
+      "unservedMW": 0,
+      "nh3TDay": 67.425,
+      "residualMW": 0,
+      "h2ResidualKg": 0,
+      "renewShare": 0.6193,
+      "cleanShare": 0.6193,
+      "solverIters": 1,
+      "converged": true,
+      "badEvents": 0,
+      "nan": false
+    },
+    {
+      "key": "lowwind",
+      "label": "低风低光",
+      "steps": 86400,
+      "ms": 190,
+      "acc": {
+        "genMWh": 2168.52,
+        "loadMWh": 5674.18,
+        "buyMWh": 3491.41,
+        "curtailMWh": 0,
+        "unservedMWh": 0,
+        "exportMWh": 0,
+        "chargeMWh": 0,
+        "dischargeMWh": 14.25,
+        "recircMWh": 14.25,
+        "nh3T": 60.18,
+        "h2StartKg": 600,
+        "h2BalanceKg": 0,
+        "h2ProducedKg": 10019.7,
+        "h2ToAmmoniaKg": 10619.7,
+        "h2ToFuelCellKg": 0,
+        "gridCO2T": 2102.18,
+        "closureMWh": 2.546585164964199e-11,
+        "consumptionTotalMWh": 5674.18,
+        "consumptionRenewMWh": 2168.52
+      },
+      "soc": 10,
+      "h2Kg": 0,
+      "genMW": 0.08,
+      "gridBuyMW": 217.87,
+      "curtailMW": 0,
+      "unservedMW": 0,
+      "nh3TDay": 54.418,
+      "residualMW": 0,
+      "h2ResidualKg": 0,
+      "renewShare": 0.3822,
+      "cleanShare": 0.3822,
+      "solverIters": 1,
+      "converged": true,
+      "badEvents": 0,
+      "nan": false
+    },
+    {
+      "key": "tankfull",
+      "label": "制氢受储罐约束",
+      "steps": 86400,
+      "ms": 199,
+      "acc": {
+        "genMWh": 14455.77,
+        "loadMWh": 14455.77,
+        "buyMWh": 0,
+        "curtailMWh": 2111.37,
+        "unservedMWh": 0,
+        "exportMWh": 0,
+        "chargeMWh": 0,
+        "dischargeMWh": 0,
+        "recircMWh": 0,
+        "nh3T": 298.98,
+        "h2StartKg": 9900,
+        "h2BalanceKg": 0,
+        "h2ProducedKg": 52861,
+        "h2ToAmmoniaKg": 52761,
+        "h2ToFuelCellKg": 0,
+        "gridCO2T": 0,
+        "closureMWh": -1.8189894035458565e-12,
+        "consumptionTotalMWh": 14455.77,
+        "consumptionRenewMWh": 14455.77
+      },
+      "soc": 95,
+      "h2Kg": 10000,
+      "genMW": 600.31,
+      "gridBuyMW": 0,
+      "curtailMW": 346.53,
+      "unservedMW": 0,
+      "nh3TDay": 149.603,
+      "residualMW": -1.1368683772161603e-13,
+      "h2ResidualKg": 0,
+      "renewShare": 1,
+      "cleanShare": 1,
+      "solverIters": 1,
+      "converged": true,
+      "badEvents": 0,
+      "nan": false
+    },
+    {
+      "key": "gasbackup",
+      "label": "燃气备用投入",
+      "steps": 86400,
+      "ms": 189,
+      "acc": {
+        "genMWh": 2167.08,
+        "loadMWh": 5672.51,
+        "buyMWh": 3505.43,
+        "curtailMWh": 0,
+        "unservedMWh": 0,
+        "exportMWh": 0,
+        "chargeMWh": 0,
+        "dischargeMWh": 0,
+        "recircMWh": 0,
+        "nh3T": 58.48,
+        "h2StartKg": 300,
+        "h2BalanceKg": 0,
+        "h2ProducedKg": 10019.4,
+        "h2ToAmmoniaKg": 10319.4,
+        "h2ToFuelCellKg": 0,
+        "gridCO2T": 2110.62,
+        "closureMWh": 9.094947017729282e-12,
+        "consumptionTotalMWh": 5672.51,
+        "consumptionRenewMWh": 2167.08
+      },
+      "soc": 10,
+      "h2Kg": 0,
+      "genMW": 0,
+      "gridBuyMW": 217.95,
+      "curtailMW": 0,
+      "unservedMW": 0,
+      "nh3TDay": 54.416,
+      "residualMW": -2.842170943040401e-14,
+      "h2ResidualKg": 0,
+      "renewShare": 0.382,
+      "cleanShare": 0.382,
+      "solverIters": 1,
+      "converged": true,
+      "badEvents": 0,
+      "nan": false
+    },
+    {
+      "key": "smr",
+      "label": "含 SMR 前瞻研究",
+      "steps": 86400,
+      "ms": 338,
+      "acc": {
+        "genMWh": 6987.75,
+        "loadMWh": 7740.45,
+        "buyMWh": 627.46,
+        "curtailMWh": 0,
+        "unservedMWh": 0,
+        "exportMWh": 0,
+        "chargeMWh": 3.8,
+        "dischargeMWh": 129.04,
+        "recircMWh": 129.044,
+        "nh3T": 116.33,
+        "h2StartKg": 400,
+        "h2BalanceKg": 0,
+        "h2ProducedKg": 20991.9,
+        "h2ToAmmoniaKg": 20529.5,
+        "h2ToFuelCellKg": 0,
+        "gridCO2T": 377.79,
+        "closureMWh": -9.549694368615746e-11,
+        "consumptionTotalMWh": 7740.45,
+        "consumptionRenewMWh": 6264.76
+      },
+      "soc": 10.93,
+      "h2Kg": 862.4,
+      "genMW": 674.64,
+      "gridBuyMW": 0,
+      "curtailMW": 0,
+      "unservedMW": 0,
+      "nh3TDay": 57.471,
+      "residualMW": 0,
+      "h2ResidualKg": 0,
+      "renewShare": 0.8094,
+      "cleanShare": 0.9024,
+      "solverIters": 2,
+      "converged": true,
+      "badEvents": 0,
+      "nan": false
+    }
+  ],
+  "ui": {
+    "drawerOpen": true,
+    "ledgerHasNaN": false,
+    "eventRows": 120,
+    "bloomOnHigh": true,
+    "devButtons": 28
+  },
+  "elapsedMs": 23167,
+  "summary": {
+    "total": 147,
+    "pass": 147,
+    "fail": 0,
+    "errors": 0,
+    "consoleErrors": 0
+  },
+  "runner": {
+    "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "size": "1920x1080",
+    "dpr": "1",
+    "noFrameLimit": false,
+    "tag": "1080p-r1"
+  }
+}

@@ -1,0 +1,850 @@
+{
+  "t0": 1789634885076,
+  "checks": [
+    {
+      "name": "模型版本已声明",
+      "ok": true,
+      "info": "1.0.0"
+    },
+    {
+      "name": "标签节点数 = 场景标签数",
+      "ok": true,
+      "info": "30 vs 30"
+    },
+    {
+      "name": "设备拾取点已注册",
+      "ok": true,
+      "info": "30"
+    },
+    {
+      "name": "边线条数（含追加的数据流）≥ 25",
+      "ok": true,
+      "info": "25"
+    },
+    {
+      "name": "物理已开始推进",
+      "ok": true,
+      "info": "95 步"
+    },
+    {
+      "name": "政策状态为待核算",
+      "ok": true,
+      "info": "pending"
+    },
+    {
+      "name": "器件参数页已填充",
+      "ok": true,
+      "info": "7 个地区"
+    },
+    {
+      "name": "暂停按钮切换运行态",
+      "ok": true,
+      "info": "true→false"
+    },
+    {
+      "name": "再次点击恢复运行",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "倍速切换到 60×",
+      "ok": true,
+      "info": "60"
+    },
+    {
+      "name": "倍速切换到 1200×",
+      "ok": true,
+      "info": "1200"
+    },
+    {
+      "name": "倍速切换到 3600×",
+      "ok": true,
+      "info": "3600"
+    },
+    {
+      "name": "倍速切换到 240×",
+      "ok": true,
+      "info": "240"
+    },
+    {
+      "name": "自动环绕可开可关",
+      "ok": true,
+      "info": "true→false"
+    },
+    {
+      "name": "抽屉可打开",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "抽屉页签 params",
+      "ok": true,
+      "info": "params"
+    },
+    {
+      "name": "抽屉页签 devices",
+      "ok": true,
+      "info": "devices"
+    },
+    {
+      "name": "抽屉页签 ledger",
+      "ok": true,
+      "info": "ledger"
+    },
+    {
+      "name": "抽屉页签 events",
+      "ok": true,
+      "info": "events"
+    },
+    {
+      "name": "抽屉页签 policy",
+      "ok": true,
+      "info": "policy"
+    },
+    {
+      "name": "账本页无 NaN/undefined",
+      "ok": true,
+      "info": "10004 字符"
+    },
+    {
+      "name": "账本页含守恒残差行",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "事件页有记录",
+      "ok": true,
+      "info": "120 条"
+    },
+    {
+      "name": "边界页显式声明待核算",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "边界页列出 11 条已知边界",
+      "ok": true,
+      "info": "11"
+    },
+    {
+      "name": "来源清单含官方 URL",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "趋势面板可打开",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "趋势面板可关闭",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "减少动态模式生效",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "减少动态可恢复",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "运行模式 class 生效",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "演示模式 class 生效",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "开关 swSvg 可切换",
+      "ok": true,
+      "info": "true→false"
+    },
+    {
+      "name": "开关 swApf 可切换",
+      "ok": true,
+      "info": "true→false"
+    },
+    {
+      "name": "开关 swGenset 可切换",
+      "ok": true,
+      "info": "false→true"
+    },
+    {
+      "name": "开关 swFc 可切换",
+      "ok": true,
+      "info": "false→true"
+    },
+    {
+      "name": "展示光照 blue-hour 可渲染",
+      "ok": true,
+      "info": "blue-hour"
+    },
+    {
+      "name": "展示光照 day-lab 可渲染",
+      "ok": true,
+      "info": "day-lab"
+    },
+    {
+      "name": "展示光照 night 可渲染",
+      "ok": true,
+      "info": "night"
+    },
+    {
+      "name": "展示光照 follow 可渲染",
+      "ok": true,
+      "info": "follow"
+    },
+    {
+      "name": "画质档 compat 可渲染",
+      "ok": true,
+      "info": "compat"
+    },
+    {
+      "name": "画质档 high 可渲染",
+      "ok": true,
+      "info": "high"
+    },
+    {
+      "name": "画质档 standard 可渲染",
+      "ok": true,
+      "info": "standard"
+    },
+    {
+      "name": "精致档泛光状态与硬件一致",
+      "ok": false,
+      "info": "float=true enabled=false"
+    },
+    {
+      "name": "地区 xinjiang 可切换",
+      "ok": true,
+      "info": "xinjiang"
+    },
+    {
+      "name": "地区 neimenggu 可切换",
+      "ok": true,
+      "info": "neimenggu"
+    },
+    {
+      "name": "地区 gansu 可切换",
+      "ok": true,
+      "info": "gansu"
+    },
+    {
+      "name": "地区 qinghai 可切换",
+      "ok": true,
+      "info": "qinghai"
+    },
+    {
+      "name": "地区 jiangsu 可切换",
+      "ok": true,
+      "info": "jiangsu"
+    },
+    {
+      "name": "地区 sichuan 可切换",
+      "ok": true,
+      "info": "sichuan"
+    },
+    {
+      "name": "地区 guangdong 可切换",
+      "ok": true,
+      "info": "guangdong"
+    },
+    {
+      "name": "手动锁定风速生效",
+      "ok": true,
+      "info": "12"
+    },
+    {
+      "name": "IT 负载可调",
+      "ok": true,
+      "info": "300"
+    },
+    {
+      "name": "储能指令 charge",
+      "ok": true,
+      "info": "charge"
+    },
+    {
+      "name": "储能指令 discharge",
+      "ok": true,
+      "info": "discharge"
+    },
+    {
+      "name": "储能指令 auto",
+      "ok": true,
+      "info": "auto"
+    },
+    {
+      "name": "固定正午模式可切换",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "SMR 档位 2",
+      "ok": true,
+      "info": "2"
+    },
+    {
+      "name": "SMR 档位 1",
+      "ok": true,
+      "info": "1"
+    },
+    {
+      "name": "SMR 档位 0",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "设备树条目数 ≥ 25",
+      "ok": true,
+      "info": "28"
+    },
+    {
+      "name": "每个设备都能打开信息卡",
+      "ok": true,
+      "info": "28/28"
+    },
+    {
+      "name": "信息卡都有标题",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "信息卡不含未替换的占位符",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "信息卡可关闭",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "画布点选不抛错",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "快捷键 T 可发起导览",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "Escape 可退出导览",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "导览条出现",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "导览第 1 章可跳转",
+      "ok": true,
+      "info": "01 / 06"
+    },
+    {
+      "name": "导览第 2 章可跳转",
+      "ok": true,
+      "info": "02 / 06"
+    },
+    {
+      "name": "导览第 3 章可跳转",
+      "ok": true,
+      "info": "03 / 06"
+    },
+    {
+      "name": "导览第 4 章可跳转",
+      "ok": true,
+      "info": "04 / 06"
+    },
+    {
+      "name": "导览第 5 章可跳转",
+      "ok": true,
+      "info": "05 / 06"
+    },
+    {
+      "name": "导览第 6 章可跳转",
+      "ok": true,
+      "info": "06 / 06"
+    },
+    {
+      "name": "导览可暂停/继续",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "导览可退出",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "导览进度条归零",
+      "ok": true,
+      "info": "0%"
+    },
+    {
+      "name": "退出导览后相机受控",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「风光储产业园（默认）」24h 无 NaN",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「风光储产业园（默认）」母线残差在机器精度内",
+      "ok": true,
+      "info": "1.1368683772161603e-13"
+    },
+    {
+      "name": "情景「风光储产业园（默认）」氢质量残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「风光储产业园（默认）」求解收敛",
+      "ok": true,
+      "info": "迭代 1 轮"
+    },
+    {
+      "name": "情景「风光储产业园（默认）」库存不越界",
+      "ok": true,
+      "info": "SOC 10%, 氢 56.2 kg"
+    },
+    {
+      "name": "情景「风光储产业园（默认）」可再生占比在 0..1",
+      "ok": true,
+      "info": "0.8874"
+    },
+    {
+      "name": "情景「风光富余」24h 无 NaN",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「风光富余」母线残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「风光富余」氢质量残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「风光富余」求解收敛",
+      "ok": true,
+      "info": "迭代 1 轮"
+    },
+    {
+      "name": "情景「风光富余」库存不越界",
+      "ok": true,
+      "info": "SOC 95%, 氢 10000 kg"
+    },
+    {
+      "name": "情景「风光富余」可再生占比在 0..1",
+      "ok": true,
+      "info": "1"
+    },
+    {
+      "name": "情景「夜间保供」24h 无 NaN",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「夜间保供」母线残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「夜间保供」氢质量残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「夜间保供」求解收敛",
+      "ok": true,
+      "info": "迭代 1 轮"
+    },
+    {
+      "name": "情景「夜间保供」库存不越界",
+      "ok": true,
+      "info": "SOC 10%, 氢 0 kg"
+    },
+    {
+      "name": "情景「夜间保供」可再生占比在 0..1",
+      "ok": true,
+      "info": "0.6193"
+    },
+    {
+      "name": "情景「低风低光」24h 无 NaN",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「低风低光」母线残差在机器精度内",
+      "ok": true,
+      "info": "-5.684341886080802e-14"
+    },
+    {
+      "name": "情景「低风低光」氢质量残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「低风低光」求解收敛",
+      "ok": true,
+      "info": "迭代 1 轮"
+    },
+    {
+      "name": "情景「低风低光」库存不越界",
+      "ok": true,
+      "info": "SOC 10%, 氢 0 kg"
+    },
+    {
+      "name": "情景「低风低光」可再生占比在 0..1",
+      "ok": true,
+      "info": "0.3822"
+    },
+    {
+      "name": "情景「制氢受储罐约束」24h 无 NaN",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「制氢受储罐约束」母线残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「制氢受储罐约束」氢质量残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「制氢受储罐约束」求解收敛",
+      "ok": true,
+      "info": "迭代 1 轮"
+    },
+    {
+      "name": "情景「制氢受储罐约束」库存不越界",
+      "ok": true,
+      "info": "SOC 95%, 氢 10000 kg"
+    },
+    {
+      "name": "情景「制氢受储罐约束」可再生占比在 0..1",
+      "ok": true,
+      "info": "1"
+    },
+    {
+      "name": "情景「燃气备用投入」24h 无 NaN",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「燃气备用投入」母线残差在机器精度内",
+      "ok": true,
+      "info": "-2.842170943040401e-14"
+    },
+    {
+      "name": "情景「燃气备用投入」氢质量残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「燃气备用投入」求解收敛",
+      "ok": true,
+      "info": "迭代 1 轮"
+    },
+    {
+      "name": "情景「燃气备用投入」库存不越界",
+      "ok": true,
+      "info": "SOC 10%, 氢 0 kg"
+    },
+    {
+      "name": "情景「燃气备用投入」可再生占比在 0..1",
+      "ok": true,
+      "info": "0.382"
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」24h 无 NaN",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」母线残差在机器精度内",
+      "ok": true,
+      "info": "1.1368683772161603e-13"
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」氢质量残差在机器精度内",
+      "ok": true,
+      "info": "0"
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」求解收敛",
+      "ok": true,
+      "info": "迭代 2 轮"
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」库存不越界",
+      "ok": true,
+      "info": "SOC 10.93%, 氢 863.5 kg"
+    },
+    {
+      "name": "情景「含 SMR 前瞻研究」可再生占比在 0..1",
+      "ok": true,
+      "info": "0.8094"
+    },
+    {
+      "name": "画质档 standard 帧率可测（>0）",
+      "ok": true,
+      "info": "142.2 fps"
+    },
+    {
+      "name": "画质档 high 帧率可测（>0）",
+      "ok": true,
+      "info": "142.2 fps"
+    },
+    {
+      "name": "画质档 compat 帧率可测（>0）",
+      "ok": true,
+      "info": "144.2 fps"
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "warnings": [],
+  "env": {
+    "three": "147",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "hw": "16 线程",
+    "gpu": "ANGLE (AMD, AMD Radeon RX 6900 XT (0x000073BF) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "webgl2": true,
+    "halfFloatRT": true,
+    "bloomAvailable": true,
+    "bloomReason": null,
+    "modelVersion": "1.0.0",
+    "viewport": "1898×982 @dpr1"
+  },
+  "perf": {
+    "standard": {
+      "fps": 142.2,
+      "frames": 711,
+      "seconds": 5,
+      "renderMs": 3.81,
+      "draws": 304,
+      "triangles": 9362,
+      "pixelRatio": 1,
+      "canvas": "1898×982",
+      "bloom": false,
+      "shadowMap": true
+    },
+    "high": {
+      "fps": 142.2,
+      "frames": 711,
+      "seconds": 5,
+      "renderMs": 3.47,
+      "draws": 1,
+      "triangles": 2,
+      "pixelRatio": 1,
+      "canvas": "1898×982",
+      "bloom": true,
+      "shadowMap": true
+    },
+    "compat": {
+      "fps": 144.2,
+      "frames": 722,
+      "seconds": 5.01,
+      "renderMs": 2.07,
+      "draws": 304,
+      "triangles": 9362,
+      "pixelRatio": 1,
+      "canvas": "1898×982",
+      "bloom": false,
+      "shadowMap": false
+    },
+    "finalQuality": "standard",
+    "autoDegraded": false
+  },
+  "scenarios": [
+    {
+      "key": "park",
+      "label": "风光储产业园（默认）",
+      "steps": 86400,
+      "ms": 468,
+      "soc": 10,
+      "h2Kg": 56.2,
+      "genMW": 558.63,
+      "gridBuyMW": 0,
+      "curtailMW": 0,
+      "unservedMW": 0,
+      "nh3TDay": 54.286,
+      "residualMW": 1.1368683772161603e-13,
+      "h2ResidualKg": 0,
+      "renewShare": 0.8874,
+      "cleanShare": 0.8874,
+      "solverIters": 1,
+      "converged": true,
+      "badEvents": 0,
+      "nan": false
+    },
+    {
+      "key": "surplus",
+      "label": "风光富余",
+      "steps": 86400,
+      "ms": 219,
+      "soc": 95,
+      "h2Kg": 10000,
+      "genMW": 605.04,
+      "gridBuyMW": 0,
+      "curtailMW": 311.37,
+      "unservedMW": 0,
+      "nh3TDay": 149.621,
+      "residualMW": 0,
+      "h2ResidualKg": 0,
+      "renewShare": 1,
+      "cleanShare": 1,
+      "solverIters": 1,
+      "converged": true,
+      "badEvents": 0,
+      "nan": false
+    },
+    {
+      "key": "night",
+      "label": "夜间保供",
+      "steps": 86400,
+      "ms": 226,
+      "soc": 10,
+      "h2Kg": 0,
+      "genMW": 67.13,
+      "gridBuyMW": 150.16,
+      "curtailMW": 0,
+      "unservedMW": 0,
+      "nh3TDay": 67.427,
+      "residualMW": 0,
+      "h2ResidualKg": 0,
+      "renewShare": 0.6193,
+      "cleanShare": 0.6193,
+      "solverIters": 1,
+      "converged": true,
+      "badEvents": 0,
+      "nan": false
+    },
+    {
+      "key": "lowwind",
+      "label": "低风低光",
+      "steps": 86400,
+      "ms": 195,
+      "soc": 10,
+      "h2Kg": 0,
+      "genMW": 0.08,
+      "gridBuyMW": 217.79,
+      "curtailMW": 0,
+      "unservedMW": 0,
+      "nh3TDay": 54.42,
+      "residualMW": -5.684341886080802e-14,
+      "h2ResidualKg": 0,
+      "renewShare": 0.3822,
+      "cleanShare": 0.3822,
+      "solverIters": 1,
+      "converged": true,
+      "badEvents": 0,
+      "nan": false
+    },
+    {
+      "key": "tankfull",
+      "label": "制氢受储罐约束",
+      "steps": 86400,
+      "ms": 201,
+      "soc": 95,
+      "h2Kg": 10000,
+      "genMW": 600.27,
+      "gridBuyMW": 0,
+      "curtailMW": 346.59,
+      "unservedMW": 0,
+      "nh3TDay": 149.614,
+      "residualMW": 0,
+      "h2ResidualKg": 0,
+      "renewShare": 1,
+      "cleanShare": 1,
+      "solverIters": 1,
+      "converged": true,
+      "badEvents": 0,
+      "nan": false
+    },
+    {
+      "key": "gasbackup",
+      "label": "燃气备用投入",
+      "steps": 86400,
+      "ms": 190,
+      "soc": 10,
+      "h2Kg": 0,
+      "genMW": 0,
+      "gridBuyMW": 217.82,
+      "curtailMW": 0,
+      "unservedMW": 0,
+      "nh3TDay": 54.42,
+      "residualMW": -2.842170943040401e-14,
+      "h2ResidualKg": 0,
+      "renewShare": 0.382,
+      "cleanShare": 0.382,
+      "solverIters": 1,
+      "converged": true,
+      "badEvents": 0,
+      "nan": false
+    },
+    {
+      "key": "smr",
+      "label": "含 SMR 前瞻研究",
+      "steps": 86400,
+      "ms": 347,
+      "soc": 10.93,
+      "h2Kg": 863.5,
+      "genMW": 665.04,
+      "gridBuyMW": 0,
+      "curtailMW": 0,
+      "unservedMW": 0,
+      "nh3TDay": 57.481,
+      "residualMW": 1.1368683772161603e-13,
+      "h2ResidualKg": 0,
+      "renewShare": 0.8094,
+      "cleanShare": 0.9024,
+      "solverIters": 2,
+      "converged": true,
+      "badEvents": 0,
+      "nan": false
+    }
+  ],
+  "ui": {
+    "drawerOpen": true,
+    "ledgerHasNaN": false,
+    "eventRows": 120,
+    "bloomOnHigh": false,
+    "devButtons": 28
+  },
+  "elapsedMs": 22858,
+  "summary": {
+    "total": 124,
+    "pass": 123,
+    "fail": 1,
+    "errors": 0,
+    "consoleErrors": 0
+  },
+  "runner": {
+    "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "size": "1920x1080",
+    "noFrameLimit": false,
+    "tag": "1920x1080"
+  }
+}

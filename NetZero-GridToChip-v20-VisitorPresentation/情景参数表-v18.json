@@ -1,0 +1,192 @@
+{
+  "version": "18.0.0",
+  "assumptions": "所有参数为演示假设",
+  "dispatch": {
+    "enabled": true,
+    "cycleHours": 24,
+    "urgentHours": 4,
+    "deadlineBufferHours": 1,
+    "reserveSoc": 25,
+    "targetH2Kg": 3000,
+    "tokenPerMWh": 1667000000
+  },
+  "grid": {
+    "importLimitMW": 400,
+    "allowGridCharge": false,
+    "exportLimitMW": 0,
+    "curtailAllowed": true
+  },
+  "scenarios": {
+    "park": {
+      "label": "多园区协同（默认）",
+      "hint": "24 h 生产任务与算力计量；按期限协调供电",
+      "region": "xinjiang",
+      "hour": 12,
+      "windManual": false,
+      "smrEnabled": false,
+      "soc": 55,
+      "h2Kg": 400,
+      "itMW": 150,
+      "stMode": "auto",
+      "seed": 20260722,
+      "note": "生产任务、备用目标和算力折算均为演示假设",
+      "durationHours": 24,
+      "importLimitMW": 400,
+      "assumption": "演示假设；工业任务以等效用电量计量"
+    },
+    "surplus": {
+      "label": "风光富余与补产",
+      "hint": "12 m/s 手动风、SOC 90%，看储能与柔性负荷消纳",
+      "region": "xinjiang",
+      "hour": 12,
+      "windManual": true,
+      "wind": 12,
+      "smrEnabled": false,
+      "soc": 90,
+      "h2Kg": 3000,
+      "itMW": 150,
+      "stMode": "auto",
+      "seed": 20260801,
+      "note": "",
+      "initialTasks": [
+        {
+          "key": "zinc",
+          "mwh": 200,
+          "ageHours": 4,
+          "dueHours": 4
+        },
+        {
+          "key": "factory",
+          "mwh": 100,
+          "ageHours": 4,
+          "dueHours": 4
+        }
+      ],
+      "durationHours": 24,
+      "importLimitMW": 400,
+      "assumption": "演示假设；工业任务以等效用电量计量"
+    },
+    "night": {
+      "label": "夜间保供",
+      "hint": "22:00、6 m/s，光伏自然为 0",
+      "region": "xinjiang",
+      "hour": 22,
+      "windManual": true,
+      "wind": 6,
+      "smrEnabled": false,
+      "soc": 60,
+      "h2Kg": 2000,
+      "itMW": 150,
+      "stMode": "auto",
+      "seed": 20260802,
+      "note": "",
+      "durationHours": 24,
+      "importLimitMW": 400,
+      "assumption": "演示假设；工业任务以等效用电量计量"
+    },
+    "lowwind": {
+      "label": "连续低风低光",
+      "hint": "连续低风与低光轨迹，观察任务履约及购电压力",
+      "region": "xinjiang",
+      "hour": 23,
+      "windManual": true,
+      "wind": 3,
+      "smrEnabled": false,
+      "soc": 15,
+      "h2Kg": 600,
+      "itMW": 150,
+      "stMode": "auto",
+      "seed": 20260803,
+      "note": "",
+      "solarFactor": 0.08,
+      "durationHours": 24,
+      "importLimitMW": 400,
+      "assumption": "演示假设；工业任务以等效用电量计量"
+    },
+    "tankfull": {
+      "label": "储氢约束与氢氨协同",
+      "hint": "强风、SOC 95%、储氢 9900 kg，看事前限产",
+      "region": "xinjiang",
+      "hour": 12,
+      "windManual": true,
+      "wind": 14,
+      "smrEnabled": false,
+      "soc": 95,
+      "h2Kg": 9900,
+      "itMW": 150,
+      "stMode": "auto",
+      "seed": 20260804,
+      "note": "",
+      "durationHours": 24,
+      "importLimitMW": 400,
+      "assumption": "演示假设；工业任务以等效用电量计量"
+    },
+    "gasbackup": {
+      "label": "燃气备用支撑",
+      "hint": "夜间低风、SOC 10%，燃气按爬坡启动",
+      "region": "xinjiang",
+      "hour": 23,
+      "windManual": true,
+      "wind": 2.5,
+      "smrEnabled": false,
+      "soc": 10,
+      "h2Kg": 300,
+      "itMW": 150,
+      "stMode": "auto",
+      "seed": 20260805,
+      "note": "",
+      "durationHours": 24,
+      "importLimitMW": 400,
+      "assumption": "演示假设；工业任务以等效用电量计量"
+    },
+    "smr": {
+      "label": "含 SMR 前瞻研究",
+      "hint": "30 MWe 研究电源并入，不代表园区已建成该机组",
+      "region": "xinjiang",
+      "hour": 12,
+      "windManual": false,
+      "smrEnabled": true,
+      "soc": 55,
+      "h2Kg": 400,
+      "itMW": 150,
+      "stMode": "auto",
+      "seed": 20260806,
+      "note": "",
+      "durationHours": 24,
+      "importLimitMW": 400,
+      "assumption": "演示假设；工业任务以等效用电量计量"
+    },
+    "deadline": {
+      "label": "生产任务临期",
+      "hint": "2 h 临期任务；检查购电保障和能力预警",
+      "region": "xinjiang",
+      "hour": 22,
+      "windManual": true,
+      "wind": 6,
+      "smrEnabled": false,
+      "soc": 25,
+      "h2Kg": 2000,
+      "itMW": 150,
+      "stMode": "auto",
+      "seed": 20261020,
+      "note": "",
+      "initialTasks": [
+        {
+          "key": "zinc",
+          "mwh": 300,
+          "ageHours": 6,
+          "dueHours": 2
+        },
+        {
+          "key": "factory",
+          "mwh": 180,
+          "ageHours": 6,
+          "dueHours": 2
+        }
+      ],
+      "durationHours": 24,
+      "importLimitMW": 400,
+      "assumption": "演示假设；工业任务以等效用电量计量"
+    }
+  }
+}

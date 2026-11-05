@@ -1,0 +1,6005 @@
+{
+  "checks": {
+    "oldInvertersRemoved": true,
+    "renderedEquipmentClear": true,
+    "allPanelsSouth": true,
+    "sharedTerrainBoundary": true,
+    "connectedPVSupply": true,
+    "incomingTerminalConnected": true,
+    "compassDirections": true,
+    "sunlightAligned": true,
+    "winterShadowVisible": true,
+    "noNightDirectSun": true,
+    "powerCalculationUnaffected": true,
+    "noShaderErrors": true,
+    "compassInsideViewport": true,
+    "glHealthy": true,
+    "enginePreserved": true,
+    "noBrowserErrors": true
+  },
+  "views": {
+    "south": [
+      {
+        "direction": "N",
+        "x": 44,
+        "y": 11
+      },
+      {
+        "direction": "E",
+        "x": 77,
+        "y": 44
+      },
+      {
+        "direction": "S",
+        "x": 44,
+        "y": 77
+      },
+      {
+        "direction": "W",
+        "x": 11,
+        "y": 44
+      }
+    ],
+    "east": [
+      {
+        "direction": "N",
+        "x": 77,
+        "y": 43.999999999999986
+      },
+      {
+        "direction": "E",
+        "x": 44.000000000000014,
+        "y": 77
+      },
+      {
+        "direction": "S",
+        "x": 11,
+        "y": 44.000000000000014
+      },
+      {
+        "direction": "W",
+        "x": 43.999999999999986,
+        "y": 11
+      }
+    ],
+    "north": [
+      {
+        "direction": "N",
+        "x": 44,
+        "y": 77
+      },
+      {
+        "direction": "E",
+        "x": 11,
+        "y": 44
+      },
+      {
+        "direction": "S",
+        "x": 44,
+        "y": 11
+      },
+      {
+        "direction": "W",
+        "x": 77,
+        "y": 44
+      }
+    ],
+    "west": [
+      {
+        "direction": "N",
+        "x": 11,
+        "y": 43.999999999999986
+      },
+      {
+        "direction": "E",
+        "x": 44.000000000000014,
+        "y": 11
+      },
+      {
+        "direction": "S",
+        "x": 77,
+        "y": 44.000000000000014
+      },
+      {
+        "direction": "W",
+        "x": 43.999999999999986,
+        "y": 77
+      }
+    ],
+    "top": [
+      {
+        "direction": "N",
+        "x": 44,
+        "y": 11
+      },
+      {
+        "direction": "E",
+        "x": 77,
+        "y": 44
+      },
+      {
+        "direction": "S",
+        "x": 44,
+        "y": 77
+      },
+      {
+        "direction": "W",
+        "x": 11,
+        "y": 44
+      }
+    ]
+  },
+  "modes": {
+    "compat": {
+      "solar": {
+        "quality": "compat",
+        "enabled": false,
+        "compass": [
+          {
+            "direction": "N",
+            "x": 64.09371785582412,
+            "y": 17.822862976816293
+          },
+          {
+            "direction": "E",
+            "x": 70.1771370231837,
+            "y": 64.09371785582412
+          },
+          {
+            "direction": "S",
+            "x": 23.90628214417588,
+            "y": 70.1771370231837
+          },
+          {
+            "direction": "W",
+            "x": 17.822862976816293,
+            "y": 23.90628214417588
+          }
+        ],
+        "plan": {
+          "settings": {
+            "latitude": 44,
+            "longitude": 87.6,
+            "timezone": 8,
+            "date": "2026-12-21",
+            "hour": 14,
+            "tiltDeg": 24,
+            "azimuthDeg": 180,
+            "demonstration": true
+          },
+          "normal": [
+            4.981087280387182e-17,
+            0.9135454576426009,
+            0.4067366430758002
+          ],
+          "panelCount": 396,
+          "equipment": [
+            {
+              "id": "inverter-0",
+              "kind": "inverter",
+              "name": "组串逆变器组 1",
+              "x": -162,
+              "z": 106,
+              "w": 5,
+              "d": 3,
+              "h": 2.1,
+              "x0": -164.5,
+              "x1": -159.5,
+              "z0": 104.5,
+              "z1": 107.5
+            },
+            {
+              "id": "transformer-0",
+              "kind": "transformer",
+              "name": "箱式升压变 1",
+              "x": -162,
+              "z": 116,
+              "w": 8,
+              "d": 6,
+              "h": 3.1,
+              "x0": -166,
+              "x1": -158,
+              "z0": 113,
+              "z1": 119
+            },
+            {
+              "id": "inverter-1",
+              "kind": "inverter",
+              "name": "组串逆变器组 2",
+              "x": -129,
+              "z": 106,
+              "w": 5,
+              "d": 3,
+              "h": 2.1,
+              "x0": -131.5,
+              "x1": -126.5,
+              "z0": 104.5,
+              "z1": 107.5
+            },
+            {
+              "id": "transformer-1",
+              "kind": "transformer",
+              "name": "箱式升压变 2",
+              "x": -129,
+              "z": 116,
+              "w": 8,
+              "d": 6,
+              "h": 3.1,
+              "x0": -133,
+              "x1": -125,
+              "z0": 113,
+              "z1": 119
+            },
+            {
+              "id": "inverter-2",
+              "kind": "inverter",
+              "name": "组串逆变器组 3",
+              "x": -96,
+              "z": 106,
+              "w": 5,
+              "d": 3,
+              "h": 2.1,
+              "x0": -98.5,
+              "x1": -93.5,
+              "z0": 104.5,
+              "z1": 107.5
+            },
+            {
+              "id": "transformer-2",
+              "kind": "transformer",
+              "name": "箱式升压变 3",
+              "x": -96,
+              "z": 116,
+              "w": 8,
+              "d": 6,
+              "h": 3.1,
+              "x0": -100,
+              "x1": -92,
+              "z0": 113,
+              "z1": 119
+            },
+            {
+              "id": "secondary",
+              "kind": "secondary",
+              "name": "计量 · 继保 · 通信",
+              "x": -82,
+              "z": 108,
+              "w": 8,
+              "d": 3,
+              "h": 3,
+              "x0": -86,
+              "x1": -78,
+              "z0": 106.5,
+              "z1": 109.5
+            },
+            {
+              "id": "collector",
+              "kind": "collector",
+              "name": "35 kV 集电开关区",
+              "x": -81,
+              "z": 120,
+              "w": 12,
+              "d": 7,
+              "h": 2.8,
+              "x0": -87,
+              "x1": -75,
+              "z0": 116.5,
+              "z1": 123.5
+            }
+          ],
+          "conflicts": [],
+          "equipmentConflicts": [],
+          "winter": [
+            {
+              "hour": 10,
+              "elevation": 2.0255120870281695,
+              "incidence": 0.27090326429957173,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 8.776439747292159,
+              "rowShadowRisk": true
+            },
+            {
+              "hour": 12,
+              "elevation": 16.53157447205706,
+              "incidence": 0.5964466017728504,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.5373875193651392,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 14,
+              "elevation": 22.55755591151185,
+              "incidence": 0.7258686071719918,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.2722484661068325,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 16,
+              "elevation": 17.81946513956852,
+              "incidence": 0.624514245765797,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.4653933969210915,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 18,
+              "elevation": 4.1600814419165095,
+              "incidence": 0.31952549158078836,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 4.538390536295346,
+              "rowShadowRisk": true
+            }
+          ]
+        },
+        "physical": [
+          {
+            "id": "inverter-0",
+            "min": [
+              -163.39999997615814,
+              -0.5,
+              105.5
+            ],
+            "max": [
+              -160.60000002384186,
+              2.321666656732559,
+              106.82
+            ]
+          },
+          {
+            "id": "transformer-0",
+            "min": [
+              -163.64999997615814,
+              -0.5,
+              115
+            ],
+            "max": [
+              -160.35000002384186,
+              3.02375,
+              118.03
+            ]
+          },
+          {
+            "id": "inverter-1",
+            "min": [
+              -130.39999997615814,
+              -0.5,
+              105.5
+            ],
+            "max": [
+              -127.60000002384186,
+              2.321666656732559,
+              106.82
+            ]
+          },
+          {
+            "id": "transformer-1",
+            "min": [
+              -130.64999997615814,
+              -0.5,
+              115
+            ],
+            "max": [
+              -127.35000002384186,
+              3.02375,
+              118.03
+            ]
+          },
+          {
+            "id": "inverter-2",
+            "min": [
+              -97.39999997615814,
+              -0.5,
+              105.5
+            ],
+            "max": [
+              -94.60000002384186,
+              2.321666656732559,
+              106.82
+            ]
+          },
+          {
+            "id": "transformer-2",
+            "min": [
+              -97.64999997615814,
+              -0.5,
+              115
+            ],
+            "max": [
+              -94.35000002384186,
+              3.02375,
+              118.03
+            ]
+          },
+          {
+            "id": "secondary",
+            "min": [
+              -84.25,
+              -0.5,
+              107.5
+            ],
+            "max": [
+              -79.75,
+              3.13875,
+              109.08
+            ]
+          },
+          {
+            "id": "collector",
+            "min": [
+              -84.75,
+              -0.5,
+              119.5
+            ],
+            "max": [
+              -77.25,
+              3.44125,
+              121.04
+            ]
+          }
+        ],
+        "physicalConflicts": [],
+        "connections": [
+          {
+            "id": "dc-0",
+            "from": "PV blocks 0",
+            "to": "inverter-0",
+            "pts": [
+              [
+                -162,
+                101.3
+              ],
+              [
+                -162,
+                104.5
+              ]
+            ]
+          },
+          {
+            "id": "ac-0",
+            "from": "inverter-0",
+            "to": "transformer-0",
+            "pts": [
+              [
+                -162,
+                107.5
+              ],
+              [
+                -162,
+                113
+              ]
+            ]
+          },
+          {
+            "id": "mv-0",
+            "from": "transformer-0",
+            "to": "collector",
+            "pts": [
+              [
+                -162,
+                119
+              ],
+              [
+                -162,
+                123.8
+              ],
+              [
+                -81,
+                123.8
+              ],
+              [
+                -81,
+                122
+              ]
+            ]
+          },
+          {
+            "id": "dc-1",
+            "from": "PV blocks 1",
+            "to": "inverter-1",
+            "pts": [
+              [
+                -129,
+                101.3
+              ],
+              [
+                -129,
+                104.5
+              ]
+            ]
+          },
+          {
+            "id": "ac-1",
+            "from": "inverter-1",
+            "to": "transformer-1",
+            "pts": [
+              [
+                -129,
+                107.5
+              ],
+              [
+                -129,
+                113
+              ]
+            ]
+          },
+          {
+            "id": "mv-1",
+            "from": "transformer-1",
+            "to": "collector",
+            "pts": [
+              [
+                -129,
+                119
+              ],
+              [
+                -129,
+                123.8
+              ],
+              [
+                -81,
+                123.8
+              ],
+              [
+                -81,
+                122
+              ]
+            ]
+          },
+          {
+            "id": "dc-2",
+            "from": "PV blocks 2",
+            "to": "inverter-2",
+            "pts": [
+              [
+                -96,
+                101.3
+              ],
+              [
+                -96,
+                104.5
+              ]
+            ]
+          },
+          {
+            "id": "ac-2",
+            "from": "inverter-2",
+            "to": "transformer-2",
+            "pts": [
+              [
+                -96,
+                107.5
+              ],
+              [
+                -96,
+                113
+              ]
+            ]
+          },
+          {
+            "id": "mv-2",
+            "from": "transformer-2",
+            "to": "collector",
+            "pts": [
+              [
+                -96,
+                119
+              ],
+              [
+                -96,
+                123.8
+              ],
+              [
+                -81,
+                123.8
+              ],
+              [
+                -81,
+                122
+              ]
+            ]
+          },
+          {
+            "id": "secondary",
+            "from": "collector",
+            "to": "secondary",
+            "pts": [
+              [
+                -82,
+                118
+              ],
+              [
+                -88,
+                118
+              ],
+              [
+                -88,
+                108
+              ],
+              [
+                -86,
+                108
+              ]
+            ]
+          },
+          {
+            "id": "outgoing",
+            "from": "collector",
+            "to": "substation",
+            "pts": [
+              [
+                -75,
+                120
+              ],
+              [
+                -65,
+                120
+              ],
+              [
+                -65,
+                78
+              ]
+            ]
+          }
+        ],
+        "diagnostic": {
+          "sun": {
+            "direction": [
+              0.029896250457661727,
+              0.38361131321920294,
+              0.9230106037195951
+            ],
+            "elevation": 22.55755591151185,
+            "azimuth": 178.14484218413122,
+            "solarNoon": 14.12447046539845
+          },
+          "incidence": 0.7258686071719918,
+          "counts": {
+            "组件": 0,
+            "设备": 0,
+            "绿植": 0,
+            "地形": 0
+          },
+          "blocked": [],
+          "method": "代表组件中心采样；设备与树冠包围盒保守估算，地形步进约 3 个展示单位",
+          "winter": [
+            {
+              "hour": 10,
+              "elevation": 2.0255120870281695,
+              "incidence": 0.27090326429957173,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 8.776439747292159,
+              "rowShadowRisk": true
+            },
+            {
+              "hour": 12,
+              "elevation": 16.53157447205706,
+              "incidence": 0.5964466017728504,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.5373875193651392,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 14,
+              "elevation": 22.55755591151185,
+              "incidence": 0.7258686071719918,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.2722484661068325,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 16,
+              "elevation": 17.81946513956852,
+              "incidence": 0.624514245765797,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.4653933969210915,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 18,
+              "elevation": 4.1600814419165095,
+              "incidence": 0.31952549158078836,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 4.538390536295346,
+              "rowShadowRisk": true
+            }
+          ]
+        },
+        "oldInverters": 0
+      },
+      "landscape": {
+        "quality": "compat",
+        "basicVisible": false,
+        "refinedVisible": false,
+        "night": false,
+        "trees": 153,
+        "shrubs": 818,
+        "rocks": 69,
+        "lamps": 16,
+        "roads": 19,
+        "turbines": 12,
+        "pvPanels": 396,
+        "coverage": {
+          "west": {
+            "trees": 58,
+            "shrubs": 247,
+            "lamps": 3,
+            "roads": 5
+          },
+          "ridge": {
+            "trees": 53,
+            "shrubs": 254,
+            "lamps": 4,
+            "roads": 6
+          },
+          "distant": {
+            "trees": 0,
+            "shrubs": 227,
+            "lamps": 3,
+            "roads": 5
+          },
+          "solar": {
+            "trees": 42,
+            "shrubs": 90,
+            "lamps": 6,
+            "roads": 3
+          }
+        },
+        "bounds": {
+          "x0": -565,
+          "x1": 245,
+          "z0": -425,
+          "z1": 190
+        },
+        "sites": [
+          {
+            "zone": "west",
+            "x": -240,
+            "z": -20,
+            "index": 0,
+            "y": 0,
+            "padY": 0.22,
+            "hubY": 27.6
+          },
+          {
+            "zone": "west",
+            "x": -360,
+            "z": 25,
+            "index": 1,
+            "y": 0,
+            "padY": 0.22,
+            "hubY": 27.6
+          },
+          {
+            "zone": "west",
+            "x": -480,
+            "z": -30,
+            "index": 2,
+            "y": 0,
+            "padY": 0.22,
+            "hubY": 27.6
+          },
+          {
+            "zone": "west",
+            "x": -485,
+            "z": 100,
+            "index": 3,
+            "y": 0,
+            "padY": 0.22,
+            "hubY": 27.6
+          },
+          {
+            "zone": "ridge",
+            "x": -475,
+            "z": -155,
+            "index": 4,
+            "y": 34.648550957844215,
+            "padY": 34.868550957844214,
+            "hubY": 62.248550957844216
+          },
+          {
+            "zone": "ridge",
+            "x": -350,
+            "z": -145,
+            "index": 5,
+            "y": 26.98014452570936,
+            "padY": 27.20014452570936,
+            "hubY": 54.58014452570936
+          },
+          {
+            "zone": "ridge",
+            "x": -225,
+            "z": -180,
+            "index": 6,
+            "y": 34.46208002709616,
+            "padY": 34.682080027096156,
+            "hubY": 62.06208002709616
+          },
+          {
+            "zone": "ridge",
+            "x": -100,
+            "z": -190,
+            "index": 7,
+            "y": 20.846964884786022,
+            "padY": 21.06696488478602,
+            "hubY": 48.44696488478603
+          },
+          {
+            "zone": "distant",
+            "x": -465,
+            "z": -310,
+            "index": 8,
+            "y": 43.25908088920739,
+            "padY": 43.47908088920739,
+            "hubY": 70.85908088920739
+          },
+          {
+            "zone": "distant",
+            "x": -335,
+            "z": -330,
+            "index": 9,
+            "y": 42.847289222496556,
+            "padY": 43.067289222496555,
+            "hubY": 70.44728922249655
+          },
+          {
+            "zone": "distant",
+            "x": -190,
+            "z": -335,
+            "index": 10,
+            "y": 44.469971885064126,
+            "padY": 44.689971885064125,
+            "hubY": 72.06997188506412
+          },
+          {
+            "zone": "distant",
+            "x": -50,
+            "z": -315,
+            "index": 11,
+            "y": 26.199137831927125,
+            "padY": 26.419137831927124,
+            "hubY": 53.799137831927126
+          }
+        ],
+        "rotorDiameter": 22.2,
+        "terrainVertices": 24797,
+        "minimumRoadSurfaceGap": 0.08159851055147982,
+        "solarFlat": true
+      },
+      "postFailed": false
+    },
+    "standard": {
+      "solar": {
+        "quality": "standard",
+        "enabled": false,
+        "compass": [
+          {
+            "direction": "N",
+            "x": 64.09371785582412,
+            "y": 17.822862976816293
+          },
+          {
+            "direction": "E",
+            "x": 70.1771370231837,
+            "y": 64.09371785582412
+          },
+          {
+            "direction": "S",
+            "x": 23.90628214417588,
+            "y": 70.1771370231837
+          },
+          {
+            "direction": "W",
+            "x": 17.822862976816293,
+            "y": 23.90628214417588
+          }
+        ],
+        "plan": {
+          "settings": {
+            "latitude": 44,
+            "longitude": 87.6,
+            "timezone": 8,
+            "date": "2026-12-21",
+            "hour": 14,
+            "tiltDeg": 24,
+            "azimuthDeg": 180,
+            "demonstration": true
+          },
+          "normal": [
+            4.981087280387182e-17,
+            0.9135454576426009,
+            0.4067366430758002
+          ],
+          "panelCount": 396,
+          "equipment": [
+            {
+              "id": "inverter-0",
+              "kind": "inverter",
+              "name": "组串逆变器组 1",
+              "x": -162,
+              "z": 106,
+              "w": 5,
+              "d": 3,
+              "h": 2.1,
+              "x0": -164.5,
+              "x1": -159.5,
+              "z0": 104.5,
+              "z1": 107.5
+            },
+            {
+              "id": "transformer-0",
+              "kind": "transformer",
+              "name": "箱式升压变 1",
+              "x": -162,
+              "z": 116,
+              "w": 8,
+              "d": 6,
+              "h": 3.1,
+              "x0": -166,
+              "x1": -158,
+              "z0": 113,
+              "z1": 119
+            },
+            {
+              "id": "inverter-1",
+              "kind": "inverter",
+              "name": "组串逆变器组 2",
+              "x": -129,
+              "z": 106,
+              "w": 5,
+              "d": 3,
+              "h": 2.1,
+              "x0": -131.5,
+              "x1": -126.5,
+              "z0": 104.5,
+              "z1": 107.5
+            },
+            {
+              "id": "transformer-1",
+              "kind": "transformer",
+              "name": "箱式升压变 2",
+              "x": -129,
+              "z": 116,
+              "w": 8,
+              "d": 6,
+              "h": 3.1,
+              "x0": -133,
+              "x1": -125,
+              "z0": 113,
+              "z1": 119
+            },
+            {
+              "id": "inverter-2",
+              "kind": "inverter",
+              "name": "组串逆变器组 3",
+              "x": -96,
+              "z": 106,
+              "w": 5,
+              "d": 3,
+              "h": 2.1,
+              "x0": -98.5,
+              "x1": -93.5,
+              "z0": 104.5,
+              "z1": 107.5
+            },
+            {
+              "id": "transformer-2",
+              "kind": "transformer",
+              "name": "箱式升压变 3",
+              "x": -96,
+              "z": 116,
+              "w": 8,
+              "d": 6,
+              "h": 3.1,
+              "x0": -100,
+              "x1": -92,
+              "z0": 113,
+              "z1": 119
+            },
+            {
+              "id": "secondary",
+              "kind": "secondary",
+              "name": "计量 · 继保 · 通信",
+              "x": -82,
+              "z": 108,
+              "w": 8,
+              "d": 3,
+              "h": 3,
+              "x0": -86,
+              "x1": -78,
+              "z0": 106.5,
+              "z1": 109.5
+            },
+            {
+              "id": "collector",
+              "kind": "collector",
+              "name": "35 kV 集电开关区",
+              "x": -81,
+              "z": 120,
+              "w": 12,
+              "d": 7,
+              "h": 2.8,
+              "x0": -87,
+              "x1": -75,
+              "z0": 116.5,
+              "z1": 123.5
+            }
+          ],
+          "conflicts": [],
+          "equipmentConflicts": [],
+          "winter": [
+            {
+              "hour": 10,
+              "elevation": 2.0255120870281695,
+              "incidence": 0.27090326429957173,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 8.776439747292159,
+              "rowShadowRisk": true
+            },
+            {
+              "hour": 12,
+              "elevation": 16.53157447205706,
+              "incidence": 0.5964466017728504,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.5373875193651392,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 14,
+              "elevation": 22.55755591151185,
+              "incidence": 0.7258686071719918,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.2722484661068325,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 16,
+              "elevation": 17.81946513956852,
+              "incidence": 0.624514245765797,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.4653933969210915,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 18,
+              "elevation": 4.1600814419165095,
+              "incidence": 0.31952549158078836,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 4.538390536295346,
+              "rowShadowRisk": true
+            }
+          ]
+        },
+        "physical": [
+          {
+            "id": "inverter-0",
+            "min": [
+              -163.39999997615814,
+              -0.5,
+              105.5
+            ],
+            "max": [
+              -160.60000002384186,
+              2.321666656732559,
+              106.82
+            ]
+          },
+          {
+            "id": "transformer-0",
+            "min": [
+              -163.64999997615814,
+              -0.5,
+              115
+            ],
+            "max": [
+              -160.35000002384186,
+              3.02375,
+              118.03
+            ]
+          },
+          {
+            "id": "inverter-1",
+            "min": [
+              -130.39999997615814,
+              -0.5,
+              105.5
+            ],
+            "max": [
+              -127.60000002384186,
+              2.321666656732559,
+              106.82
+            ]
+          },
+          {
+            "id": "transformer-1",
+            "min": [
+              -130.64999997615814,
+              -0.5,
+              115
+            ],
+            "max": [
+              -127.35000002384186,
+              3.02375,
+              118.03
+            ]
+          },
+          {
+            "id": "inverter-2",
+            "min": [
+              -97.39999997615814,
+              -0.5,
+              105.5
+            ],
+            "max": [
+              -94.60000002384186,
+              2.321666656732559,
+              106.82
+            ]
+          },
+          {
+            "id": "transformer-2",
+            "min": [
+              -97.64999997615814,
+              -0.5,
+              115
+            ],
+            "max": [
+              -94.35000002384186,
+              3.02375,
+              118.03
+            ]
+          },
+          {
+            "id": "secondary",
+            "min": [
+              -84.25,
+              -0.5,
+              107.5
+            ],
+            "max": [
+              -79.75,
+              3.13875,
+              109.08
+            ]
+          },
+          {
+            "id": "collector",
+            "min": [
+              -84.75,
+              -0.5,
+              119.5
+            ],
+            "max": [
+              -77.25,
+              3.44125,
+              121.04
+            ]
+          }
+        ],
+        "physicalConflicts": [],
+        "connections": [
+          {
+            "id": "dc-0",
+            "from": "PV blocks 0",
+            "to": "inverter-0",
+            "pts": [
+              [
+                -162,
+                101.3
+              ],
+              [
+                -162,
+                104.5
+              ]
+            ]
+          },
+          {
+            "id": "ac-0",
+            "from": "inverter-0",
+            "to": "transformer-0",
+            "pts": [
+              [
+                -162,
+                107.5
+              ],
+              [
+                -162,
+                113
+              ]
+            ]
+          },
+          {
+            "id": "mv-0",
+            "from": "transformer-0",
+            "to": "collector",
+            "pts": [
+              [
+                -162,
+                119
+              ],
+              [
+                -162,
+                123.8
+              ],
+              [
+                -81,
+                123.8
+              ],
+              [
+                -81,
+                122
+              ]
+            ]
+          },
+          {
+            "id": "dc-1",
+            "from": "PV blocks 1",
+            "to": "inverter-1",
+            "pts": [
+              [
+                -129,
+                101.3
+              ],
+              [
+                -129,
+                104.5
+              ]
+            ]
+          },
+          {
+            "id": "ac-1",
+            "from": "inverter-1",
+            "to": "transformer-1",
+            "pts": [
+              [
+                -129,
+                107.5
+              ],
+              [
+                -129,
+                113
+              ]
+            ]
+          },
+          {
+            "id": "mv-1",
+            "from": "transformer-1",
+            "to": "collector",
+            "pts": [
+              [
+                -129,
+                119
+              ],
+              [
+                -129,
+                123.8
+              ],
+              [
+                -81,
+                123.8
+              ],
+              [
+                -81,
+                122
+              ]
+            ]
+          },
+          {
+            "id": "dc-2",
+            "from": "PV blocks 2",
+            "to": "inverter-2",
+            "pts": [
+              [
+                -96,
+                101.3
+              ],
+              [
+                -96,
+                104.5
+              ]
+            ]
+          },
+          {
+            "id": "ac-2",
+            "from": "inverter-2",
+            "to": "transformer-2",
+            "pts": [
+              [
+                -96,
+                107.5
+              ],
+              [
+                -96,
+                113
+              ]
+            ]
+          },
+          {
+            "id": "mv-2",
+            "from": "transformer-2",
+            "to": "collector",
+            "pts": [
+              [
+                -96,
+                119
+              ],
+              [
+                -96,
+                123.8
+              ],
+              [
+                -81,
+                123.8
+              ],
+              [
+                -81,
+                122
+              ]
+            ]
+          },
+          {
+            "id": "secondary",
+            "from": "collector",
+            "to": "secondary",
+            "pts": [
+              [
+                -82,
+                118
+              ],
+              [
+                -88,
+                118
+              ],
+              [
+                -88,
+                108
+              ],
+              [
+                -86,
+                108
+              ]
+            ]
+          },
+          {
+            "id": "outgoing",
+            "from": "collector",
+            "to": "substation",
+            "pts": [
+              [
+                -75,
+                120
+              ],
+              [
+                -65,
+                120
+              ],
+              [
+                -65,
+                78
+              ]
+            ]
+          }
+        ],
+        "diagnostic": {
+          "sun": {
+            "direction": [
+              0.029896250457661727,
+              0.38361131321920294,
+              0.9230106037195951
+            ],
+            "elevation": 22.55755591151185,
+            "azimuth": 178.14484218413122,
+            "solarNoon": 14.12447046539845
+          },
+          "incidence": 0.7258686071719918,
+          "counts": {
+            "组件": 0,
+            "设备": 0,
+            "绿植": 0,
+            "地形": 0
+          },
+          "blocked": [],
+          "method": "代表组件中心采样；设备与树冠包围盒保守估算，地形步进约 3 个展示单位",
+          "winter": [
+            {
+              "hour": 10,
+              "elevation": 2.0255120870281695,
+              "incidence": 0.27090326429957173,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 8.776439747292159,
+              "rowShadowRisk": true
+            },
+            {
+              "hour": 12,
+              "elevation": 16.53157447205706,
+              "incidence": 0.5964466017728504,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.5373875193651392,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 14,
+              "elevation": 22.55755591151185,
+              "incidence": 0.7258686071719918,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.2722484661068325,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 16,
+              "elevation": 17.81946513956852,
+              "incidence": 0.624514245765797,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.4653933969210915,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 18,
+              "elevation": 4.1600814419165095,
+              "incidence": 0.31952549158078836,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 4.538390536295346,
+              "rowShadowRisk": true
+            }
+          ]
+        },
+        "oldInverters": 0
+      },
+      "landscape": {
+        "quality": "standard",
+        "basicVisible": true,
+        "refinedVisible": false,
+        "night": false,
+        "trees": 153,
+        "shrubs": 818,
+        "rocks": 69,
+        "lamps": 16,
+        "roads": 19,
+        "turbines": 12,
+        "pvPanels": 396,
+        "coverage": {
+          "west": {
+            "trees": 58,
+            "shrubs": 247,
+            "lamps": 3,
+            "roads": 5
+          },
+          "ridge": {
+            "trees": 53,
+            "shrubs": 254,
+            "lamps": 4,
+            "roads": 6
+          },
+          "distant": {
+            "trees": 0,
+            "shrubs": 227,
+            "lamps": 3,
+            "roads": 5
+          },
+          "solar": {
+            "trees": 42,
+            "shrubs": 90,
+            "lamps": 6,
+            "roads": 3
+          }
+        },
+        "bounds": {
+          "x0": -565,
+          "x1": 245,
+          "z0": -425,
+          "z1": 190
+        },
+        "sites": [
+          {
+            "zone": "west",
+            "x": -240,
+            "z": -20,
+            "index": 0,
+            "y": 0,
+            "padY": 0.22,
+            "hubY": 27.6
+          },
+          {
+            "zone": "west",
+            "x": -360,
+            "z": 25,
+            "index": 1,
+            "y": 0,
+            "padY": 0.22,
+            "hubY": 27.6
+          },
+          {
+            "zone": "west",
+            "x": -480,
+            "z": -30,
+            "index": 2,
+            "y": 0,
+            "padY": 0.22,
+            "hubY": 27.6
+          },
+          {
+            "zone": "west",
+            "x": -485,
+            "z": 100,
+            "index": 3,
+            "y": 0,
+            "padY": 0.22,
+            "hubY": 27.6
+          },
+          {
+            "zone": "ridge",
+            "x": -475,
+            "z": -155,
+            "index": 4,
+            "y": 34.648550957844215,
+            "padY": 34.868550957844214,
+            "hubY": 62.248550957844216
+          },
+          {
+            "zone": "ridge",
+            "x": -350,
+            "z": -145,
+            "index": 5,
+            "y": 26.98014452570936,
+            "padY": 27.20014452570936,
+            "hubY": 54.58014452570936
+          },
+          {
+            "zone": "ridge",
+            "x": -225,
+            "z": -180,
+            "index": 6,
+            "y": 34.46208002709616,
+            "padY": 34.682080027096156,
+            "hubY": 62.06208002709616
+          },
+          {
+            "zone": "ridge",
+            "x": -100,
+            "z": -190,
+            "index": 7,
+            "y": 20.846964884786022,
+            "padY": 21.06696488478602,
+            "hubY": 48.44696488478603
+          },
+          {
+            "zone": "distant",
+            "x": -465,
+            "z": -310,
+            "index": 8,
+            "y": 43.25908088920739,
+            "padY": 43.47908088920739,
+            "hubY": 70.85908088920739
+          },
+          {
+            "zone": "distant",
+            "x": -335,
+            "z": -330,
+            "index": 9,
+            "y": 42.847289222496556,
+            "padY": 43.067289222496555,
+            "hubY": 70.44728922249655
+          },
+          {
+            "zone": "distant",
+            "x": -190,
+            "z": -335,
+            "index": 10,
+            "y": 44.469971885064126,
+            "padY": 44.689971885064125,
+            "hubY": 72.06997188506412
+          },
+          {
+            "zone": "distant",
+            "x": -50,
+            "z": -315,
+            "index": 11,
+            "y": 26.199137831927125,
+            "padY": 26.419137831927124,
+            "hubY": 53.799137831927126
+          }
+        ],
+        "rotorDiameter": 22.2,
+        "terrainVertices": 24797,
+        "minimumRoadSurfaceGap": 0.08159851055147982,
+        "solarFlat": true
+      },
+      "postFailed": false
+    },
+    "high": {
+      "solar": {
+        "quality": "high",
+        "enabled": false,
+        "compass": [
+          {
+            "direction": "N",
+            "x": 64.09371785582412,
+            "y": 17.822862976816293
+          },
+          {
+            "direction": "E",
+            "x": 70.1771370231837,
+            "y": 64.09371785582412
+          },
+          {
+            "direction": "S",
+            "x": 23.90628214417588,
+            "y": 70.1771370231837
+          },
+          {
+            "direction": "W",
+            "x": 17.822862976816293,
+            "y": 23.90628214417588
+          }
+        ],
+        "plan": {
+          "settings": {
+            "latitude": 44,
+            "longitude": 87.6,
+            "timezone": 8,
+            "date": "2026-12-21",
+            "hour": 14,
+            "tiltDeg": 24,
+            "azimuthDeg": 180,
+            "demonstration": true
+          },
+          "normal": [
+            4.981087280387182e-17,
+            0.9135454576426009,
+            0.4067366430758002
+          ],
+          "panelCount": 396,
+          "equipment": [
+            {
+              "id": "inverter-0",
+              "kind": "inverter",
+              "name": "组串逆变器组 1",
+              "x": -162,
+              "z": 106,
+              "w": 5,
+              "d": 3,
+              "h": 2.1,
+              "x0": -164.5,
+              "x1": -159.5,
+              "z0": 104.5,
+              "z1": 107.5
+            },
+            {
+              "id": "transformer-0",
+              "kind": "transformer",
+              "name": "箱式升压变 1",
+              "x": -162,
+              "z": 116,
+              "w": 8,
+              "d": 6,
+              "h": 3.1,
+              "x0": -166,
+              "x1": -158,
+              "z0": 113,
+              "z1": 119
+            },
+            {
+              "id": "inverter-1",
+              "kind": "inverter",
+              "name": "组串逆变器组 2",
+              "x": -129,
+              "z": 106,
+              "w": 5,
+              "d": 3,
+              "h": 2.1,
+              "x0": -131.5,
+              "x1": -126.5,
+              "z0": 104.5,
+              "z1": 107.5
+            },
+            {
+              "id": "transformer-1",
+              "kind": "transformer",
+              "name": "箱式升压变 2",
+              "x": -129,
+              "z": 116,
+              "w": 8,
+              "d": 6,
+              "h": 3.1,
+              "x0": -133,
+              "x1": -125,
+              "z0": 113,
+              "z1": 119
+            },
+            {
+              "id": "inverter-2",
+              "kind": "inverter",
+              "name": "组串逆变器组 3",
+              "x": -96,
+              "z": 106,
+              "w": 5,
+              "d": 3,
+              "h": 2.1,
+              "x0": -98.5,
+              "x1": -93.5,
+              "z0": 104.5,
+              "z1": 107.5
+            },
+            {
+              "id": "transformer-2",
+              "kind": "transformer",
+              "name": "箱式升压变 3",
+              "x": -96,
+              "z": 116,
+              "w": 8,
+              "d": 6,
+              "h": 3.1,
+              "x0": -100,
+              "x1": -92,
+              "z0": 113,
+              "z1": 119
+            },
+            {
+              "id": "secondary",
+              "kind": "secondary",
+              "name": "计量 · 继保 · 通信",
+              "x": -82,
+              "z": 108,
+              "w": 8,
+              "d": 3,
+              "h": 3,
+              "x0": -86,
+              "x1": -78,
+              "z0": 106.5,
+              "z1": 109.5
+            },
+            {
+              "id": "collector",
+              "kind": "collector",
+              "name": "35 kV 集电开关区",
+              "x": -81,
+              "z": 120,
+              "w": 12,
+              "d": 7,
+              "h": 2.8,
+              "x0": -87,
+              "x1": -75,
+              "z0": 116.5,
+              "z1": 123.5
+            }
+          ],
+          "conflicts": [],
+          "equipmentConflicts": [],
+          "winter": [
+            {
+              "hour": 10,
+              "elevation": 2.0255120870281695,
+              "incidence": 0.27090326429957173,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 8.776439747292159,
+              "rowShadowRisk": true
+            },
+            {
+              "hour": 12,
+              "elevation": 16.53157447205706,
+              "incidence": 0.5964466017728504,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.5373875193651392,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 14,
+              "elevation": 22.55755591151185,
+              "incidence": 0.7258686071719918,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.2722484661068325,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 16,
+              "elevation": 17.81946513956852,
+              "incidence": 0.624514245765797,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.4653933969210915,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 18,
+              "elevation": 4.1600814419165095,
+              "incidence": 0.31952549158078836,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 4.538390536295346,
+              "rowShadowRisk": true
+            }
+          ]
+        },
+        "physical": [
+          {
+            "id": "inverter-0",
+            "min": [
+              -163.39999997615814,
+              -0.5,
+              105.5
+            ],
+            "max": [
+              -160.60000002384186,
+              2.321666656732559,
+              106.82
+            ]
+          },
+          {
+            "id": "transformer-0",
+            "min": [
+              -163.64999997615814,
+              -0.5,
+              115
+            ],
+            "max": [
+              -160.35000002384186,
+              3.02375,
+              118.03
+            ]
+          },
+          {
+            "id": "inverter-1",
+            "min": [
+              -130.39999997615814,
+              -0.5,
+              105.5
+            ],
+            "max": [
+              -127.60000002384186,
+              2.321666656732559,
+              106.82
+            ]
+          },
+          {
+            "id": "transformer-1",
+            "min": [
+              -130.64999997615814,
+              -0.5,
+              115
+            ],
+            "max": [
+              -127.35000002384186,
+              3.02375,
+              118.03
+            ]
+          },
+          {
+            "id": "inverter-2",
+            "min": [
+              -97.39999997615814,
+              -0.5,
+              105.5
+            ],
+            "max": [
+              -94.60000002384186,
+              2.321666656732559,
+              106.82
+            ]
+          },
+          {
+            "id": "transformer-2",
+            "min": [
+              -97.64999997615814,
+              -0.5,
+              115
+            ],
+            "max": [
+              -94.35000002384186,
+              3.02375,
+              118.03
+            ]
+          },
+          {
+            "id": "secondary",
+            "min": [
+              -84.25,
+              -0.5,
+              107.5
+            ],
+            "max": [
+              -79.75,
+              3.13875,
+              109.08
+            ]
+          },
+          {
+            "id": "collector",
+            "min": [
+              -84.75,
+              -0.5,
+              119.5
+            ],
+            "max": [
+              -77.25,
+              3.44125,
+              121.04
+            ]
+          }
+        ],
+        "physicalConflicts": [],
+        "connections": [
+          {
+            "id": "dc-0",
+            "from": "PV blocks 0",
+            "to": "inverter-0",
+            "pts": [
+              [
+                -162,
+                101.3
+              ],
+              [
+                -162,
+                104.5
+              ]
+            ]
+          },
+          {
+            "id": "ac-0",
+            "from": "inverter-0",
+            "to": "transformer-0",
+            "pts": [
+              [
+                -162,
+                107.5
+              ],
+              [
+                -162,
+                113
+              ]
+            ]
+          },
+          {
+            "id": "mv-0",
+            "from": "transformer-0",
+            "to": "collector",
+            "pts": [
+              [
+                -162,
+                119
+              ],
+              [
+                -162,
+                123.8
+              ],
+              [
+                -81,
+                123.8
+              ],
+              [
+                -81,
+                122
+              ]
+            ]
+          },
+          {
+            "id": "dc-1",
+            "from": "PV blocks 1",
+            "to": "inverter-1",
+            "pts": [
+              [
+                -129,
+                101.3
+              ],
+              [
+                -129,
+                104.5
+              ]
+            ]
+          },
+          {
+            "id": "ac-1",
+            "from": "inverter-1",
+            "to": "transformer-1",
+            "pts": [
+              [
+                -129,
+                107.5
+              ],
+              [
+                -129,
+                113
+              ]
+            ]
+          },
+          {
+            "id": "mv-1",
+            "from": "transformer-1",
+            "to": "collector",
+            "pts": [
+              [
+                -129,
+                119
+              ],
+              [
+                -129,
+                123.8
+              ],
+              [
+                -81,
+                123.8
+              ],
+              [
+                -81,
+                122
+              ]
+            ]
+          },
+          {
+            "id": "dc-2",
+            "from": "PV blocks 2",
+            "to": "inverter-2",
+            "pts": [
+              [
+                -96,
+                101.3
+              ],
+              [
+                -96,
+                104.5
+              ]
+            ]
+          },
+          {
+            "id": "ac-2",
+            "from": "inverter-2",
+            "to": "transformer-2",
+            "pts": [
+              [
+                -96,
+                107.5
+              ],
+              [
+                -96,
+                113
+              ]
+            ]
+          },
+          {
+            "id": "mv-2",
+            "from": "transformer-2",
+            "to": "collector",
+            "pts": [
+              [
+                -96,
+                119
+              ],
+              [
+                -96,
+                123.8
+              ],
+              [
+                -81,
+                123.8
+              ],
+              [
+                -81,
+                122
+              ]
+            ]
+          },
+          {
+            "id": "secondary",
+            "from": "collector",
+            "to": "secondary",
+            "pts": [
+              [
+                -82,
+                118
+              ],
+              [
+                -88,
+                118
+              ],
+              [
+                -88,
+                108
+              ],
+              [
+                -86,
+                108
+              ]
+            ]
+          },
+          {
+            "id": "outgoing",
+            "from": "collector",
+            "to": "substation",
+            "pts": [
+              [
+                -75,
+                120
+              ],
+              [
+                -65,
+                120
+              ],
+              [
+                -65,
+                78
+              ]
+            ]
+          }
+        ],
+        "diagnostic": {
+          "sun": {
+            "direction": [
+              0.029896250457661727,
+              0.38361131321920294,
+              0.9230106037195951
+            ],
+            "elevation": 22.55755591151185,
+            "azimuth": 178.14484218413122,
+            "solarNoon": 14.12447046539845
+          },
+          "incidence": 0.7258686071719918,
+          "counts": {
+            "组件": 0,
+            "设备": 0,
+            "绿植": 0,
+            "地形": 0
+          },
+          "blocked": [],
+          "method": "代表组件中心采样；设备与树冠包围盒保守估算，地形步进约 3 个展示单位",
+          "winter": [
+            {
+              "hour": 10,
+              "elevation": 2.0255120870281695,
+              "incidence": 0.27090326429957173,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 8.776439747292159,
+              "rowShadowRisk": true
+            },
+            {
+              "hour": 12,
+              "elevation": 16.53157447205706,
+              "incidence": 0.5964466017728504,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.5373875193651392,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 14,
+              "elevation": 22.55755591151185,
+              "incidence": 0.7258686071719918,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.2722484661068325,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 16,
+              "elevation": 17.81946513956852,
+              "incidence": 0.624514245765797,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 1.4653933969210915,
+              "rowShadowRisk": false
+            },
+            {
+              "hour": 18,
+              "elevation": 4.1600814419165095,
+              "incidence": 0.31952549158078836,
+              "clearRowGap": 2.212390905064619,
+              "projectedNorthShadow": 4.538390536295346,
+              "rowShadowRisk": true
+            }
+          ]
+        },
+        "oldInverters": 0
+      },
+      "landscape": {
+        "quality": "high",
+        "basicVisible": true,
+        "refinedVisible": true,
+        "night": false,
+        "trees": 153,
+        "shrubs": 818,
+        "rocks": 69,
+        "lamps": 16,
+        "roads": 19,
+        "turbines": 12,
+        "pvPanels": 396,
+        "coverage": {
+          "west": {
+            "trees": 58,
+            "shrubs": 247,
+            "lamps": 3,
+            "roads": 5
+          },
+          "ridge": {
+            "trees": 53,
+            "shrubs": 254,
+            "lamps": 4,
+            "roads": 6
+          },
+          "distant": {
+            "trees": 0,
+            "shrubs": 227,
+            "lamps": 3,
+            "roads": 5
+          },
+          "solar": {
+            "trees": 42,
+            "shrubs": 90,
+            "lamps": 6,
+            "roads": 3
+          }
+        },
+        "bounds": {
+          "x0": -565,
+          "x1": 245,
+          "z0": -425,
+          "z1": 190
+        },
+        "sites": [
+          {
+            "zone": "west",
+            "x": -240,
+            "z": -20,
+            "index": 0,
+            "y": 0,
+            "padY": 0.22,
+            "hubY": 27.6
+          },
+          {
+            "zone": "west",
+            "x": -360,
+            "z": 25,
+            "index": 1,
+            "y": 0,
+            "padY": 0.22,
+            "hubY": 27.6
+          },
+          {
+            "zone": "west",
+            "x": -480,
+            "z": -30,
+            "index": 2,
+            "y": 0,
+            "padY": 0.22,
+            "hubY": 27.6
+          },
+          {
+            "zone": "west",
+            "x": -485,
+            "z": 100,
+            "index": 3,
+            "y": 0,
+            "padY": 0.22,
+            "hubY": 27.6
+          },
+          {
+            "zone": "ridge",
+            "x": -475,
+            "z": -155,
+            "index": 4,
+            "y": 34.648550957844215,
+            "padY": 34.868550957844214,
+            "hubY": 62.248550957844216
+          },
+          {
+            "zone": "ridge",
+            "x": -350,
+            "z": -145,
+            "index": 5,
+            "y": 26.98014452570936,
+            "padY": 27.20014452570936,
+            "hubY": 54.58014452570936
+          },
+          {
+            "zone": "ridge",
+            "x": -225,
+            "z": -180,
+            "index": 6,
+            "y": 34.46208002709616,
+            "padY": 34.682080027096156,
+            "hubY": 62.06208002709616
+          },
+          {
+            "zone": "ridge",
+            "x": -100,
+            "z": -190,
+            "index": 7,
+            "y": 20.846964884786022,
+            "padY": 21.06696488478602,
+            "hubY": 48.44696488478603
+          },
+          {
+            "zone": "distant",
+            "x": -465,
+            "z": -310,
+            "index": 8,
+            "y": 43.25908088920739,
+            "padY": 43.47908088920739,
+            "hubY": 70.85908088920739
+          },
+          {
+            "zone": "distant",
+            "x": -335,
+            "z": -330,
+            "index": 9,
+            "y": 42.847289222496556,
+            "padY": 43.067289222496555,
+            "hubY": 70.44728922249655
+          },
+          {
+            "zone": "distant",
+            "x": -190,
+            "z": -335,
+            "index": 10,
+            "y": 44.469971885064126,
+            "padY": 44.689971885064125,
+            "hubY": 72.06997188506412
+          },
+          {
+            "zone": "distant",
+            "x": -50,
+            "z": -315,
+            "index": 11,
+            "y": 26.199137831927125,
+            "padY": 26.419137831927124,
+            "hubY": 53.799137831927126
+          }
+        ],
+        "rotorDiameter": 22.2,
+        "terrainVertices": 24797,
+        "minimumRoadSurfaceGap": 0.08159851055147982,
+        "solarFlat": true
+      },
+      "postFailed": false
+    }
+  },
+  "geometry": {
+    "terrain": {
+      "min": [
+        -565,
+        0,
+        -425
+      ],
+      "max": [
+        245,
+        64.66397094726562,
+        190
+      ]
+    },
+    "base": {
+      "min": [
+        -565,
+        -1.75,
+        -425
+      ],
+      "max": [
+        245,
+        0,
+        190
+      ]
+    },
+    "edgeMax": 0,
+    "retiredGroundVisible": false,
+    "normals": [
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ],
+      [
+        0,
+        0.9135454533753186,
+        0.40673665266027326
+      ]
+    ],
+    "solarEdge": [
+      [
+        -81,
+        0.32,
+        120
+      ],
+      [
+        -65,
+        0.32,
+        120
+      ],
+      [
+        -65,
+        0.32,
+        106
+      ],
+      [
+        -65,
+        0.32,
+        92
+      ],
+      [
+        -65,
+        0.32,
+        78
+      ],
+      [
+        -65,
+        8,
+        78
+      ],
+      [
+        -51,
+        8,
+        78
+      ],
+      [
+        -37,
+        8,
+        78
+      ],
+      [
+        -23,
+        8,
+        78
+      ],
+      [
+        -23,
+        8,
+        61.25
+      ],
+      [
+        -23,
+        8,
+        44.5
+      ],
+      [
+        -23,
+        8,
+        27.75
+      ],
+      [
+        -23,
+        8,
+        11
+      ],
+      [
+        -6.333333333333332,
+        8,
+        11
+      ],
+      [
+        10.333333333333336,
+        8,
+        11
+      ],
+      [
+        27,
+        8,
+        11
+      ],
+      [
+        27,
+        3.2,
+        11
+      ]
+    ],
+    "solar": {
+      "quality": "high",
+      "enabled": false,
+      "compass": [
+        {
+          "direction": "N",
+          "x": 64.09371785582412,
+          "y": 17.822862976816293
+        },
+        {
+          "direction": "E",
+          "x": 70.1771370231837,
+          "y": 64.09371785582412
+        },
+        {
+          "direction": "S",
+          "x": 23.90628214417588,
+          "y": 70.1771370231837
+        },
+        {
+          "direction": "W",
+          "x": 17.822862976816293,
+          "y": 23.90628214417588
+        }
+      ],
+      "plan": {
+        "settings": {
+          "latitude": 44,
+          "longitude": 87.6,
+          "timezone": 8,
+          "date": "2026-12-21",
+          "hour": 14,
+          "tiltDeg": 24,
+          "azimuthDeg": 180,
+          "demonstration": true
+        },
+        "normal": [
+          4.981087280387182e-17,
+          0.9135454576426009,
+          0.4067366430758002
+        ],
+        "panelCount": 396,
+        "equipment": [
+          {
+            "id": "inverter-0",
+            "kind": "inverter",
+            "name": "组串逆变器组 1",
+            "x": -162,
+            "z": 106,
+            "w": 5,
+            "d": 3,
+            "h": 2.1,
+            "x0": -164.5,
+            "x1": -159.5,
+            "z0": 104.5,
+            "z1": 107.5
+          },
+          {
+            "id": "transformer-0",
+            "kind": "transformer",
+            "name": "箱式升压变 1",
+            "x": -162,
+            "z": 116,
+            "w": 8,
+            "d": 6,
+            "h": 3.1,
+            "x0": -166,
+            "x1": -158,
+            "z0": 113,
+            "z1": 119
+          },
+          {
+            "id": "inverter-1",
+            "kind": "inverter",
+            "name": "组串逆变器组 2",
+            "x": -129,
+            "z": 106,
+            "w": 5,
+            "d": 3,
+            "h": 2.1,
+            "x0": -131.5,
+            "x1": -126.5,
+            "z0": 104.5,
+            "z1": 107.5
+          },
+          {
+            "id": "transformer-1",
+            "kind": "transformer",
+            "name": "箱式升压变 2",
+            "x": -129,
+            "z": 116,
+            "w": 8,
+            "d": 6,
+            "h": 3.1,
+            "x0": -133,
+            "x1": -125,
+            "z0": 113,
+            "z1": 119
+          },
+          {
+            "id": "inverter-2",
+            "kind": "inverter",
+            "name": "组串逆变器组 3",
+            "x": -96,
+            "z": 106,
+            "w": 5,
+            "d": 3,
+            "h": 2.1,
+            "x0": -98.5,
+            "x1": -93.5,
+            "z0": 104.5,
+            "z1": 107.5
+          },
+          {
+            "id": "transformer-2",
+            "kind": "transformer",
+            "name": "箱式升压变 3",
+            "x": -96,
+            "z": 116,
+            "w": 8,
+            "d": 6,
+            "h": 3.1,
+            "x0": -100,
+            "x1": -92,
+            "z0": 113,
+            "z1": 119
+          },
+          {
+            "id": "secondary",
+            "kind": "secondary",
+            "name": "计量 · 继保 · 通信",
+            "x": -82,
+            "z": 108,
+            "w": 8,
+            "d": 3,
+            "h": 3,
+            "x0": -86,
+            "x1": -78,
+            "z0": 106.5,
+            "z1": 109.5
+          },
+          {
+            "id": "collector",
+            "kind": "collector",
+            "name": "35 kV 集电开关区",
+            "x": -81,
+            "z": 120,
+            "w": 12,
+            "d": 7,
+            "h": 2.8,
+            "x0": -87,
+            "x1": -75,
+            "z0": 116.5,
+            "z1": 123.5
+          }
+        ],
+        "conflicts": [],
+        "equipmentConflicts": [],
+        "winter": [
+          {
+            "hour": 10,
+            "elevation": 2.0255120870281695,
+            "incidence": 0.27090326429957173,
+            "clearRowGap": 2.212390905064619,
+            "projectedNorthShadow": 8.776439747292159,
+            "rowShadowRisk": true
+          },
+          {
+            "hour": 12,
+            "elevation": 16.53157447205706,
+            "incidence": 0.5964466017728504,
+            "clearRowGap": 2.212390905064619,
+            "projectedNorthShadow": 1.5373875193651392,
+            "rowShadowRisk": false
+          },
+          {
+            "hour": 14,
+            "elevation": 22.55755591151185,
+            "incidence": 0.7258686071719918,
+            "clearRowGap": 2.212390905064619,
+            "projectedNorthShadow": 1.2722484661068325,
+            "rowShadowRisk": false
+          },
+          {
+            "hour": 16,
+            "elevation": 17.81946513956852,
+            "incidence": 0.624514245765797,
+            "clearRowGap": 2.212390905064619,
+            "projectedNorthShadow": 1.4653933969210915,
+            "rowShadowRisk": false
+          },
+          {
+            "hour": 18,
+            "elevation": 4.1600814419165095,
+            "incidence": 0.31952549158078836,
+            "clearRowGap": 2.212390905064619,
+            "projectedNorthShadow": 4.538390536295346,
+            "rowShadowRisk": true
+          }
+        ]
+      },
+      "physical": [
+        {
+          "id": "inverter-0",
+          "min": [
+            -163.39999997615814,
+            -0.5,
+            105.5
+          ],
+          "max": [
+            -160.60000002384186,
+            2.321666656732559,
+            106.82
+          ]
+        },
+        {
+          "id": "transformer-0",
+          "min": [
+            -163.64999997615814,
+            -0.5,
+            115
+          ],
+          "max": [
+            -160.35000002384186,
+            3.02375,
+            118.03
+          ]
+        },
+        {
+          "id": "inverter-1",
+          "min": [
+            -130.39999997615814,
+            -0.5,
+            105.5
+          ],
+          "max": [
+            -127.60000002384186,
+            2.321666656732559,
+            106.82
+          ]
+        },
+        {
+          "id": "transformer-1",
+          "min": [
+            -130.64999997615814,
+            -0.5,
+            115
+          ],
+          "max": [
+            -127.35000002384186,
+            3.02375,
+            118.03
+          ]
+        },
+        {
+          "id": "inverter-2",
+          "min": [
+            -97.39999997615814,
+            -0.5,
+            105.5
+          ],
+          "max": [
+            -94.60000002384186,
+            2.321666656732559,
+            106.82
+          ]
+        },
+        {
+          "id": "transformer-2",
+          "min": [
+            -97.64999997615814,
+            -0.5,
+            115
+          ],
+          "max": [
+            -94.35000002384186,
+            3.02375,
+            118.03
+          ]
+        },
+        {
+          "id": "secondary",
+          "min": [
+            -84.25,
+            -0.5,
+            107.5
+          ],
+          "max": [
+            -79.75,
+            3.13875,
+            109.08
+          ]
+        },
+        {
+          "id": "collector",
+          "min": [
+            -84.75,
+            -0.5,
+            119.5
+          ],
+          "max": [
+            -77.25,
+            3.44125,
+            121.04
+          ]
+        }
+      ],
+      "physicalConflicts": [],
+      "connections": [
+        {
+          "id": "dc-0",
+          "from": "PV blocks 0",
+          "to": "inverter-0",
+          "pts": [
+            [
+              -162,
+              101.3
+            ],
+            [
+              -162,
+              104.5
+            ]
+          ]
+        },
+        {
+          "id": "ac-0",
+          "from": "inverter-0",
+          "to": "transformer-0",
+          "pts": [
+            [
+              -162,
+              107.5
+            ],
+            [
+              -162,
+              113
+            ]
+          ]
+        },
+        {
+          "id": "mv-0",
+          "from": "transformer-0",
+          "to": "collector",
+          "pts": [
+            [
+              -162,
+              119
+            ],
+            [
+              -162,
+              123.8
+            ],
+            [
+              -81,
+              123.8
+            ],
+            [
+              -81,
+              122
+            ]
+          ]
+        },
+        {
+          "id": "dc-1",
+          "from": "PV blocks 1",
+          "to": "inverter-1",
+          "pts": [
+            [
+              -129,
+              101.3
+            ],
+            [
+              -129,
+              104.5
+            ]
+          ]
+        },
+        {
+          "id": "ac-1",
+          "from": "inverter-1",
+          "to": "transformer-1",
+          "pts": [
+            [
+              -129,
+              107.5
+            ],
+            [
+              -129,
+              113
+            ]
+          ]
+        },
+        {
+          "id": "mv-1",
+          "from": "transformer-1",
+          "to": "collector",
+          "pts": [
+            [
+              -129,
+              119
+            ],
+            [
+              -129,
+              123.8
+            ],
+            [
+              -81,
+              123.8
+            ],
+            [
+              -81,
+              122
+            ]
+          ]
+        },
+        {
+          "id": "dc-2",
+          "from": "PV blocks 2",
+          "to": "inverter-2",
+          "pts": [
+            [
+              -96,
+              101.3
+            ],
+            [
+              -96,
+              104.5
+            ]
+          ]
+        },
+        {
+          "id": "ac-2",
+          "from": "inverter-2",
+          "to": "transformer-2",
+          "pts": [
+            [
+              -96,
+              107.5
+            ],
+            [
+              -96,
+              113
+            ]
+          ]
+        },
+        {
+          "id": "mv-2",
+          "from": "transformer-2",
+          "to": "collector",
+          "pts": [
+            [
+              -96,
+              119
+            ],
+            [
+              -96,
+              123.8
+            ],
+            [
+              -81,
+              123.8
+            ],
+            [
+              -81,
+              122
+            ]
+          ]
+        },
+        {
+          "id": "secondary",
+          "from": "collector",
+          "to": "secondary",
+          "pts": [
+            [
+              -82,
+              118
+            ],
+            [
+              -88,
+              118
+            ],
+            [
+              -88,
+              108
+            ],
+            [
+              -86,
+              108
+            ]
+          ]
+        },
+        {
+          "id": "outgoing",
+          "from": "collector",
+          "to": "substation",
+          "pts": [
+            [
+              -75,
+              120
+            ],
+            [
+              -65,
+              120
+            ],
+            [
+              -65,
+              78
+            ]
+          ]
+        }
+      ],
+      "diagnostic": {
+        "sun": {
+          "direction": [
+            0.029896250457661727,
+            0.38361131321920294,
+            0.9230106037195951
+          ],
+          "elevation": 22.55755591151185,
+          "azimuth": 178.14484218413122,
+          "solarNoon": 14.12447046539845
+        },
+        "incidence": 0.7258686071719918,
+        "counts": {
+          "组件": 0,
+          "设备": 0,
+          "绿植": 0,
+          "地形": 0
+        },
+        "blocked": [],
+        "method": "代表组件中心采样；设备与树冠包围盒保守估算，地形步进约 3 个展示单位",
+        "winter": [
+          {
+            "hour": 10,
+            "elevation": 2.0255120870281695,
+            "incidence": 0.27090326429957173,
+            "clearRowGap": 2.212390905064619,
+            "projectedNorthShadow": 8.776439747292159,
+            "rowShadowRisk": true
+          },
+          {
+            "hour": 12,
+            "elevation": 16.53157447205706,
+            "incidence": 0.5964466017728504,
+            "clearRowGap": 2.212390905064619,
+            "projectedNorthShadow": 1.5373875193651392,
+            "rowShadowRisk": false
+          },
+          {
+            "hour": 14,
+            "elevation": 22.55755591151185,
+            "incidence": 0.7258686071719918,
+            "clearRowGap": 2.212390905064619,
+            "projectedNorthShadow": 1.2722484661068325,
+            "rowShadowRisk": false
+          },
+          {
+            "hour": 16,
+            "elevation": 17.81946513956852,
+            "incidence": 0.624514245765797,
+            "clearRowGap": 2.212390905064619,
+            "projectedNorthShadow": 1.4653933969210915,
+            "rowShadowRisk": false
+          },
+          {
+            "hour": 18,
+            "elevation": 4.1600814419165095,
+            "incidence": 0.31952549158078836,
+            "clearRowGap": 2.212390905064619,
+            "projectedNorthShadow": 4.538390536295346,
+            "rowShadowRisk": true
+          }
+        ]
+      },
+      "oldInverters": 0
+    }
+  },
+  "solarCheck": {
+    "quality": "high",
+    "enabled": true,
+    "compass": [
+      {
+        "direction": "N",
+        "x": 64.09371785582412,
+        "y": 17.822862976816293
+      },
+      {
+        "direction": "E",
+        "x": 70.1771370231837,
+        "y": 64.09371785582412
+      },
+      {
+        "direction": "S",
+        "x": 23.90628214417588,
+        "y": 70.1771370231837
+      },
+      {
+        "direction": "W",
+        "x": 17.822862976816293,
+        "y": 23.90628214417588
+      }
+    ],
+    "plan": {
+      "settings": {
+        "latitude": 44,
+        "longitude": 87.6,
+        "timezone": 8,
+        "date": "2026-12-21",
+        "hour": 14,
+        "tiltDeg": 24,
+        "azimuthDeg": 180,
+        "demonstration": true
+      },
+      "normal": [
+        4.981087280387182e-17,
+        0.9135454576426009,
+        0.4067366430758002
+      ],
+      "panelCount": 396,
+      "equipment": [
+        {
+          "id": "inverter-0",
+          "kind": "inverter",
+          "name": "组串逆变器组 1",
+          "x": -162,
+          "z": 106,
+          "w": 5,
+          "d": 3,
+          "h": 2.1,
+          "x0": -164.5,
+          "x1": -159.5,
+          "z0": 104.5,
+          "z1": 107.5
+        },
+        {
+          "id": "transformer-0",
+          "kind": "transformer",
+          "name": "箱式升压变 1",
+          "x": -162,
+          "z": 116,
+          "w": 8,
+          "d": 6,
+          "h": 3.1,
+          "x0": -166,
+          "x1": -158,
+          "z0": 113,
+          "z1": 119
+        },
+        {
+          "id": "inverter-1",
+          "kind": "inverter",
+          "name": "组串逆变器组 2",
+          "x": -129,
+          "z": 106,
+          "w": 5,
+          "d": 3,
+          "h": 2.1,
+          "x0": -131.5,
+          "x1": -126.5,
+          "z0": 104.5,
+          "z1": 107.5
+        },
+        {
+          "id": "transformer-1",
+          "kind": "transformer",
+          "name": "箱式升压变 2",
+          "x": -129,
+          "z": 116,
+          "w": 8,
+          "d": 6,
+          "h": 3.1,
+          "x0": -133,
+          "x1": -125,
+          "z0": 113,
+          "z1": 119
+        },
+        {
+          "id": "inverter-2",
+          "kind": "inverter",
+          "name": "组串逆变器组 3",
+          "x": -96,
+          "z": 106,
+          "w": 5,
+          "d": 3,
+          "h": 2.1,
+          "x0": -98.5,
+          "x1": -93.5,
+          "z0": 104.5,
+          "z1": 107.5
+        },
+        {
+          "id": "transformer-2",
+          "kind": "transformer",
+          "name": "箱式升压变 3",
+          "x": -96,
+          "z": 116,
+          "w": 8,
+          "d": 6,
+          "h": 3.1,
+          "x0": -100,
+          "x1": -92,
+          "z0": 113,
+          "z1": 119
+        },
+        {
+          "id": "secondary",
+          "kind": "secondary",
+          "name": "计量 · 继保 · 通信",
+          "x": -82,
+          "z": 108,
+          "w": 8,
+          "d": 3,
+          "h": 3,
+          "x0": -86,
+          "x1": -78,
+          "z0": 106.5,
+          "z1": 109.5
+        },
+        {
+          "id": "collector",
+          "kind": "collector",
+          "name": "35 kV 集电开关区",
+          "x": -81,
+          "z": 120,
+          "w": 12,
+          "d": 7,
+          "h": 2.8,
+          "x0": -87,
+          "x1": -75,
+          "z0": 116.5,
+          "z1": 123.5
+        }
+      ],
+      "conflicts": [],
+      "equipmentConflicts": [],
+      "winter": [
+        {
+          "hour": 10,
+          "elevation": 2.0255120870281695,
+          "incidence": 0.27090326429957173,
+          "clearRowGap": 2.212390905064619,
+          "projectedNorthShadow": 8.776439747292159,
+          "rowShadowRisk": true
+        },
+        {
+          "hour": 12,
+          "elevation": 16.53157447205706,
+          "incidence": 0.5964466017728504,
+          "clearRowGap": 2.212390905064619,
+          "projectedNorthShadow": 1.5373875193651392,
+          "rowShadowRisk": false
+        },
+        {
+          "hour": 14,
+          "elevation": 22.55755591151185,
+          "incidence": 0.7258686071719918,
+          "clearRowGap": 2.212390905064619,
+          "projectedNorthShadow": 1.2722484661068325,
+          "rowShadowRisk": false
+        },
+        {
+          "hour": 16,
+          "elevation": 17.81946513956852,
+          "incidence": 0.624514245765797,
+          "clearRowGap": 2.212390905064619,
+          "projectedNorthShadow": 1.4653933969210915,
+          "rowShadowRisk": false
+        },
+        {
+          "hour": 18,
+          "elevation": 4.1600814419165095,
+          "incidence": 0.31952549158078836,
+          "clearRowGap": 2.212390905064619,
+          "projectedNorthShadow": 4.538390536295346,
+          "rowShadowRisk": true
+        }
+      ]
+    },
+    "physical": [
+      {
+        "id": "inverter-0",
+        "min": [
+          -163.39999997615814,
+          -0.5,
+          105.5
+        ],
+        "max": [
+          -160.60000002384186,
+          2.321666656732559,
+          106.82
+        ]
+      },
+      {
+        "id": "transformer-0",
+        "min": [
+          -163.64999997615814,
+          -0.5,
+          115
+        ],
+        "max": [
+          -160.35000002384186,
+          3.02375,
+          118.03
+        ]
+      },
+      {
+        "id": "inverter-1",
+        "min": [
+          -130.39999997615814,
+          -0.5,
+          105.5
+        ],
+        "max": [
+          -127.60000002384186,
+          2.321666656732559,
+          106.82
+        ]
+      },
+      {
+        "id": "transformer-1",
+        "min": [
+          -130.64999997615814,
+          -0.5,
+          115
+        ],
+        "max": [
+          -127.35000002384186,
+          3.02375,
+          118.03
+        ]
+      },
+      {
+        "id": "inverter-2",
+        "min": [
+          -97.39999997615814,
+          -0.5,
+          105.5
+        ],
+        "max": [
+          -94.60000002384186,
+          2.321666656732559,
+          106.82
+        ]
+      },
+      {
+        "id": "transformer-2",
+        "min": [
+          -97.64999997615814,
+          -0.5,
+          115
+        ],
+        "max": [
+          -94.35000002384186,
+          3.02375,
+          118.03
+        ]
+      },
+      {
+        "id": "secondary",
+        "min": [
+          -84.25,
+          -0.5,
+          107.5
+        ],
+        "max": [
+          -79.75,
+          3.13875,
+          109.08
+        ]
+      },
+      {
+        "id": "collector",
+        "min": [
+          -84.75,
+          -0.5,
+          119.5
+        ],
+        "max": [
+          -77.25,
+          3.44125,
+          121.04
+        ]
+      }
+    ],
+    "physicalConflicts": [],
+    "connections": [
+      {
+        "id": "dc-0",
+        "from": "PV blocks 0",
+        "to": "inverter-0",
+        "pts": [
+          [
+            -162,
+            101.3
+          ],
+          [
+            -162,
+            104.5
+          ]
+        ]
+      },
+      {
+        "id": "ac-0",
+        "from": "inverter-0",
+        "to": "transformer-0",
+        "pts": [
+          [
+            -162,
+            107.5
+          ],
+          [
+            -162,
+            113
+          ]
+        ]
+      },
+      {
+        "id": "mv-0",
+        "from": "transformer-0",
+        "to": "collector",
+        "pts": [
+          [
+            -162,
+            119
+          ],
+          [
+            -162,
+            123.8
+          ],
+          [
+            -81,
+            123.8
+          ],
+          [
+            -81,
+            122
+          ]
+        ]
+      },
+      {
+        "id": "dc-1",
+        "from": "PV blocks 1",
+        "to": "inverter-1",
+        "pts": [
+          [
+            -129,
+            101.3
+          ],
+          [
+            -129,
+            104.5
+          ]
+        ]
+      },
+      {
+        "id": "ac-1",
+        "from": "inverter-1",
+        "to": "transformer-1",
+        "pts": [
+          [
+            -129,
+            107.5
+          ],
+          [
+            -129,
+            113
+          ]
+        ]
+      },
+      {
+        "id": "mv-1",
+        "from": "transformer-1",
+        "to": "collector",
+        "pts": [
+          [
+            -129,
+            119
+          ],
+          [
+            -129,
+            123.8
+          ],
+          [
+            -81,
+            123.8
+          ],
+          [
+            -81,
+            122
+          ]
+        ]
+      },
+      {
+        "id": "dc-2",
+        "from": "PV blocks 2",
+        "to": "inverter-2",
+        "pts": [
+          [
+            -96,
+            101.3
+          ],
+          [
+            -96,
+            104.5
+          ]
+        ]
+      },
+      {
+        "id": "ac-2",
+        "from": "inverter-2",
+        "to": "transformer-2",
+        "pts": [
+          [
+            -96,
+            107.5
+          ],
+          [
+            -96,
+            113
+          ]
+        ]
+      },
+      {
+        "id": "mv-2",
+        "from": "transformer-2",
+        "to": "collector",
+        "pts": [
+          [
+            -96,
+            119
+          ],
+          [
+            -96,
+            123.8
+          ],
+          [
+            -81,
+            123.8
+          ],
+          [
+            -81,
+            122
+          ]
+        ]
+      },
+      {
+        "id": "secondary",
+        "from": "collector",
+        "to": "secondary",
+        "pts": [
+          [
+            -82,
+            118
+          ],
+          [
+            -88,
+            118
+          ],
+          [
+            -88,
+            108
+          ],
+          [
+            -86,
+            108
+          ]
+        ]
+      },
+      {
+        "id": "outgoing",
+        "from": "collector",
+        "to": "substation",
+        "pts": [
+          [
+            -75,
+            120
+          ],
+          [
+            -65,
+            120
+          ],
+          [
+            -65,
+            78
+          ]
+        ]
+      }
+    ],
+    "diagnostic": {
+      "sun": {
+        "direction": [
+          0.029896250457661727,
+          0.38361131321920294,
+          0.9230106037195951
+        ],
+        "elevation": 22.55755591151185,
+        "azimuth": 178.14484218413122,
+        "solarNoon": 14.12447046539845
+      },
+      "incidence": 0.7258686071719918,
+      "counts": {
+        "组件": 0,
+        "设备": 0,
+        "绿植": 0,
+        "地形": 0
+      },
+      "blocked": [],
+      "method": "代表组件中心采样；设备与树冠包围盒保守估算，地形步进约 3 个展示单位",
+      "winter": [
+        {
+          "hour": 10,
+          "elevation": 2.0255120870281695,
+          "incidence": 0.27090326429957173,
+          "clearRowGap": 2.212390905064619,
+          "projectedNorthShadow": 8.776439747292159,
+          "rowShadowRisk": true
+        },
+        {
+          "hour": 12,
+          "elevation": 16.53157447205706,
+          "incidence": 0.5964466017728504,
+          "clearRowGap": 2.212390905064619,
+          "projectedNorthShadow": 1.5373875193651392,
+          "rowShadowRisk": false
+        },
+        {
+          "hour": 14,
+          "elevation": 22.55755591151185,
+          "incidence": 0.7258686071719918,
+          "clearRowGap": 2.212390905064619,
+          "projectedNorthShadow": 1.2722484661068325,
+          "rowShadowRisk": false
+        },
+        {
+          "hour": 16,
+          "elevation": 17.81946513956852,
+          "incidence": 0.624514245765797,
+          "clearRowGap": 2.212390905064619,
+          "projectedNorthShadow": 1.4653933969210915,
+          "rowShadowRisk": false
+        },
+        {
+          "hour": 18,
+          "elevation": 4.1600814419165095,
+          "incidence": 0.31952549158078836,
+          "clearRowGap": 2.212390905064619,
+          "projectedNorthShadow": 4.538390536295346,
+          "rowShadowRisk": true
+        }
+      ]
+    },
+    "oldInverters": 0
+  },
+  "morning": {
+    "sun": {
+      "direction": [
+        0.809064635720969,
+        0.035344491899410635,
+        0.5866559316311974
+      ],
+      "elevation": 2.0255120870281695,
+      "azimuth": 125.94601412065197,
+      "solarNoon": 14.123178779417826
+    },
+    "incidence": 0.27090326429957173,
+    "counts": {
+      "组件": 130,
+      "设备": 129,
+      "绿植": 84,
+      "地形": 0
+    },
+    "blocked": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      57,
+      58,
+      59,
+      60,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      352,
+      353,
+      354,
+      355,
+      356,
+      357,
+      358,
+      359,
+      360,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369,
+      370,
+      371,
+      372,
+      373,
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      391,
+      392,
+      393,
+      394
+    ],
+    "method": "代表组件中心采样；设备与树冠包围盒保守估算，地形步进约 3 个展示单位",
+    "winter": [
+      {
+        "hour": 10,
+        "elevation": 2.0255120870281695,
+        "incidence": 0.27090326429957173,
+        "clearRowGap": 2.212390905064619,
+        "projectedNorthShadow": 8.776439747292159,
+        "rowShadowRisk": true
+      },
+      {
+        "hour": 12,
+        "elevation": 16.53157447205706,
+        "incidence": 0.5964466017728504,
+        "clearRowGap": 2.212390905064619,
+        "projectedNorthShadow": 1.5373875193651392,
+        "rowShadowRisk": false
+      },
+      {
+        "hour": 14,
+        "elevation": 22.55755591151185,
+        "incidence": 0.7258686071719918,
+        "clearRowGap": 2.212390905064619,
+        "projectedNorthShadow": 1.2722484661068325,
+        "rowShadowRisk": false
+      },
+      {
+        "hour": 16,
+        "elevation": 17.81946513956852,
+        "incidence": 0.624514245765797,
+        "clearRowGap": 2.212390905064619,
+        "projectedNorthShadow": 1.4653933969210915,
+        "rowShadowRisk": false
+      },
+      {
+        "hour": 18,
+        "elevation": 4.1600814419165095,
+        "incidence": 0.31952549158078836,
+        "clearRowGap": 2.212390905064619,
+        "projectedNorthShadow": 4.538390536295346,
+        "rowShadowRisk": true
+      }
+    ]
+  },
+  "errors": []
+}

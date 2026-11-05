@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Three variants share weather, services, inventories, limits and complete work",
+    "pass": true,
+    "detail": {
+      "existing": {
+        "gridMWh": 3.8229089915075014,
+        "peakMW": 4,
+        "storageEndMWh": 5.12859200713195,
+        "curtailMWh": 0.29330307461009725
+      },
+      "sst": {
+        "gridMWh": 3.805815662786388,
+        "peakMW": 4,
+        "storageEndMWh": 5.157770232660402,
+        "curtailMWh": 0.30543370280187204
+      },
+      "coordinated": {
+        "gridMWh": 2.9026889384482093,
+        "peakMW": 2.8,
+        "storageEndMWh": 4.268034475666056,
+        "curtailMWh": 0.4989795918367346
+      }
+    }
+  },
+  {
+    "name": "Model is deterministic, pure and leaves shared configuration unchanged",
+    "pass": true
+  },
+  {
+    "name": "Existing full-load IT reference is 97.5%, SST can be worse at low load",
+    "pass": true
+  },
+  {
+    "name": "Coordination shifts the same released service, peak benefit exposes storage tradeoff",
+    "pass": true
+  },
+  {
+    "name": "Zero supply and depleted storage expose unmet IT and charging, without energy creation",
+    "pass": true
+  },
+  {
+    "name": "Low supply, full battery, zero export, and tiny inventory keep physical bounds",
+    "pass": true
+  },
+  {
+    "name": "AC battery loss and ending inventory reconcile exactly",
+    "pass": true
+  },
+  {
+    "name": "No V2G: charging power never negative; no service is delivered before arrival",
+    "pass": true
+  },
+  {
+    "name": "No export permission means no exported energy in any variant",
+    "pass": true
+  },
+  {
+    "name": "Sampling is presentation-only, frameAt clamps to recorded bounds",
+    "pass": true
+  },
+  {
+    "name": "Three original cloud stories remain backed by active v18 task accounting",
+    "pass": true
+  }
+]

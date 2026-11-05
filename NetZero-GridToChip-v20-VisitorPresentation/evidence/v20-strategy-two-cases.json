@@ -1,0 +1,299 @@
+{
+  "passed": true,
+  "duration": 90,
+  "conditions": {
+    "success": {
+      "initialSoc": 35,
+      "gridLimitMW": 250
+    },
+    "limited": {
+      "initialSoc": 12,
+      "gridLimitMW": 80
+    }
+  },
+  "success": {
+    "fulfillment": {
+      "runId": "run-mvkm3rm8-4",
+      "scenario": "park",
+      "start": 57600,
+      "elapsed": 7200,
+      "cycle": 0,
+      "tasks": [
+        {
+          "id": "run-mvkm3rm8-4-zinc-0",
+          "key": "zinc",
+          "unit": "MWh",
+          "target": 2400,
+          "done": 167.12226898702724,
+          "release": 57600,
+          "deadline": 144000,
+          "origin": "本周期演示生产计划",
+          "completedAt": null,
+          "missedAtDeadline": false
+        },
+        {
+          "id": "run-mvkm3rm8-4-factory-1",
+          "key": "factory",
+          "unit": "MWh",
+          "target": 1200,
+          "done": 82.33681354261539,
+          "release": 57600,
+          "deadline": 144000,
+          "origin": "本周期演示生产计划",
+          "completedAt": null,
+          "missedAtDeadline": false
+        }
+      ],
+      "extra": {
+        "zinc": 0,
+        "factory": 0
+      },
+      "targetH2Kg": 3000,
+      "initialSoc": 35,
+      "initialH2Kg": 500,
+      "meter": {
+        "tokens": 666799999999.9854,
+        "itMWh": 399.9999999999984,
+        "dcMWh": 461.7464699750272,
+        "dcSourceMWh": {
+          "renew": 275.10923971171553,
+          "nuclear": 0,
+          "grid": 170.93699650967974,
+          "gas": 0,
+          "unknown": 15.700233753600502
+        },
+        "gridLoadMWh": 250.07377157214674,
+        "gridChargeMWh": 0,
+        "criticalUnservedMWh": 13.109622758619187,
+        "chargingLimitedMWh": 19.19999999999842,
+        "violations": 0,
+        "reserveBelowSeconds": 0
+      },
+      "orders": [],
+      "production": [
+        {
+          "key": "zinc",
+          "unit": "MWh",
+          "target": 2400,
+          "done": 167.12226898702724,
+          "remaining": 2232.8777310129726,
+          "overdue": 0,
+          "completionPct": 6.963427874459469,
+          "extra": 0,
+          "nextDeadline": 144000,
+          "requiredMW": 101.49444231877148,
+          "capacityMW": 200,
+          "impossible": false,
+          "missedTasks": 0
+        },
+        {
+          "key": "factory",
+          "unit": "MWh",
+          "target": 1200,
+          "done": 82.33681354261539,
+          "remaining": 1117.6631864573847,
+          "overdue": 0,
+          "completionPct": 6.8614011285512815,
+          "extra": 0,
+          "nextDeadline": 144000,
+          "requiredMW": 50.8028721116993,
+          "capacityMW": 100,
+          "impossible": false,
+          "missedTasks": 0
+        }
+      ],
+      "hydrogen": {
+        "unit": "kg",
+        "inventory": 0,
+        "target": 3000,
+        "gap": 3000,
+        "reason": "按下游耗氢及目标库存补充；非固定用电欠账"
+      },
+      "assumptions": "24 h 等效用电任务；能力估算仅含额定上限，不含未来天气、爬坡或停机预测；不存在真实订单"
+    },
+    "elapsed": 7200,
+    "durationSeconds": 7200,
+    "gridBuyMWh": 250.07377157214674,
+    "gridCostYuan": null,
+    "curtailMWh": 0,
+    "unservedMWh": 13.109667836143679,
+    "loadMWh": 772.2262229609696,
+    "renewableConsumedMWh": 493.6524513888885,
+    "renewableSharePct": 63.925885538569375,
+    "gridCO2T": 150.56941786358848,
+    "socEnd": 25,
+    "batteryEndMWh": 75,
+    "h2EndKg": 0,
+    "nh3Tonnes": 9.166424661151781,
+    "debt": {
+      "zinc": 2232.8777310129726,
+      "factory": 1117.6631864573847,
+      "pem": 0
+    },
+    "actualProductionMWh": {
+      "zinc": 167.12226898702724,
+      "factory": 82.33681354261539,
+      "pem": 53.64500889445793
+    },
+    "batchITMWh": 100.00000000001164,
+    "criticalMW": 150,
+    "capacityMW": 80,
+    "remainingMWh": 0,
+    "processedMWh": 100.00000000000135,
+    "totalMWh": 100,
+    "completed": 3,
+    "total": 3,
+    "deadlineMissed": 0,
+    "lateCompleted": 0,
+    "deferredTasks": 0,
+    "criticalProcessedMWh": 299.9999999999967,
+    "criticalMissedMWh": 0,
+    "criticalMissedSeconds": 0,
+    "maxPowerResidualMW": 1.1368683772161603e-13,
+    "maxH2ResidualKg": 0,
+    "unconvergedSteps": 1
+  },
+  "limited": {
+    "fulfillment": {
+      "runId": "run-mvkm3rss-8",
+      "scenario": "park",
+      "start": 57600,
+      "elapsed": 7200,
+      "cycle": 0,
+      "tasks": [
+        {
+          "id": "run-mvkm3rss-8-zinc-0",
+          "key": "zinc",
+          "unit": "MWh",
+          "target": 2400,
+          "done": 0,
+          "release": 57600,
+          "deadline": 144000,
+          "origin": "本周期演示生产计划",
+          "completedAt": null,
+          "missedAtDeadline": false
+        },
+        {
+          "id": "run-mvkm3rss-8-factory-1",
+          "key": "factory",
+          "unit": "MWh",
+          "target": 1200,
+          "done": 74.58372916232668,
+          "release": 57600,
+          "deadline": 144000,
+          "origin": "本周期演示生产计划",
+          "completedAt": null,
+          "missedAtDeadline": false
+        }
+      ],
+      "extra": {
+        "zinc": 0,
+        "factory": 0
+      },
+      "targetH2Kg": 3000,
+      "initialSoc": 12,
+      "initialH2Kg": 500,
+      "meter": {
+        "tokens": 548050512696.2719,
+        "itMWh": 328.76455470684215,
+        "dcMWh": 378.1231005366761,
+        "dcSourceMWh": {
+          "renew": 318.8200543066707,
+          "nuclear": 0,
+          "grid": 59.30304622999573,
+          "gas": 0,
+          "unknown": 0
+        },
+        "gridLoadMWh": 81.13074674872087,
+        "gridChargeMWh": 0,
+        "criticalUnservedMWh": 135.48521119095767,
+        "chargingLimitedMWh": 16.53804500560862,
+        "violations": 0,
+        "reserveBelowSeconds": 7200
+      },
+      "orders": [],
+      "production": [
+        {
+          "key": "zinc",
+          "unit": "MWh",
+          "target": 2400,
+          "done": 0,
+          "remaining": 2400,
+          "overdue": 0,
+          "completionPct": 0,
+          "extra": 0,
+          "nextDeadline": 144000,
+          "requiredMW": 109.0909090909091,
+          "capacityMW": 200,
+          "impossible": false,
+          "missedTasks": 0
+        },
+        {
+          "key": "factory",
+          "unit": "MWh",
+          "target": 1200,
+          "done": 74.58372916232668,
+          "remaining": 1125.4162708376734,
+          "overdue": 0,
+          "completionPct": 6.2153107635272224,
+          "extra": 0,
+          "nextDeadline": 144000,
+          "requiredMW": 51.155285038076066,
+          "capacityMW": 100,
+          "impossible": false,
+          "missedTasks": 0
+        }
+      ],
+      "hydrogen": {
+        "unit": "kg",
+        "inventory": 869.117899341132,
+        "target": 3000,
+        "gap": 2130.882100658868,
+        "reason": "按下游耗氢及目标库存补充；非固定用电欠账"
+      },
+      "assumptions": "24 h 等效用电任务；能力估算仅含额定上限，不含未来天气、爬坡或停机预测；不存在真实订单"
+    },
+    "elapsed": 7200,
+    "durationSeconds": 7200,
+    "gridBuyMWh": 81.13074674872087,
+    "gridCostYuan": null,
+    "curtailMWh": 0,
+    "unservedMWh": 135.48521119095767,
+    "loadMWh": 564.7368842132555,
+    "renewableConsumedMWh": 483.60613746454703,
+    "renewableSharePct": 85.63388561706152,
+    "gridCO2T": 48.84882261739971,
+    "socEnd": 15.181332742708062,
+    "batteryEndMWh": 45.54399822812412,
+    "h2EndKg": 869.117899341132,
+    "nh3Tonnes": 9.881564814814547,
+    "debt": {
+      "zinc": 2400,
+      "factory": 1125.4162708376734,
+      "pem": 0
+    },
+    "actualProductionMWh": {
+      "zinc": 0,
+      "factory": 74.58372916232668,
+      "pem": 101.4203258350392
+    },
+    "batchITMWh": 83.11666666666382,
+    "criticalMW": 150,
+    "capacityMW": 80,
+    "remainingMWh": 16.883333333331937,
+    "processedMWh": 83.11666666666652,
+    "totalMWh": 100,
+    "completed": 2,
+    "total": 3,
+    "deadlineMissed": 3,
+    "lateCompleted": 2,
+    "deferredTasks": 1,
+    "criticalProcessedMWh": 245.6478880401616,
+    "criticalMissedMWh": 54.352111959822665,
+    "criticalMissedSeconds": 3197,
+    "maxPowerResidualMW": 5.684341886080802e-14,
+    "maxH2ResidualKg": 0,
+    "unconvergedSteps": 0
+  },
+  "liveBrowserVerified": false
+}

@@ -1,0 +1,29 @@
+# Historical deliveries stay on disk; v20 is the Git baseline.
+/GobiLight-NetZero-v1.3.5/
+/NetZero-GridToChip-v[2-9]/
+/NetZero-GridToChip-v[2-9]-*/
+/NetZero-GridToChip-v1[0-9]-*/
+/tmp/
+/*.cmd
+!/打开多园区共享综合能源系统v20.cmd
+
+# Duplicate snapshots and local browser outputs.
+**/backups/
+**/screenshots/
+node_modules/
+playwright-report/
+test-results/
+__pycache__/
+*.py[cod]
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local credentials and environment files.
+.env
+.env.*
+!.env.example
+*.pem
+*.key

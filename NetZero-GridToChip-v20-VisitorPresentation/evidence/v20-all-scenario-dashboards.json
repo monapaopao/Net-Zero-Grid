@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "scenarioIds": [
+    "coordination",
+    "strategy",
+    "sst"
+  ],
+  "simulationChanged": false,
+  "liveBrowserVerified": false
+}

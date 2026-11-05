@@ -1,0 +1,160 @@
+{
+  "files": [
+    {
+      "name": "config.js",
+      "original": "0aa2767352bfb7ca478826d9fcaa7d34022b9e4d74a5e22f23531342d318cc23",
+      "current": "0aa2767352bfb7ca478826d9fcaa7d34022b9e4d74a5e22f23531342d318cc23",
+      "unchanged": true
+    },
+    {
+      "name": "engine.js",
+      "original": "3c1923370f85de8c48601bd231197a3c7a5e643a3667bcfdfe7eec04f3e59372",
+      "current": "3c1923370f85de8c48601bd231197a3c7a5e643a3667bcfdfe7eec04f3e59372",
+      "unchanged": true
+    },
+    {
+      "name": "dispatch-tasks.js",
+      "original": "3725328ad730953bcd1db7a688f3e9eaac39f17c415279146dd0c1789976dff8",
+      "current": "3725328ad730953bcd1db7a688f3e9eaac39f17c415279146dd0c1789976dff8",
+      "unchanged": true
+    },
+    {
+      "name": "sst-simulation.js",
+      "original": "ce91c1e9d2e54f5fdeece41f96189e72d086570ac058c2c0bbef4c50d2664383",
+      "current": "ce91c1e9d2e54f5fdeece41f96189e72d086570ac058c2c0bbef4c50d2664383",
+      "unchanged": true
+    },
+    {
+      "name": "sst-model.js",
+      "original": "c0fe2a9738a3c0281215715aaa9cc2511406cb529e3a3de2cb0e850689a10b8f",
+      "current": "c0fe2a9738a3c0281215715aaa9cc2511406cb529e3a3de2cb0e850689a10b8f",
+      "unchanged": true
+    },
+    {
+      "name": "sst-three.js",
+      "original": "8cc11f0d080d012a4f66766dc0b6028f21a54c80aa7e5272d42e1cb7af1816b2",
+      "current": "8cc11f0d080d012a4f66766dc0b6028f21a54c80aa7e5272d42e1cb7af1816b2",
+      "unchanged": true
+    },
+    {
+      "name": "wind-anatomy.js",
+      "original": "786302c45fd4d4c372ffd55cf9439af81f827c363a5dba4acf812305eed691b4",
+      "current": "786302c45fd4d4c372ffd55cf9439af81f827c363a5dba4acf812305eed691b4",
+      "unchanged": true
+    },
+    {
+      "name": "wind-product.js",
+      "original": "532e12655b95d0d8a9abd54fff56fcc97aaebbc78f533477b37105d50a4c71de",
+      "current": "532e12655b95d0d8a9abd54fff56fcc97aaebbc78f533477b37105d50a4c71de",
+      "unchanged": true
+    },
+    {
+      "name": "transmission-towers.js",
+      "original": "1ba245ed06a286f21b3959e925ab3469ca949eb8194ad4ddad2580445389dfc7",
+      "current": "1ba245ed06a286f21b3959e925ab3469ca949eb8194ad4ddad2580445389dfc7",
+      "unchanged": true
+    },
+    {
+      "name": "storage-model.js",
+      "original": "03cb5ee7168e4c532af0fc0fcd919c2a4db209672fbf6102a2ad1ef48ba5fa92",
+      "current": "03cb5ee7168e4c532af0fc0fcd919c2a4db209672fbf6102a2ad1ef48ba5fa92",
+      "unchanged": true
+    },
+    {
+      "name": "campus-detail.js",
+      "original": "82a118ac3345f53af115bd164ee30d6499a0de47ae19cd5979bef736ee887b85",
+      "current": "82a118ac3345f53af115bd164ee30d6499a0de47ae19cd5979bef736ee887b85",
+      "unchanged": true
+    },
+    {
+      "name": "chemical-campus.js",
+      "original": "2f4c1b7eedd3431ee26b5770a86391153b6cde5c2930179203ac21200ba6e49c",
+      "current": "2f4c1b7eedd3431ee26b5770a86391153b6cde5c2930179203ac21200ba6e49c",
+      "unchanged": true
+    },
+    {
+      "name": "solar-site-plan.js",
+      "original": "35ba8a6641fc51e654a9db7481c0ad43b25b3a8ad3220a61f79de8219582c921",
+      "current": "35ba8a6641fc51e654a9db7481c0ad43b25b3a8ad3220a61f79de8219582c921",
+      "unchanged": true
+    }
+  ],
+  "unchangedThisRefinement": [
+    {
+      "path": "src/config.js",
+      "sha256": "0aa2767352bfb7ca478826d9fcaa7d34022b9e4d74a5e22f23531342d318cc23",
+      "copyOnly": false,
+      "pickingOnly": false,
+      "simulationAndGuideLogicUnchanged": true
+    },
+    {
+      "path": "src/engine.js",
+      "sha256": "3c1923370f85de8c48601bd231197a3c7a5e643a3667bcfdfe7eec04f3e59372",
+      "copyOnly": false,
+      "pickingOnly": false,
+      "simulationAndGuideLogicUnchanged": true
+    },
+    {
+      "path": "src/dispatch-tasks.js",
+      "sha256": "3725328ad730953bcd1db7a688f3e9eaac39f17c415279146dd0c1789976dff8",
+      "copyOnly": false,
+      "pickingOnly": false,
+      "simulationAndGuideLogicUnchanged": true
+    },
+    {
+      "path": "src/sst-simulation.js",
+      "sha256": "ce91c1e9d2e54f5fdeece41f96189e72d086570ac058c2c0bbef4c50d2664383",
+      "copyOnly": false,
+      "pickingOnly": false,
+      "simulationAndGuideLogicUnchanged": true
+    },
+    {
+      "path": "src/reception.js",
+      "sha256": "5666bfa41a201516f02cff95a8d773f8a2c236970b47e60d7af20f74a887f764",
+      "copyOnly": true,
+      "pickingOnly": false,
+      "simulationAndGuideLogicUnchanged": true
+    },
+    {
+      "path": "src/premium.js",
+      "sha256": "f4fe0b55ff1389a1015e9953635ead4f38c7c4a24f3dab5164015a8c3acb1e22",
+      "copyOnly": false,
+      "pickingOnly": true,
+      "simulationAndGuideLogicUnchanged": true
+    },
+    {
+      "path": "src/visitor-view.js",
+      "sha256": "fb298983d1e5741fa33015002735e70c615292bfaf91532627f8bd5b18756e56",
+      "copyOnly": false,
+      "pickingOnly": false,
+      "simulationAndGuideLogicUnchanged": true
+    },
+    {
+      "path": "src/visitor-view.css",
+      "sha256": "6b4576c10dc9416822596a59cec3a7289fb5fd13795a9513b58db002fed56ec3",
+      "copyOnly": false,
+      "pickingOnly": false,
+      "simulationAndGuideLogicUnchanged": true
+    },
+    {
+      "path": "src/vendor/dcdt-v11/app.js",
+      "sha256": "5737ce117416ff1dae8c0dc0e81e56684872a978ad5969c31e5b397a8e9eacb0",
+      "copyOnly": false,
+      "pickingOnly": false,
+      "simulationAndGuideLogicUnchanged": true
+    },
+    {
+      "path": "src/vendor/dcdt-v11/style.css",
+      "sha256": "c6279b8d8f998966e55079040d2ad74546e3da3f1770680401a18b9eb40511e0",
+      "copyOnly": false,
+      "pickingOnly": false,
+      "simulationAndGuideLogicUnchanged": true
+    }
+  ],
+  "campusCamerasOutsideFactoryUnchanged": true,
+  "factoryNewDetailSeconds": 22,
+  "buildingVisualTimingUnchanged": true,
+  "fullTourSeconds": 391,
+  "receptionSeconds": 180,
+  "defaultRuntimeAndTaskLogicUnchanged": true
+}

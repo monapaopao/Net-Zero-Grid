@@ -1,0 +1,278 @@
+{
+  "version": "4.0.0",
+  "dataBuilding": {
+    "position": [
+      134,
+      0,
+      -10
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bounds": [
+      31.072500228881836,
+      15.919999599456787,
+      24
+    ]
+  },
+  "rectifierBounds": {
+    "min": [
+      107.48000001907349,
+      2.4139882093265897e-9,
+      73.92000007629395
+    ],
+    "max": [
+      110.51999998092651,
+      3.29400007724762,
+      78.07999992370605
+    ]
+  },
+  "indoorProcess": true,
+  "indoorRectifier": true,
+  "closedWorkshop": true,
+  "exteriorDataRectifierLabels": 0,
+  "turbines": [
+    {
+      "hub": [
+        -188,
+        27.6,
+        -72
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -146,
+        27.6,
+        -72
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -104,
+        27.6,
+        -72
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -62,
+        27.6,
+        -72
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -175,
+        27.6,
+        -24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -133,
+        27.6,
+        -24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -91,
+        27.6,
+        -24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -49,
+        27.6,
+        -24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -188,
+        27.6,
+        24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -146,
+        27.6,
+        24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -104,
+        27.6,
+        24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "hub": [
+        -62,
+        27.6,
+        24
+      ],
+      "scale": [
+        3,
+        3,
+        3
+      ]
+    }
+  ],
+  "minTurbineDistance": 42,
+  "rotorDiameter": 24.599999999999998,
+  "buildings": {
+    "factory": [
+      36,
+      7.5,
+      19.80000000000001
+    ],
+    "logistics": [
+      44,
+      6.6000000000000005,
+      22
+    ],
+    "fire": [
+      22.399999999999977,
+      6.875,
+      13.5
+    ]
+  },
+  "conveyorPositions": [
+    [
+      168.06,
+      1.6500000000000001,
+      92.51999999999998
+    ],
+    [
+      177.66000000000003,
+      1.6500000000000001,
+      92.51999999999998
+    ],
+    [
+      169.26,
+      1.6500000000000001,
+      92.51999999999998
+    ]
+  ],
+  "socBarPosition": [
+    26.489201365926366,
+    0.63,
+    36.14
+  ],
+  "currentDeviceLabels": 29,
+  "edges": [
+    {
+      "key": "wind",
+      "length": 81.22655639408005,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "solar",
+      "length": 193.96249898721985,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "trans",
+      "length": 97.35419718550587,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "tr2dc",
+      "length": 24,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "metalE",
+      "length": 14,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "panZnAc",
+      "length": 24,
+      "finite": true,
+      "tubeMatchesParticles": true
+    },
+    {
+      "key": "panZnDc",
+      "length": 33,
+      "finite": true,
+      "tubeMatchesParticles": true
+    }
+  ],
+  "checks": {
+    "animatedObjectsStayInFacility": true,
+    "fixedA1": true,
+    "indoorProcess": true,
+    "indoorRectifier": true,
+    "closedWorkshop": true,
+    "noExteriorRectifier": true,
+    "turbinesClear": true,
+    "routeContinuity": true
+  }
+}

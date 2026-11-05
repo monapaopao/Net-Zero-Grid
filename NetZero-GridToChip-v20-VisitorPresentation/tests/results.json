@@ -1,0 +1,399 @@
+{
+  "date": "2026-11-05T05:08:36.307Z",
+  "node": "v24.22.1",
+  "engine": "GobiLight-NetZero engine v18.0.0",
+  "summary": {
+    "total": 29,
+    "pass": 29,
+    "fail": 0
+  },
+  "results": [
+    {
+      "name": "P01 缺电 + 上一时刻存量柔性负荷：全部残留负荷计入需求，无隐藏缺口",
+      "status": "PASS",
+      "ms": 2,
+      "detail": {
+        "residual": -1.4210854715202004e-14,
+        "gridBuy": 0,
+        "discharge": 32,
+        "deferredMW": 116.667
+      }
+    },
+    {
+      "name": "P02 富余 10 MW、强制充电 150 MW：限充，且默认不产生购电充电",
+      "status": "PASS",
+      "ms": 1,
+      "detail": {
+        "chargeMW": 10,
+        "gridBuyMW": 0,
+        "demandMW": 272.513
+      }
+    },
+    {
+      "name": "P03 缺电 20 MW、强制放电 150 MW：放电限于真实缺口，不制造无去向功率",
+      "status": "PASS",
+      "ms": 0,
+      "detail": {
+        "dischargeMW": 20
+      }
+    },
+    {
+      "name": "P04 SOC 恰在 10%/95% 不越界，充放效率只计一次",
+      "status": "PASS",
+      "ms": 2,
+      "detail": {
+        "chargeAt95": 0,
+        "dischargeAt10": 0,
+        "socAfter": 50.005963
+      }
+    },
+    {
+      "name": "P05 全电源停、储能耗尽：购电覆盖负荷；通道不足时显式记未供电",
+      "status": "PASS",
+      "ms": 1,
+      "detail": {
+        "pass1GridMW": 200.013,
+        "gridBuyMW": 100,
+        "unservedMW": 265.859
+      }
+    },
+    {
+      "name": "P06 制氢 0→200 MW：本步公辅与产量同时闭合，PUE 不混入氨公辅",
+      "status": "PASS",
+      "ms": 0,
+      "detail": {
+        "pemMW": 200,
+        "prodKgH": 4166.67,
+        "nh3AuxMW": 0.0055
+      }
+    },
+    {
+      "name": "P07 购电与弃电不同时出现；分项完整不漏",
+      "status": "PASS",
+      "ms": 0,
+      "detail": {
+        "ok": true
+      }
+    },
+    {
+      "name": "H01 储氢接近满、制氢最大：事前限产，不用 clamp 删质量",
+      "status": "PASS",
+      "ms": 1,
+      "detail": {
+        "pemMW": 86.4,
+        "prodKgInStep": 0.5,
+        "h2EndKg": 9999.9997
+      }
+    },
+    {
+      "name": "H02 储氢接近空、合成与燃料电池同时运行：不超用、不负库存、不虚构产氨",
+      "status": "PASS",
+      "ms": 0,
+      "detail": {
+        "h2EndKg": 19.50463,
+        "nh3H2KgH": 2200,
+        "fcKgH": 0
+      }
+    },
+    {
+      "name": "H03 10000 kg 库存、无制氢：额定用氢与出罐能力一致，4.55 h 口径成立",
+      "status": "PASS",
+      "ms": 0,
+      "detail": {
+        "autonomyHours": 4.5455,
+        "nh3H2kgH": 2200,
+        "directFeedPemMW": 105.6
+      }
+    },
+    {
+      "name": "F01 不足最低工业负荷：按运行/停机状态处理，保安需求不无故消失",
+      "status": "PASS",
+      "ms": 0,
+      "detail": {
+        "zincServedMW": 0,
+        "factoryServedMW": 20
+      }
+    },
+    {
+      "name": "F02 电解锌全停次数上限：所有分支一致，不绕过 2 次/日限制",
+      "status": "PASS",
+      "ms": 1,
+      "detail": {
+        "stopsAllowed": 2
+      }
+    },
+    {
+      "name": "F03 午夜前 80 MWh 欠账跨日结转，不清零注销",
+      "status": "PASS",
+      "ms": 2,
+      "detail": {
+        "debtBefore": 80,
+        "debtAfter": 2399.999,
+        "debtInDayRecord": 2399.999
+      }
+    },
+    {
+      "name": "F04 电解槽硬限 200 MW：欠账也不自动扩至 240 MW",
+      "status": "PASS",
+      "ms": 0,
+      "detail": {
+        "pemMW": 200
+      }
+    },
+    {
+      "name": "C01 燃气发电、购电 0：直接排放不得按 0 报告",
+      "status": "PASS",
+      "ms": 0,
+      "detail": {
+        "unaccountedMWh": 0.008333,
+        "configuredCO2T": 0.000004167
+      }
+    },
+    {
+      "name": "C02 电网充电后再放电：来源属性传递，不得全部标绿电",
+      "status": "PASS",
+      "ms": 33,
+      "detail": {
+        "battGridFrac": 0.8261,
+        "consumptionGridShare": 0.9334
+      }
+    },
+    {
+      "name": "C03 绿电制氢后氢回发：不重复计入一次清洁能源与减排",
+      "status": "PASS",
+      "ms": 0,
+      "detail": {
+        "primaryRenewMWh": 0.083333,
+        "recircMWh": 0.000556
+      }
+    },
+    {
+      "name": "C04 初始 SOC 与氢来源未知：不自动计入认证绿电/绿氢",
+      "status": "PASS",
+      "ms": 1,
+      "detail": {
+        "battUnknownMWh": 165,
+        "h2UnknownKg": 400
+      }
+    },
+    {
+      "name": "C05 综合能耗与等价折标参数缺失：政策状态为「待核算」",
+      "status": "PASS",
+      "ms": 0,
+      "detail": {
+        "policyStatus": "pending"
+      }
+    },
+    {
+      "name": "C06 区域因子切换：单位/年份/来源可追踪，历史结算不被回算",
+      "status": "PASS",
+      "ms": 0,
+      "detail": {
+        "before": 0.041112,
+        "after": 0.052586
+      }
+    },
+    {
+      "name": "Q01 SVG 请求无功超 50 Mvar：容量饱和、PF 按剩余 Q 计算，不保证趋近 1",
+      "status": "PASS",
+      "ms": 0,
+      "detail": {
+        "qRawMvar": 251.11,
+        "qSvgMvar": 50,
+        "pfAfter": 0.97262
+      }
+    },
+    {
+      "name": "T01 相同种子、不同推进分块：同一模拟时刻的物理状态一致",
+      "status": "PASS",
+      "ms": 33,
+      "detail": {
+        "identical": true
+      }
+    },
+    {
+      "name": "T02 跨午夜：日电量按真实边界归属，库存连续",
+      "status": "PASS",
+      "ms": 1,
+      "detail": {
+        "dayRecords": 1,
+        "dayGenMWh": 3.735,
+        "newDayGenMWh": 0.7707
+      }
+    },
+    {
+      "name": "T03 暂停冻结：真实时间推进不改变物理状态",
+      "status": "PASS",
+      "ms": 3,
+      "detail": {
+        "frozen": true
+      }
+    },
+    {
+      "name": "T04 24 小时连续运行：无 NaN、无负库存、账本自洽",
+      "status": "PASS",
+      "ms": 343,
+      "detail": {
+        "genMWh": 6225.2,
+        "loadMWh": 7193.08,
+        "curtailMWh": 0,
+        "buyMWh": 839.66,
+        "unservedMWh": 0,
+        "nh3T": 104.49,
+        "h2Kg": 7,
+        "soc": 10,
+        "renewableShare": 0.8654
+      }
+    },
+    {
+      "name": "T05 全情景 24 小时：求解收敛、守恒、无异常",
+      "status": "PASS",
+      "ms": 2526,
+      "detail": [
+        {
+          "scenario": "park",
+          "genMWh": 6225.2,
+          "loadMWh": 7193.1,
+          "curtailMWh": 0,
+          "buyMWh": 839.7,
+          "unservedMWh": 0,
+          "nh3T": 104.49,
+          "socEnd": 10,
+          "h2EndKg": 7,
+          "renewShare": 0.8654,
+          "maxPowerResidualMW": 0,
+          "maxH2ResidualKg": 0
+        },
+        {
+          "scenario": "surplus",
+          "genMWh": 14711,
+          "loadMWh": 14695.2,
+          "curtailMWh": 1145.8,
+          "buyMWh": 0,
+          "unservedMWh": 0,
+          "nh3T": 296.09,
+          "socEnd": 95,
+          "h2EndKg": 10000,
+          "renewShare": 1,
+          "maxPowerResidualMW": 0,
+          "maxH2ResidualKg": 0
+        },
+        {
+          "scenario": "night",
+          "genMWh": 3778.6,
+          "loadMWh": 6101.1,
+          "curtailMWh": 0,
+          "buyMWh": 2180,
+          "unservedMWh": 0,
+          "nh3T": 83.45,
+          "socEnd": 10,
+          "h2EndKg": 0,
+          "renewShare": 0.6193,
+          "maxPowerResidualMW": 0,
+          "maxH2ResidualKg": 0
+        },
+        {
+          "scenario": "lowwind",
+          "genMWh": 174.8,
+          "loadMWh": 5229,
+          "curtailMWh": 0,
+          "buyMWh": 5039.9,
+          "unservedMWh": 0,
+          "nh3T": 60.07,
+          "socEnd": 10,
+          "h2EndKg": 0,
+          "renewShare": 0.0334,
+          "maxPowerResidualMW": 0,
+          "maxH2ResidualKg": 0
+        },
+        {
+          "scenario": "tankfull",
+          "genMWh": 14413.3,
+          "loadMWh": 14413.3,
+          "curtailMWh": 2153.8,
+          "buyMWh": 0,
+          "unservedMWh": 0,
+          "nh3T": 296.09,
+          "socEnd": 95,
+          "h2EndKg": 10000,
+          "renewShare": 1,
+          "maxPowerResidualMW": 0,
+          "maxH2ResidualKg": 0
+        },
+        {
+          "scenario": "gasbackup",
+          "genMWh": 3366.7,
+          "loadMWh": 5975.6,
+          "curtailMWh": 0,
+          "buyMWh": 2608.9,
+          "unservedMWh": 0,
+          "nh3T": 67.71,
+          "socEnd": 10,
+          "h2EndKg": 0,
+          "renewShare": 0.3627,
+          "maxPowerResidualMW": 0,
+          "maxH2ResidualKg": 0
+        },
+        {
+          "scenario": "smr",
+          "genMWh": 6996.4,
+          "loadMWh": 7629.7,
+          "curtailMWh": 0,
+          "buyMWh": 505.1,
+          "unservedMWh": 0,
+          "nh3T": 115.09,
+          "socEnd": 10,
+          "h2EndKg": 0.2,
+          "renewShare": 0.8226,
+          "maxPowerResidualMW": 0,
+          "maxH2ResidualKg": 0
+        },
+        {
+          "scenario": "deadline",
+          "genMWh": 3778.6,
+          "loadMWh": 6101.1,
+          "curtailMWh": 0,
+          "buyMWh": 2279.7,
+          "unservedMWh": 0,
+          "nh3T": 83.45,
+          "socEnd": 10,
+          "h2EndKg": 0,
+          "renewShare": 0.6193,
+          "maxPowerResidualMW": 0,
+          "maxH2ResidualKg": 0
+        }
+      ]
+    },
+    {
+      "name": "T06 7 天连续运行：有限输出、库存与来源守恒",
+      "status": "PASS",
+      "ms": 2234,
+      "detail": {
+        "days": 6,
+        "soc": 10,
+        "h2Kg": 0,
+        "genMWh": 36317
+      }
+    },
+    {
+      "name": "N01 容量与派生数字核对（储能时长、氢氨比、理论年产量）",
+      "status": "PASS",
+      "ms": 0,
+      "detail": {
+        "usableStorageMWh": 242.25,
+        "nh3KgH": 12466.67,
+        "h2For60kt": 10588.24
+      }
+    },
+    {
+      "name": "T07 运行中切换情景：日累计基线同步清零，日记录不出负值",
+      "status": "PASS",
+      "ms": 532,
+      "detail": {
+        "daysBefore": 1,
+        "daysAfter": 1,
+        "lastDayGenMWh": 7351.2
+      }
+    }
+  ]
+}

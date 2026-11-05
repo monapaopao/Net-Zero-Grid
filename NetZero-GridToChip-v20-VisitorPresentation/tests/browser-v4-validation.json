@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-03",
+  "surface": "Codex in-app browser",
+  "production": "http://127.0.0.1:8766/NetZero-GridToChip-v4-Scale/dist/Net-Zero-grid-premium.html",
+  "viewports": [
+    [
+      1280,
+      720
+    ],
+    [
+      1366,
+      768
+    ]
+  ],
+  "productionConsoleErrors": [],
+  "checkedViews": [
+    "overview",
+    "AIS substation",
+    "industrial factory",
+    "zinc closed",
+    "zinc cell cutaway",
+    "zinc power closeup",
+    "A1 exterior",
+    "V5 interior data hall and 240 V DC bus",
+    "wind",
+    "solar",
+    "comparison page"
+  ],
+  "geometryReport": "layout-audit-v4.json",
+  "viewportOverrideReset": true,
+  "notes": "生产页面通过本地 HTTP 验证；离线自包含资源由 build --verify 检查。对照截图使用独立测试页面，未修改 v3 文件。"
+}

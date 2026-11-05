@@ -1,0 +1,13 @@
+'use strict';
+const fs=require('fs'),path=require('path'),crypto=require('crypto'),assert=require('assert/strict');
+const root=path.join(__dirname,'..'),base=path.join(root,'../NetZero-GridToChip-v13-WindProportionTour10s');
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'evidence/v13-preserved-manifest.json'),'utf8'));
+for(const f of manifest)assert.equal(hash(path.join(base,f.file)),f.sha256,f.file);
+const tour=JSON.parse(fs.readFileSync(path.join(root,'evidence/v14-tour-continuity.json'),'utf8'));
+const offline=JSON.parse(fs.readFileSync(path.join(root,'evidence/v14-offline.json'),'utf8'));
+const preserved=JSON.parse(fs.readFileSync(path.join(root,'evidence/v14-preservation.json'),'utf8'));
+assert(Object.values(tour.checks).every(Boolean));assert(Object.values(preserved.checks).every(Boolean));assert.equal(offline.summary.fail,0);
+const files=['dist/Net-Zero-grid-premium.html','src/premium.js','src/wind-product.js','src/engine.js','src/config.js','导览文案.json','导览文字.txt','导览文字.md'];
+const report={version:'14.0.0',generatedAt:new Date().toISOString(),backup:{version:'v13',checkedFiles:manifest.length,changedFiles:0},checks:{tour:Object.keys(tour.checks).length,offline:offline.summary.pass,preserved:Object.keys(preserved.checks).length},pacing:tour.pacing,firstMovementSeconds:tour.firstMovementSeconds,energyMotion:tour.energyMotion,artifacts:files.map(file=>({file,sha256:hash(path.join(root,file))}))};
+fs.writeFileSync(path.join(root,'evidence/v14-release.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));

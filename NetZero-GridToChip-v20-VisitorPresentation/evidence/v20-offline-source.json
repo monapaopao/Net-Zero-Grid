@@ -1,0 +1,17 @@
+{
+  "checks": [
+    "MainInlineScriptsParse",
+    "StandaloneInlineScriptsParse",
+    "NoExternalScriptsStylesOrImages",
+    "BuildingIframeEqualsFullStandalone",
+    "FactoryIncludedBeforeBoot",
+    "FactorySpatialFlowsAndPickingBundleMatchesCurrentSource",
+    "ExportedTimelinesAgreeWithSource",
+    "VersionTitleAndFullNuclearName"
+  ],
+  "passed": 8,
+  "mainBytes": 3529072,
+  "standaloneBytes": 1412789,
+  "mainInlineScripts": 63,
+  "liveBrowserVerified": false
+}

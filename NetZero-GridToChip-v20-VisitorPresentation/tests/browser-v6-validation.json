@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "gasClose": true,
+    "machineViewOpensCover": true,
+    "mvOpen": true,
+    "mvClose": true,
+    "switchClosesCover": true
+  },
+  "logs": []
+}

@@ -1,0 +1,117 @@
+{
+  "generatedAt": "2026-09-28T03:29:33.340Z",
+  "artifact": "dist\\Net-Zero-grid-premium.html",
+  "bytes": 2469670,
+  "offline": true,
+  "outboundRequests": [],
+  "loadingFailed": [],
+  "consoleErrors": [],
+  "staticExternalRefs": [],
+  "summary": {
+    "total": 20,
+    "pass": 20,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "name": "断网状态下页面完成启动",
+      "ok": true,
+      "info": ""
+    },
+    {
+      "name": "内核在推进（步数 > 0）",
+      "ok": true,
+      "info": "steps=263"
+    },
+    {
+      "name": "设备档案已装载",
+      "ok": true,
+      "info": "设备 30 / 标签 30"
+    },
+    {
+      "name": "能源边线已装载",
+      "ok": true,
+      "info": "边线 23"
+    },
+    {
+      "name": "三维画布尺寸正常",
+      "ok": true,
+      "info": "1920×1080"
+    },
+    {
+      "name": "摘要面板有数值",
+      "ok": true,
+      "info": "摘要 ▸ 园区实时摘要 风光储产业园（默认） 园区实际总负荷 瞬时 490.9MW 数据中心 175.5 · 公辅 10.0 · 柔性 30"
+    },
+    {
+      "name": "运行面板可以打开",
+      "ok": true,
+      "info": ""
+    },
+    {
+      "name": "账本页有内容",
+      "ok": true,
+      "info": "运行参数 设备 账本 事件 边界与来源 × 电量分项（累计） 一次发电量（不含放电与氢回发） 41.4 MWh 端用电量（已供需求） 41."
+    },
+    {
+      "name": "导览可以启动",
+      "ok": true,
+      "info": ""
+    },
+    {
+      "name": "情景可以切换",
+      "ok": true,
+      "info": "当前 night"
+    },
+    {
+      "name": "光照可以切换",
+      "ok": true,
+      "info": "当前 day-lab"
+    },
+    {
+      "name": "画质可以切换",
+      "ok": true,
+      "info": "当前 high，像素比 1，泛光 true"
+    },
+    {
+      "name": "相机复位可用",
+      "ok": true,
+      "info": "相机 163, 134, 172（产物里的总览机位 163, 134, 172）"
+    },
+    {
+      "name": "无 NaN 残差",
+      "ok": true,
+      "info": "母线 0 / 氢 0"
+    },
+    {
+      "name": "单文件内含出网引用（应为 0）",
+      "ok": true,
+      "info": "无"
+    },
+    {
+      "name": "CSS @import（应为 0）",
+      "ok": true,
+      "info": "无"
+    },
+    {
+      "name": "硬编码出网 fetch（应为 0）",
+      "ok": true,
+      "info": "无"
+    },
+    {
+      "name": "运行期未发出任何出网请求",
+      "ok": true,
+      "info": "无"
+    },
+    {
+      "name": "无资源加载失败",
+      "ok": true,
+      "info": "无"
+    },
+    {
+      "name": "无 console.error",
+      "ok": true,
+      "info": ""
+    }
+  ]
+}
