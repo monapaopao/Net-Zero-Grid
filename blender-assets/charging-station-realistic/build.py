@@ -124,4 +124,3 @@ print('DEVICE',device,flush=True)
 shot('01-station-daylight.png',(44,-53,28),(-4,0,2),42)
 shot('02-charger-detail.png',(-10,8,2.5),(-13.5,14,1.2),47)
 (OUT/'build-report.json').write_text(json.dumps({'device':device,'objects':len(scene.objects),'materials':len(bpy.data.materials),'textures':[p.name for p in (OUT/'textures').glob('*.png')],'renders':[p.name for p in (OUT/'renders').glob('*.png')]},indent=2),encoding='utf-8')
-
