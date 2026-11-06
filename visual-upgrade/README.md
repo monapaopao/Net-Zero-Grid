@@ -1,5 +1,7 @@
 # v20 园区外景 · Three.js r187 视觉升级
 
+第 4 步的独立 WebGPU 对照入口、TSL 迁移说明与验证结果见 [WebGPU 试验](webgpu/README.md)。
+
 双击 `dist/多园区-v20-r187-视觉升级.html`。页面内嵌 Three.js r187 与匹配的 OrbitControls，使用 WebGL 2。数据中心楼内仍使用 v20 内嵌的 r180 应用。
 
 升级位于 Git 分支 `visual/three-r187`，以 v20 的离线交付为输入。开发和发布都可以继续使用原版离线页面作为基线。
