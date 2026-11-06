@@ -1,0 +1,2 @@
+/dist/*.html -diff -whitespace linguist-generated=true
+/vendor/*.js -diff -whitespace linguist-vendored=true

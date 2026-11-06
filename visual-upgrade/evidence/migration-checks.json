@@ -1,0 +1,248 @@
+[
+  {
+    "name": "r157",
+    "revision": "157",
+    "webgl2": true,
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Ti (0x00002C05) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "shots": [
+      {
+        "view": "campus",
+        "draws": 2276,
+        "triangles": 5485152,
+        "intervals": [
+          16.6,
+          16.7,
+          16.6,
+          16.8,
+          16.7
+        ],
+        "roof": 0,
+        "ao": true,
+        "polish": null
+      },
+      {
+        "view": "charge",
+        "draws": 1201,
+        "triangles": 3871598,
+        "intervals": [
+          16.7,
+          16.6,
+          16.7,
+          16.7,
+          16.6
+        ],
+        "roof": 0,
+        "ao": true,
+        "polish": null
+      },
+      {
+        "view": "factory",
+        "draws": 499,
+        "triangles": 4608602,
+        "intervals": [
+          16.7,
+          16.7,
+          16.6,
+          16.8,
+          16.6
+        ],
+        "roof": 1,
+        "ao": true,
+        "polish": null
+      }
+    ],
+    "interaction": {
+      "roofClosed": true,
+      "connections": 9,
+      "vehicleCard": true,
+      "sstSwapped": true
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "name": "r167",
+    "revision": "167",
+    "webgl2": true,
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Ti (0x00002C05) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "shots": [
+      {
+        "view": "campus",
+        "draws": 2278,
+        "triangles": 5485152,
+        "intervals": [
+          16.7,
+          16.8,
+          16.5,
+          16.8,
+          16.7
+        ],
+        "roof": 0,
+        "ao": true,
+        "polish": null
+      },
+      {
+        "view": "charge",
+        "draws": 1203,
+        "triangles": 3871598,
+        "intervals": [
+          16.8,
+          16.5,
+          16.6,
+          16.8,
+          16.5
+        ],
+        "roof": 0,
+        "ao": true,
+        "polish": null
+      },
+      {
+        "view": "factory",
+        "draws": 499,
+        "triangles": 4608602,
+        "intervals": [
+          16.6,
+          16.7,
+          16.7,
+          16.6,
+          16.7
+        ],
+        "roof": 1,
+        "ao": true,
+        "polish": null
+      }
+    ],
+    "interaction": {
+      "roofClosed": true,
+      "connections": 9,
+      "vehicleCard": true,
+      "sstSwapped": true
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "name": "r177",
+    "revision": "177",
+    "webgl2": true,
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Ti (0x00002C05) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "shots": [
+      {
+        "view": "campus",
+        "draws": 2276,
+        "triangles": 5485064,
+        "intervals": [
+          16.6,
+          16.6,
+          16.7,
+          16.7,
+          16.6
+        ],
+        "roof": 0,
+        "ao": true,
+        "polish": null
+      },
+      {
+        "view": "charge",
+        "draws": 1201,
+        "triangles": 3871598,
+        "intervals": [
+          16.6,
+          16.7,
+          16.7,
+          16.6,
+          16.7
+        ],
+        "roof": 0,
+        "ao": true,
+        "polish": null
+      },
+      {
+        "view": "factory",
+        "draws": 499,
+        "triangles": 4608546,
+        "intervals": [
+          16.7,
+          16.6,
+          16.8,
+          16.6,
+          16.7
+        ],
+        "roof": 1,
+        "ao": true,
+        "polish": null
+      }
+    ],
+    "interaction": {
+      "roofClosed": true,
+      "connections": 9,
+      "vehicleCard": true,
+      "sstSwapped": true
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "name": "r187",
+    "revision": "187",
+    "webgl2": true,
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Ti (0x00002C05) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "shots": [
+      {
+        "view": "campus",
+        "draws": 3386,
+        "triangles": 10281752,
+        "intervals": [
+          16.7,
+          16.7,
+          16.7,
+          16.7,
+          16.6
+        ],
+        "roof": 0,
+        "ao": true,
+        "polish": null
+      },
+      {
+        "view": "charge",
+        "draws": 2003,
+        "triangles": 8394726,
+        "intervals": [
+          16.7,
+          16.7,
+          16.6,
+          16.6,
+          16.6
+        ],
+        "roof": 0,
+        "ao": true,
+        "polish": null
+      },
+      {
+        "view": "factory",
+        "draws": 1274,
+        "triangles": 9191026,
+        "intervals": [
+          16.7,
+          16.7,
+          16.6,
+          16.7,
+          16.8
+        ],
+        "roof": 1,
+        "ao": true,
+        "polish": null
+      }
+    ],
+    "interaction": {
+      "roofClosed": true,
+      "connections": 9,
+      "vehicleCard": true,
+      "sstSwapped": true,
+      "reception": true,
+      "buildingRevision": "bundled r180"
+    },
+    "errors": [],
+    "external": []
+  }
+]
