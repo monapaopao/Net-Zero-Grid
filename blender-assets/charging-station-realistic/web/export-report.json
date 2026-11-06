@@ -1,0 +1,16 @@
+{
+  "mounts": [
+    "panamaSc2_door",
+    "panamaSc2_interior",
+    "panamaSc2_protection",
+    "panamaSc2_shell",
+    "panamaSc_door",
+    "panamaSc_interior",
+    "panamaSc_protection",
+    "panamaSc_shell",
+    "station"
+  ],
+  "batches": 48,
+  "triangles": 70674,
+  "bytes": 6808756
+}

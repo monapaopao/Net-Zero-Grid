@@ -1,0 +1,7 @@
+*.cjs text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.glb binary
+dist/*.html binary
+vendor/*.js binary

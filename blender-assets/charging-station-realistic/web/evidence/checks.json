@@ -1,0 +1,121 @@
+{
+  "state": {
+    "ready": true,
+    "active": "blender",
+    "error": null,
+    "mounts": {
+      "station": 19,
+      "panamaSc_shell": 2,
+      "panamaSc_door": 5,
+      "panamaSc_interior": 4,
+      "panamaSc_protection": 3,
+      "panamaSc2_shell": 2,
+      "panamaSc2_door": 5,
+      "panamaSc2_interior": 5,
+      "panamaSc2_protection": 3
+    },
+    "size": [
+      40,
+      5.65772008895874,
+      34.62000274658203
+    ]
+  },
+  "renderAssets": {
+    "revision": "187",
+    "maps": 4,
+    "normalMaps": 7,
+    "roughnessMaps": 7,
+    "quality": "high"
+  },
+  "vehicle": {
+    "terminals": 24,
+    "positions": 21,
+    "routes": 9,
+    "aligned": true,
+    "connection": "园区车辆 · 车位 N01特斯拉 Model 3 · 外观示意连接状态：已连接（场景示意，功率未细分）牌照：沪AD10001 · 新能源绿色牌照站端充电总功率：3.26 MW单车功率 / SOC：未细分终端蓝绿灯表示示意连接；站端功率来自园区模型，不代表该车实时遥测。普通乘用车不直接套用原重型车等效功率。",
+    "busGround": 0.20650000059604645,
+    "stationPower": 3.2551649742995092
+  },
+  "coverY": 2.0063163172,
+  "sst": {
+    "converted": true,
+    "restored": true,
+    "connectivity": true
+  },
+  "reception": true,
+  "readyMs": 2537,
+  "comparisons": [
+    {
+      "view": "station",
+      "model": "original",
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "draws": 1427,
+      "triangles": 7300662
+    },
+    {
+      "view": "station",
+      "model": "blender",
+      "medianMs": 16.7,
+      "p95Ms": 16.7,
+      "draws": 1424,
+      "triangles": 7400122
+    },
+    {
+      "view": "terminal",
+      "model": "original",
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "draws": 1319,
+      "triangles": 7241596
+    },
+    {
+      "view": "terminal",
+      "model": "blender",
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "draws": 1324,
+      "triangles": 7336966
+    },
+    {
+      "view": "power",
+      "model": "original",
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "draws": 1183,
+      "triangles": 7207046
+    },
+    {
+      "view": "power",
+      "model": "blender",
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "draws": 1182,
+      "triangles": 7304120
+    },
+    {
+      "view": "south",
+      "model": "original",
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "draws": 1164,
+      "triangles": 7096956
+    },
+    {
+      "view": "south",
+      "model": "blender",
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "draws": 1161,
+      "triangles": 7196416
+    }
+  ],
+  "fallback": {
+    "active": "original",
+    "failed": true,
+    "routes": 9,
+    "disabled": true
+  },
+  "errors": [],
+  "external": []
+}
