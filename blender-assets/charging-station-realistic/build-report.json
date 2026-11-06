@@ -1,0 +1,15 @@
+{
+  "device": "OPTIX",
+  "objects": 2870,
+  "materials": 21,
+  "textures": [
+    "concrete_basecolor.png",
+    "concrete_height.png",
+    "paint_micrograin.png",
+    "surface_roughness.png"
+  ],
+  "renders": [
+    "01-station-daylight.png",
+    "02-charger-detail.png"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "images": [
+    {
+      "name": "concrete_basecolor",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true
+    },
+    {
+      "name": "concrete_height",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true
+    },
+    {
+      "name": "paint_micrograin",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true
+    },
+    {
+      "name": "Photovoltaic cells \u00b7 shared module",
+      "size": [
+        128,
+        256
+      ],
+      "packed": true
+    },
+    {
+      "name": "surface_roughness",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true
+    }
+  ],
+  "camera": "Architectural camera",
+  "engine": "CYCLES"
+}
