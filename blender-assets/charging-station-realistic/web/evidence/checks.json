@@ -32,9 +32,9 @@
     "positions": 21,
     "routes": 9,
     "aligned": true,
-    "connection": "园区车辆 · 车位 N01特斯拉 Model 3 · 外观示意连接状态：已连接（场景示意，功率未细分）牌照：沪AD10001 · 新能源绿色牌照站端充电总功率：3.26 MW单车功率 / SOC：未细分终端蓝绿灯表示示意连接；站端功率来自园区模型，不代表该车实时遥测。普通乘用车不直接套用原重型车等效功率。",
+    "connection": "园区车辆 · 车位 N01特斯拉 Model 3 · 外观示意连接状态：已连接（场景示意，功率未细分）牌照：沪AD10001 · 新能源绿色牌照站端充电总功率：3.60 MW单车功率 / SOC：未细分终端蓝绿灯表示示意连接；站端功率来自园区模型，不代表该车实时遥测。普通乘用车不直接套用原重型车等效功率。",
     "busGround": 0.20650000059604645,
-    "stationPower": 3.2551649742995092
+    "stationPower": 3.5999999999999996
   },
   "coverY": 2.0063163172,
   "sst": {
@@ -43,73 +43,94 @@
     "connectivity": true
   },
   "reception": true,
-  "readyMs": 2537,
+  "readyMs": 2596,
   "comparisons": [
     {
       "view": "station",
       "model": "original",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1427,
-      "triangles": 7300662
+      "draws": 1388,
+      "triangles": 7310876
     },
     {
       "view": "station",
       "model": "blender",
       "medianMs": 16.7,
-      "p95Ms": 16.7,
-      "draws": 1424,
-      "triangles": 7400122
+      "p95Ms": 16.8,
+      "draws": 1385,
+      "triangles": 7410336
     },
     {
       "view": "terminal",
       "model": "original",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1319,
-      "triangles": 7241596
+      "draws": 1279,
+      "triangles": 7250768
     },
     {
       "view": "terminal",
       "model": "blender",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1324,
-      "triangles": 7336966
+      "draws": 1284,
+      "triangles": 7346138
     },
     {
       "view": "power",
       "model": "original",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1183,
-      "triangles": 7207046
+      "draws": 1135,
+      "triangles": 7215956
     },
     {
       "view": "power",
       "model": "blender",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1182,
-      "triangles": 7304120
+      "draws": 1134,
+      "triangles": 7313030
     },
     {
       "view": "south",
       "model": "original",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1164,
-      "triangles": 7096956
+      "draws": 1117,
+      "triangles": 7105872
     },
     {
       "view": "south",
       "model": "blender",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1161,
-      "triangles": 7196416
+      "draws": 1114,
+      "triangles": 7205332
     }
   ],
+  "flow": {
+    "behavior": {
+      "advancing": true,
+      "reversing": true,
+      "stopped": true,
+      "switchWorks": true,
+      "scopeWorks": true,
+      "focused": true,
+      "focusedLimit": true,
+      "reduced": true,
+      "typedHalos": 51,
+      "onePerPath": true,
+      "retiredPoints": true
+    },
+    "sst": {
+      "running": true,
+      "onlyStoryHalos": true,
+      "pause": true,
+      "connected": true
+    }
+  },
   "fallback": {
     "active": "original",
     "failed": true,

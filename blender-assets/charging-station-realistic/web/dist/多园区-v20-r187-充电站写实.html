@@ -11601,11 +11601,10 @@ window.NZ_MULTI=(function(){
     for(const e of EDGES){
       const active=Math.abs(e.pw())>1e-6;const highlight=linked&&linked.includes(e.key);
       const inScope=window.NZ_FLOW_RENDERER.contextVisible(e);
-      if(e.visualTube){e.visualTube.visible=V.flows&&inScope;e.visualTube.material.opacity=V.selected?(highlight?.62:.20):(active?.32:.12);}
+      if(e.visualTube){e.visualTube.visible=V.flows&&inScope;e.visualTube.material.opacity=V.selected?(highlight?.46:.14):(active?.24:.12);}
       e.points.visible=V.flows&&inScope&&active&&!S.reduceMotion;
     }
     if(window.NZ_FLOWS)window.NZ_FLOWS.afterEdges();
-    window.NZ_FLOW_RENDERER.afterVisibility();
   }
   function ready(api){
     window.NZ_FLOW_RENDERER.init();
@@ -12750,9 +12749,9 @@ window.NZ_WIND_PRODUCT=(function(){
 /* v15 visual flow repair: independent of power accounting and simulation time. */
 'use strict';
 window.NZ_FLOW_RENDERER=(function(){
-  const CAPACITY=64,EPS=1e-6,projected=new THREE.Vector3();
+  const projected = new THREE.Vector3();
   const tailRoot=new THREE.Group();tailRoot.name='Flow overlay trails';scene.add(tailRoot);
-  let initialized=false,elapsed=0;
+  let initialized=false,elapsed=0,frameDt=0;
   const scopes={
     wind:['wind','trans'],solar:['solar','trans'],nuclear:['smr','trans'],
     compute:['wind','solar','trans','smr','bus2tr','hvDataA','hvDataB','tr2dc','tr2dcB','dcA','dcB','genset'],
@@ -12776,74 +12775,232 @@ window.NZ_FLOW_RENDERER=(function(){
     }
     return {pixels:Math.max(1,pixels),worldPerPixel:world/Math.max(1,pixels)};
   }
-  function sprite(){
-    const c=document.createElement('canvas');c.width=c.height=32;const x=c.getContext('2d');
-    x.fillStyle='rgba(255,255,255,.24)';x.beginPath();x.arc(16,16,15,0,Math.PI*2);x.fill();
-    x.fillStyle='#fff';x.beginPath();x.arc(16,16,10,0,Math.PI*2);x.fill();
-    return new THREE.CanvasTexture(c);
-  }
-  function init(){
-    if(initialized)return;initialized=true;const map=sprite();
-    for(const e of EDGES){
-      const geometry=e.points.geometry;geometry.setAttribute('position',new THREE.BufferAttribute(new Float32Array(CAPACITY*3),3));geometry.setDrawRange(0,0);
-      e.parts=[];e.partCap=CAPACITY;e.spawnAcc=0;e.flowPhase=0;e.flowMetricAt=-1;e.flowPixels=0;e.flowSpeed=0;
-      const material=e.points.material;material.color.setHex(kind(e)==='power'?0xb87012:e.media==='hydrogen'?0x287fab:0x8057a0);
-      Object.assign(material,{map,size:5.8,sizeAttenuation:false,transparent:true,opacity:.98,alphaTest:.05,depthTest:true,depthWrite:false,blending:THREE.NormalBlending});material.needsUpdate=true;
-      e.points.renderOrder=12;e.points.frustumCulled=false;e.points.name='Flow particles '+e.key;
-      const tg=new THREE.BufferGeometry();tg.setAttribute('position',new THREE.BufferAttribute(new Float32Array(CAPACITY*3),3));tg.setDrawRange(0,0);
-      const tm=new THREE.PointsMaterial({map,color:material.color,size:3.5,sizeAttenuation:false,transparent:true,opacity:.32,alphaTest:.02,depthWrite:false,depthTest:true});
-      const trail=new THREE.Points(tg,tm);trail.name='Flow trail '+e.key;trail.frustumCulled=false;trail.renderOrder=11;tailRoot.add(trail);e.flowTrail=trail;
-      if(e.visualTube){e.visualTube.material.transparent=true;e.visualTube.material.depthWrite=false;e.visualTube.renderOrder=3;}
-      // The original wind/PV tube was both conductor and overlay. Retain a thin conductor when overlays are off.
-      if(['wind','solar'].includes(e.key)){
-        const curve=new THREE.Curve();curve.getPoint=t=>new THREE.Vector3(...edgePoint(e,t));
-        const cable=new THREE.Mesh(new THREE.TubeGeometry(curve,Math.max(24,Math.ceil(e.len/4)),.038,5,false),new THREE.MeshStandardMaterial({color:0x78908d,roughness:.8}));
-        cable.name='Permanent conductor '+e.key;scene.add(cable);
+  function init() {
+    if (initialized) return;
+    initialized = true;
+    for (const edge of EDGES) {
+      edge.points.geometry.setDrawRange(0, 0);
+      edge.flowMetricAt = -1;
+      if (edge.visualTube) {
+        edge.visualTube.material.transparent = true;
+        edge.visualTube.material.depthWrite = false;
+        edge.visualTube.renderOrder = 3;
+      }
+      // These two routes also represent permanent overhead conductors.
+      if (['wind', 'solar'].includes(edge.key)) {
+        const curve = new THREE.Curve();
+        curve.getPoint = t => new THREE.Vector3(...edgePoint(edge, t));
+        const conductor = new THREE.Mesh(new THREE.TubeGeometry(curve, Math.max(24, Math.ceil(edge.len / 4)), .038, 5, false),
+          new THREE.MeshStandardMaterial({ color: 0x78908d, roughness: .8 }));
+        conductor.name = 'Permanent conductor ' + edge.key;
+        scene.add(conductor);
       }
     }
-    updateParticles=update;drawParticles=draw;
+    updateParticles = dt => { frameDt = dt; elapsed += dt; };
   }
-  function update(dt){
-    const replay=window.NZ_CLOUD_VISIT?.visualReplay?.();if(replay?.active&&replay.paused)dt=0;
-    elapsed+=dt;
-    const budget=window.NZ_CONFIG.QUALITY[S.quality].particles;
-    for(const e of EDGES){
-      const rate=Number(e.pw())||0;e.flowRate=rate;
-      if(elapsed-e.flowMetricAt>.25||e.flowMetricAt<0){
-        const m=metrics(e.pts);e.flowPixels=m.pixels;e.flowWorldPerPixel=m.worldPerPixel;e.flowMetricAt=elapsed;
+
+  function afterVisibility() {
+    const focus = window.NZ_FLOWS.getFocus();
+    for (const edge of EDGES) {
+      if (edge.points.geometry.drawRange.count !== 0) edge.points.geometry.setDrawRange(0, 0);
+      const rate = Number(edge.pw()) || 0;
+      edge.flowRate = rate;
+      const shown = edge.points.visible;
+      if (!shown) {
+        if (edge.flowHalo) edge.flowHalo.visible = false;
+        continue;
       }
-      const density=replay?.active ? .25+.75*Math.sqrt(Math.min(1,Math.abs(rate)/250)):.72+.28*Math.sqrt(Math.min(1,Math.abs(rate)/100));
-      const count=Math.abs(rate)>EPS&&e.flowPixels>=4?Math.min(CAPACITY,budget,Math.max(2,Math.ceil(e.flowPixels/48*density))):0;
-      // One speed family in screen space; minimum traversal time keeps close short links calm.
-      const worldSpeed=Math.min(45,42*e.flowWorldPerPixel),phaseSpeed=Math.min(.24,worldSpeed/Math.max(e.len,.1));
-      e.flowSpeed=worldSpeed;e.flowPhase=(e.flowPhase+dt*phaseSpeed*(rate<0?-1:1)+1)%1;
-      e.parts.length=count;
-      for(let i=0;i<count;i++)e.parts[i]={d:(i/count+e.flowPhase)%1};
-    }
-  }
-  function draw(){
-    for(const e of EDGES){
-      const a=e.points.geometry.attributes.position,ta=e.flowTrail.geometry.attributes.position;
-      const n=S.reduceMotion?0:Math.min(e.parts.length,a.count,ta.count,window.NZ_CONFIG.QUALITY[S.quality].particles);
-      for(let i=0;i<n;i++){
-        const d=e.parts[i].d,p=edgePoint(e,d),back=(d-(e.flowRate<0?-1:1)*Math.min(.025,3/Math.max(1,e.flowPixels))+1)%1,t=edgePoint(e,back);
-        a.setXYZ(i,p[0],p[1]+.22,p[2]);ta.setXYZ(i,t[0],t[1]+.22,t[2]);
+      if (edge.haloPath !== edge.pts) {
+        if (edge.flowHalo) {
+          edge.flowHalo.removeFromParent();
+          edge.flowHalo.geometry.dispose();
+          edge.flowHalo.material.dispose();
+        }
+        const color = kind(edge) === 'process' ? (edge.media === 'hydrogen' ? 0x287fab : 0x8057a0) :
+          edge.dataFlow ? (edge.color || 0x087f9d) : 0xb87012;
+        edge.flowHalo = window.NZ_FLOW_HALO.create(edge.pts.map(([x, y, z]) => [x, y + .14, z]), color, edge.key);
+        tailRoot.add(edge.flowHalo);
+        edge.haloPath = edge.pts;
+        edge.flowMetricAt = -1;
       }
-      a.needsUpdate=true;ta.needsUpdate=true;e.points.geometry.setDrawRange(0,n);e.flowTrail.geometry.setDrawRange(0,n);
+      if (edge.flowMetricAt < 0 || elapsed - edge.flowMetricAt > .25) {
+        const result = metrics(edge.pts);
+        edge.flowPixels = result.pixels;
+        edge.flowSpeed = Math.min(.30, 48 / Math.max(20, result.pixels), 46 / Math.max(1, edge.len));
+        edge.flowMetricAt = elapsed;
+      }
+      const emphasis = focus === 'energy' ? ['stg', 'bus2dist', 'bus2tr'].includes(edge.key) : focus !== 'overview';
+      window.NZ_FLOW_HALO.step(edge.flowHalo, { rate, dt: frameDt, speed: edge.flowSpeed,
+        shown, pixels: edge.flowPixels, emphasis });
     }
+    frameDt = 0;
   }
-  function afterVisibility(){for(const e of EDGES)e.flowTrail.visible=e.points.visible&&!S.reduceMotion&&e.points.geometry.drawRange.count>0;}
-  function audit(){return {maxParticlesPerRoute:CAPACITY,edges:EDGES.map(e=>({key:e.key,allocated:e.points.geometry.attributes.position.count,count:e.points.geometry.drawRange.count,pixels:e.flowPixels,speed:e.flowSpeed,phase:e.flowPhase,rate:e.flowRate,visible:e.points.visible,trailVisible:e.flowTrail.visible}))};}
-  return {init,metrics,contextVisible,afterVisibility,audit};
+
+  function audit() {
+    return { maxHighlightsPerRoute: 2, edges: EDGES.map(edge => ({ key: edge.key,
+      allocated: 0, count: window.NZ_FLOW_HALO.count(edge.flowHalo), pixels: edge.flowPixels, speed: edge.flowSpeed,
+      phase: edge.flowHalo?.material.uniforms.uPhase.value, rate: edge.flowRate,
+      visible: !!edge.flowHalo?.visible })) };
+  }
+
+  return { init, metrics, contextVisible, afterVisibility, audit };
 })();
 </script>
 <script>/* ===== campus-flows.js ===== */
+'use strict';
+
+window.NZ_FLOW_HALO = (function () {
+  const viewport = { value: new THREE.Vector2(1, 1) };
+  const minViewport = new THREE.Vector2(1, 1);
+  const night = { value: 0 };
+  const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+  const vertexShader = `
+    attribute vec3 previous;
+    attribute vec3 following;
+    attribute vec2 ribbon;
+    uniform vec2 uViewport;
+    uniform float uWidth;
+    varying vec2 vRibbon;
+
+    vec2 screenPosition(vec4 point) {
+      return point.xy / max(.001, point.w) * uViewport;
+    }
+
+    void main() {
+      vec4 center = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      vec4 a = projectionMatrix * modelViewMatrix * vec4(previous, 1.0);
+      vec4 b = projectionMatrix * modelViewMatrix * vec4(following, 1.0);
+      vec2 before = screenPosition(center) - screenPosition(a);
+      vec2 after = screenPosition(b) - screenPosition(center);
+      if (length(before) < .001) before = after;
+      if (length(after) < .001) after = before;
+      before /= max(.001, length(before));
+      after /= max(.001, length(after));
+      vec2 normal = vec2(-after.y, after.x);
+      vec2 join = before + after;
+      if (length(join) > .001) {
+        join = normalize(vec2(-join.y, join.x));
+        normal = join / max(.68, dot(join, normal));
+      }
+      center.xy += normal * ribbon.y * uWidth * 2.0 * center.w / uViewport;
+      gl_Position = center;
+      vRibbon = ribbon;
+    }`;
+  const fragmentShader = `
+    uniform vec3 uColor;
+    uniform float uPhase;
+    uniform float uDirection;
+    uniform float uSpan;
+    uniform float uSecond;
+    uniform float uStrength;
+    uniform float uNight;
+    varying vec2 vRibbon;
+
+    float pulseAt(float phase) {
+      // The head leaves the path completely before wrapping to its start.
+      float head = phase * (1.0 + 2.0 * uSpan) - uSpan;
+      float tail = (head - vRibbon.x) * uDirection / uSpan;
+      return smoothstep(0.0, .13, tail) * (1.0 - smoothstep(.12, 1.0, tail));
+    }
+
+    void main() {
+      float pulse = max(pulseAt(uPhase), pulseAt(fract(uPhase + .5)) * uSecond);
+      float ends = smoothstep(0.0, .018, vRibbon.x) * smoothstep(0.0, .018, 1.0 - vRibbon.x);
+      float across = abs(vRibbon.y);
+      float core = exp(-9.0 * across * across);
+      float fringe = exp(-2.8 * across * across) * (1.0 - smoothstep(.60, 1.0, across));
+      float alpha = min(1.0, ends * uStrength * ((.05 + .72 * pulse) * core + (.28 + .10 * uNight) * pulse * fringe));
+      if (alpha < .003) discard;
+      vec3 color = mix(uColor, vec3(1.0), (.10 + .13 * uNight) * core * pulse);
+      gl_FragColor = vec4(color, alpha);
+      #include <colorspace_fragment>
+    }`;
+
+  function create(points, color, name) {
+    const path = [];
+    const lengths = [];
+    let length = 0;
+    for (const point of points) {
+      const last = path.at(-1);
+      const segment = last ? Math.hypot(point[0] - last[0], point[1] - last[1], point[2] - last[2]) : 0;
+      if (last && segment < .0001) continue;
+      length += segment;
+      lengths.push(length);
+      path.push(point);
+    }
+    const vertices = [], previous = [], following = [], coordinates = [], indices = [];
+    for (let i = 0; i < path.length; i++) {
+      for (const side of [-1, 1]) {
+        vertices.push(...path[i]);
+        previous.push(...path[Math.max(0, i - 1)]);
+        following.push(...path[Math.min(path.length - 1, i + 1)]);
+        coordinates.push(lengths[i] / (length || 1), side);
+      }
+      if (i > 0) {
+        const start = (i - 1) * 2;
+        indices.push(start, start + 1, start + 2, start + 2, start + 1, start + 3);
+      }
+    }
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+    geometry.setAttribute('previous', new THREE.Float32BufferAttribute(previous, 3));
+    geometry.setAttribute('following', new THREE.Float32BufferAttribute(following, 3));
+    geometry.setAttribute('ribbon', new THREE.Float32BufferAttribute(coordinates, 2));
+    geometry.setIndex(indices);
+    let seed = 0;
+    for (const letter of name) seed = (Math.imul(31, seed) + letter.charCodeAt(0)) >>> 0;
+    const material = new THREE.ShaderMaterial({
+      vertexShader, fragmentShader, uniforms: {
+        uViewport: viewport, uNight: night, uColor: { value: new THREE.Color(color) },
+        uPhase: { value: (seed % 997) / 997 }, uDirection: { value: 1 },
+        uSpan: { value: .25 }, uSecond: { value: 0 }, uWidth: { value: 3 }, uStrength: { value: .75 }
+      },
+      transparent: true, depthTest: true, depthWrite: false, side: THREE.DoubleSide,
+      toneMapped: false, forceSinglePass: true
+    });
+    const mesh = new THREE.Mesh(geometry, material);
+    mesh.name = 'Flow halo · ' + name;
+    mesh.userData.flowHalo = true;
+    mesh.visible = false;
+    mesh.renderOrder = 11;
+    mesh.raycast = () => {};
+    return mesh;
+  }
+
+  function step(mesh, { rate, dt, speed, shown, pixels = 180, emphasis = false }) {
+    const uniforms = mesh.material.uniforms;
+    mesh.visible = shown && Math.abs(rate) > 1e-6;
+    if (!mesh.visible) return;
+    const direction = rate < 0 ? -1 : 1;
+    const intensity = Math.sqrt(clamp(Math.abs(rate) / 80, 0, 1));
+    uniforms.uDirection.value = direction;
+    uniforms.uPhase.value = THREE.MathUtils.euclideanModulo(
+      uniforms.uPhase.value + (dt || 0) * speed * direction * (.87 + .20 * intensity), 1);
+    uniforms.uSpan.value = clamp(84 / Math.max(84, pixels), .065, .47);
+    uniforms.uSecond.value = emphasis ? .85 * clamp((pixels - 200) / 130, 0, 1) : 0;
+    uniforms.uWidth.value = emphasis ? 5 : 3.2;
+    uniforms.uStrength.value = (emphasis ? .90 : .68) + .09 * intensity;
+  }
+
+  function count(mesh) {
+    return mesh?.visible ? (mesh.material.uniforms.uSecond.value > 0 ? 2 : 1) : 0;
+  }
+
+  function frame(renderer, isNight) {
+    renderer.getSize(viewport.value);
+    viewport.value.max(minViewport);
+    night.value = isNight ? 1 : 0;
+  }
+
+  return { create, step, count, frame };
+})();
+
 /* v12 typed visual flows: bounded buffers, explicit interfaces, no writes to the energy engine. */
 'use strict';
 window.NZ_FLOWS=(function(){
   const root=new THREE.Group();root.name='Typed campus energy and communication flows';scene.add(root);
   const kinds={power:{name:'电力',color:0xb87012},data:{name:'数据',color:0x087f9d},control:{name:'调度控制',color:0xa53f82},coolSupply:{name:'冷却供流',color:0x288e77},coolReturn:{name:'回流换热',color:0xd36b52},heatSupply:{name:'余热供流（概念）',color:0xd36b52},heatReturn:{name:'余热回流（概念）',color:0x288e77}};
-  const enabled={power:true,data:true,control:true,cooling:true,process:true,heat:false},routes=[],nodes={},MAX_PARTICLES=32;
+  const enabled={power:true,data:true,control:true,cooling:true,process:true,heat:false},routes=[],nodes={};
   const contextAliases={generation:'wind',power:'energy',hydrogen:'chemical',loads:'factory',backup:'compute',storage:'energy'};
   let quality='standard',focus='overview',all=true,clock=0,api,panel,updated=0;
   let narrative={active:false,eventId:null,routeIds:[],paused:false},narrativeRoutes=new Set();
@@ -12879,9 +13036,6 @@ window.NZ_FLOWS=(function(){
   const sceneHeight=(x,z)=>x<-18?P.height(x,z):0;
   // Ground utility overlays follow the terrain. Lifted marks represent buried paths, not overhead conductors.
   function drape(pts){const out=[];for(let i=1;i<pts.length;i++){const a=pts[i-1],b=pts[i],n=Math.max(1,Math.ceil(Math.hypot(b[0]-a[0],b[2]-a[2])/2));if(i===1)out.push(a.slice());for(let j=1;j<=n;j++){const t=j/n,p=a.map((v,k)=>v+(b[k]-v)*t);if(!(i===pts.length-1&&j===n))p[1]=Math.max(p[1],sceneHeight(p[0],p[2])+.9);out.push(p);}}return out;}
-  // Procedural symbols keep the offline asset self-contained and readable beyond color alone.
-  const particleMaps={};
-  for(const shape of ['circle','square','diamond','bar']){const canvas=document.createElement('canvas');canvas.width=canvas.height=32;const c=canvas.getContext('2d');c.fillStyle='rgba(255,255,255,.24)';c.beginPath();c.arc(16,16,15,0,Math.PI*2);c.fill();c.fillStyle='#fff';c.beginPath();if(shape==='circle')c.arc(16,16,10,0,Math.PI*2);else if(shape==='diamond'){c.moveTo(16,3);c.lineTo(29,16);c.lineTo(16,29);c.lineTo(3,16);c.closePath();}else if(shape==='square')c.rect(7,7,18,18);else c.rect(3,10,26,12);c.fill();particleMaps[shape]=new THREE.CanvasTexture(canvas);}
   const directionCanvas=document.createElement('canvas');directionCanvas.width=directionCanvas.height=32;
   const directionContext=directionCanvas.getContext('2d');directionContext.fillStyle='#fff';directionContext.beginPath();directionContext.moveTo(3,11);directionContext.lineTo(18,11);directionContext.lineTo(18,4);directionContext.lineTo(30,16);directionContext.lineTo(18,28);directionContext.lineTo(18,21);directionContext.lineTo(3,21);directionContext.closePath();directionContext.fill();
   const directionMap=new THREE.CanvasTexture(directionCanvas);
@@ -12891,11 +13045,11 @@ window.NZ_FLOWS=(function(){
     const g=new THREE.Group();g.name=id;root.add(g);
     const material=type==='control'||type==='data'?new THREE.LineDashedMaterial({color:kinds[type].color,transparent:true,opacity:.35,dashSize:type==='control'?.8:1.6,gapSize:type==='control'?.7:.8,depthWrite:false,toneMapped:false,fog:false}):new THREE.LineBasicMaterial({color:kinds[type].color,transparent:true,opacity:.36,depthWrite:false,toneMapped:false,fog:false});
     const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts.map(p=>new THREE.Vector3(...p))),material);line.computeLineDistances();g.add(line);
-    const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(new Float32Array(MAX_PARTICLES*3),3));geometry.setDrawRange(0,0);
-    const particle=new THREE.Points(geometry,new THREE.PointsMaterial({color:kinds[type].color,map:particleMaps[type==='control'?'diamond':type==='data'?'square':type.startsWith('cool')||type.startsWith('heat')?'bar':'circle'],size:type==='control'?6.6:6,sizeAttenuation:false,transparent:true,alphaTest:.05,opacity:1,depthWrite:false,toneMapped:false,fog:false}));particle.frustumCulled=false;particle.renderOrder=20;g.add(particle);
+    const halo = window.NZ_FLOW_HALO.create(pts, kinds[type].color, id);
+    g.add(halo);
     const markers=[];
     if(type==='control'||type==='data')for(let i=0;i<2;i++){const marker=new THREE.Sprite(new THREE.SpriteMaterial({map:directionMap,color:kinds[type].color,transparent:true,opacity:.9,depthWrite:false,toneMapped:false,fog:false}));marker.visible=false;marker.renderOrder=20;g.add(marker);markers.push(marker);}
-    const r={id,type,from,to,zone,pts,lengths,length,g,line,particle,markers,active,concept:!!options.concept,pulse:!!options.pulse,visible:false,count:0,phase:0,rate:0,screenLength:0,speed:0,metricsAt:-Infinity,narrativeSelected:false,staticDirections:false};routes.push(r);return r;
+    const r={id,type,from,to,zone,pts,lengths,length,g,line,halo,markers,active,concept:!!options.concept,pulse:!!options.pulse,visible:false,count:0,phase:0,rate:0,screenLength:0,speed:0,metricsAt:-Infinity,narrativeSelected:false,staticDirections:false};routes.push(r);return r;
   }
   const ems='energy.ems',noc='compute.noc';
   const energySpine=[[20,.42,54],[100,.42,54],[100,.42,95],[171,.42,95],[171,.42,103]];
@@ -12997,26 +13151,15 @@ window.NZ_FLOWS=(function(){
       const communication=r.type==='data'||r.type==='control',selected=narrative.active&&communication&&narrativeRoutes.has(r.id);
       const rate=narrative.active&&communication?(selected?1:0):physicalRate;r.rate=rate;r.narrativeSelected=selected;r.staticDirections=false;
       r.visible=all&&enabled[groupFor(r.type)]&&visibleIn(r);r.g.visible=r.visible;
-      if(!r.visible){r.count=0;r.particle.geometry.setDrawRange(0,0);directionMarkers(r,false);continue;}
+      if(!r.visible){r.count=0;r.halo.visible=false;directionMarkers(r,false);continue;}
       metrics(r,t);
       const active=Math.abs(rate)>1e-6,paused=communication&&narrative.active&&narrative.paused,moving=active&&!S.reduceMotion&&!paused;
       r.staticDirections=communication&&active&&(S.reduceMotion||paused);directionMarkers(r,r.staticDirections);
-      r.line.material.opacity=narrative.active&&communication?(selected?.72:.1):r.concept?.28:active?(r.type==='power'?.62:.42):.12;
-      const budget=Math.min(MAX_PARTICLES,Math.max(2,(window.NZ_CONFIG.QUALITY[quality]||window.NZ_CONFIG.QUALITY.standard).particles));
-      const spacing=quality==='compat'?72:quality==='high'?40:52;
-      let density=bound(Math.ceil(r.screenLength/spacing),2,budget);
-      if(r.type==='power')density=bound(Math.round(density*(.85+.15*Math.min(1,Math.abs(rate)/20))),2,budget);
-      const packets=r.pulse?Math.max(1,Math.floor(density/2)):0;
-      const count=moving?(r.pulse?packets*2:density):0;
-      r.count=Math.min(count,r.particle.geometry.attributes.position.count);r.particle.geometry.setDrawRange(0,r.count);
-      if(moving)r.phase=(r.phase+Math.max(0,dt||0)*r.speed)%1;
-      const a=r.particle.geometry.attributes.position;
-      for(let i=0;i<r.count;i++){
-        // Paired diamonds form short command packets. There is always a packet in transit while the route is active.
-        const u=r.pulse?((Math.floor(i/2)/packets+r.phase-(i%2)*Math.min(.07,10/Math.max(40,r.screenLength))+1)%1):((i/r.count+r.phase)%1);
-        pointAt(r,rate<0?1-u:u,temp);a.setXYZ(i,temp.x,temp.y,temp.z);
-      }
-      if(r.count)a.needsUpdate=true;
+      r.line.material.opacity=narrative.active&&communication?(selected?.46:.09):r.concept?.19:active?(r.type==='power'?.28:.23):.12;
+      window.NZ_FLOW_HALO.step(r.halo, { rate, dt: Math.max(0, dt || 0), speed: r.speed,
+        shown: moving, pixels: r.screenLength, emphasis: selected || focus !== 'overview' });
+      r.count = window.NZ_FLOW_HALO.count(r.halo);
+      r.phase = r.halo.material.uniforms.uPhase.value;
     }
     if(panel&&performance.now()-updated>500){updated=performance.now();const labels={power:'电力',data:'数据',control:'调度',cooling:'冷却',process:'工艺介质',heat:'余热'};
       panel.querySelector('.flow-status').textContent=Object.keys(enabled).map(kind=>{
@@ -13047,7 +13190,7 @@ window.NZ_FLOWS=(function(){
     panel.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{const defaults=button.dataset.flowAction==='default';Object.keys(enabled).forEach(k=>setEnabled(k,defaults&&k!=='heat'));const global=document.getElementById('showCampusFlows');global.checked=defaults;global.dispatchEvent(new Event('change'));}));
     TICKERS.push(update);
   }
-  function audit(){return {quality,focus,global:all,enabled:{...enabled},maxParticlesPerRoute:MAX_PARTICLES,totalAllocated:routes.length*MAX_PARTICLES,heatVisible:heat.visible,measuredCommunication:false,thermalPowerConfigured:false,narrative:{...narrative,routeIds:narrative.routeIds.slice()},nodes:Object.values(nodes),routes:routes.map(({id,type,from,to,zone,pts,concept,visible,count,rate,phase,screenLength,speed,narrativeSelected,staticDirections})=>({id,type,from,to,zone,pts,concept,visible,count,rate,phase,screenLength,speed,narrativeSelected,staticDirections}))};}
+  function audit(){return {quality,focus,global:all,enabled:{...enabled},maxHighlightsPerRoute:2,totalAllocated:0,heatVisible:heat.visible,measuredCommunication:false,thermalPowerConfigured:false,narrative:{...narrative,routeIds:narrative.routeIds.slice()},nodes:Object.values(nodes),routes:routes.map(({id,type,from,to,zone,pts,concept,visible,count,rate,phase,screenLength,speed,narrativeSelected,staticDirections})=>({id,type,from,to,zone,pts,concept,visible,count,rate,phase,screenLength,speed,narrativeSelected,staticDirections}))};}
   return {ready,selection,context,contextAliases,setNarrativeSignals,clearNarrativeSignals,setEnabled,update,afterEdges,legacyKind,isEnabled,getFocus:()=>focus,audit,setGlobal:v=>all=!!v,setQuality:q=>{quality=q;for(const r of routes)r.metricsAt=-Infinity;}};
 })();
 
@@ -13970,7 +14113,7 @@ window.NZ_SST_VISIT=(function(){
   const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fmt=(x,d=2)=>Number.isFinite(x)?x.toLocaleString('zh-CN',{maximumFractionDigits:d,minimumFractionDigits:d}):'—';
   const limit=(x,a,b)=>Math.max(a,Math.min(b,x));
-  let api,ui,on=false,preview=false,paused=false,time=0,index=-1,comparison,variant='coordinated',frame,scheme='existing',schemeOverride=null,opacity=0,goal=0,move=null,job=0,inside=false,loading=false,lastPaint=0,clock=0,loadNotice='';
+  let api,ui,on=false,preview=false,paused=false,time=0,index=-1,comparison,variant='coordinated',frame,scheme='existing',schemeOverride=null,opacity=0,goal=0,move=null,job=0,inside=false,loading=false,lastPaint=0,loadNotice='';
   const nodes=[],lines=[],routePorts={},equipmentLinks=[];let flowRoot,savedFlows,typedRoots=[],buildingLocationLabel;
   const stage=()=>STARTS.reduce((v,t,i)=>time>=t?i:v,0);
   function ready(a,hooks){api=a;ui=hooks;buildNodes();buildFlows();
@@ -13993,9 +14136,12 @@ window.NZ_SST_VISIT=(function(){
     buildingLocationLabel=document.createElement('div');buildingLocationLabel.className='sst-scene-label';buildingLocationLabel.hidden=true;buildingLocationLabel.dataset.sstLocation='building';$('sceneFrame').append(buildingLocationLabel);
   }
   function line(id,kind,points,from,to){
-    const color=kind==='power'?0xb87012:0xa53f82,curve=new THREE.CurvePath();for(let i=1;i<points.length;i++)curve.add(new THREE.LineCurve3(new THREE.Vector3(...points[i-1]),new THREE.Vector3(...points[i])));
+    const color=kind==='power'?0xb87012:0xa53f82;
     const path=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points.map(p=>new THREE.Vector3(...p))),new THREE.LineBasicMaterial({color,transparent:true,opacity:.65,depthTest:true,depthWrite:false,toneMapped:false}));flowRoot.add(path);
-    const geom=new THREE.BufferGeometry();geom.setAttribute('position',new THREE.BufferAttribute(new Float32Array(18*3),3));const dots=new THREE.Points(geom,new THREE.PointsMaterial({color,size:5,sizeAttenuation:false,depthTest:true,depthWrite:false,transparent:true,opacity:.95,toneMapped:false}));dots.frustumCulled=false;dots.renderOrder=12;path.renderOrder=11;flowRoot.add(dots);lines.push({id,kind,points,from,to,curve,path,dots,rate:0});
+    const halo = window.NZ_FLOW_HALO.create(points, color, 'SST ' + id);
+    flowRoot.add(halo);
+    path.material.opacity = .32;
+    lines.push({ id, kind, points, from, to, path, halo, rate: 0 });
   }
   function buildFlows(){
     api.scene.updateMatrixWorld(true);
@@ -14029,7 +14175,7 @@ window.NZ_SST_VISIT=(function(){
     connect('command-building','control','noc','building.control',[[171,.6,103],[171,.6,95],[100,.6,95],[100,.6,0],[149,.6,0]]);
   }
   async function start(){
-    clearPreview();on=true;job++;paused=false;time=0;index=-1;schemeOverride=null;variant='coordinated';opacity=goal=0;clock=0;loadNotice='';window.NZ_VISUAL.clear();comparison=window.NZ_SST_SIMULATION.compare();savedFlows=window.NZ_FLOWS.audit();
+    clearPreview();on=true;job++;paused=false;time=0;index=-1;schemeOverride=null;variant='coordinated';opacity=goal=0;loadNotice='';window.NZ_VISUAL.clear();comparison=window.NZ_SST_SIMULATION.compare();savedFlows=window.NZ_FLOWS.audit();
     typedRoots=['Typed campus energy and communication flows','Flow overlay trails'].map(name=>api.scene.getObjectByName(name)).filter(Boolean).map(root=>({root,visible:root.visible}));
     ui.shell.classList.add('sst-story');document.body.classList.add('sst-running','scenario-dashboard-playing');ui.hud.hidden=true;ui.controlsBox.hidden=false;flowRoot.visible=true;nodes.forEach(n=>{n.label.hidden=false;n.model.setHighlight(1);});
     api.controls.enabled=false;render();updateStage();selectFrame();paint(true);
@@ -14067,9 +14213,14 @@ window.NZ_SST_VISIT=(function(){
   function seek(t){time=limit(t,0,TOTAL);if(time>=TOTAL)paused=true;updateStage();selectFrame();paint(true);return true;}
   function pause(){if(time>=TOTAL){paused=false;seek(0);}else paused=!paused;if(paused)move=null;api.controls.enabled=paused&&!inside;paint(true);return paused;}
   function cameraTick(dt){if(!move)return;move.elapsed=Math.min(move.duration,move.elapsed+dt);const u=move.elapsed/move.duration,k=u*u*(3-2*u);api.camera.position.fromArray(move.from.map((v,i)=>v+(move.to[i]-v)*k));api.controls.target.fromArray(move.look.map((v,i)=>v+(move.target[i]-v)*k));if(u>=1){move=null;if(paused&&!inside)api.controls.enabled=true;}}
-  function tick(dt){if(!on){if(preview)updateNodes(dt);return;}if(!paused&&!loading){time=Math.min(TOTAL,time+dt);if(time>=TOTAL)paused=true;updateStage();selectFrame();}if(!loading)cameraTick(dt);updateNodes(dt);if(!paused&&!api.S.reduceMotion)clock+=dt;updateFlows();paint(false);}
-  function updateFlows(){const s=frame?.state;if(!s)return;const branch=id=>frame.branches.find(b=>b.id===id)||{inputMW:0,outputMW:0},publicPower=branch('north').inputMW+branch('south').inputMW,storageNet=s.storageDischargeMW-s.storageChargeMW,aux=s.siteAuxMW??window.NZ_SST_SIMULATION.defaults.siteAuxMW,mvDistribution=publicPower+aux-storageNet,rates={'solar-feed':s.pvUsedMW,'wind-feed':s.windUsedMW,'hub-export':s.pvUsedMW+s.windUsedMW,'grid-connection':branch('it').inputMW+mvDistribution,'data-hv-feeder':branch('it').inputMW,'dist-hv-feeder':mvDistribution,'dc-mv':branch('it').inputMW,'mv-distribution':mvDistribution,'storage-ac':storageNet,'charge-north-ac':branch('north').inputMW,'charge-south-ac':branch('south').inputMW,'north-dc':branch('north').outputMW,'north-protected-dc':branch('north').outputMW,'south-dc':branch('south').outputMW,'south-protected-dc':branch('south').outputMW};const samples=comparison.variants[variant].frames,previous=samples[Math.max(0,samples.findIndex(v=>v.elapsed===frame.elapsed)-1)],p=previous.state,changed=(key)=>Math.abs((s[key]||0)-(p[key]||0))>.01,changes={'command-north':changed('northMW'),'command-south':changed('southMW'),'command-building':changed('itMW'),'command-ems-noc':['storageChargeMW','storageDischargeMW','northMW','southMW','itMW'].some(changed)};for(const r of lines){r.rate=r.kind==='control'?(index===4&&changes[r.id]?1:0):rates[r.id]||0;
-      const enabled=window.NZ_FLOWS.isEnabled(r.kind),show=index>=4&&enabled&&!inside;r.path.visible=show;r.dots.visible=show&&Math.abs(r.rate)>.0001;const a=r.dots.geometry.attributes.position;for(let j=0;j<18;j++){let u=(j/18+clock*(r.kind==='control'?.10:.055))%1;if(r.rate<0)u=1-u;const p=r.curve.getPoint(u);a.setXYZ(j,p.x,p.y,p.z);}a.needsUpdate=true;}}
+  function tick(dt){if(!on){if(preview)updateNodes(dt);return;}if(!paused&&!loading){time=Math.min(TOTAL,time+dt);if(time>=TOTAL)paused=true;updateStage();selectFrame();}if(!loading)cameraTick(dt);updateNodes(dt);updateFlows(paused || loading ? 0 : dt);paint(false);}
+  function updateFlows(dt){const s=frame?.state;if(!s)return;const branch=id=>frame.branches.find(b=>b.id===id)||{inputMW:0,outputMW:0},publicPower=branch('north').inputMW+branch('south').inputMW,storageNet=s.storageDischargeMW-s.storageChargeMW,aux=s.siteAuxMW??window.NZ_SST_SIMULATION.defaults.siteAuxMW,mvDistribution=publicPower+aux-storageNet,rates={'solar-feed':s.pvUsedMW,'wind-feed':s.windUsedMW,'hub-export':s.pvUsedMW+s.windUsedMW,'grid-connection':branch('it').inputMW+mvDistribution,'data-hv-feeder':branch('it').inputMW,'dist-hv-feeder':mvDistribution,'dc-mv':branch('it').inputMW,'mv-distribution':mvDistribution,'storage-ac':storageNet,'charge-north-ac':branch('north').inputMW,'charge-south-ac':branch('south').inputMW,'north-dc':branch('north').outputMW,'north-protected-dc':branch('north').outputMW,'south-dc':branch('south').outputMW,'south-protected-dc':branch('south').outputMW};const samples=comparison.variants[variant].frames,previous=samples[Math.max(0,samples.findIndex(v=>v.elapsed===frame.elapsed)-1)],p=previous.state,changed=(key)=>Math.abs((s[key]||0)-(p[key]||0))>.01,changes={'command-north':changed('northMW'),'command-south':changed('southMW'),'command-building':changed('itMW'),'command-ems-noc':['storageChargeMW','storageDischargeMW','northMW','southMW','itMW'].some(changed)};for(const r of lines){r.rate=r.kind==='control'?(index===4&&changes[r.id]?1:0):rates[r.id]||0;
+      const shown = index >= 4 && window.NZ_FLOWS.isEnabled(r.kind) && !inside;
+      r.path.visible = shown;
+      window.NZ_FLOW_HALO.step(r.halo, { rate: r.rate, dt, speed: r.kind === 'control' ? .16 : .13,
+        shown: shown && !api.S.reduceMotion, emphasis: true });
+    }
+  }
   function paint(force){if(!on||!$('sstStep'))return;if(!force&&performance.now()-lastPaint<180)return;lastPaint=performance.now();const i=stage();if($('sstConclusion'))$('sstConclusion').hidden=i!==5;$('sstStep').textContent=String(i+1).padStart(2,'0')+' / 06 · '+(i<4?'装备结构':'运行与结果');$('sstTitle').textContent=chapters[i][0];$('sstText').textContent=chapters[i][1];$('sstProgress').textContent=fmt(time,1)+' / 108 秒';$('sstSeek').value=time;$('sstPause').textContent=time>=TOTAL?'重播':paused?'继续':'暂停';$('sstStatus').textContent=loading?'正在进入数据楼，请稍候…':loadNotice||(paused?'已暂停 · ':'')+(i<4?'方案展示：'+(scheme==='sst'?'SST 变换单元；保留输出保护':'原隔离与整流单元'):'代表性支路 · '+({'pv-surplus':'光伏富余窗口','charging-arrival':'充电服务到达','charging-pulse':'超充需求增加'}[frame?.event]||'相同服务条件')+' · '+comparison.variants[variant].variant.name);ui.body.querySelectorAll('[data-scheme]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.scheme===scheme)));if($('sstVariant').value!==variant)$('sstVariant').value=variant;
     ui.body.querySelector('[data-sst-action=explode]').disabled=scheme!=='sst'||loading;ui.body.querySelector('[data-sst-action=assemble]').disabled=scheme!=='sst'||loading;$('sstFacts').hidden=i<4;const s=frame?.state;if(s)$('sstFacts').innerHTML=[['代表性 IT 输出',fmt(s.itMW)+' MW','支路额定 5 MW'],['南北充电输出',fmt(s.northMW+s.southMW)+' MW','两支路各 1 MW'],['分配储能 SOC',fmt(s.soc,1)+'%','既有交流储能中的 8 MWh 份额']].map(([a,b,c])=>'<div class="sst-fact"><span>'+a+'</span><strong>'+b+'</strong><small>'+c+'</small></div>').join('');
     if(window.NZ_VISITOR_VIEW){const state=frame?.state;window.NZ_VISITOR_VIEW.update({owner:'cloud',title:chapters[i][0],context:'public',labels:i<2?['substation','dc','panamaSc']:[],flows:i<4?[]:['power','control'],scope:'SST · 两小时代表支路 · 前瞻方案演示',greenDashboard:window.NZ_SCENARIO_VIEW.sst(comparison,frame,i,scheme,variant,window.NZ_SST_SIMULATION),metrics:state?[{label:'代表 IT 输出',value:fmt(state.itMW),unit:'MW',note:'支路额定 5 MW'},{label:'接入点购电',value:fmt(state.gridImportMW),unit:'MW',note:'相同服务需求下比较'},{label:'分配储能 SOC',value:fmt(state.soc,1),unit:'%',note:'既有储能中的 8 MWh 份额'}]:[]});}
@@ -14083,7 +14234,7 @@ window.NZ_SST_VISIT=(function(){
   function routeAudit(){
     const errors=[],same=(a,b)=>a&&b&&a.every((v,i)=>Math.abs(v-b[i])<1e-6),graphs={power:{},control:{}};
     function join(kind,a,b){(graphs[kind][a]||(graphs[kind][a]=new Set())).add(b);(graphs[kind][b]||(graphs[kind][b]=new Set())).add(a);}
-    for(const r of lines){const a=routePorts[r.from],b=routePorts[r.to];if(!a||!b)errors.push(r.id+' missing declared port');else{if(!same(r.points[0],a.p)||!same(r.points.at(-1),b.p))errors.push(r.id+' endpoint mismatch');if(r.kind==='power'&&(a.voltageKV!==b.voltageKV||a.domain!==b.domain))errors.push(r.id+' directly joins different voltage or AC/DC domains');}if(r.points.some(p=>p.length!==3||!p.every(Number.isFinite)))errors.push(r.id+' invalid coordinates');if(!r.path.material.depthTest||!r.dots.material.depthTest)errors.push(r.id+' draws through equipment');join(r.kind,r.from,r.to);}
+    for(const r of lines){const a=routePorts[r.from],b=routePorts[r.to];if(!a||!b)errors.push(r.id+' missing declared port');else{if(!same(r.points[0],a.p)||!same(r.points.at(-1),b.p))errors.push(r.id+' endpoint mismatch');if(r.kind==='power'&&(a.voltageKV!==b.voltageKV||a.domain!==b.domain))errors.push(r.id+' directly joins different voltage or AC/DC domains');}if(r.points.some(p=>p.length!==3||!p.every(Number.isFinite)))errors.push(r.id+' invalid coordinates');if(!r.path.material.depthTest||!r.halo.material.depthTest)errors.push(r.id+' draws through equipment');join(r.kind,r.from,r.to);}
     equipmentLinks.forEach(l=>join(l.kind,l.from,l.to));
     const reachable=(kind,source,target)=>{const seen=new Set([source]),todo=[source];while(todo.length){const id=todo.pop();for(const next of graphs[kind][id]||[])if(!seen.has(next)){seen.add(next);todo.push(next);}}return seen.has(target);};
     for(const target of ['solar.output','wind.output','storage.output','building.power','north.terminal','south.terminal'])if(!reachable('power','grid.bus',target))errors.push('power graph disconnected '+target);
@@ -14825,9 +14976,11 @@ window.NZ_FACTORY=(function(){
   let wireCount=0;for(const [name,list]of Object.entries(wireBuckets))if(list.length){const mesh=new THREE.Mesh(merge(list),material(name));mesh.name='Factory continuous '+name+' wires';hero.add(mesh);wireCount++;list.forEach(g=>g.dispose());}
   wasteFlows=new THREE.Group();wasteFlows.name='Selected wastewater flow schematic';wasteFlows.visible=false;hero.add(wasteFlows);
   for(const route of liquidPaths){
-   const points=route.points.map(p=>new THREE.Vector3(...p)),curve=new THREE.CurvePath();for(let i=1;i<points.length;i++)curve.add(new THREE.LineCurve3(points[i-1],points[i]));
+   const points=route.points.map(p=>new THREE.Vector3(...p));
    const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),new THREE.LineDashedMaterial({color:data.colors[route.mat],dashSize:1,gapSize:.6,depthWrite:false,transparent:true,opacity:.9}));line.computeLineDistances();line.name=route.id;wasteFlows.add(line);
-   const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.BufferAttribute(new Float32Array(36),3));const dots=new THREE.Points(geo,new THREE.PointsMaterial({color:data.colors[route.mat],size:5,sizeAttenuation:false,depthWrite:false}));dots.userData.curve=curve;dots.userData.liquidRoute=route.id;wasteFlows.add(dots);
+   const halo = window.NZ_FLOW_HALO.create(route.points, data.colors[route.mat], route.id);
+   halo.userData.phaseOffset = halo.material.uniforms.uPhase.value;
+   wasteFlows.add(halo);
   }
   const staticMeshes=emitBuckets(buckets),highlightGeo=new THREE.SphereGeometry(data.config.wireRadius*lineScale*1.22,6,4),highlightMat=new THREE.MeshStandardMaterial({color:0xf0eee2,roughness:.4,metalness:.25});glints=new THREE.InstancedMesh(highlightGeo,highlightMat,12*lines.length);glints.name='All row wire travel glints';glints.instanceMatrix.setUsage(THREE.DynamicDrawUsage);hero.add(glints);
   const allMeshes=staticMeshes.concat(dynamicMeshes),uniqueGeometries=new Set(allMeshes.map(m=>m.geometry));buildStats={partCount:data.parts.length,displayedLineParts:data.parts.length*lines.length,hallPartCount:architecture.length,lineCount:lines.length,workcellFootprint:data.config.footprint.map(v=>v*lineScale),staticMeshBuckets:staticMeshes.length,dynamicMeshBuckets:dynamicBuckets.size,dynamicMeshes:dynamicMeshes.length,wireMeshes:wireCount,movingGlints:12*lines.length,meshCount:allMeshes.length+wireCount+1,uniqueGeometries:uniqueGeometries.size+wireCount+1,sharedDynamicGeometries:dynamicBuckets.size,preservedRoot:root.uuid,roofPVModules:architecture.filter(p=>p.type==='pvface').length};
@@ -14839,7 +14992,13 @@ window.NZ_FACTORY=(function(){
   if(!hero)return;const p=M.pose(state,data);lastPose=p;for(const line of lines){for(const [name,g]of Object.entries(line.groups)){g.position.fromArray(data.assemblies[name]);const delta=p.movingTranslations?.[name];if(delta)g.position.add(new THREE.Vector3(...delta));}if(line.groups.payoutRotor)line.groups.payoutRotor.rotation.z=p.payoutAngle;if(line.groups.takeupRotor)line.groups.takeupRotor.rotation.z=p.takeupAngle;if(line.groups.traverse&&!p.movingTranslations)line.groups.traverse.position.z=(data.assemblies.traverse?.[2]||0)+p.traverse;for(const r of p.rollerAngles)if(line.groups[r.group])line.groups[r.group].rotation.z=r.angle;}
   for(const item of instancedMotion){for(let i=0;i<lines.length;i++){const group=lines[i].groups[item.group];group.updateMatrix();item.mesh.setMatrixAt(i,lines[i].matrix.clone().multiply(group.matrix));}item.mesh.instanceMatrix.needsUpdate=true;}
   const total=p.path.reduce((n,s)=>n+s.length,0),object=new THREE.Object3D();for(let i=0;i<lines.length;i++)for(let j=0;j<12;j++){object.position.fromArray(M.sample(p.path,(p.distance+j*total/12)%total)).applyMatrix4(lines[i].matrix);object.updateMatrix();glints.setMatrixAt(i*12+j,object.matrix);}glints.instanceMatrix.needsUpdate=true;for(const g of fine)g.visible=api.S.quality==='high';lastQuality=api.S.quality;applyRoof();
-  wasteFlows.visible=state.mode==='waste'||!!saved;if(wasteFlows.visible)for(const dots of wasteFlows.children.filter(o=>o.isPoints)){const a=dots.geometry.attributes.position;for(let i=0;i<a.count;i++){const v=dots.userData.curve.getPoint((i/a.count+state.distance*.025)%1);a.setXYZ(i,v.x,v.y,v.z);}a.needsUpdate=true;}
+  wasteFlows.visible = state.mode === 'waste' || !!saved;
+  if (wasteFlows.visible) for (const halo of wasteFlows.children) {
+   if (!halo.userData.flowHalo) continue;
+   window.NZ_FLOW_HALO.step(halo, { rate: api.S.factory, dt: 0, speed: 0,
+     shown: !api.S.reduceMotion && window.NZ_FLOWS.isEnabled('process'), emphasis: true });
+   halo.material.uniforms.uPhase.value = (halo.userData.phaseOffset + state.distance * .025) % 1;
+  }
 
  }
  function paint(){if(!panel)return;const roof=panel.querySelector('[data-factory="roof"]');roof.textContent=state.open?'合上屋顶':'打开屋顶';roof.setAttribute('aria-pressed',String(state.open));for(const b of panel.querySelectorAll('[data-factory-mode]'))b.setAttribute('aria-pressed',String(b.dataset.factoryMode===state.mode));}
@@ -15543,7 +15702,6 @@ window.NZ_STATION_ASSET = (function () {
   }
 
   /* 每帧公共收尾：动画钩子 → 粒子 → 相机 → 出图 → 标签 → 日月弧 */
-  const qForParticles = () => (QS[S.quality] || QS.standard).particles;
   let visualClock = 0;
 
   function finishFrame(light, tNow, dtR) {
@@ -15553,12 +15711,6 @@ window.NZ_STATION_ASSET = (function () {
     if(window.NZ_FACTORY)window.NZ_FACTORY.tick(S.reduceMotion||window.NZ_CLOUD_VISIT.isPaused()||window.NZ_RECEPTION?.isPaused()||tour.active&&tour.paused?0:dtR);
 
     window.NZ_VEHICLES?.tick(sceneDt);
-    const cap = qForParticles();
-    for (const e of EDGES) {
-      const capacity=e.points.geometry.attributes.position.count;
-      if (e.parts.length > Math.min(cap,capacity)) e.parts.length = Math.min(cap,capacity);
-    }
-    drawParticles();
     window.NZ_VISUAL.beforeRender(light, rimL);
     for (const light of [sunL, rimL, ambL, hemiL]) light.intensity *= Math.PI;
     window.NZ_RENDER_POLISH.frame(light, camera, controls.target, sunL, hemiL, ambL, rimL, S, postObj);
@@ -15573,6 +15725,8 @@ window.NZ_STATION_ASSET = (function () {
     if (camTween) applyCamTween(dtR);
     controls.update();
 
+    window.NZ_FLOW_HALO.frame(renderer, night);
+    window.NZ_FLOW_RENDERER.afterVisibility();
     if (window.NZ_SOLAR) window.NZ_SOLAR.update();
 
     const t0 = (window.performance && performance.now) ? performance.now() : 0;

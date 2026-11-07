@@ -4,6 +4,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { pathToFileURL } = require('node:url');
+const { checkFlows, captureFlowShots } = require('./check-flow.cjs');
 
 const bundled = path.join(process.env.USERPROFILE || '', '.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || (fs.existsSync(bundled) ? bundled : 'playwright'));
@@ -107,7 +108,8 @@ async function run() {
 
     const screenshotDir = path.join(__dirname, 'evidence');
     fs.mkdirSync(screenshotDir, { recursive: true });
-    await page.addStyleTag({ content: 'body *{visibility:hidden!important} #gridCanvas{visibility:visible!important} #canvasWrap,#sceneFrame{position:fixed!important;inset:0!important;border:0!important} #labels3d,#vignette{display:none!important}' });
+    const canvasOnly = 'body *{visibility:hidden!important} #gridCanvas{visibility:visible!important} #canvasWrap,#sceneFrame{position:fixed!important;inset:0!important;border:0!important} #labels3d,#vignette{display:none!important}';
+    await page.addStyleTag({ content: canvasOnly });
     await page.evaluate('window.__NZ_TEST.resize()');
     const comparisons = [];
     for (const view of ['station', 'terminal', 'power', 'south']) {
@@ -128,8 +130,19 @@ async function run() {
         await page.screenshot({ path: path.join(screenshotDir, view + '-' + model + '.jpg'), type: 'jpeg', quality: 92 });
       }
     }
+    const flow = await checkFlows(page, screenshotDir);
     assert.deepEqual(errors, []);
     assert.deepEqual(external, []);
+    if (process.env.FLOW_BASELINE) {
+      const previous = await context.newPage();
+      await previous.goto(pathToFileURL(path.resolve(process.env.FLOW_BASELINE)).href);
+      await previous.waitForSelector('#station-preview');
+      await previous.evaluate(() => document.querySelector('#segQuality [data-q="high"]').click());
+      await previous.addStyleTag({ content: canvasOnly });
+      await previous.evaluate(() => __NZ_TEST.resize());
+      await captureFlowShots(previous, screenshotDir, 'particles');
+      await previous.close();
+    }
     const fallbackPage = await context.newPage();
     await fallbackPage.addInitScript(() => {
       window.DecompressionStream = class {
@@ -145,8 +158,8 @@ async function run() {
       disabled: document.querySelector('#station-preview [data-model="blender"]').disabled
     }));
     assert.deepEqual(fallback, { active: 'original', failed: true, routes: 9, disabled: true });
-    fs.writeFileSync(path.join(screenshotDir, 'checks.json'), JSON.stringify({ state, renderAssets, vehicle, coverY, sst, reception, readyMs, comparisons, fallback, errors, external }, null, 2) + '\n');
-    console.log('PASS offline r187, PBR textures, nine mounts, vehicles, disassembly, SST and reception startup');
+    fs.writeFileSync(path.join(screenshotDir, 'checks.json'), JSON.stringify({ state, renderAssets, vehicle, coverY, sst, reception, readyMs, comparisons, flow, fallback, errors, external }, null, 2) + '\n');
+    console.log('PASS offline r187, station, vehicles, reception, flow direction, zero flow, scope and SST pause');
   } finally {
     await browser.close();
   }
