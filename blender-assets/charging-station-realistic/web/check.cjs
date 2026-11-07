@@ -26,7 +26,8 @@ async function run() {
     const file = path.join(__dirname, 'dist/多园区-v20-r187-充电站写实.html');
     const started = Date.now();
     await page.goto(pathToFileURL(file).href);
-    await page.waitForSelector('#station-preview');
+    await page.waitForSelector('#flowLayers', { state: 'attached' });
+    assert.equal(await page.locator('#station-preview').count(), 0);
     const readyMs = Date.now() - started;
     const state = await page.evaluate(() => {
       window.__NZ_TEST.S.running = false;
@@ -49,10 +50,10 @@ async function run() {
     assert.equal(renderAssets.quality, 'high');
     assert(renderAssets.maps > 0 && renderAssets.normalMaps > 0 && renderAssets.roughnessMaps > 0);
 
-    await page.click('#station-preview [data-model="original"]');
+    await page.evaluate(() => NZ_STATION_ASSET.setModel('original'));
     assert.equal(await page.evaluate('NZ_STATION_ASSET.state.active'), 'original');
     assert.equal(await page.evaluate('__NZ_TEST.scene.getObjectByName("Terminal connection indicator N01").position.y'), 1.82);
-    await page.click('#station-preview [data-model="blender"]');
+    await page.evaluate(() => NZ_STATION_ASSET.setModel('blender'));
     assert.equal(await page.evaluate('__NZ_TEST.scene.getObjectByName("Terminal connection indicator N01").position.y'), 1.61);
     const vehicle = await page.evaluate(() => {
       const audit = window.NZ_VEHICLES.audit();
@@ -136,7 +137,7 @@ async function run() {
     if (process.env.FLOW_BASELINE) {
       const previous = await context.newPage();
       await previous.goto(pathToFileURL(path.resolve(process.env.FLOW_BASELINE)).href);
-      await previous.waitForSelector('#station-preview');
+      await previous.waitForSelector('#flowLayers', { state: 'attached' });
       await previous.evaluate(() => document.querySelector('#segQuality [data-q="high"]').click());
       await previous.addStyleTag({ content: canvasOnly });
       await previous.evaluate(() => __NZ_TEST.resize());
@@ -150,14 +151,14 @@ async function run() {
       };
     });
     await fallbackPage.goto(pathToFileURL(file).href);
-    await fallbackPage.waitForSelector('#station-preview');
+    await fallbackPage.waitForSelector('#flowLayers', { state: 'attached' });
     const fallback = await fallbackPage.evaluate(() => ({
       active: NZ_STATION_ASSET.state.active,
       failed: NZ_STATION_ASSET.state.error === 'Simulated GLB decoding failure',
       routes: NZ_VEHICLES.audit().routes.length,
-      disabled: document.querySelector('#station-preview [data-model="blender"]').disabled
+      toolbar: !!document.querySelector('#station-preview')
     }));
-    assert.deepEqual(fallback, { active: 'original', failed: true, routes: 9, disabled: true });
+    assert.deepEqual(fallback, { active: 'original', failed: true, routes: 9, toolbar: false });
     fs.writeFileSync(path.join(screenshotDir, 'checks.json'), JSON.stringify({ state, renderAssets, vehicle, coverY, sst, reception, readyMs, comparisons, flow, fallback, errors, external }, null, 2) + '\n');
     console.log('PASS offline r187, station, vehicles, reception, flow direction, zero flow, scope and SST pause');
   } finally {

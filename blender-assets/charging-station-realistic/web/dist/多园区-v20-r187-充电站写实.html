@@ -15285,7 +15285,6 @@ window.NZ_STATION_ASSET = (function () {
   const swaps = [];
   const indicators = [];
   let api;
-  let bar;
   let staging;
 
   function setModel(model) {
@@ -15301,12 +15300,6 @@ window.NZ_STATION_ASSET = (function () {
       if (upgraded) light.scale.multiplyScalar(.55);
     }
     state.active = upgraded ? 'blender' : 'original';
-    if (bar) {
-      bar.querySelector('[role="status"]').textContent = upgraded ? '当前写实外观' : '当前 r187 原外观';
-      for (const button of bar.querySelectorAll('[data-model]')) {
-        button.setAttribute('aria-pressed', String(button.dataset.model === state.active));
-      }
-    }
     return true;
   }
 
@@ -15430,7 +15423,7 @@ window.NZ_STATION_ASSET = (function () {
     api.controls.update();
   }
 
-  function showControls() {
+  function afterBoot() {
     // The existing connection lamps sit inside the original screens. Move
     // them below the new bay labels while keeping their live materials.
     api.scene.traverse(node => {
@@ -15438,26 +15431,11 @@ window.NZ_STATION_ASSET = (function () {
         indicators.push({ light: node, y: node.position.y, scale: node.scale.clone() });
       }
     });
-    bar = document.createElement('div');
-    bar.id = 'station-preview';
-    bar.style.cssText = 'position:fixed;z-index:999;top:84px;right:18px;max-width:calc(100vw - 36px);padding:9px 12px;background:#f9fcfbee;border:1px solid #b9ceca;border-radius:7px;color:#243f40;display:flex;gap:8px;align-items:center;flex-wrap:wrap;font:13px "Microsoft YaHei",sans-serif';
-    bar.innerHTML = '<strong>充电站外观</strong><button type="button" data-model="original">r187 原版</button><button type="button" data-model="blender">写实全站</button><button type="button" data-view="station">全站</button><button type="button" data-view="terminal">终端</button><button type="button" data-view="power">北排电源</button><button type="button" data-view="south">南排电源</button><span role="status"></span>';
-    document.body.appendChild(bar);
-    bar.addEventListener('click', event => {
-      const button = event.target.closest('button');
-      if (!button) return;
-      if (button.dataset.model) setModel(button.dataset.model);
-      if (button.dataset.view) focus(button.dataset.view);
-    });
     if (state.ready) setModel('blender');
-    else {
-      bar.querySelector('[data-model="blender"]').disabled = true;
-      bar.querySelector('[role="status"]').textContent = '写实资产加载失败，已恢复 r187 原外观';
-    }
     focus('station');
   }
 
-  return { prepare, showControls, state, setModel, focus };
+  return { prepare, afterBoot, state, setModel, focus };
 })();
 
 </script>
@@ -17079,7 +17057,7 @@ function paintNarration(){if(!tour.active)return;const c=TOUR[tour.chap],inside=
 
   window.NZ_STATION_ASSET.prepare(window.__NZ_TEST).then(() => {
     boot();
-    window.NZ_STATION_ASSET.showControls();
+    window.NZ_STATION_ASSET.afterBoot();
   });
 })();
 

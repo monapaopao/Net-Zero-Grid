@@ -45,7 +45,7 @@ async function build() {
   const normalized = page.slice(startup).replace(/\r\n/g, '\n');
   if (startup < 0 || normalized.split(hook).length !== 2) throw new Error('Missing r187 startup hook');
   const scripts = [loader, 'window.STATION_PACK = ' + payload + ';', adapter].map(script => `<script>\n${script}\n</script>`).join('\n');
-  const app = normalized.replace(hook, '\n  window.NZ_STATION_ASSET.prepare(window.__NZ_TEST).then(() => {\n    boot();\n    window.NZ_STATION_ASSET.showControls();\n  });\n})();');
+  const app = normalized.replace(hook, '\n  window.NZ_STATION_ASSET.prepare(window.__NZ_TEST).then(() => {\n    boot();\n    window.NZ_STATION_ASSET.afterBoot();\n  });\n})();');
   const out = path.join(__dirname, 'dist');
   fs.mkdirSync(out, { recursive: true });
   fs.writeFileSync(path.join(out, preview), (page.slice(0, startup) + scripts + '\n' + app)

@@ -1,12 +1,12 @@
 # 充电站写实全站 · Three.js r187
 
-用 Chrome 或 Edge 打开 [多园区离线预览](dist/多园区-v20-r187-充电站写实.html)。页面默认显示写实全站，右上角可以切换「r187 原版」或「写实全站」，并直达全站、终端、北排电源和南排电源四个机位。
+用 Chrome 或 Edge 打开 [多园区离线预览](dist/多园区-v20-r187-充电站写实.html)。页面默认从写实充电站全景开始。
 
 写实资产覆盖光伏雨棚、充电区地坪、21 个泊位、24 台终端、两套直流电源及输出保护柜。园区沿用原有车辆、充电线、连接状态、功率牌及场景灯光。九个挂载组随原有设备结构运动，支持机柜拆解与 SST 替换。写实资产加载失败时，页面自动显示 r187 原外观。
 
 能源、数据、调度及冷热线路沿用原来的路径和介质颜色。全景的每条运行线路最多显示一段柔边光带，聚焦时较长的线路可显示两段。反向流沿原路线逆向运动，零流量和减少动态模式保留静态线路。SST 导览和工厂废水示意也使用同一光带，夜间只加强光带自身的柔边。
 
-同机位前后对照可查看[全景原粒子](evidence/particles-campus.jpg)与[全景光带](evidence/halo-campus.jpg)、[充电站原粒子](evidence/particles-charge.jpg)与[充电站光带](evidence/halo-charge.jpg)、[工厂原粒子](evidence/particles-factory.jpg)与[工厂光带](evidence/halo-factory.jpg)。这些截图采自运动中的不同帧，流向应以离线页实际播放为准。「r187 原版」切换的是充电站模型，两种模型都使用本版光带。改动前的粒子版保存在 Git 提交 `ad0bf70`。
+同机位前后对照可查看[全景原粒子](evidence/particles-campus.jpg)与[全景光带](evidence/halo-campus.jpg)、[充电站原粒子](evidence/particles-charge.jpg)与[充电站光带](evidence/halo-charge.jpg)、[工厂原粒子](evidence/particles-factory.jpg)与[工厂光带](evidence/halo-factory.jpg)。这些截图采自运动中的不同帧，流向应以离线页实际播放为准。改动前的粒子版保存在 Git 提交 `ad0bf70`。
 
 ## 资产和运行结果
 

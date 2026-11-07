@@ -43,7 +43,7 @@
     "connectivity": true
   },
   "reception": true,
-  "readyMs": 2596,
+  "readyMs": 2854,
   "comparisons": [
     {
       "view": "station",
@@ -73,7 +73,7 @@
       "view": "terminal",
       "model": "blender",
       "medianMs": 16.7,
-      "p95Ms": 16.8,
+      "p95Ms": 16.7,
       "draws": 1284,
       "triangles": 7346138
     },
@@ -81,7 +81,7 @@
       "view": "power",
       "model": "original",
       "medianMs": 16.7,
-      "p95Ms": 16.8,
+      "p95Ms": 16.7,
       "draws": 1135,
       "triangles": 7215956
     },
@@ -135,7 +135,7 @@
     "active": "original",
     "failed": true,
     "routes": 9,
-    "disabled": true
+    "toolbar": false
   },
   "errors": [],
   "external": []
