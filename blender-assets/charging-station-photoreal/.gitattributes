@@ -1,0 +1,13 @@
+*.py text eol=lf
+*.js text eol=lf
+*.cjs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.blend binary
+*.glb binary
+*.hdr binary
+*.png binary
+*.jpg binary
+*.mp4 binary
+web/dist/* -diff
+web/vendor/* -diff

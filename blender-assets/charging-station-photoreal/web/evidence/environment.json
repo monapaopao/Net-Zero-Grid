@@ -1,0 +1,22 @@
+{
+  "CapturedAt": "2026-11-10T16:05:10.5881612+08:00",
+  "OS": "Windows",
+  "Viewport": "1440x810",
+  "Quality": "high",
+  "Browser": "Chrome --enable-gpu --use-angle=d3d11",
+  "GPU": [
+    {
+      "Name": "GameViewer Virtual Display Adapter",
+      "DriverVersion": "15.6.5.199"
+    },
+    {
+      "Name": "NVIDIA GeForce RTX 5070 Ti",
+      "DriverVersion": "32.0.16.2114"
+    }
+  ],
+  "CPU": [
+    {
+      "Name": "Intel(R) Core(TM) Ultra 7 270K Plus"
+    }
+  ]
+}

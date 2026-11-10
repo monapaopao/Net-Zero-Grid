@@ -1,0 +1,120 @@
+{
+  "vehicles": [
+    {
+      "id": "charge-N01",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "charge-N03",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "charge-N05",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "charge-N08",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "charge-N11",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "charge-S06",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "charge-S08",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "charge-S10",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "charge-bus",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "park-0-2",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "park-0-4",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "park-0-6",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "park-0-8",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "park-0-10",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "park-1-1",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "park-1-3",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "park-1-5",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "park-1-7",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    },
+    {
+      "id": "park-1-9",
+      "handled": true,
+      "correctPlate": true,
+      "positionError": 0
+    }
+  ],
+  "original": true,
+  "restored": true
+}

@@ -14,7 +14,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || bundled);
     const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
-    await page.goto(pathToFileURL(path.join(__dirname, 'dist/多园区-v20-r187-充电站写实.html')).href);
+    await page.goto(pathToFileURL(process.env.PREVIEW_FILE || path.join(__dirname, 'dist/多园区-v20-r187-充电站写实.html')).href);
     await page.waitForSelector('#btnNorthTop');
     await page.evaluate(() => {
       __NZ_TEST.S.running = false;
@@ -94,7 +94,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || bundled);
     await settle();
     const camera = await page.evaluate(() => __NZ_TEST.camera.position.toArray());
     assert(camera[1] > 1200 && Math.abs(camera[0] + 70) < 15);
-    const output = path.join(__dirname, 'evidence');
+    const output = process.env.EVIDENCE_DIR || path.join(__dirname, 'evidence');
     await page.evaluate(() => document.querySelectorAll('#toast .tmsg').forEach(message => message.remove()));
     await page.screenshot({ path: path.join(output, 'label-controls.jpg'), type: 'jpeg', quality: 90 });
     assert.deepEqual(errors, []);

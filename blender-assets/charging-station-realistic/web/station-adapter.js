@@ -20,6 +20,7 @@ window.NZ_STATION_ASSET = (function () {
       if (upgraded) light.scale.multiplyScalar(.55);
     }
     state.active = upgraded ? 'blender' : 'original';
+    window.NZ_PHOTO_ASSETS?.setActive(upgraded);
     return true;
   }
 
@@ -36,6 +37,7 @@ window.NZ_STATION_ASSET = (function () {
 
   function install(scene, plan) {
     const { THREE: T } = api;
+    window.NZ_PHOTO_ASSETS?.begin(api);
     const currentPlan = window.NZ_MULTI_PLAN.charging;
     if (JSON.stringify(plan) !== JSON.stringify(currentPlan)) throw new Error('v20 charging layout differs from the GLB plan.');
     const models = window.NZ_DETAIL.models;
@@ -69,6 +71,7 @@ window.NZ_STATION_ASSET = (function () {
     scene.updateMatrixWorld(true);
     for (const mesh of meshes) {
       const mount = mounts.get(mesh.name.split('__')[0]);
+      if (!mount && window.NZ_PHOTO_ASSETS?.collect(mesh)) continue;
       if (!mount) throw new Error('Unknown GLB mount: ' + mesh.name);
       mesh.matrixWorld.decompose(mesh.position, mesh.quaternion, mesh.scale);
       mount.add(mesh);
@@ -152,6 +155,7 @@ window.NZ_STATION_ASSET = (function () {
       }
     });
     if (state.ready) setModel('blender');
+    if (state.ready) window.NZ_PHOTO_ASSETS?.afterBoot();
     focus('station');
   }
 

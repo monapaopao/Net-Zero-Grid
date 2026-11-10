@@ -10,7 +10,8 @@ const labelControls = require('./label-controls.cjs');
 
 const root = path.resolve(__dirname, '../../..');
 const tools = path.join(root, 'tmp/three-r187-tools');
-const bundle = path.join(__dirname, 'vendor/GLTFLoader-r187.js');
+const assetDir = process.env.STATION_ASSET_DIR ? path.resolve(process.env.STATION_ASSET_DIR) : __dirname;
+const bundle = path.join(assetDir, 'vendor/GLTFLoader-r187.js');
 const preview = '多园区-v20-r187-充电站写实.html';
 
 async function buildLoader() {
@@ -25,7 +26,8 @@ async function buildLoader() {
   const entry = path.join(temp, 'entry.mjs');
   fs.writeFileSync(shim, 'export const { ' + Object.keys(three).join(', ') + ' } = globalThis.THREE;\n');
   const loader = path.join(pkg, 'examples/jsm/loaders/GLTFLoader.js').replaceAll('\\', '/');
-  fs.writeFileSync(entry, `import { GLTFLoader } from ${JSON.stringify(loader)};\nglobalThis.THREE.GLTFLoader = GLTFLoader;\n`);
+  const hdrLoader = path.join(pkg, 'examples/jsm/loaders/HDRLoader.js').replaceAll('\\', '/');
+  fs.writeFileSync(entry, `import { GLTFLoader } from ${JSON.stringify(loader)};\nimport { HDRLoader } from ${JSON.stringify(hdrLoader)};\nglobalThis.THREE.GLTFLoader = GLTFLoader;\nglobalThis.THREE.HDRLoader = HDRLoader;\n`);
   const result = spawnSync(process.env.ESBUILD || path.join(tools, 'esbuild/package/esbuild.exe'), [
     entry, '--bundle', '--format=iife', '--minify', '--legal-comments=inline', '--alias:three=' + shim, '--outfile=' + bundle
   ], { stdio: 'inherit', windowsHide: true });
@@ -39,15 +41,16 @@ async function build() {
   const loader = fs.readFileSync(bundle, 'utf8');
   const adapter = fs.readFileSync(path.join(__dirname, 'station-adapter.js'), 'utf8');
   const plan = JSON.parse(fs.readFileSync(path.join(__dirname, 'station-plan.json'), 'utf8'));
-  const glb = gzipSync(fs.readFileSync(path.join(__dirname, 'charging-station.glb')), { level: 9 });
+  const glb = gzipSync(fs.readFileSync(path.join(assetDir, 'charging-station.glb')), { level: 9 });
   const payload = JSON.stringify({ plan, glb: glb.toString('base64') });
   const startup = page.indexOf('<script>/* ===== premium.js ===== */');
   const hook = '\n  boot();\n})();';
   const normalized = page.slice(startup).replace(/\r\n/g, '\n');
   if (startup < 0 || normalized.split(hook).length !== 2) throw new Error('Missing r187 startup hook');
-  const scripts = [loader, 'window.STATION_PACK = ' + payload + ';', adapter].map(script => `<script>\n${script}\n</script>`).join('\n');
+  const additions = assetDir === __dirname ? [] : require(path.join(assetDir, 'pack.cjs'))();
+  const scripts = [loader, ...additions, 'window.STATION_PACK = ' + payload + ';', adapter].map(script => `<script>\n${script}\n</script>`).join('\n');
   const app = normalized.replace(hook, '\n  window.NZ_STATION_ASSET.prepare(window.__NZ_TEST).then(() => {\n    boot();\n    window.NZ_STATION_ASSET.afterBoot();\n  });\n})();');
-  const out = path.join(__dirname, 'dist');
+  const out = path.join(assetDir, 'dist');
   fs.mkdirSync(out, { recursive: true });
   fs.writeFileSync(path.join(out, preview), (page.slice(0, startup) + scripts + '\n' + app)
     .replace('</title>', ' · 充电站写实</title>'));

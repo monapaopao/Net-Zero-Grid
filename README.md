@@ -94,6 +94,7 @@ v20 基线已在独立导出的副本中完成构建，两个离线页面与现�
 
 ## 更多文档
 
+- [充电站材质与光照样板：Blender 资产、Three.js r187 实时接入与日夜对比](blender-assets/charging-station-photoreal/README.md)
 - [v20 功能与接待路线](NetZero-GridToChip-v20-VisitorPresentation/README-v20.md)
 - [v20 累计修改说明](NetZero-GridToChip-v20-VisitorPresentation/修改说明-v20.md)
 - [调度履约与计量](NetZero-GridToChip-v20-VisitorPresentation/README-v18.md)

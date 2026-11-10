@@ -1,0 +1,66 @@
+{
+  "device": "OPTIX",
+  "objects": 5477,
+  "vehiclePrototypes": [
+    "model3",
+    "yu7",
+    "li",
+    "ice",
+    "bus"
+  ],
+  "shots": {
+    "station": {
+      "pos": [
+        110,
+        28,
+        145
+      ],
+      "tgt": [
+        55,
+        2,
+        99
+      ]
+    },
+    "entrance": {
+      "pos": [
+        91,
+        6.1,
+        114
+      ],
+      "tgt": [
+        64,
+        2,
+        101
+      ]
+    },
+    "terminal": {
+      "pos": [
+        69,
+        3.5,
+        94
+      ],
+      "tgt": [
+        65.5,
+        1.2,
+        84.7
+      ]
+    }
+  },
+  "sunDirectionBlender": [
+    0.5412194728851318,
+    0.3937265872955322,
+    0.7430079579353333
+  ],
+  "baked": {
+    "daylight_indirect": {
+      "radianceScale": 0.18874591588974,
+      "resolution": 1024,
+      "filter": "separable 5-tap"
+    },
+    "static_occlusion": {
+      "radianceScale": 1,
+      "resolution": 1024,
+      "filter": "separable 5-tap"
+    }
+  }
+}

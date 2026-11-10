@@ -1,0 +1,27 @@
+{
+  "batches": 111,
+  "triangles": 369828,
+  "bytes": 34364044,
+  "mounts": [
+    "landscape",
+    "panamaSc2_door",
+    "panamaSc2_interior",
+    "panamaSc2_protection",
+    "panamaSc2_shell",
+    "panamaSc_door",
+    "panamaSc_interior",
+    "panamaSc_protection",
+    "panamaSc_shell",
+    "station",
+    "vehicle-bus",
+    "vehicle-ice",
+    "vehicle-li",
+    "vehicle-model3",
+    "vehicle-yu7"
+  ],
+  "maps": {
+    "lightMap": "daylight_indirect.png",
+    "aoMap": "static_occlusion.png",
+    "uvChannel": 1
+  }
+}

@@ -23,7 +23,7 @@ async function run() {
     page.on('pageerror', error => errors.push(error.message));
     page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
     page.on('request', request => { if (/^https?:/.test(request.url())) external.push(request.url()); });
-    const file = path.join(__dirname, 'dist/多园区-v20-r187-充电站写实.html');
+    const file = process.env.PREVIEW_FILE || path.join(__dirname, 'dist/多园区-v20-r187-充电站写实.html');
     const started = Date.now();
     await page.goto(pathToFileURL(file).href);
     await page.waitForSelector('#flowLayers', { state: 'attached' });
@@ -107,7 +107,7 @@ async function run() {
     });
     assert(reception);
 
-    const screenshotDir = path.join(__dirname, 'evidence');
+    const screenshotDir = process.env.EVIDENCE_DIR || path.join(__dirname, 'evidence');
     fs.mkdirSync(screenshotDir, { recursive: true });
     const canvasOnly = 'body *{visibility:hidden!important} #gridCanvas{visibility:visible!important} #canvasWrap,#sceneFrame{position:fixed!important;inset:0!important;border:0!important} #labels3d,#vignette{display:none!important}';
     await page.addStyleTag({ content: canvasOnly });
