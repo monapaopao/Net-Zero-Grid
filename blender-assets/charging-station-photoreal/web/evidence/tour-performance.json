@@ -1,0 +1,212 @@
+{
+  "viewport": [
+    1920,
+    1080
+  ],
+  "deviceScaleFactor": 2,
+  "result": {
+    "wallSeconds": 181.44360000000893,
+    "final": {
+      "active": false,
+      "paused": false,
+      "loading": false,
+      "time": 180,
+      "duration": 180,
+      "inside": false,
+      "buildingFailed": false,
+      "cue": "quick-ending",
+      "notice": "",
+      "computed": true
+    },
+    "qualityStayedHigh": true,
+    "buildingVisited": true,
+    "mainWasSuspended": true,
+    "overall": {
+      "frames": 10827,
+      "medianMs": 16.7,
+      "p95Ms": 16.8,
+      "maxMs": 300,
+      "over50": 4
+    },
+    "chapters": {
+      "campus/quick-welcome": {
+        "frames": 886,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 100,
+        "over50": 1
+      },
+      "campus/quick-wind": {
+        "frames": 778,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 33.3,
+        "over50": 0
+      },
+      "campus/quick-line": {
+        "frames": 480,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 17.7,
+        "over50": 0
+      },
+      "campus/quick-solar": {
+        "frames": 240,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.9,
+        "over50": 0
+      },
+      "campus/quick-dc-entry": {
+        "frames": 337,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 300,
+        "over50": 2
+      },
+      "building/quick-dc-power": {
+        "frames": 764,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 33.4,
+        "over50": 0
+      },
+      "building/quick-dc-server": {
+        "frames": 660,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 17,
+        "over50": 0
+      },
+      "building/quick-dc-chip": {
+        "frames": 359,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.9,
+        "over50": 0
+      },
+      "campus/quick-dc-chip": {
+        "frames": 40,
+        "medianMs": 16.7,
+        "p95Ms": 16.7,
+        "maxMs": 16.7,
+        "over50": 0
+      },
+      "campus/quick-factory-overview": {
+        "frames": 413,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 83.3,
+        "over50": 1
+      },
+      "campus/quick-factory-process": {
+        "frames": 539,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 33.3,
+        "over50": 0
+      },
+      "campus/quick-factory-monitor": {
+        "frames": 601,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.9,
+        "over50": 0
+      },
+      "campus/quick-charge": {
+        "frames": 420,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.8,
+        "over50": 0
+      },
+      "campus/quick-storage": {
+        "frames": 420,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.8,
+        "over50": 0
+      },
+      "campus/quick-coordination-event": {
+        "frames": 660,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.9,
+        "over50": 0
+      },
+      "campus/quick-coordination-result": {
+        "frames": 780,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.9,
+        "over50": 0
+      },
+      "campus/quick-sst-existing": {
+        "frames": 480,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.8,
+        "over50": 0
+      },
+      "campus/quick-sst-change": {
+        "frames": 480,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.8,
+        "over50": 0
+      },
+      "campus/quick-sst-result": {
+        "frames": 480,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.9,
+        "over50": 0
+      },
+      "campus/quick-review": {
+        "frames": 534,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 33.4,
+        "over50": 0
+      },
+      "campus/quick-ending": {
+        "frames": 476,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 50,
+        "over50": 0
+      }
+    },
+    "budget": {
+      "sourceInstances": 19170,
+      "visibleInstances": 0,
+      "shadowUpdates": 1489,
+      "regionUpdates": 137,
+      "focus": "overview",
+      "adaptiveChanges": 0,
+      "ready": true,
+      "level": 0,
+      "suspended": false,
+      "pixelRatio": 1.2043020296397826,
+      "quality": "high",
+      "history": [],
+      "post": {
+        "scene": [
+          1722,
+          1074
+        ],
+        "ao": [
+          861,
+          537
+        ],
+        "bloom": [
+          430,
+          268
+        ],
+        "samples": 8,
+        "msaa": 0
+      }
+    }
+  },
+  "errors": []
+}

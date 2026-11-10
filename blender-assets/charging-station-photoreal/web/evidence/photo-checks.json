@@ -1,7 +1,7 @@
 [
   {
     "version": "before",
-    "readyMs": 2577,
+    "readyMs": 2678,
     "htmlBytes": 7023016,
     "shots": [
       {
@@ -9,8 +9,8 @@
         "night": false,
         "medianMs": 16.7,
         "p95Ms": 16.8,
-        "draws": 1383,
-        "triangles": 7410332,
+        "draws": 1385,
+        "triangles": 7410336,
         "lighting": {
           "region": "charge",
           "closeStrength": 0.8463904610488147,
@@ -23,8 +23,8 @@
         "night": true,
         "medianMs": 16.7,
         "p95Ms": 16.8,
-        "draws": 1584,
-        "triangles": 8427992,
+        "draws": 1586,
+        "triangles": 8427996,
         "lighting": {
           "region": "charge",
           "closeStrength": 0.8463904610488147,
@@ -37,8 +37,8 @@
         "night": false,
         "medianMs": 16.7,
         "p95Ms": 16.8,
-        "draws": 1619,
-        "triangles": 7264548,
+        "draws": 1621,
+        "triangles": 7264552,
         "lighting": {
           "region": "charge",
           "closeStrength": 1,
@@ -51,8 +51,8 @@
         "night": true,
         "medianMs": 16.7,
         "p95Ms": 16.8,
-        "draws": 1806,
-        "triangles": 8326764,
+        "draws": 1808,
+        "triangles": 8326768,
         "lighting": {
           "region": "charge",
           "closeStrength": 1,
@@ -65,8 +65,8 @@
         "night": false,
         "medianMs": 16.7,
         "p95Ms": 16.8,
-        "draws": 1282,
-        "triangles": 7346134,
+        "draws": 1284,
+        "triangles": 7346138,
         "lighting": {
           "region": "charge",
           "closeStrength": 1,
@@ -78,9 +78,9 @@
         "view": "terminal",
         "night": true,
         "medianMs": 16.7,
-        "p95Ms": 16.7,
-        "draws": 1475,
-        "triangles": 8347098,
+        "p95Ms": 16.8,
+        "draws": 1477,
+        "triangles": 8347102,
         "lighting": {
           "region": "charge",
           "closeStrength": 1,
@@ -94,16 +94,16 @@
   },
   {
     "version": "after",
-    "readyMs": 3207,
-    "htmlBytes": 27691250,
+    "readyMs": 3418,
+    "htmlBytes": 28675548,
     "shots": [
       {
         "view": "station",
         "night": false,
         "medianMs": 16.7,
         "p95Ms": 16.8,
-        "draws": 1683,
-        "triangles": 8731978,
+        "draws": 742,
+        "triangles": 3071487,
         "lighting": {
           "region": "charge",
           "closeStrength": 0.8463904610488147,
@@ -120,8 +120,8 @@
         "night": true,
         "medianMs": 16.7,
         "p95Ms": 16.8,
-        "draws": 1683,
-        "triangles": 8731978,
+        "draws": 742,
+        "triangles": 3071487,
         "lighting": {
           "region": "charge",
           "closeStrength": 0.8463904610488147,
@@ -138,8 +138,8 @@
         "night": false,
         "medianMs": 16.7,
         "p95Ms": 16.8,
-        "draws": 1869,
-        "triangles": 8385750,
+        "draws": 869,
+        "triangles": 3195765,
         "lighting": {
           "region": "charge",
           "closeStrength": 1,
@@ -156,8 +156,8 @@
         "night": true,
         "medianMs": 16.7,
         "p95Ms": 16.8,
-        "draws": 1869,
-        "triangles": 8385750,
+        "draws": 869,
+        "triangles": 3195765,
         "lighting": {
           "region": "charge",
           "closeStrength": 1,
@@ -174,8 +174,8 @@
         "night": false,
         "medianMs": 16.7,
         "p95Ms": 16.8,
-        "draws": 1491,
-        "triangles": 8307836,
+        "draws": 676,
+        "triangles": 3294266,
         "lighting": {
           "region": "charge",
           "closeStrength": 1,
@@ -192,8 +192,8 @@
         "night": true,
         "medianMs": 16.7,
         "p95Ms": 16.8,
-        "draws": 1491,
-        "triangles": 8307836,
+        "draws": 676,
+        "triangles": 3294266,
         "lighting": {
           "region": "charge",
           "closeStrength": 1,
@@ -216,11 +216,16 @@
             0.1890000023841858,
             89
           ],
+          "heading": 0,
+          "plate": "沪AD10001",
+          "zone": "charging",
+          "connectedBay": "N01",
           "port": [
             46.551,
             1.0190000023841859,
             87.466
-          ]
+          ],
+          "level": "near"
         },
         {
           "id": "charge-N03",
@@ -230,11 +235,16 @@
             0.1890000023841858,
             89
           ],
+          "heading": 0,
+          "plate": "沪AD10002",
+          "zone": "charging",
+          "connectedBay": "N03",
           "port": [
             52.475,
             1.0190000023841859,
             87.3035
-          ]
+          ],
+          "level": "near"
         },
         {
           "id": "charge-N05",
@@ -244,11 +254,16 @@
             0.1890000023841858,
             89
           ],
+          "heading": 0,
+          "plate": "沪AD10003",
+          "zone": "charging",
+          "connectedBay": "N05",
           "port": [
             58.477,
             1.0190000023841859,
             87.375
-          ]
+          ],
+          "level": "near"
         },
         {
           "id": "charge-N08",
@@ -258,11 +273,16 @@
             0.1890000023841858,
             89
           ],
+          "heading": 0,
+          "plate": "沪AD10004",
+          "zone": "charging",
+          "connectedBay": "N08",
           "port": [
             67.477,
             1.0190000023841859,
             87.375
-          ]
+          ],
+          "level": "near"
         },
         {
           "id": "charge-N11",
@@ -272,11 +292,16 @@
             0.1890000023841858,
             89
           ],
+          "heading": 0,
+          "plate": "沪AD10005",
+          "zone": "charging",
+          "connectedBay": "N11",
           "port": [
             76.477,
             1.0190000023841859,
             87.375
-          ]
+          ],
+          "level": "near"
         },
         {
           "id": "charge-S06",
@@ -286,11 +311,16 @@
             0.1890000023841858,
             107
           ],
+          "heading": 3.141592653589793,
+          "plate": "沪AD10006",
+          "zone": "charging",
+          "connectedBay": "S06",
           "port": [
             63.449,
             1.0190000023841859,
             108.534
-          ]
+          ],
+          "level": "near"
         },
         {
           "id": "charge-S08",
@@ -300,11 +330,16 @@
             0.1890000023841858,
             107
           ],
+          "heading": 3.141592653589793,
+          "plate": "沪AD10007",
+          "zone": "charging",
+          "connectedBay": "S08",
           "port": [
             69.525,
             1.0190000023841859,
             108.6965
-          ]
+          ],
+          "level": "near"
         },
         {
           "id": "charge-S10",
@@ -314,11 +349,16 @@
             0.1890000023841858,
             107
           ],
+          "heading": 3.141592653589793,
+          "plate": "沪AD10008",
+          "zone": "charging",
+          "connectedBay": "S10",
           "port": [
             75.523,
             1.0190000023841859,
             108.625
-          ]
+          ],
+          "level": "near"
         },
         {
           "id": "charge-bus",
@@ -328,11 +368,16 @@
             0.20650000059604645,
             107
           ],
+          "heading": 1.5707963267948966,
+          "plate": "沪AD10009",
+          "zone": "charging",
+          "connectedBay": "S01",
           "port": [
             48.165,
             1.3265000005960466,
             108.3
-          ]
+          ],
+          "level": "near"
         },
         {
           "id": "park-0-2",
@@ -342,11 +387,16 @@
             0.1590000011920929,
             126.8
           ],
+          "heading": 0,
+          "plate": "沪AD10010",
+          "zone": "parking",
+          "connectedBay": null,
           "port": [
             39.975,
             0.9890000011920929,
             125.1035
-          ]
+          ],
+          "level": "mid"
         },
         {
           "id": "park-0-4",
@@ -356,11 +406,16 @@
             0.1590000011920929,
             126.8
           ],
+          "heading": 0,
+          "plate": "沪AD10011",
+          "zone": "parking",
+          "connectedBay": null,
           "port": [
             47.977,
             0.9890000011920929,
             125.175
-          ]
+          ],
+          "level": "mid"
         },
         {
           "id": "park-0-6",
@@ -370,11 +425,16 @@
             0.1590000011920929,
             126.8
           ],
+          "heading": 0,
+          "plate": "沪AD10012",
+          "zone": "parking",
+          "connectedBay": null,
           "port": [
             56.051,
             0.9890000011920929,
             125.26599999999999
-          ]
+          ],
+          "level": "near"
         },
         {
           "id": "park-0-8",
@@ -384,11 +444,16 @@
             0.1590000011920929,
             126.8
           ],
+          "heading": 0,
+          "plate": "沪AD10013",
+          "zone": "parking",
+          "connectedBay": null,
           "port": [
             63.975,
             0.9890000011920929,
             125.1035
-          ]
+          ],
+          "level": "near"
         },
         {
           "id": "park-0-10",
@@ -398,7 +463,12 @@
             0.1590000011920929,
             126.8
           ],
-          "port": null
+          "heading": 0,
+          "plate": "沪A10014",
+          "zone": "parking",
+          "connectedBay": null,
+          "port": null,
+          "level": "near"
         },
         {
           "id": "park-1-1",
@@ -408,11 +478,16 @@
             0.1590000011920929,
             135.2
           ],
+          "heading": 3.141592653589793,
+          "plate": "沪AD10015",
+          "zone": "parking",
+          "connectedBay": null,
           "port": [
             38.025,
             0.9890000011920929,
             136.89649999999997
-          ]
+          ],
+          "level": "mid"
         },
         {
           "id": "park-1-3",
@@ -422,11 +497,16 @@
             0.1590000011920929,
             135.2
           ],
+          "heading": 3.141592653589793,
+          "plate": "沪AD10016",
+          "zone": "parking",
+          "connectedBay": null,
           "port": [
             46.022999999999996,
             0.9890000011920929,
             136.825
-          ]
+          ],
+          "level": "mid"
         },
         {
           "id": "park-1-5",
@@ -436,11 +516,16 @@
             0.1590000011920929,
             135.2
           ],
+          "heading": 3.141592653589793,
+          "plate": "沪AD10017",
+          "zone": "parking",
+          "connectedBay": null,
           "port": [
             53.949,
             0.9890000011920929,
             136.73399999999998
-          ]
+          ],
+          "level": "mid"
         },
         {
           "id": "park-1-7",
@@ -450,11 +535,16 @@
             0.1590000011920929,
             135.2
           ],
+          "heading": 3.141592653589793,
+          "plate": "沪AD10018",
+          "zone": "parking",
+          "connectedBay": null,
           "port": [
             62.025,
             0.9890000011920929,
             136.89649999999997
-          ]
+          ],
+          "level": "mid"
         },
         {
           "id": "park-1-9",
@@ -464,7 +554,12 @@
             0.1590000011920929,
             135.2
           ],
-          "port": null
+          "heading": 3.141592653589793,
+          "plate": "沪A10019",
+          "zone": "parking",
+          "connectedBay": null,
+          "port": null,
+          "level": "mid"
         }
       ],
       "prototypes": [
@@ -474,9 +569,16 @@
         "vehicle-model3",
         "vehicle-yu7"
       ],
-      "nativeInstances": 229,
+      "nativeInstances": 227,
       "floorMaterials": 1,
       "active": true,
+      "lod": {
+        "near": 12,
+        "mid": 7,
+        "far": 0
+      },
+      "drawBatches": 70,
+      "atlasBatches": 1,
       "bakedMaps": true,
       "nightIndirectOff": true
     },

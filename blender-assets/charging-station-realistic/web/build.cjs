@@ -37,7 +37,9 @@ async function buildLoader() {
 async function build() {
   if (process.argv.includes('--rebuild-loader') || !fs.existsSync(bundle)) await buildLoader();
   const baseline = path.join(root, 'visual-upgrade/dist/多园区-v20-r187-视觉升级.html');
-  const page = labelControls(patchFlowScripts(fs.readFileSync(baseline, 'utf8')));
+  let page = labelControls(patchFlowScripts(fs.readFileSync(baseline, 'utf8')));
+  const pagePatch = path.join(assetDir, 'page-patch.cjs');
+  if (assetDir !== __dirname && fs.existsSync(pagePatch)) page = require(pagePatch)(page);
   const loader = fs.readFileSync(bundle, 'utf8');
   const adapter = fs.readFileSync(path.join(__dirname, 'station-adapter.js'), 'utf8');
   const plan = JSON.parse(fs.readFileSync(path.join(__dirname, 'station-plan.json'), 'utf8'));

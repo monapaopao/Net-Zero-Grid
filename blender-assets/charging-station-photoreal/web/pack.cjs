@@ -10,6 +10,7 @@ module.exports = function pack() {
     ao: encode('static_occlusion.png'), sun: report.sunDirectionBlender,
     irradianceScale: report.baked.daylight_indirect.radianceScale };
   return ['window.NZ_PHOTO_PACK = ' + JSON.stringify(payload) + ';',
+    fs.readFileSync(path.join(__dirname, 'performance.js'), 'utf8'),
     fs.readFileSync(path.join(__dirname, 'photo-assets.js'), 'utf8'),
     fs.readFileSync(path.join(__dirname, 'photo-render.js'), 'utf8')];
 };

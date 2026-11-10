@@ -59,6 +59,7 @@ window.NZ_RENDER_POLISH = (function (base) {
     for (const x of [50, 64, 78]) {
       for (const z of [88, 108]) {
         const light = new T.PointLight('#e3edfc', 32, 19, 2);
+        light.name = 'Station canopy fixture ' + x + '/' + z;
         light.position.set(x, 4.8, z);
         light.visible = false;
         api.scene.add(light);
@@ -70,6 +71,7 @@ window.NZ_RENDER_POLISH = (function (base) {
       if (/LED diffuser|Equipment display lettering/.test(mesh.material.name)) emissive.add(mesh.material);
     });
     api.renderer.domElement.addEventListener('webglcontextrestored', () => { rebuild = true; });
+    window.NZ_PERF.setup(context);
   }
 
   function frame(light, camera, target, sun, hemi, ambient, rim, state, post) {

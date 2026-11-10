@@ -6,8 +6,12 @@ from pathlib import Path
 import bpy
 import numpy as np
 from mathutils import Vector
+import sys
 
 OUT = Path(__file__).resolve().parent
+sys.path.insert(0, str(OUT))
+from geometry import box, cylinder
+from vehicles import SPECS
 bpy.ops.wm.open_mainfile(filepath=str(OUT / 'charging-station-photoreal.blend'))
 scene = bpy.context.scene
 source = list(scene.objects)
@@ -82,6 +86,7 @@ for obj in source:
 
 for obj in source:
     obj.select_set(False)
+lod_report = {}
 for (mount, name), data in batches.items():
     mesh = bpy.data.meshes.new(mount + '__' + name)
     mesh.from_pydata(data['vertices'], [], data['faces'])
@@ -95,12 +100,53 @@ for (mount, name), data in batches.items():
     obj = bpy.data.objects.new(mesh.name, mesh)
     scene.collection.objects.link(obj)
     obj.select_set(True)
+    if mount.startswith('vehicle-'):
+        middle = obj.copy()
+        middle.data = mesh.copy()
+        middle.name = mount + '-mid__' + name
+        scene.collection.objects.link(middle)
+        decimate = middle.modifiers.new('Medium distance coachwork', 'DECIMATE')
+        decimate.ratio = .18
+        decimate.use_collapse_triangulate = True
+        middle.select_set(True)
+
+# Far silhouettes omit subpixel hardware entirely instead of retaining tiny disconnected meshes.
+for kind, (width, length, height, wheelbase, radius) in SPECS.items():
+    col = bpy.data.collections.new('Runtime far vehicle ' + kind)
+    scene.collection.children.link(col)
+    paint = converted['Vehicle paint · ' + kind][0]
+    glass = converted['Vehicle laminated glazing · ' + kind][0]
+    rubber = converted['Vehicle rubber · ' + kind][0]
+    if kind == 'bus':
+        box('far body', (0, 0, 1.63), (width, length, 2.85), paint, col, .1)
+        box('far glazing', (0, 0, 2.25), (width + .01, length * .88, 1.12), glass, col, .04)
+    else:
+        box('far body', (0, 0, .63), (width, length, .66), paint, col, .12)
+        box('far glazing', (0, .16, (height + .86) / 2), (width * .8, length * .49, height - .86), glass, col, .10)
+    for y in [-wheelbase / 2, wheelbase / 2]:
+        for side in [-1, 1]:
+            cylinder('far tyre', (side * (width / 2 - .08), y, radius), radius, .2, rubber, col, (1, 0, 0), 12)
+    for item in col.objects:
+        item.name = 'vehicle-' + kind + '-far__' + item.name
+        item.select_set(True)
 
 target = OUT / 'web/charging-station.glb'
 bpy.ops.export_scene.gltf(filepath=str(target), export_format='GLB', use_selection=True,
-                          export_yup=True, export_animations=False, export_image_quality=88)
-report = {'batches': len(batches), 'triangles': triangles, 'bytes': target.stat().st_size,
-          'mounts': sorted({mount for mount, _ in batches}),
+                          export_yup=True, export_animations=False, export_image_quality=88, export_apply=True)
+for item in scene.objects:
+    if not item.select_get() or not item.name.startswith('vehicle-'):
+        continue
+    evaluated = item.evaluated_get(bpy.context.evaluated_depsgraph_get())
+    mesh = evaluated.to_mesh()
+    level = 'far' if '-far__' in item.name else 'mid' if '-mid__' in item.name else 'near'
+    lod_report[level] = lod_report.get(level, 0) + sum(len(p.vertices) - 2 for p in mesh.polygons)
+    evaluated.to_mesh_clear()
+container = target.read_bytes()
+graph = json.loads(container[20:20 + int.from_bytes(container[12:16], 'little')])
+primitives = [primitive for mesh in graph['meshes'] for primitive in mesh['primitives']]
+report = {'batches': len(primitives), 'triangles': sum(graph['accessors'][p['indices']]['count'] // 3 for p in primitives),
+          'nearOnlyTriangles': triangles, 'baseBatches': len(batches), 'vehicleLOD': lod_report, 'bytes': target.stat().st_size,
+          'mounts': sorted({node['name'].split('__')[0] for node in graph['nodes'] if 'mesh' in node}),
           'maps': {'lightMap': 'daylight_indirect.png', 'aoMap': 'static_occlusion.png', 'uvChannel': 1}}
 (OUT / 'web/export-report.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8', newline='\n')
 print(report)

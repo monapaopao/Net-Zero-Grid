@@ -43,71 +43,71 @@
     "connectivity": true
   },
   "reception": true,
-  "readyMs": 4234,
+  "readyMs": 4256,
   "comparisons": [
     {
       "view": "station",
       "model": "original",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1305,
-      "triangles": 7078156
+      "draws": 752,
+      "triangles": 2895324
     },
     {
       "view": "station",
       "model": "blender",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1683,
-      "triangles": 8731978
+      "draws": 742,
+      "triangles": 3071487
     },
     {
       "view": "terminal",
       "model": "original",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1281,
-      "triangles": 7219664
+      "draws": 709,
+      "triangles": 2912852
     },
     {
       "view": "terminal",
       "model": "blender",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1491,
-      "triangles": 8307836
+      "draws": 676,
+      "triangles": 3294266
     },
     {
       "view": "power",
       "model": "original",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1097,
-      "triangles": 7185772
+      "draws": 616,
+      "triangles": 2831976
     },
     {
       "view": "power",
       "model": "blender",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1277,
-      "triangles": 8220468
+      "draws": 578,
+      "triangles": 3265580
     },
     {
       "view": "south",
       "model": "original",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1097,
-      "triangles": 7081000
+      "draws": 641,
+      "triangles": 2872028
     },
     {
       "view": "south",
       "model": "blender",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1283,
-      "triangles": 8133268
+      "draws": 595,
+      "triangles": 3212972
     }
   ],
   "flow": {

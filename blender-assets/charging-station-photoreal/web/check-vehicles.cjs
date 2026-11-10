@@ -16,13 +16,15 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || path.join(process.
     const result = await page.evaluate(() => {
       const fleet = __NZ_TEST.scene.getObjectByName('Photoreal charging and parking fleet');
       const source = NZ_VEHICLES.audit().vehicles;
-      const vehicles = fleet.children.map(root => {
-        const mesh = root.children.find(child => child.isMesh);
-        const expected = source.find(vehicle => vehicle.id === root.userData.vehicleId);
-        const handled = NZ_VEHICLES.inspectHit({ object: mesh });
+      __NZ_TEST.scene.updateMatrixWorld(true);
+      const vehicles = NZ_PHOTO_ASSETS.audit().vehicles.map(vehicle => {
+        const expected = source.find(item => item.id === vehicle.id);
+        const ray = new THREE.Raycaster(new THREE.Vector3(vehicle.p[0], vehicle.p[1] + 8, vehicle.p[2]), new THREE.Vector3(0, -1, 0));
+        const hit = ray.intersectObject(fleet, true).find(item => item.object.userData.vehicleIds?.[item.instanceId] === vehicle.id);
+        const handled = hit && NZ_VEHICLES.inspectHit(hit);
         const card = document.querySelector('#vehicleContent').textContent;
         return { id: expected.id, handled, correctPlate: card.includes(expected.plate),
-          positionError: root.position.distanceTo(new THREE.Vector3(...expected.p)) };
+          positionError: new THREE.Vector3(...vehicle.p).distanceTo(new THREE.Vector3(...expected.p)), hit: !!hit };
       });
       NZ_VEHICLES.hide();
       NZ_STATION_ASSET.setModel('original');
