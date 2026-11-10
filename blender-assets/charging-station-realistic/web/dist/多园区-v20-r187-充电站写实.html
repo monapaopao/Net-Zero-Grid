@@ -888,6 +888,21 @@ body.strategy-pair-playing .strategy-final.strategy-single{grid-template-columns
 @media(max-width:700px){#vehicleCard{top:auto;bottom:80px;right:12px;width:280px}}
 
 </style>
+<style>/* Label controls */
+
+    .scene-tools{top:14px;right:18px;width:min(354px,calc(100% - 36px));display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) 36px;gap:6px;align-items:stretch}
+    .scene-tools .iconbtn{height:36px;margin:0;min-width:0;padding:0 10px;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;box-sizing:border-box}
+    .scene-tools #btnViewHome{width:36px;padding:0}
+    .scene-tools [hidden]{display:none!important}
+    .scene-tools #btnNorthTop{order:0}.scene-tools #btnToggleLabels{order:1}.scene-tools #btnLabelDetail{order:2;display:inline-flex}.scene-tools #btnChemicalLabels{order:3}.scene-tools #btnViewHome{order:4}
+    .scene-tools:has(#btnChemicalLabels:not([hidden])){grid-template-columns:repeat(4,minmax(0,1fr)) 36px}
+    #flowLayers{top:58px;right:18px;width:min(354px,calc(100% - 36px));box-sizing:border-box}
+    body.scene-labels-hidden :is(#labels3d,#labels3d *,#chemicalReviewLabels,#chemicalReviewLabels *,#chemicalReviewFlow,.sst-scene-label){visibility:hidden!important;pointer-events:none!important}
+    body:not(.labels-detail) .dev3d .lv{display:none!important}
+    @media(max-width:1100px){.scene-tools{top:115px;right:16px}#flowLayers{top:159px;right:16px}}
+    @media(max-width:780px){.scene-tools{top:76px;right:12px;width:calc(100% - 24px)}#flowLayers{top:120px;right:12px;width:calc(100% - 24px)}}
+  
+</style>
 </head>
 <body class="mode-exhibit">
 <!-- =====================================================================
@@ -898,7 +913,7 @@ body.strategy-pair-playing .strategy-final.strategy-single{grid-template-columns
   <main id="sceneFrame" aria-label="多园区共享综合能源系统三维场景">
     <canvas id="gridCanvas"></canvas><div id="labels3d"></div><div id="vignette"></div>
     <div id="sceneHeading"><div class="nav-eyebrow" id="sceneEyebrow">CAMPUS OVERVIEW</div><h2 id="sceneTitle">园区总览</h2><p id="sceneSubtitle">从风光发电到算力与工业负荷，探索园区的能源协同。</p></div>
-    <div class="scene-tools"><button class="iconbtn" id="btnLabelDetail" aria-pressed="false">详细标签</button><button class="iconbtn" id="btnViewHome" aria-label="返回园区总览">⌂</button></div>
+    <div class="scene-tools"><button class="iconbtn" id="btnToggleLabels" type="button" aria-pressed="true" aria-controls="labels3d" title="隐藏全部场景标签">开关标签</button><button class="iconbtn" id="btnLabelDetail" aria-pressed="false">详细标签</button><button class="iconbtn" id="btnViewHome" aria-label="返回园区总览">⌂</button></div>
     <div class="scene-breadcrumb"><i>⌁</i><span id="sceneLocation">园区 / 总览</span><span>· 能源协同运行示意</span></div>
   </main>
   <aside id="campusNav"><div class="nav-eyebrow">MULTI CAMPUS · DIGITAL TWIN</div><h1>多园区共享综合能源系统</h1><div class="nav-heading">探索园区 <small>EXPLORE</small></div><nav id="campusLinks" aria-label="园区系统导航"></nav>
@@ -11566,6 +11581,15 @@ window.NZ_MULTI=(function(){
   function clear(){if(window.NZ_FACTORY)window.NZ_FACTORY.selection(null);window.NZ_CHEMICAL.selection(null);if(window.NZ_WIND_PRODUCT)window.NZ_WIND_PRODUCT.selection(null);if(window.NZ_FLOWS)window.NZ_FLOWS.context("overview");window.NZ_INFRA.selection(null);window.NZ_LAYOUT.selection(null);if(window.NZ_RENEWABLES)window.NZ_RENEWABLES.selection(null);if(window.NZ_SOLAR)window.NZ_SOLAR.selection(null);window.NZ_DETAIL.reset();V.selected=null;ring.visible=false;selectGroup('overview');}
   function tourChapter(index){window.NZ_CHEMICAL.selection(null);const chapter=window.NZ_TOUR_SCRIPT.campus[index];if(window.NZ_WIND_PRODUCT)window.NZ_WIND_PRODUCT.tour(chapter.id);if(window.NZ_FLOWS)window.NZ_FLOWS.context(({generation:"wind",power:"energy",hydrogen:"chemical",loads:"factory"})[chapter.group]||chapter.group);window.NZ_INFRA.selection(null);window.NZ_LAYOUT.selection(null);if(window.NZ_RENEWABLES)window.NZ_RENEWABLES.selection(null);if(window.NZ_SOLAR)window.NZ_SOLAR.selection(null);window.NZ_DETAIL.reset();V.selected=null;ring.visible=false;selectGroup(chapter.group||'overview');}
   function filterLabels(){
+    document.body.classList.toggle('scene-labels-hidden', !V.labels);
+    document.body.classList.toggle('labels-detail', V.labels && V.details);
+    $id('showCampusLabels').checked = V.labels;
+    const toggle = $id('btnToggleLabels');
+    toggle.classList.toggle('on', V.labels);
+    toggle.setAttribute('aria-pressed', String(V.labels));
+    toggle.title = V.labels ? '隐藏全部场景标签' : '显示简易标签';
+    $id('btnLabelDetail').classList.toggle('on', V.labels && V.details);
+    $id('btnLabelDetail').setAttribute('aria-pressed', String(V.labels && V.details));
     const dc=LABELS3D.dc;
     if(dc){const s=window.NZ_ENGINE.S;dc.lv.textContent='IT '+s.itMW.toFixed(1)+' MW · 进线 '+s.dcLoadMW.toFixed(1)+' MW · PUE '+s.pue.toFixed(2);}
     const g=groups.find(g=>g.id===V.group);
@@ -11619,9 +11643,22 @@ window.NZ_MULTI=(function(){
     window.NZ_LAYOUT.ready(api);window.NZ_INFRA.ready(api);
     $id('campusLinks').innerHTML=groups.map((g,i)=>'<button class="campus-link'+(i===0?' active':'')+'" data-group="'+g.id+'"><b>'+String(i).padStart(2,'0')+'</b>'+g.name+'<span>›</span></button>').join('');
     $id('campusLinks').addEventListener('click',e=>{const b=e.target.closest('[data-group]');if(!b)return;api.exitTour();api.closeDrawer();const g=groups.find(g=>g.id===b.dataset.group);if(g.key){api.focus(g.key);selectGroup(g.id);}else{$id('infoClose').click();$id('btnCamReset').click();clear();}});
-    $id('showCampusLabels').addEventListener('change',e=>{V.labels=e.target.checked;filterLabels();});
+    $id('showCampusLabels').addEventListener('change', e => {
+      V.labels = e.target.checked;
+      V.details = false;
+      filterLabels();
+    });
+    $id('btnToggleLabels').addEventListener('click', () => {
+      V.labels = !V.labels;
+      V.details = false;
+      filterLabels();
+    });
     $id('showCampusFlows').addEventListener('change',e=>{V.flows=e.target.checked;if(window.NZ_FLOWS)window.NZ_FLOWS.setGlobal(V.flows);});
-    $id('btnLabelDetail').addEventListener('click',()=>{V.details=!V.details;document.body.classList.toggle('labels-detail',V.details);$id('btnLabelDetail').classList.toggle('on',V.details);$id('btnLabelDetail').setAttribute('aria-pressed',String(V.details));});
+    $id('btnLabelDetail').addEventListener('click', () => {
+      V.details = !V.labels || !V.details;
+      V.labels = true;
+      filterLabels();
+    });
     $id('enterBuilding').addEventListener('click',()=>window.GOBI_DCDT.open());
     $id('navNotes').addEventListener('click',()=>api.drawer('policy'));
     $id('btnViewHome').addEventListener('click',()=>{$id('infoClose').click();$id('btnCamReset').click();clear();});
