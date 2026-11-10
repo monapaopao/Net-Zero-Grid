@@ -1,0 +1,1274 @@
+[
+  {
+    "width": 1920,
+    "height": 1080,
+    "dpr": 2,
+    "mode": "standard",
+    "actualQuality": "standard",
+    "median": 16.69999999999891,
+    "p95": 16.799999999999272,
+    "over33": 0,
+    "frames": 283,
+    "perf": {
+      "fps": 60,
+      "worstFps": 59.00728913571675,
+      "samples": [
+        1,
+        59,
+        60,
+        60
+      ],
+      "renderMs": 7.209351556407641,
+      "draws": 1288,
+      "triangles": 5053986,
+      "lastPassDraws": 1288,
+      "quality": "standard",
+      "pixelRatio": 1.25,
+      "vw": 1430,
+      "vh": 892,
+      "ao": false,
+      "environment": {
+        "quality": "standard",
+        "refinedVisible": false,
+        "basicVisible": true,
+        "night": false,
+        "localLights": 0,
+        "trees": 411,
+        "shrubs": 1868,
+        "roadLamps": 161,
+        "canopyLamps": 9,
+        "parkingSpaces": 24,
+        "benches": 1,
+        "boundary": {
+          "x0": -565,
+          "x1": 360,
+          "z0": -425,
+          "z1": 190
+        },
+        "sites": {
+          "compute": {
+            "name": "数据中心园区",
+            "x0": 84,
+            "x1": 214,
+            "z0": -36,
+            "z1": 150,
+            "gate": [
+              95,
+              150
+            ],
+            "polygon": [
+              [
+                84,
+                -36
+              ],
+              [
+                214,
+                -36
+              ],
+              [
+                214,
+                150
+              ],
+              [
+                84,
+                150
+              ],
+              [
+                84,
+                40
+              ],
+              [
+                88,
+                40
+              ],
+              [
+                88,
+                6
+              ],
+              [
+                84,
+                6
+              ]
+            ]
+          },
+          "chemical": {
+            "name": "化工与电冶金园区",
+            "x0": 90,
+            "x1": 310,
+            "z0": -275,
+            "z1": -125,
+            "gate": [
+              296,
+              -125
+            ]
+          },
+          "nuclear": {
+            "name": "独立 SMR 核电研究园区",
+            "x0": 227,
+            "x1": 333,
+            "z0": -392,
+            "z1": -318,
+            "gate": [
+              304,
+              -319
+            ]
+          },
+          "factory": {
+            "name": "智能制造与柔性用能区",
+            "x0": 238,
+            "x1": 326,
+            "z0": -90,
+            "z1": 135,
+            "gate": [
+              249,
+              135
+            ],
+            "westGate": [
+              238,
+              23
+            ]
+          },
+          "energy": {
+            "name": "共享能源枢纽",
+            "x0": -10,
+            "x1": 87,
+            "z0": -44,
+            "z1": 59,
+            "gate": [
+              2,
+              59
+            ],
+            "polygon": [
+              [
+                -10,
+                -44
+              ],
+              [
+                82,
+                -44
+              ],
+              [
+                82,
+                6
+              ],
+              [
+                87,
+                6
+              ],
+              [
+                87,
+                40
+              ],
+              [
+                82,
+                40
+              ],
+              [
+                82,
+                59
+              ],
+              [
+                -10,
+                59
+              ]
+            ]
+          },
+          "public": {
+            "name": "公共交通与充电服务区",
+            "x0": 24,
+            "x1": 86,
+            "z0": 75,
+            "z1": 142,
+            "gate": [
+              64,
+              142
+            ]
+          },
+          "emergency": {
+            "name": "消防站",
+            "x0": 118,
+            "x1": 182,
+            "z0": -99,
+            "z1": -47,
+            "gate": [
+              150,
+              -47
+            ],
+            "serviceGate": [
+              174,
+              -99
+            ]
+          }
+        },
+        "southRoad": {
+          "z0": 136,
+          "z1": 144
+        },
+        "postDetails": [],
+        "coverage": {
+          "energy": {
+            "roads": 5,
+            "trees": 14,
+            "shrubs": 52,
+            "lamps": 7
+          },
+          "compute": {
+            "roads": 9,
+            "trees": 46,
+            "shrubs": 217,
+            "lamps": 29
+          },
+          "public": {
+            "roads": 6,
+            "trees": 4,
+            "shrubs": 32,
+            "lamps": 2
+          },
+          "chemical": {
+            "roads": 7,
+            "trees": 88,
+            "shrubs": 474,
+            "lamps": 37
+          },
+          "factory": {
+            "roads": 5,
+            "trees": 35,
+            "shrubs": 189,
+            "lamps": 18
+          },
+          "regional": {
+            "roads": 12,
+            "trees": 211,
+            "shrubs": 756,
+            "lamps": 56
+          },
+          "nuclear": {
+            "roads": 4,
+            "trees": 12,
+            "shrubs": 103,
+            "lamps": 11
+          },
+          "logistics": {
+            "roads": 0,
+            "trees": 0,
+            "shrubs": 36,
+            "lamps": 1
+          },
+          "entrance": {
+            "roads": 0,
+            "trees": 0,
+            "shrubs": 2,
+            "lamps": 0
+          },
+          "industrial": {
+            "roads": 0,
+            "trees": 1,
+            "shrubs": 7,
+            "lamps": 0
+          }
+        },
+        "roadSegments": 48,
+        "activeLightZones": []
+      },
+      "bloom": false
+    },
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Ti (0x00002C05) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "canvas": [
+      1787,
+      1115
+    ],
+    "config": {
+      "high": {
+        "label": "精致",
+        "pixelRatioMax": 1.75,
+        "shadows": true,
+        "shadowMapSize": 2048,
+        "ao": true,
+        "bloom": true,
+        "stars": 900,
+        "particles": 22,
+        "anisotropy": 4
+      },
+      "standard": {
+        "label": "标准",
+        "pixelRatioMax": 1.25,
+        "shadows": true,
+        "shadowMapSize": 1024,
+        "ao": false,
+        "bloom": false,
+        "stars": 600,
+        "particles": 14,
+        "anisotropy": 2
+      },
+      "compat": {
+        "label": "兼容",
+        "pixelRatioMax": 1,
+        "shadows": false,
+        "shadowMapSize": 512,
+        "ao": false,
+        "bloom": false,
+        "stars": 320,
+        "particles": 8,
+        "anisotropy": 1
+      }
+    }
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "dpr": 2,
+    "mode": "high",
+    "actualQuality": "high",
+    "median": 133.5,
+    "p95": 650.1000000000022,
+    "over33": 8,
+    "frames": 13,
+    "perf": {
+      "fps": 4.031535567102667,
+      "worstFps": 4.031535567102667,
+      "samples": [
+        1,
+        59,
+        60,
+        60,
+        34,
+        7,
+        7,
+        4
+      ],
+      "renderMs": 179.74613082760752,
+      "draws": 1672,
+      "triangles": 8429698,
+      "lastPassDraws": 1,
+      "quality": "high",
+      "pixelRatio": 1.75,
+      "vw": 1430,
+      "vh": 892,
+      "ao": true,
+      "environment": {
+        "quality": "high",
+        "refinedVisible": true,
+        "basicVisible": true,
+        "night": false,
+        "localLights": 0,
+        "trees": 411,
+        "shrubs": 1868,
+        "roadLamps": 161,
+        "canopyLamps": 9,
+        "parkingSpaces": 24,
+        "benches": 1,
+        "boundary": {
+          "x0": -565,
+          "x1": 360,
+          "z0": -425,
+          "z1": 190
+        },
+        "sites": {
+          "compute": {
+            "name": "数据中心园区",
+            "x0": 84,
+            "x1": 214,
+            "z0": -36,
+            "z1": 150,
+            "gate": [
+              95,
+              150
+            ],
+            "polygon": [
+              [
+                84,
+                -36
+              ],
+              [
+                214,
+                -36
+              ],
+              [
+                214,
+                150
+              ],
+              [
+                84,
+                150
+              ],
+              [
+                84,
+                40
+              ],
+              [
+                88,
+                40
+              ],
+              [
+                88,
+                6
+              ],
+              [
+                84,
+                6
+              ]
+            ]
+          },
+          "chemical": {
+            "name": "化工与电冶金园区",
+            "x0": 90,
+            "x1": 310,
+            "z0": -275,
+            "z1": -125,
+            "gate": [
+              296,
+              -125
+            ]
+          },
+          "nuclear": {
+            "name": "独立 SMR 核电研究园区",
+            "x0": 227,
+            "x1": 333,
+            "z0": -392,
+            "z1": -318,
+            "gate": [
+              304,
+              -319
+            ]
+          },
+          "factory": {
+            "name": "智能制造与柔性用能区",
+            "x0": 238,
+            "x1": 326,
+            "z0": -90,
+            "z1": 135,
+            "gate": [
+              249,
+              135
+            ],
+            "westGate": [
+              238,
+              23
+            ]
+          },
+          "energy": {
+            "name": "共享能源枢纽",
+            "x0": -10,
+            "x1": 87,
+            "z0": -44,
+            "z1": 59,
+            "gate": [
+              2,
+              59
+            ],
+            "polygon": [
+              [
+                -10,
+                -44
+              ],
+              [
+                82,
+                -44
+              ],
+              [
+                82,
+                6
+              ],
+              [
+                87,
+                6
+              ],
+              [
+                87,
+                40
+              ],
+              [
+                82,
+                40
+              ],
+              [
+                82,
+                59
+              ],
+              [
+                -10,
+                59
+              ]
+            ]
+          },
+          "public": {
+            "name": "公共交通与充电服务区",
+            "x0": 24,
+            "x1": 86,
+            "z0": 75,
+            "z1": 142,
+            "gate": [
+              64,
+              142
+            ]
+          },
+          "emergency": {
+            "name": "消防站",
+            "x0": 118,
+            "x1": 182,
+            "z0": -99,
+            "z1": -47,
+            "gate": [
+              150,
+              -47
+            ],
+            "serviceGate": [
+              174,
+              -99
+            ]
+          }
+        },
+        "southRoad": {
+          "z0": 136,
+          "z1": 144
+        },
+        "postDetails": [],
+        "coverage": {
+          "energy": {
+            "roads": 5,
+            "trees": 14,
+            "shrubs": 52,
+            "lamps": 7
+          },
+          "compute": {
+            "roads": 9,
+            "trees": 46,
+            "shrubs": 217,
+            "lamps": 29
+          },
+          "public": {
+            "roads": 6,
+            "trees": 4,
+            "shrubs": 32,
+            "lamps": 2
+          },
+          "chemical": {
+            "roads": 7,
+            "trees": 88,
+            "shrubs": 474,
+            "lamps": 37
+          },
+          "factory": {
+            "roads": 5,
+            "trees": 35,
+            "shrubs": 189,
+            "lamps": 18
+          },
+          "regional": {
+            "roads": 12,
+            "trees": 211,
+            "shrubs": 756,
+            "lamps": 56
+          },
+          "nuclear": {
+            "roads": 4,
+            "trees": 12,
+            "shrubs": 103,
+            "lamps": 11
+          },
+          "logistics": {
+            "roads": 0,
+            "trees": 0,
+            "shrubs": 36,
+            "lamps": 1
+          },
+          "entrance": {
+            "roads": 0,
+            "trees": 0,
+            "shrubs": 2,
+            "lamps": 0
+          },
+          "industrial": {
+            "roads": 0,
+            "trees": 1,
+            "shrubs": 7,
+            "lamps": 0
+          }
+        },
+        "roadSegments": 48,
+        "activeLightZones": []
+      },
+      "bloom": false
+    },
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Ti (0x00002C05) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "canvas": [
+      2502,
+      1561
+    ],
+    "config": {
+      "high": {
+        "label": "精致",
+        "pixelRatioMax": 1.75,
+        "shadows": true,
+        "shadowMapSize": 2048,
+        "ao": true,
+        "bloom": true,
+        "stars": 900,
+        "particles": 22,
+        "anisotropy": 4
+      },
+      "standard": {
+        "label": "标准",
+        "pixelRatioMax": 1.25,
+        "shadows": true,
+        "shadowMapSize": 1024,
+        "ao": false,
+        "bloom": false,
+        "stars": 600,
+        "particles": 14,
+        "anisotropy": 2
+      },
+      "compat": {
+        "label": "兼容",
+        "pixelRatioMax": 1,
+        "shadows": false,
+        "shadowMapSize": 512,
+        "ao": false,
+        "bloom": false,
+        "stars": 320,
+        "particles": 8,
+        "anisotropy": 1
+      }
+    }
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "dpr": 2,
+    "mode": "no-post",
+    "actualQuality": "high",
+    "median": 49.79999999999927,
+    "p95": 283.8000000000029,
+    "over33": 28,
+    "frames": 51,
+    "perf": {
+      "fps": 13.069997095556182,
+      "worstFps": 4.031535567102667,
+      "samples": [
+        60,
+        34,
+        7,
+        7,
+        4,
+        6,
+        9,
+        14,
+        12,
+        13
+      ],
+      "renderMs": 8.810539851289235,
+      "draws": 1668,
+      "triangles": 8446132,
+      "lastPassDraws": 1668,
+      "quality": "high",
+      "pixelRatio": 1.75,
+      "vw": 1430,
+      "vh": 892,
+      "ao": false,
+      "environment": {
+        "quality": "high",
+        "refinedVisible": true,
+        "basicVisible": true,
+        "night": false,
+        "localLights": 0,
+        "trees": 411,
+        "shrubs": 1868,
+        "roadLamps": 161,
+        "canopyLamps": 9,
+        "parkingSpaces": 24,
+        "benches": 1,
+        "boundary": {
+          "x0": -565,
+          "x1": 360,
+          "z0": -425,
+          "z1": 190
+        },
+        "sites": {
+          "compute": {
+            "name": "数据中心园区",
+            "x0": 84,
+            "x1": 214,
+            "z0": -36,
+            "z1": 150,
+            "gate": [
+              95,
+              150
+            ],
+            "polygon": [
+              [
+                84,
+                -36
+              ],
+              [
+                214,
+                -36
+              ],
+              [
+                214,
+                150
+              ],
+              [
+                84,
+                150
+              ],
+              [
+                84,
+                40
+              ],
+              [
+                88,
+                40
+              ],
+              [
+                88,
+                6
+              ],
+              [
+                84,
+                6
+              ]
+            ]
+          },
+          "chemical": {
+            "name": "化工与电冶金园区",
+            "x0": 90,
+            "x1": 310,
+            "z0": -275,
+            "z1": -125,
+            "gate": [
+              296,
+              -125
+            ]
+          },
+          "nuclear": {
+            "name": "独立 SMR 核电研究园区",
+            "x0": 227,
+            "x1": 333,
+            "z0": -392,
+            "z1": -318,
+            "gate": [
+              304,
+              -319
+            ]
+          },
+          "factory": {
+            "name": "智能制造与柔性用能区",
+            "x0": 238,
+            "x1": 326,
+            "z0": -90,
+            "z1": 135,
+            "gate": [
+              249,
+              135
+            ],
+            "westGate": [
+              238,
+              23
+            ]
+          },
+          "energy": {
+            "name": "共享能源枢纽",
+            "x0": -10,
+            "x1": 87,
+            "z0": -44,
+            "z1": 59,
+            "gate": [
+              2,
+              59
+            ],
+            "polygon": [
+              [
+                -10,
+                -44
+              ],
+              [
+                82,
+                -44
+              ],
+              [
+                82,
+                6
+              ],
+              [
+                87,
+                6
+              ],
+              [
+                87,
+                40
+              ],
+              [
+                82,
+                40
+              ],
+              [
+                82,
+                59
+              ],
+              [
+                -10,
+                59
+              ]
+            ]
+          },
+          "public": {
+            "name": "公共交通与充电服务区",
+            "x0": 24,
+            "x1": 86,
+            "z0": 75,
+            "z1": 142,
+            "gate": [
+              64,
+              142
+            ]
+          },
+          "emergency": {
+            "name": "消防站",
+            "x0": 118,
+            "x1": 182,
+            "z0": -99,
+            "z1": -47,
+            "gate": [
+              150,
+              -47
+            ],
+            "serviceGate": [
+              174,
+              -99
+            ]
+          }
+        },
+        "southRoad": {
+          "z0": 136,
+          "z1": 144
+        },
+        "postDetails": [],
+        "coverage": {
+          "energy": {
+            "roads": 5,
+            "trees": 14,
+            "shrubs": 52,
+            "lamps": 7
+          },
+          "compute": {
+            "roads": 9,
+            "trees": 46,
+            "shrubs": 217,
+            "lamps": 29
+          },
+          "public": {
+            "roads": 6,
+            "trees": 4,
+            "shrubs": 32,
+            "lamps": 2
+          },
+          "chemical": {
+            "roads": 7,
+            "trees": 88,
+            "shrubs": 474,
+            "lamps": 37
+          },
+          "factory": {
+            "roads": 5,
+            "trees": 35,
+            "shrubs": 189,
+            "lamps": 18
+          },
+          "regional": {
+            "roads": 12,
+            "trees": 211,
+            "shrubs": 756,
+            "lamps": 56
+          },
+          "nuclear": {
+            "roads": 4,
+            "trees": 12,
+            "shrubs": 103,
+            "lamps": 11
+          },
+          "logistics": {
+            "roads": 0,
+            "trees": 0,
+            "shrubs": 36,
+            "lamps": 1
+          },
+          "entrance": {
+            "roads": 0,
+            "trees": 0,
+            "shrubs": 2,
+            "lamps": 0
+          },
+          "industrial": {
+            "roads": 0,
+            "trees": 1,
+            "shrubs": 7,
+            "lamps": 0
+          }
+        },
+        "roadSegments": 48,
+        "activeLightZones": []
+      },
+      "bloom": false
+    },
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Ti (0x00002C05) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "canvas": [
+      2502,
+      1561
+    ],
+    "config": {
+      "high": {
+        "label": "精致",
+        "pixelRatioMax": 1.75,
+        "shadows": true,
+        "shadowMapSize": 2048,
+        "ao": true,
+        "bloom": true,
+        "stars": 900,
+        "particles": 22,
+        "anisotropy": 4
+      },
+      "standard": {
+        "label": "标准",
+        "pixelRatioMax": 1.25,
+        "shadows": true,
+        "shadowMapSize": 1024,
+        "ao": false,
+        "bloom": false,
+        "stars": 600,
+        "particles": 14,
+        "anisotropy": 2
+      },
+      "compat": {
+        "label": "兼容",
+        "pixelRatioMax": 1,
+        "shadows": false,
+        "shadowMapSize": 512,
+        "ao": false,
+        "bloom": false,
+        "stars": 320,
+        "particles": 8,
+        "anisotropy": 1
+      }
+    }
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "dpr": 2,
+    "mode": "cap-1.25",
+    "actualQuality": "high",
+    "median": 16.69999999999709,
+    "p95": 16.80000000000291,
+    "over33": 0,
+    "frames": 284,
+    "perf": {
+      "fps": 60,
+      "worstFps": 4.031535567102667,
+      "samples": [
+        4,
+        6,
+        9,
+        14,
+        12,
+        13,
+        19,
+        60,
+        60,
+        60
+      ],
+      "renderMs": 5.667686535681061,
+      "draws": 1668,
+      "triangles": 8446132,
+      "lastPassDraws": 1,
+      "quality": "high",
+      "pixelRatio": 1.75,
+      "vw": 1430,
+      "vh": 892,
+      "ao": true,
+      "environment": {
+        "quality": "high",
+        "refinedVisible": true,
+        "basicVisible": true,
+        "night": false,
+        "localLights": 0,
+        "trees": 411,
+        "shrubs": 1868,
+        "roadLamps": 161,
+        "canopyLamps": 9,
+        "parkingSpaces": 24,
+        "benches": 1,
+        "boundary": {
+          "x0": -565,
+          "x1": 360,
+          "z0": -425,
+          "z1": 190
+        },
+        "sites": {
+          "compute": {
+            "name": "数据中心园区",
+            "x0": 84,
+            "x1": 214,
+            "z0": -36,
+            "z1": 150,
+            "gate": [
+              95,
+              150
+            ],
+            "polygon": [
+              [
+                84,
+                -36
+              ],
+              [
+                214,
+                -36
+              ],
+              [
+                214,
+                150
+              ],
+              [
+                84,
+                150
+              ],
+              [
+                84,
+                40
+              ],
+              [
+                88,
+                40
+              ],
+              [
+                88,
+                6
+              ],
+              [
+                84,
+                6
+              ]
+            ]
+          },
+          "chemical": {
+            "name": "化工与电冶金园区",
+            "x0": 90,
+            "x1": 310,
+            "z0": -275,
+            "z1": -125,
+            "gate": [
+              296,
+              -125
+            ]
+          },
+          "nuclear": {
+            "name": "独立 SMR 核电研究园区",
+            "x0": 227,
+            "x1": 333,
+            "z0": -392,
+            "z1": -318,
+            "gate": [
+              304,
+              -319
+            ]
+          },
+          "factory": {
+            "name": "智能制造与柔性用能区",
+            "x0": 238,
+            "x1": 326,
+            "z0": -90,
+            "z1": 135,
+            "gate": [
+              249,
+              135
+            ],
+            "westGate": [
+              238,
+              23
+            ]
+          },
+          "energy": {
+            "name": "共享能源枢纽",
+            "x0": -10,
+            "x1": 87,
+            "z0": -44,
+            "z1": 59,
+            "gate": [
+              2,
+              59
+            ],
+            "polygon": [
+              [
+                -10,
+                -44
+              ],
+              [
+                82,
+                -44
+              ],
+              [
+                82,
+                6
+              ],
+              [
+                87,
+                6
+              ],
+              [
+                87,
+                40
+              ],
+              [
+                82,
+                40
+              ],
+              [
+                82,
+                59
+              ],
+              [
+                -10,
+                59
+              ]
+            ]
+          },
+          "public": {
+            "name": "公共交通与充电服务区",
+            "x0": 24,
+            "x1": 86,
+            "z0": 75,
+            "z1": 142,
+            "gate": [
+              64,
+              142
+            ]
+          },
+          "emergency": {
+            "name": "消防站",
+            "x0": 118,
+            "x1": 182,
+            "z0": -99,
+            "z1": -47,
+            "gate": [
+              150,
+              -47
+            ],
+            "serviceGate": [
+              174,
+              -99
+            ]
+          }
+        },
+        "southRoad": {
+          "z0": 136,
+          "z1": 144
+        },
+        "postDetails": [],
+        "coverage": {
+          "energy": {
+            "roads": 5,
+            "trees": 14,
+            "shrubs": 52,
+            "lamps": 7
+          },
+          "compute": {
+            "roads": 9,
+            "trees": 46,
+            "shrubs": 217,
+            "lamps": 29
+          },
+          "public": {
+            "roads": 6,
+            "trees": 4,
+            "shrubs": 32,
+            "lamps": 2
+          },
+          "chemical": {
+            "roads": 7,
+            "trees": 88,
+            "shrubs": 474,
+            "lamps": 37
+          },
+          "factory": {
+            "roads": 5,
+            "trees": 35,
+            "shrubs": 189,
+            "lamps": 18
+          },
+          "regional": {
+            "roads": 12,
+            "trees": 211,
+            "shrubs": 756,
+            "lamps": 56
+          },
+          "nuclear": {
+            "roads": 4,
+            "trees": 12,
+            "shrubs": 103,
+            "lamps": 11
+          },
+          "logistics": {
+            "roads": 0,
+            "trees": 0,
+            "shrubs": 36,
+            "lamps": 1
+          },
+          "entrance": {
+            "roads": 0,
+            "trees": 0,
+            "shrubs": 2,
+            "lamps": 0
+          },
+          "industrial": {
+            "roads": 0,
+            "trees": 1,
+            "shrubs": 7,
+            "lamps": 0
+          }
+        },
+        "roadSegments": 48,
+        "activeLightZones": []
+      },
+      "bloom": false
+    },
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Ti (0x00002C05) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "canvas": [
+      1787,
+      1115
+    ],
+    "config": {
+      "high": {
+        "label": "精致",
+        "pixelRatioMax": 1.75,
+        "shadows": true,
+        "shadowMapSize": 2048,
+        "ao": true,
+        "bloom": true,
+        "stars": 900,
+        "particles": 22,
+        "anisotropy": 4
+      },
+      "standard": {
+        "label": "标准",
+        "pixelRatioMax": 1.25,
+        "shadows": true,
+        "shadowMapSize": 1024,
+        "ao": false,
+        "bloom": false,
+        "stars": 600,
+        "particles": 14,
+        "anisotropy": 2
+      },
+      "compat": {
+        "label": "兼容",
+        "pixelRatioMax": 1,
+        "shadows": false,
+        "shadowMapSize": 512,
+        "ao": false,
+        "bloom": false,
+        "stars": 320,
+        "particles": 8,
+        "anisotropy": 1
+      }
+    }
+  }
+]
