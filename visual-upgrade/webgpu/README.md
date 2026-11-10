@@ -1,65 +1,57 @@
-# Three.js r187 WebGPU 对照试验
+# Three.js r187 / WebGPU · 原生模型版
 
-独立迁移 v20 园区外景的渲染管线，保留园区模型、能源仿真与接待交互。数据楼内部沿用独立的 r180 WebGL 应用。
+当前展示入口以 `d04ac10` 的原生 Three.js 视觉为基线，恢复接入 Blender 之前的园区、充电站、车辆、树木、材质与光照，保留最新方向光带和标签控制区。数据楼内部仍为独立的 r180 WebGL 应用。分支与恢复范围见 [RESTORE.md](RESTORE.md)。
 
 ## 打开
 
-用 Chrome 或 Edge 打开 [WebGPU 试验页](dist/多园区-v20-r187-WebGPU.html)，选择界面中的高画质。浏览器标签标题显示实际后端与效果名称。
+使用支持 WebGPU 的 Chrome 或 Edge 打开 [原生模型页面](dist/多园区-v20-r187-WebGPU.html)，或使用仓库根入口及 Windows 启动器。浏览器标题显示实际渲染后端。
 
-- 默认：优先 WebGPU，使用 GTAO 接触遮蔽和 TSL 泛光。
-- 地址末尾加 `?ssgi`：启用 SSGI 间接光照与空间降噪。
-- 地址末尾加 `?forceWebGL`：强制使用新渲染器的 WebGL 2 回退。
-- [原 WebGL 对照页](../dist/多园区-v20-r187-视觉升级.html)。
+- 默认使用实际 WebGPU，保持基线的 GTAO 与 TSL 泛光。
+- WebGPU 无法启用时明确提示，不静默启动 WebGL 展示。
+- 数据楼内部保留原有独立 WebGL 应用，本版本不宣称全站 WebGPU。
+- 页面资源全部内嵌，无 CDN 或 Blender 资产依赖。本机已验证直接打开文件；部署时需 HTTPS 或 localhost，浏览器应开启硬件加速。
+- `?ssgi` 是原基线保留的显式 SSGI 试验项，不默认开启。
+- `?forceWebGL` 仅供显式后端对照诊断，标题会标明 WebGL 2；正常入口不使用它。
 
-页面内嵌资源，无需 CDN。本机 Chrome 已验证直接打开文件；其他部署环境需 HTTPS 或 localhost，并允许浏览器使用硬件加速。若 WebGPU 不可用，新渲染器自动选择 WebGL 2；初始化错误会显示在页面上。
+## 保留内容
 
-## 迁移内容
+- 光流使用 `halo.mjs` 中的 TSL 节点材质，保留亮芯、柔边、暗轮廓、方向头部、正反方向、零流停止、每路最多两段高亮，以及图层/范围筛选和减少动态。旧流动点绘制范围归零；星空等其他点图元仍使用实例精灵。
+- 右上角依次为“北向俯视、开关标签、详细标签、主页”，下方是流动图层窗口。标签隐藏/简易/详细模式与侧栏复选框联动。
+- v20 能源仿真、车辆查询与充电连接、SST、工厂、园区导览和三分钟接待路线保持原有功能。
+- 光流及界面共用代码已提取至 `visual-upgrade/shared`，当前构建不导入 `blender-assets`。
 
-- 异步初始化 `WebGPURenderer`，初始化结束后启动原业务循环。
-- 将 GLSL 后处理迁移到 `RenderPipeline`、TSL GTAO 与 Bloom。
-- 光伏面板远距离纹理淡出迁移到节点材质，保留工厂屋顶独立材质。
-- 保留车漆清漆层、玻璃、粗糙漫反射地面和程序生成的环境反射。
-- 能源流动粒子改用实例化精灵。WebGPU 原生点图元只有 1 像素，精灵保留原有尺寸、纹理、位置更新和粒子数量控制。
-- 可选 SSGI 使用全分辨率、3 个方向切片、8 步采样及空间降噪，没有时域历史累积。
-- GPU 设备丢失时停止提交绘制并显示现有异常提示；本试验需重新加载恢复，尚未做设备丢失后的完整资源重建。
+## 构建与验证
 
-## 复现
-
-从仓库根目录执行：
+从仓库根目录执行，常规构建只需要 Node.js 和仓库中已提交的引擎包：
 
 ```powershell
 node visual-upgrade/build.cjs
 node visual-upgrade/webgpu/build.cjs
 node visual-upgrade/webgpu/check.cjs
+node visual-upgrade/shared/check-labels.cjs
+node visual-upgrade/webgpu/check-unavailable.cjs
+node visual-upgrade/webgpu/check-tour.cjs
 ```
 
-默认构建使用已提交的引擎包。修改 `engine.mjs` 后，需将官方 `three@0.187.0` 解包到 `tmp/three-r187-tools/r187/package`，并设置 `ESBUILD` 为 esbuild 可执行文件路径，然后执行：
+根目录也提供 `npm run build:webgpu`、`npm run check:webgpu`。最后一项完整接待检查约需三分钟，单独运行。
+
+修改 `engine.mjs` 或 `halo.mjs` 后，需要重新打包引擎：将官方 `three@0.187.0` 放到 `tmp/three-r187-tools/r187/package`，准备 esbuild（可通过 `ESBUILD` 指定），然后执行：
 
 ```powershell
 node visual-upgrade/webgpu/build.cjs --rebuild-engine
 ```
 
-测试依赖 Playwright 和 Chrome，可设置 `PLAYWRIGHT_MODULE` 与 `CHROME_PATH`。检查记录在 `evidence/checks.json`；截图文件名以 `webgl`、`webgpu`、`fallback`、`ssgi` 区分。
+浏览器测试需要 Playwright 和 Chrome，可设置 `PLAYWRIGHT_MODULE` 与 `CHROME_PATH`。默认检查当前 WebGPU 页面；`check.cjs --compare` 才运行原 WebGL、WebGPU、显式回退、SSGI 四种对照。
 
-## 如何理解结果
+## 当前验证记录
 
-本机 Chrome 无头模式、NVIDIA Blackwell GPU 的短样本结果（毫秒）：
+- `evidence/checks.json`：实际后端为 WebGPU、NVIDIA Blackwell GPU；原生站体和车辆、130 个 TSL 光流材质、车辆查询与 9 条连接、SST、工厂屋顶、接待启动/退出、数据楼进入/退出、夜景泛光和光流行为。无页面错误或外部请求。
+- `evidence/label-controls-checks.json`：标签联动与 1440、1024、390 三种宽度下的按钮顺序、尺寸和对齐。
+- `evidence/unavailable-check.json`：禁用 WebGPU 后明确报错，未启动回退展示。
+- `evidence/tour-check.json`：精致档、实际 WebGPU、完整 180 秒接待路线，包含数据楼进入/退出和园区恢复。1440×810 / DPR 1 本机记录的整体 P95 为约 33.3 ms。
+- `evidence/rollback-before-charge.jpg`、`rollback-after-charge.jpg`：相同入口机位、1440×810 分辨率的恢复前后截图。
+- `evidence/retained-controls.png`：保留的控制区截图。
 
-| 方案 | 三个机位帧间隔中位数 | 全景 P95 | 充电站 / 工厂 P95 |
-| --- | --- | --- | --- |
-| 原 WebGLRenderer | 16.7 | 16.8 | 16.8 / 16.8 |
-| WebGPU + GTAO | 16.7 | 33.3 | 16.8 / 16.8 |
-| 新渲染器 WebGL 2 回退 | 16.7 | 33.4 | 16.8 / 16.8 |
-| WebGPU + SSGI | 16.7 | 33.3 | 16.8 / 16.8 |
+帧时间包括 CPU、GPU 和浏览器调度，并受垂直同步影响；该记录不是不同 API 的等算法基准，也不能证明所有设备或高 DPI 下均有 60 FPS。当前阶段以恢复确认的视觉基线和保留指定交互为目标。
 
-当前没有证据表明迁移后更快。P95 表示 95% 的采样帧间隔不超过该数值，单次短样本不能代表其他设备或长时间运行。
-
-四种模式使用相同的 1440 × 810 视口、像素比 1、高画质与三个固定机位。每个机位预热 60 帧，再采样 120 个帧间隔。场景中的风机和流动粒子仍会动画，截图不是逐像素同步回放。
-
-帧间隔包含浏览器调度、CPU 和 GPU 工作，并受屏幕刷新节奏限制，不等于纯 GPU 耗时。WebGL 与 TSL 使用不同 AO 实现；这次比较衡量实际交付方案，不能作为图形 API 的等算法基准。绘制次数也因阴影和后处理统计口径不同而不可直接比较。
-
-兼容性检查覆盖车辆信息与 9 条连接、工厂屋顶、SST 预览、三分钟接待的计算/启动/退出、数据楼进入/退出、夜景泛光及粒子位置更新。未覆盖完整三分钟播放、全部情景和不同硬件的长期稳定性。
-
-目前建议保留 WebGL 作为稳定展示入口，WebGPU 作为独立候选方案。单换后端的画面改善有限；SSGI 在这套明亮、开放的场景中增益也较轻微。进一步采用它应以特定镜头的视觉收益和目标设备实测为依据。
-
-引擎来自 Three.js r187，许可见 [Three.js MIT 许可](../vendor/THREE-LICENSE.txt)。技术依据见 [官方 WebGPU 迁移说明](https://threejs.org/manual/pages/webgpurenderer.html)。
+引擎采用 Three.js r187，许可见 [Three.js MIT 许可](../vendor/THREE-LICENSE.txt)。

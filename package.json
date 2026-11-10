@@ -7,7 +7,9 @@
   "license": "UNLICENSED",
   "engines": { "node": ">=22" },
   "scripts": {
-    "build": "node NetZero-GridToChip-v20-VisitorPresentation/build.cjs --verify",
+    "build": "node NetZero-GridToChip-v20-VisitorPresentation/build.cjs --verify && npm run build:webgpu",
+    "build:webgpu": "node visual-upgrade/build.cjs && node visual-upgrade/webgpu/build.cjs",
+    "check:webgpu": "node visual-upgrade/webgpu/check.cjs && node visual-upgrade/shared/check-labels.cjs && node visual-upgrade/webgpu/check-unavailable.cjs",
     "test": "npm run test:engine && npm run test:dispatch && npm run test:sst && npm run test:startup",
     "test:engine": "cd NetZero-GridToChip-v20-VisitorPresentation && node tests/engine.test.cjs",
     "test:dispatch": "cd NetZero-GridToChip-v20-VisitorPresentation && node tests/dispatch-v18.test.cjs",

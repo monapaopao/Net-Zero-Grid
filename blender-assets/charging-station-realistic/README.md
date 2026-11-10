@@ -1,5 +1,7 @@
 # 充电站写实材质样板
 
+> 历史试验，已退出当前展示入口。当前版本见 [原生 Three.js / WebGPU 恢复记录](../../visual-upgrade/webgpu/RESTORE.md)。
+
 全站网页交付见 [Three.js r187 写实全站](web/README.md)。
 
 独立实验目录，基于已经生成的充电站结构制作。没有修改 v20、Three.js r187 展示页或此前 Blender 试验。文件夹隔离不等于新增 Git 分支。

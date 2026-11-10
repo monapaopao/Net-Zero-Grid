@@ -5,6 +5,7 @@ import { ao } from 'three/addons/tsl/display/GTAONode.js';
 import { bloom } from 'three/addons/tsl/display/BloomNode.js';
 import { ssgi } from 'three/addons/tsl/display/SSGINode.js';
 import { denoise } from 'three/addons/tsl/display/DenoiseNode.js';
+import { createHaloMaterial } from './halo.mjs';
 
 const particles = [];
 // Keep the legacy animation's geometry/material references; draw textured quads
@@ -30,6 +31,7 @@ class FlowPoints extends T.Points {
 globalThis.THREE = { ...T, OrbitControls, Points: FlowPoints };
 globalThis.NZ_GPU = {
   ready: false, lost: false, backend: 'initializing',
+  createHaloMaterial,
   updateParticles() {
     for (const item of particles) {
       const {source, sprite} = item;
@@ -65,6 +67,10 @@ globalThis.NZ_GPU = {
     await renderer.init();
     renderer.info.autoReset = false;
     this.backend = renderer.backend.isWebGPUBackend ? 'WebGPU' : 'WebGL2 fallback';
+    if (!renderer.backend.isWebGPUBackend && !new URLSearchParams(location.search).has('forceWebGL')) {
+      renderer.dispose();
+      throw new Error('当前浏览器未能启用 WebGPU。请使用支持 WebGPU 的 Chrome 或 Edge、开启硬件加速，并通过本地文件、localhost 或 HTTPS 打开。未启动 WebGL 回退展示。');
+    }
     renderer.onDeviceLost = info => {
       this.lost = true;
       this.error = info.message || info.reason || 'GPU device lost';

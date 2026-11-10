@@ -1,5 +1,7 @@
 # 充电站材质与光照样板 · 第二轮
 
+> 此试验已归档并退出当前展示入口。当前原生 Three.js / WebGPU 版本见 [回档说明](../../visual-upgrade/webgpu/RESTORE.md)。下面保留本轮制作与验证记录，供历史追溯。
+
 当前性能优化在 `codex/charging-station-performance` 分支中维护，沿用独立样板目录。初始写实版本见 `codex/charging-station-photoreal`，优化前提交为 `4e6d8af`。
 
 本轮已落实 [1–5 步性能调整](PERFORMANCE-PLAN.md#已实施的性能优化)：精致档控制内部像素量，半尺寸 AO、四分之一尺寸泛光，车辆实例化与三档 LOD，局部阴影缓存，园区细节按距离启用，以及保留手动画质选择的自适应预算。使用新版时请刷新原有页面，再选择“精致”。

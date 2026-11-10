@@ -2,6 +2,9 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
+const vm = require('node:vm');
+const patchFlows = require('../shared/flow-build.cjs');
+const patchLabels = require('../shared/label-controls.cjs');
 const root = path.resolve(__dirname, '../..');
 const pkg = path.join(root, 'tmp/three-r187-tools/r187/package');
 const vendor = path.join(__dirname, 'vendor');
@@ -23,7 +26,7 @@ function once(s, a, b) {
   if (s.split(a).length !== 2) throw new Error('Missing or ambiguous anchor: ' + a);
   return s.replace(a, () => b);
 }
-let html = fs.readFileSync(path.join(__dirname, '../dist/多园区-v20-r187-视觉升级.html'), 'utf8');
+let html = patchLabels(patchFlows(fs.readFileSync(path.join(__dirname, '../dist/多园区-v20-r187-视觉升级.html'), 'utf8')));
 html = html.replace(/<script>\/\* ===== ([\w.-]+) ===== \*\/\r?\n([\s\S]*?)\r?\n<\/script>/g, (block, name, code) => {
   if (name === 'three.js') code = fs.readFileSync(bundle, 'utf8');
   if (name === 'post.js') code = '// TSL post-processing is bundled with the WebGPU engine.';
@@ -50,15 +53,19 @@ html = html.replace(/<script>\/\* ===== ([\w.-]+) ===== \*\/\r?\n([\s\S]*?)\r?\n
     window.NZ_GPU.error = error.message;
     console.error(error);
     const notice = document.createElement('p');
-    notice.textContent = 'WebGPU 试验启动失败：' + error.message;
+    notice.id = 'webgpu-startup-error';
+    notice.setAttribute('role', 'alert');
+    notice.textContent = 'WebGPU 启动失败：' + error.message;
+    document.title = '[WebGPU 不可用] ' + document.title;
     Object.assign(notice.style, {position:'fixed',top:'0',left:'0',zIndex:99999,background:'white',padding:'16px'});
     document.body.appendChild(notice);
   });`);
   }
+  new vm.Script(code, { filename: name });
   return '<script>/* ===== ' + name + ' ===== */\n' + code + '\n</script>';
 });
-html = html.replace('视觉升级</title>', 'WebGPU 对照试验</title>');
+html = html.replace('视觉升级</title>', '原生模型 · WebGPU</title>');
 const out = path.join(__dirname, 'dist');
 fs.mkdirSync(out, { recursive: true });
 fs.writeFileSync(path.join(out, '多园区-v20-r187-WebGPU.html'), html);
-console.log('Built WebGPU comparison');
+console.log('Built native Three.js / WebGPU presentation with retained halos and label controls');

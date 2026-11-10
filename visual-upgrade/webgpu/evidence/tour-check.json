@@ -1,0 +1,183 @@
+{
+  "viewport": [
+    1440,
+    810
+  ],
+  "deviceScaleFactor": 1,
+  "result": {
+    "backend": "WebGPU",
+    "lost": false,
+    "wallSeconds": 181.45090000000596,
+    "qualityStayedHigh": true,
+    "buildingVisited": true,
+    "final": {
+      "active": false,
+      "paused": false,
+      "loading": false,
+      "time": 180,
+      "duration": 180,
+      "inside": false,
+      "buildingFailed": false,
+      "cue": "quick-ending",
+      "notice": "",
+      "computed": true
+    },
+    "overall": {
+      "frames": 10039,
+      "medianMs": 16.7,
+      "p95Ms": 33.3,
+      "maxMs": 266.6,
+      "over50": 3
+    },
+    "chapters": {
+      "campus/quick-welcome": {
+        "frames": 895,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 83.4,
+        "over50": 1
+      },
+      "campus/quick-wind": {
+        "frames": 780,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.9,
+        "over50": 0
+      },
+      "campus/quick-line": {
+        "frames": 480,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.9,
+        "over50": 0
+      },
+      "campus/quick-solar": {
+        "frames": 240,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.8,
+        "over50": 0
+      },
+      "campus/quick-dc-entry": {
+        "frames": 298,
+        "medianMs": 16.7,
+        "p95Ms": 33.3,
+        "maxMs": 266.6,
+        "over50": 1
+      },
+      "building/quick-dc-power": {
+        "frames": 741,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 33.4,
+        "over50": 0
+      },
+      "building/quick-dc-server": {
+        "frames": 451,
+        "medianMs": 16.7,
+        "p95Ms": 33.4,
+        "maxMs": 50,
+        "over50": 0
+      },
+      "building/quick-dc-chip": {
+        "frames": 326,
+        "medianMs": 16.7,
+        "p95Ms": 33.3,
+        "maxMs": 33.4,
+        "over50": 0
+      },
+      "campus/quick-dc-chip": {
+        "frames": 42,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.8,
+        "over50": 0
+      },
+      "campus/quick-factory-overview": {
+        "frames": 404,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 100,
+        "over50": 1
+      },
+      "campus/quick-factory-process": {
+        "frames": 539,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 33.3,
+        "over50": 0
+      },
+      "campus/quick-factory-monitor": {
+        "frames": 600,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.8,
+        "over50": 0
+      },
+      "campus/quick-charge": {
+        "frames": 379,
+        "medianMs": 16.7,
+        "p95Ms": 33.4,
+        "maxMs": 33.4,
+        "over50": 0
+      },
+      "campus/quick-storage": {
+        "frames": 418,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 33.4,
+        "over50": 0
+      },
+      "campus/quick-coordination-event": {
+        "frames": 561,
+        "medianMs": 16.7,
+        "p95Ms": 33.4,
+        "maxMs": 49.9,
+        "over50": 0
+      },
+      "campus/quick-coordination-result": {
+        "frames": 630,
+        "medianMs": 16.7,
+        "p95Ms": 33.4,
+        "maxMs": 33.5,
+        "over50": 0
+      },
+      "campus/quick-sst-existing": {
+        "frames": 378,
+        "medianMs": 16.7,
+        "p95Ms": 33.4,
+        "maxMs": 33.5,
+        "over50": 0
+      },
+      "campus/quick-sst-change": {
+        "frames": 479,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 33.3,
+        "over50": 0
+      },
+      "campus/quick-sst-result": {
+        "frames": 480,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 16.8,
+        "over50": 0
+      },
+      "campus/quick-review": {
+        "frames": 518,
+        "medianMs": 16.7,
+        "p95Ms": 16.8,
+        "maxMs": 33.5,
+        "over50": 0
+      },
+      "campus/quick-ending": {
+        "frames": 400,
+        "medianMs": 16.7,
+        "p95Ms": 33.4,
+        "maxMs": 33.5,
+        "over50": 0
+      }
+    }
+  },
+  "errors": []
+}

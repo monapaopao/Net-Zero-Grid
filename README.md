@@ -8,7 +8,7 @@
 
 Net-Zero Grid 是多园区综合能源系统的交互式仿真与展示项目，通过 Three.js 场景、能源运行账本、生产任务履约和协同情境，解释风光波动下各园区如何共享能源，以及不同装备和调度策略带来的收益与代价。
 
-当前维护基线为 **v20 · 客户参观版**，提供离线单文件页面、完整园区导览、三分钟接待路线和四个协同专题。
+当前维护基线为 **v20 · 客户参观版**。当前展示入口采用 **Three.js r187 / WebGPU 原生模型版**，恢复接入 Blender 前的园区视觉，保留最新方向光带与标签控制区；提供离线单文件页面、完整园区导览、三分钟接待路线和四个协同专题。
 
 [在线入口](https://monapaopao.github.io/Net-Zero-Grid/) · [开发指南](CONTRIBUTING.md) · [版本记录](CHANGELOG.md) · [模型边界](docs/MODEL-BOUNDARIES.md)
 
@@ -33,10 +33,10 @@ Net-Zero Grid 是多园区综合能源系统的交互式仿真与展示项目，
 也可以点击 **Code → Download ZIP**，解压后打开：
 
 ```text
-NetZero-GridToChip-v20-VisitorPresentation/dist/Net-Zero-grid-premium.html
+visual-upgrade/webgpu/dist/多园区-v20-r187-WebGPU.html
 ```
 
-Windows 用户可双击根目录的 `打开多园区共享综合能源系统v20.cmd`。页面自包含，支持离线运行，浏览器需支持 WebGL。数据中心独立预览为同一 `dist/` 目录中的 `数据中心独立预览.html`。
+Windows 用户可双击根目录的 `打开多园区共享综合能源系统v20.cmd`。页面自包含，支持离线运行，园区外景需支持 WebGPU 的 Chrome 或 Edge 并开启硬件加速；无法启用时会明确提示，不静默回退。数据楼内部保留独立 WebGL 应用，其独立页面为 `NetZero-GridToChip-v20-VisitorPresentation/dist/数据中心独立预览.html`。
 
 进入后选择 **云参观 → 园区导览 → 三分钟快速认识**。需要观察运行细节时，可退出导览自由探索，或查看四个情境专题。
 
@@ -50,9 +50,10 @@ cd Net-Zero-Grid
 npm run build
 npm test
 npm run check:offline
+npm run check:webgpu
 ```
 
-构建会生成离线页面并同步导览文本、字幕和时间表。默认测试执行基础物理、调度履约、SST 与车辆启动共 56 项检查；离线检查补充脚本解析和打包验证。
+构建会生成 v20 基线及当前 WebGPU 离线页面，并同步导览文本、字幕和时间表。默认测试执行基础物理、调度履约、SST 与车辆启动共 56 项检查；离线检查补充脚本解析和打包验证。WebGPU 浏览器检查需要本机 Chrome 与 Playwright，详见 [WebGPU 版本说明](visual-upgrade/webgpu/README.md)。
 
 ## 项目结构
 
@@ -94,7 +95,8 @@ v20 基线已在独立导出的副本中完成构建，两个离线页面与现�
 
 ## 更多文档
 
-- [充电站材质与光照样板：Blender 资产、Three.js r187 实时接入与日夜对比](blender-assets/charging-station-photoreal/README.md)
+- [当前 Three.js / WebGPU 原生模型版与回档说明](visual-upgrade/webgpu/README.md)
+- [历史 Blender 写实试验（已退出当前展示入口）](blender-assets/charging-station-photoreal/README.md)
 - [v20 功能与接待路线](NetZero-GridToChip-v20-VisitorPresentation/README-v20.md)
 - [v20 累计修改说明](NetZero-GridToChip-v20-VisitorPresentation/修改说明-v20.md)
 - [调度履约与计量](NetZero-GridToChip-v20-VisitorPresentation/README-v18.md)

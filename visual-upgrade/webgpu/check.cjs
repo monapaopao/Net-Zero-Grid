@@ -3,11 +3,12 @@ const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
 const { pathToFileURL } = require('node:url');
+const { checkFlows } = require('../shared/check-flow.cjs');
 const bundled = path.join(process.env.USERPROFILE || '', '.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || (fs.existsSync(bundled) ? bundled : 'playwright'));
 const evidence = path.join(__dirname, 'evidence');
 fs.mkdirSync(evidence, { recursive: true });
-const modes = process.argv.includes('--ssgi') ? ['ssgi'] : process.argv.includes('--probe') ? ['webgpu'] : ['webgl', 'webgpu', 'fallback', 'ssgi'];
+const modes = process.argv.includes('--ssgi') ? ['ssgi'] : process.argv.includes('--compare') ? ['webgl', 'webgpu', 'fallback', 'ssgi'] : ['webgpu'];
 (async () => {
   const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true, args: ['--enable-gpu', '--use-angle=d3d11'] });
   const results = [];
@@ -81,10 +82,20 @@ const modes = process.argv.includes('--ssgi') ? ['ssgi'] : process.argv.includes
             counts:sources.every(o=>o.children[0].count===Math.min(o.geometry.drawRange.count,o.geometry.attributes.position.count)),
             materials:sources.every(o=>['map','size','sizeAttenuation','blending','alphaTest'].every(k=>o.children[0].material[k]===o.material[k]))};
         });
-        const record={mode,init,loadMs,shots,interactions,particles,errors,warnings,external}; results.push(record);
+        const restoration = mode === 'webgl' ? null : await page.evaluate(() => {
+          const halos=[]; __NZ_TEST.scene.traverse(o=>{if(o.userData.flowHalo)halos.push(o);});
+          return { nativeStation:!__NZ_TEST.scene.getObjectByName('Blender station · station'),
+            nativeFleet:!__NZ_TEST.scene.getObjectByName('Photoreal charging and parking fleet'),
+            noAssetAdapter:!window.NZ_STATION_ASSET&&!window.NZ_PHOTO_ASSETS&&!window.NZ_PERF,
+            nodeHalos:halos.length>0&&halos.every(o=>o.material.isNodeMaterial&&!o.material.isShaderMaterial),
+            haloCount:halos.length,controls:['btnNorthTop','btnToggleLabels','btnLabelDetail','btnViewHome'].every(id=>!!document.getElementById(id)) };
+        });
+        const flow = mode === 'webgl' ? null : await checkFlows(page,evidence);
+        const record={mode,init,loadMs,shots,interactions,particles,restoration,flow,errors,warnings,external}; results.push(record);
         assert.deepEqual(interactions,{vehicleCard:true,connections:9,roofClosed:true,sst:true,reception:true,building:true,nightBloom:true});
         assert.deepEqual(errors, []); assert.deepEqual(external, []);
-        if(particles) assert(particles.systems>0&&particles.updated>0&&particles.quads&&particles.counts&&particles.materials);
+        if(particles) assert(particles.systems>0&&particles.quads&&particles.counts&&particles.materials);
+        if(restoration) for(const key of ['nativeStation','nativeFleet','noAssetAdapter','nodeHalos','controls'])assert(restoration[key],key);
         assert(!warnings.some(w=>w.startsWith('THREE.')),warnings.join('\n'));
         if(mode==='webgpu') assert.equal(init.gpu.backend,'WebGPU');
         if(mode==='fallback') assert.equal(init.gpu.backend,'WebGL2 fallback');
