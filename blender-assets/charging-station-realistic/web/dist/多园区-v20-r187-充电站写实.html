@@ -12888,6 +12888,9 @@ window.NZ_FLOW_HALO = (function () {
     }`;
   const fragmentShader = `
     uniform vec3 uColor;
+    uniform vec3 uOutline;
+    uniform float uWidth;
+    uniform float uCoreWidth;
     uniform float uPhase;
     uniform float uDirection;
     uniform float uSpan;
@@ -12896,22 +12899,36 @@ window.NZ_FLOW_HALO = (function () {
     uniform float uNight;
     varying vec2 vRibbon;
 
-    float pulseAt(float phase) {
+    float tailAt(float phase) {
       // The head leaves the path completely before wrapping to its start.
       float head = phase * (1.0 + 2.0 * uSpan) - uSpan;
       float tail = (head - vRibbon.x) * uDirection / uSpan;
-      return smoothstep(0.0, .13, tail) * (1.0 - smoothstep(.12, 1.0, tail));
+      return tail;
+    }
+
+    float envelope(float tail) {
+      return smoothstep(0.0, .055, tail) * (1.0 - smoothstep(.22, 1.0, tail));
     }
 
     void main() {
-      float pulse = max(pulseAt(uPhase), pulseAt(fract(uPhase + .5)) * uSecond);
+      float tailA = tailAt(uPhase);
+      float tailB = tailAt(fract(uPhase + .5));
+      float a = envelope(tailA);
+      float b = envelope(tailB) * uSecond;
+      float pulse = max(a, b);
+      float tail = a >= b ? tailA : tailB;
       float ends = smoothstep(0.0, .018, vRibbon.x) * smoothstep(0.0, .018, 1.0 - vRibbon.x);
-      float across = abs(vRibbon.y);
-      float core = exp(-9.0 * across * across);
-      float fringe = exp(-2.8 * across * across) * (1.0 - smoothstep(.60, 1.0, across));
-      float alpha = min(1.0, ends * uStrength * ((.05 + .72 * pulse) * core + (.28 + .10 * uNight) * pulse * fringe));
+      float across = abs(vRibbon.y) * uWidth;
+      float spindle = mix(.18, 1.0, smoothstep(0.0, .16, max(0.0, tail)));
+      float core = 1.0 - smoothstep(uCoreWidth * spindle - .35, uCoreWidth * spindle + .35, across);
+      float outline = 1.0 - smoothstep(uCoreWidth * spindle + .35, uCoreWidth * spindle + 1.0, across);
+      float fringe = exp(-3.0 * across * across / (uWidth * uWidth));
+      fringe *= 1.0 - smoothstep(uWidth - 1.5, uWidth, across);
+      float alpha = ends * min(1.0, uStrength * pulse * max(outline, fringe * .30));
       if (alpha < .003) discard;
-      vec3 color = mix(uColor, vec3(1.0), (.10 + .13 * uNight) * core * pulse);
+      vec3 color = mix(uOutline, uColor, core);
+      float head = 1.0 - smoothstep(.08, .25, max(0.0, tail));
+      color = mix(color, vec3(1.0), .09 * head * core);
       gl_FragColor = vec4(color, alpha);
       #include <colorspace_fragment>
     }`;
@@ -12949,11 +12966,15 @@ window.NZ_FLOW_HALO = (function () {
     geometry.setIndex(indices);
     let seed = 0;
     for (const letter of name) seed = (Math.imul(31, seed) + letter.charCodeAt(0)) >>> 0;
+    const saturated = new THREE.Color(color);
+    const hsl = saturated.getHSL({});
+    saturated.setHSL(hsl.h, Math.max(.88, hsl.s), .49);
     const material = new THREE.ShaderMaterial({
       vertexShader, fragmentShader, uniforms: {
-        uViewport: viewport, uNight: night, uColor: { value: new THREE.Color(color) },
+        uViewport: viewport, uNight: night, uColor: { value: saturated },
+        uOutline: { value: saturated.clone().multiplyScalar(.25) }, uCoreWidth: { value: 1.4 },
         uPhase: { value: (seed % 997) / 997 }, uDirection: { value: 1 },
-        uSpan: { value: .25 }, uSecond: { value: 0 }, uWidth: { value: 3 }, uStrength: { value: .75 }
+        uSpan: { value: .25 }, uSecond: { value: 0 }, uWidth: { value: 5 }, uStrength: { value: 1 }
       },
       transparent: true, depthTest: true, depthWrite: false, side: THREE.DoubleSide,
       toneMapped: false, forceSinglePass: true
@@ -12975,11 +12996,13 @@ window.NZ_FLOW_HALO = (function () {
     const intensity = Math.sqrt(clamp(Math.abs(rate) / 80, 0, 1));
     uniforms.uDirection.value = direction;
     uniforms.uPhase.value = THREE.MathUtils.euclideanModulo(
-      uniforms.uPhase.value + (dt || 0) * speed * direction * (.87 + .20 * intensity), 1);
-    uniforms.uSpan.value = clamp(84 / Math.max(84, pixels), .065, .47);
-    uniforms.uSecond.value = emphasis ? .85 * clamp((pixels - 200) / 130, 0, 1) : 0;
-    uniforms.uWidth.value = emphasis ? 5 : 3.2;
-    uniforms.uStrength.value = (emphasis ? .90 : .68) + .09 * intensity;
+      uniforms.uPhase.value + (dt || 0) * Math.min(.4, speed * 1.5) * direction * (.92 + .12 * intensity), 1);
+    uniforms.uSpan.value = clamp(105 / Math.max(105, pixels), .08, .48);
+    const second = emphasis || Math.abs(rate) > 15;
+    uniforms.uSecond.value = second ? .95 * clamp((pixels - 320) / 130, 0, 1) : 0;
+    uniforms.uWidth.value = emphasis ? 6 : 5;
+    uniforms.uCoreWidth.value = emphasis ? 1.9 : 1.4;
+    uniforms.uStrength.value = (night.value ? .80 : 1) * (.94 + .06 * intensity);
   }
 
   function count(mesh) {

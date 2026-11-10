@@ -141,7 +141,7 @@ async function run() {
       await previous.evaluate(() => document.querySelector('#segQuality [data-q="high"]').click());
       await previous.addStyleTag({ content: canvasOnly });
       await previous.evaluate(() => __NZ_TEST.resize());
-      await captureFlowShots(previous, screenshotDir, 'particles');
+      await captureFlowShots(previous, screenshotDir, process.env.FLOW_BASELINE_PREFIX || 'particles');
       await previous.close();
     }
     const fallbackPage = await context.newPage();

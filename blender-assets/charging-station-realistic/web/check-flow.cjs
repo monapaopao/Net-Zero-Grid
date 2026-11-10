@@ -54,10 +54,10 @@ async function checkFlows(page, evidence) {
       await frames();
       const flows = NZ_FLOWS.audit();
       const typedHalos = flows.routes.filter(route => route.count === 1).length;
-      const onePerPath = flows.routes.every(route => route.count <= 1) &&
-        NZ_FLOW_RENDERER.audit().edges.every(route => route.count <= 1);
+      const overviewLimit = flows.routes.every(route => route.count <= 2) &&
+        NZ_FLOW_RENDERER.audit().edges.every(route => route.count <= 2);
       const retiredPoints = EDGES.every(edge => edge.points.geometry.drawRange.count === 0);
-      return { advancing, reversing, stopped, switchWorks, scopeWorks, focused, focusedLimit, reduced, typedHalos, onePerPath, retiredPoints };
+      return { advancing, reversing, stopped, switchWorks, scopeWorks, focused, focusedLimit, reduced, typedHalos, overviewLimit, retiredPoints };
     } finally {
       edge.pw = original;
       api.S.reduceMotion = false;

@@ -43,71 +43,71 @@
     "connectivity": true
   },
   "reception": true,
-  "readyMs": 2854,
+  "readyMs": 2613,
   "comparisons": [
     {
       "view": "station",
       "model": "original",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1388,
-      "triangles": 7310876
+      "draws": 1386,
+      "triangles": 7310872
     },
     {
       "view": "station",
       "model": "blender",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1385,
-      "triangles": 7410336
+      "draws": 1383,
+      "triangles": 7410332
     },
     {
       "view": "terminal",
       "model": "original",
       "medianMs": 16.7,
-      "p95Ms": 16.8,
-      "draws": 1279,
-      "triangles": 7250768
+      "p95Ms": 16.7,
+      "draws": 1277,
+      "triangles": 7250764
     },
     {
       "view": "terminal",
       "model": "blender",
       "medianMs": 16.7,
-      "p95Ms": 16.7,
-      "draws": 1284,
-      "triangles": 7346138
+      "p95Ms": 16.8,
+      "draws": 1282,
+      "triangles": 7346134
     },
     {
       "view": "power",
       "model": "original",
       "medianMs": 16.7,
-      "p95Ms": 16.7,
-      "draws": 1135,
-      "triangles": 7215956
+      "p95Ms": 16.8,
+      "draws": 1133,
+      "triangles": 7215952
     },
     {
       "view": "power",
       "model": "blender",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1134,
-      "triangles": 7313030
+      "draws": 1132,
+      "triangles": 7313026
     },
     {
       "view": "south",
       "model": "original",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1117,
-      "triangles": 7105872
+      "draws": 1115,
+      "triangles": 7105868
     },
     {
       "view": "south",
       "model": "blender",
       "medianMs": 16.7,
       "p95Ms": 16.8,
-      "draws": 1114,
-      "triangles": 7205332
+      "draws": 1112,
+      "triangles": 7205328
     }
   ],
   "flow": {
@@ -121,7 +121,7 @@
       "focusedLimit": true,
       "reduced": true,
       "typedHalos": 51,
-      "onePerPath": true,
+      "overviewLimit": true,
       "retiredPoints": true
     },
     "sst": {
