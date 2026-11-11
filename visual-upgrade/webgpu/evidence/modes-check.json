@@ -1,0 +1,49 @@
+{
+  "version": "21.1.0",
+  "unchangedBusinessState": true,
+  "unchangedCamera": true,
+  "parameterInput": true,
+  "scenarioEntrySwitchesMode": true,
+  "exportModelVersion": "18.0.0",
+  "responsive": [
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "mode": {
+        "x": 587.359375,
+        "right": 678.359375,
+        "width": 91
+      },
+      "drawer": {
+        "x": 674,
+        "y": 68,
+        "width": 350,
+        "height": 720,
+        "top": 68,
+        "right": 1024,
+        "bottom": 788,
+        "left": 674
+      }
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "mode": {
+        "x": 225.703125,
+        "right": 304.703125,
+        "width": 79
+      },
+      "drawer": {
+        "x": 0,
+        "y": 378,
+        "width": 390,
+        "height": 377,
+        "top": 378,
+        "right": 390,
+        "bottom": 755,
+        "left": 0
+      }
+    }
+  ],
+  "errors": []
+}

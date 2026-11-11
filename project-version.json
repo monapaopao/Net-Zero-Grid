@@ -1,6 +1,6 @@
 {
-  "version": "21.0.0",
-  "name": "原生 WebGPU 基准版",
+  "version": "21.1.0",
+  "name": "参观与仿真双模式版",
   "date": "2026-11-11",
   "modelBaseline": "v20",
   "visualBaseline": "d04ac10"

@@ -1,0 +1,36 @@
+/* Scoped extension of the existing light engineering interface. */
+#modePurpose{font-size:11px;color:#456169;max-width:150px;line-height:1.4}
+#visitSummary{position:absolute;left:22px;bottom:20px;display:flex;gap:24px;padding:16px 20px;background:rgba(255,255,255,.96);border:1px solid #dfe7e8;border-radius:6px;pointer-events:none;z-index:8}
+#visitSummary span{display:block;font-size:11px;color:#456169;margin-bottom:7px}#visitSummary strong{font-size:22px;font-weight:500;color:#26383c;font-variant-numeric:tabular-nums}
+#visitGuide{margin-top:14px;background:#087d73;color:#fff;border-color:#087d73;height:36px}#visitAnalysis{margin:18px 8px 12px;white-space:normal}
+#simIntro{padding:18px 18px 10px;flex:none}#simIntro h2{font-size:18px;font-weight:500;margin:0 0 7px}#simIntro p{font-size:12px;color:#456169;margin:0;line-height:1.6}
+#simSummaryDisclosure{flex:none}#simSummaryDisclosure>summary{display:none}#simSummaryDisclosure:not([open]) #summary{display:none!important}
+#modeDeviceAnalysis{width:100%;margin:14px 0;background:#087d73;color:#fff;border-color:#087d73}
+body.mode-exhibit:not(.visitor-playing) #sceneFrame{right:0}
+body.mode-exhibit:not(.visitor-playing):has(#infoCard.open) #sceneFrame{right:300px}
+body.mode-exhibit #summary,body.mode-exhibit #flexHud,body.mode-exhibit #trendPanel,body.mode-exhibit #visitAnalysis~.nav-bottom{display:none!important}
+body.mode-exhibit #drawer{display:none!important}
+body.mode-exhibit #multiCampusControls,body.mode-exhibit #campusNav .nav-bottom{display:none!important}
+body.mode-exhibit #infoParams,body.mode-exhibit #infoCard .ic-io,body.mode-exhibit #infoNote,body.mode-exhibit #infoCard #tokenMeter{display:none}
+body.mode-exhibit #infoCard :is(#detailControls,#factoryControls,#windProductControls,#solarControls){display:none}
+body.mode-exhibit #infoDesc{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+body.mode-exhibit #infoCard{right:0;width:300px}body.mode-exhibit #btnExport{display:none}
+body.mode-run:not(.visitor-playing) #sceneFrame{right:410px}
+body.mode-run:not(.visitor-playing) #drawer{width:410px;bottom:var(--foot);border-left:1px solid #dfe7e8;box-shadow:none;display:flex;flex-direction:column;z-index:12}
+body.mode-run #drawer .dr-body{min-height:0;overflow:auto;flex:1;padding:16px 18px}
+body.mode-run #summary{position:static;display:block;width:auto;height:auto;border:0;flex:none}
+body.mode-run #summary .sum-body{padding:0 18px 10px;height:auto;max-height:none!important;display:grid;grid-template-columns:1fr 1fr;gap:6px 16px}
+body.mode-run #summary .sum-head{grid-column:1/-1;margin:0 0 2px}body.mode-run #summary .sum-head span{display:none}body.mode-run #summary .sum-head em{margin:0;font-size:12px;color:#456169}
+body.mode-run #summary .kpi{padding:5px 0;margin:0}body.mode-run #summary .kpi-vl{font-size:22px}body.mode-run #summary .kpi-sub{font-size:10px;line-height:1.4}body.mode-run #summary .sum-foot,body.mode-run #summary .sum-links{display:none}
+body.mode-run #drTabs{display:flex;flex-wrap:wrap;gap:4px}body.mode-run #drTabs button{font-size:11px;padding:7px}body.mode-run #drawer .dr-head{padding:8px 12px;flex:none}
+body.mode-run #visitSummary,body.mode-run #visitGuide,body.mode-run #visitAnalysis{display:none}
+body.mode-run:not(.visitor-playing) #trendPanel{left:calc(var(--rail) + 16px);right:426px;bottom:calc(var(--foot) + 12px);width:auto;max-width:600px}
+body.mode-run #infoCard,body.mode-run.dr-open #infoCard{right:0;width:410px;z-index:23}
+.visitor-playing #modePurpose,.visitor-playing #visitSummary,.visitor-playing #visitGuide,.visitor-playing #visitAnalysis{display:none!important}
+@media(max-width:1440px){#modePurpose{display:none}}
+@media(max-width:1100px){#segMode{display:inline-flex!important}.visitor-playing #segMode{display:none!important}.selscope select{min-width:110px;max-width:125px}body.mode-run:not(.visitor-playing) #sceneFrame{right:350px}body.mode-run:not(.visitor-playing) #drawer{width:350px}body.mode-run:not(.visitor-playing) #trendPanel{right:366px}body.mode-run #infoCard,body.mode-run.dr-open #infoCard{right:0;width:350px}}
+@media(max-width:780px){#segMode button{padding:0 7px;font-size:12px}#btnDrawer{display:none}#visitSummary{left:12px;right:12px;bottom:12px;gap:12px;padding:12px;justify-content:space-between}#visitSummary strong{font-size:17px}#visitSummary span{font-size:10px}#visitGuide{height:32px;margin-top:8px}#visitAnalysis{display:none}body.mode-run:not(.visitor-playing) #sceneFrame{right:0}body.mode-run:not(.visitor-playing) #drawer{top:42%;bottom:var(--foot);width:100%;height:auto;border-top:1px solid #dfe7e8}body.mode-run #summary{display:none}#simIntro{padding:10px 14px 5px}#simIntro h2{font-size:15px}#simIntro p{font-size:11px}body.mode-run:not(.visitor-playing) #trendPanel{left:12px;right:12px;bottom:calc(58% + 8px);max-height:120px}body.mode-run #infoCard,body.mode-run.dr-open #infoCard{right:0;width:100%;z-index:24}body.mode-exhibit #infoCard{width:100%}.brand{min-width:70px}#topbar{gap:6px}.tb-right{gap:4px}.clockbox{display:none}}
+@media(prefers-reduced-motion:reduce){#drawer,#infoCard{transition:none}}
+@media(max-width:780px){body.mode-exhibit:not(.visitor-playing):has(#infoCard.open) #sceneFrame{right:0}body.mode-run #infoCard,body.mode-run.dr-open #infoCard{width:100%}}
+@media(max-width:780px){body.mode-run:not(.visitor-playing) #trendPanel{position:static;width:auto;max-height:none;flex:none;padding:8px 12px;margin:0;border:0;border-bottom:1px solid #dfe7e8;border-radius:0;box-shadow:none}#trendCanvas{height:90px}#trendPanel .tp-head{font-size:11px}}
+@media(max-width:780px){#simSummaryDisclosure>summary{display:list-item;margin:0 18px;padding:8px 0;font-size:12px;color:#087d73;cursor:pointer}body.mode-run #simSummaryDisclosure[open] #summary{display:block}}

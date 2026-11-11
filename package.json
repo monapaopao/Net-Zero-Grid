@@ -1,6 +1,6 @@
 {
   "name": "net-zero-grid",
-  "version": "21.0.0",
+  "version": "21.1.0",
   "private": true,
   "description": "多园区共享综合能源系统：能源仿真、协同调度、SST 对比与三维客户参观",
   "repository": {
@@ -14,7 +14,8 @@
   "scripts": {
     "build": "node NetZero-GridToChip-v20-VisitorPresentation/build.cjs --verify && npm run build:webgpu",
     "build:webgpu": "node visual-upgrade/build.cjs && node visual-upgrade/webgpu/build.cjs",
-    "check:webgpu": "node visual-upgrade/webgpu/check.cjs && node visual-upgrade/shared/check-labels.cjs && node visual-upgrade/webgpu/check-unavailable.cjs",
+    "check:version": "node scripts/project-version.cjs check",
+    "check:webgpu": "node visual-upgrade/webgpu/check.cjs && node visual-upgrade/shared/check-labels.cjs && node visual-upgrade/webgpu/check-unavailable.cjs && node visual-upgrade/webgpu/check-modes.cjs && node scripts/project-version.cjs check",
     "test": "npm run test:engine && npm run test:dispatch && npm run test:sst && npm run test:startup",
     "test:engine": "cd NetZero-GridToChip-v20-VisitorPresentation && node tests/engine.test.cjs",
     "test:dispatch": "cd NetZero-GridToChip-v20-VisitorPresentation && node tests/dispatch-v18.test.cjs",

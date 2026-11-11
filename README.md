@@ -1,5 +1,9 @@
 # Net-Zero Grid · 多园区共享综合能源系统
 
+<!-- project-release:start -->
+当前项目版本：**v21.1.0 · 参观与仿真双模式版**。版本规则见 [VERSIONING.md](VERSIONING.md)。
+<!-- project-release:end -->
+
 [![验证](https://github.com/monapaopao/Net-Zero-Grid/actions/workflows/verify.yml/badge.svg)](https://github.com/monapaopao/Net-Zero-Grid/actions/workflows/verify.yml)
 ![版本](https://img.shields.io/badge/baseline-v20-146b60)
 ![技术](https://img.shields.io/badge/JavaScript-Three.js-f0db4f)
@@ -8,7 +12,7 @@
 
 Net-Zero Grid 是多园区综合能源系统的交互式仿真与展示项目，通过 Three.js 场景、能源运行账本、生产任务履约和协同情境，解释风光波动下各园区如何共享能源，以及不同装备和调度策略带来的收益与代价。
 
-当前维护基线为 **v20 · 客户参观版**。当前展示入口采用 **Three.js r187 / WebGPU 原生模型版**，恢复接入 Blender 前的园区视觉，保留最新方向光带与标签控制区；提供离线单文件页面、完整园区导览、三分钟接待路线和四个协同专题。
+业务模型沿用 **v20 · 客户参观版**，项目发布采用独立三段版本号。当前展示入口采用 **Three.js r187 / WebGPU 原生模型版**，提供“参观 / 仿真”双模式，保留方向光带与标签控制区，以及完整园区导览、三分钟接待路线和四个协同专题。
 
 [在线入口](https://monapaopao.github.io/Net-Zero-Grid/) · [开发指南](CONTRIBUTING.md) · [版本记录](CHANGELOG.md) · [模型边界](docs/MODEL-BOUNDARIES.md)
 

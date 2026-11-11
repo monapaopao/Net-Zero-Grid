@@ -1,5 +1,11 @@
 # Three.js r187 / WebGPU · 原生模型版
 
+<!-- project-release:start -->
+当前项目版本：**v21.1.0 · 参观与仿真双模式版**。版本规则见 [VERSIONING.md](../../VERSIONING.md)。
+<!-- project-release:end -->
+
+基准回退标签为 `v21.0.0`。参观扩大画面并显示三项摘要；仿真展开参数、趋势及结果分析。模式切换保持业务状态与相机连续。布局说明见 [UI-MODES.md](../../docs/UI-MODES.md)。
+
 当前展示入口以 `d04ac10` 的原生 Three.js 视觉为基线，恢复接入 Blender 之前的园区、充电站、车辆、树木、材质与光照，保留最新方向光带和标签控制区。数据楼内部仍为独立的 r180 WebGL 应用。分支与恢复范围见 [RESTORE.md](RESTORE.md)。
 
 ## 打开
@@ -31,6 +37,8 @@ node visual-upgrade/webgpu/check.cjs
 node visual-upgrade/shared/check-labels.cjs
 node visual-upgrade/webgpu/check-unavailable.cjs
 node visual-upgrade/webgpu/check-tour.cjs
+node visual-upgrade/webgpu/check-modes.cjs
+node scripts/project-version.cjs check
 ```
 
 根目录也提供 `npm run build:webgpu`、`npm run check:webgpu`。最后一项完整接待检查约需三分钟，单独运行。
@@ -51,6 +59,8 @@ node visual-upgrade/webgpu/build.cjs --rebuild-engine
 - `evidence/tour-check.json`：精致档、实际 WebGPU、完整 180 秒接待路线，包含数据楼进入/退出和园区恢复。1440×810 / DPR 1 本机记录的整体 P95 为约 33.3 ms。
 - `evidence/rollback-before-charge.jpg`、`rollback-after-charge.jpg`：相同入口机位、1440×810 分辨率的恢复前后截图。
 - `evidence/retained-controls.png`：保留的控制区截图。
+- `evidence/modes-check.json`：双模式业务状态/相机一致性、真实参数输入、导览恢复、导出项目/模型版本以及 1024、390 宽度布局。
+- `evidence/v21-visit-desktop.jpg` / `v21-simulation-desktop.jpg`：同机位、同窗口尺寸的两种模式；另有窄屏截图。
 
 帧时间包括 CPU、GPU 和浏览器调度，并受垂直同步影响；该记录不是不同 API 的等算法基准，也不能证明所有设备或高 DPI 下均有 60 FPS。当前阶段以恢复确认的视觉基线和保留指定交互为目标。
 

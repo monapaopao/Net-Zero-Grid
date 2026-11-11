@@ -67,6 +67,7 @@ html = html.replace(/<script>\/\* ===== ([\w.-]+) ===== \*\/\r?\n([\s\S]*?)\r?\n
 });
 html = html.replace('视觉升级</title>', '原生模型 · WebGPU</title>');
 html = projectVersion.patch(html);
+html = require('./modes-build.cjs')(html);
 projectVersion.docs();
 const out = path.join(__dirname, 'dist');
 fs.mkdirSync(out, { recursive: true });

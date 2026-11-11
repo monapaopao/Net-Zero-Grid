@@ -22,5 +22,7 @@ jobs:
         run: npm run build
       - name: Core regressions
         run: npm test
+      - name: Project release consistency
+        run: npm run check:version
       - name: Inspect offline packaging
         run: npm run check:offline

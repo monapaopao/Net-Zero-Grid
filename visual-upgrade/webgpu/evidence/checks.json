@@ -11,18 +11,18 @@
         "vendor": "nvidia",
         "architecture": "blackwell"
       },
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
       "perf": {
         "fps": 0,
         "worstFps": null,
         "samples": [],
-        "renderMs": 30.18470000101626,
+        "renderMs": 32.827699998646985,
         "draws": 2756,
         "triangles": 5474925,
         "lastPassDraws": 2756,
         "quality": "standard",
         "pixelRatio": 1,
-        "vw": 1002,
+        "vw": 1256,
         "vh": 630,
         "ao": false,
         "environment": {
@@ -271,21 +271,21 @@
         "bloom": false
       }
     },
-    "loadMs": 2599,
+    "loadMs": 2670,
     "shots": [
       {
         "view": "campus",
-        "medianMs": 16.699999999999818,
+        "medianMs": 33.100000000000364,
         "p95Ms": 33.400000000000546,
         "perf": {
-          "fps": 41.5,
-          "worstFps": 6,
+          "fps": 39.83475951608145,
+          "worstFps": 2.9031789809841775,
           "samples": [
-            6,
+            3,
             40,
-            42
+            40
           ],
-          "renderMs": 22.89915050394311,
+          "renderMs": 25.29887615202364,
           "draws": 3380,
           "triangles": 10294964,
           "lastPassDraws": 3380,
@@ -552,15 +552,15 @@
         "medianMs": 16.69999999999891,
         "p95Ms": 16.80000000000109,
         "perf": {
-          "fps": 54,
-          "worstFps": 6,
+          "fps": 50.084300307448196,
+          "worstFps": 2.9031789809841775,
           "samples": [
-            6,
+            3,
             40,
-            42,
-            54
+            40,
+            50
           ],
-          "renderMs": 13.039270243870957,
+          "renderMs": 13.501643516733568,
           "draws": 1608,
           "triangles": 7166502,
           "lastPassDraws": 1608,
@@ -825,19 +825,19 @@
       {
         "view": "factory",
         "medianMs": 16.69999999999891,
-        "p95Ms": 16.799999999999272,
+        "p95Ms": 16.80000000000109,
         "perf": {
           "fps": 60,
-          "worstFps": 6,
+          "worstFps": 2.9031789809841775,
           "samples": [
-            6,
+            3,
             40,
-            42,
-            54,
-            60,
+            40,
+            50,
+            59,
             60
           ],
-          "renderMs": 7.160052518073481,
+          "renderMs": 8.198949798285621,
           "draws": 675,
           "triangles": 7539448,
           "lastPassDraws": 675,
