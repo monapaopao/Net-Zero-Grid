@@ -4,6 +4,7 @@ module.exports=function(page){
  const once=(s,a,b)=>{if(s.split(a).length!==2)throw Error('Mode anchor: '+a);return s.replace(a,()=>b);};
  page=once(page,'data-mode="exhibit">演示</button>','data-mode="exhibit" aria-pressed="true">参观</button>');
  page=once(page,'data-mode="run">运行</button>','data-mode="run" aria-pressed="false">仿真</button>');
+ page=once(page,'电力平衡趋势（近 24 分钟仿真时间 · 每点 1 分钟）','电力平衡趋势 <small>近 24 分钟仿真时间 · 每点 1 分钟</small>');
  page=once(page,'window.NZ_GPU.ready = true;','window.NZ_MODES.ready(window.__NZ_TEST);\n    window.NZ_GPU.ready = true;');
  page=page.replace(/<script>\/\* ===== premium.js ===== \*\/\r?\n([\s\S]*?)\r?\n<\/script>/,(_,source)=>{
   let code=source;
@@ -15,9 +16,16 @@ module.exports=function(page){
   code=once(code,"  function toggleDrawer() { drawerOpen ? closeDrawer() : openDrawer('params'); }","  function toggleDrawer() { S.mode==='run'?setMode('exhibit'):openDrawer('params'); }");
   code=once(code,"    if (tab) switchTab(tab);","    if (tab) switchTab(tab);\n    window.NZ_MODES?.rememberTab(tab);");
   code=once(code,"    $('infoLive').textContent = '实时：' + devLive(key);","    $('infoLive').textContent = '实时：' + devLive(key);\n    window.NZ_MODES?.device(key);");
-  code=once(code,"      const p = $('trendPanel');","      if(S.mode!=='run'){setMode('run');return;}\n      const p = $('trendPanel');");
+  const trendStart=code.indexOf("    $('btnTrend').addEventListener"),trendEnd=code.indexOf('    /* 减少动态 */',trendStart);
+  if(trendStart<0||trendEnd<0)throw Error('Missing trend listeners');
+  code=code.slice(0,trendStart)+"    $('btnTrend').addEventListener('click',()=>window.NZ_MODES.toggleTrend());\n    $('trendClose').addEventListener('click',()=>window.NZ_MODES.toggleTrend());\n\n"+code.slice(trendEnd);
+  code=once(code,'const line = (key, color, width, abs) => {','const line = (key, color, width, abs, dash = []) => {');
+  code=once(code,'g.strokeStyle = color; g.lineWidth = width; g.stroke();','g.setLineDash(dash); g.strokeStyle = color; g.lineWidth = width; g.stroke(); g.setLineDash([]);');
+  for(const [before,after] of [["line('gen', PAL.power, 1.6);","line('gen', '#D97706', 2);"],["line('served', PAL.gold, 1.6);","line('served', '#087D73', 2);"],["line('buy', PAL.warn, 1.4);","line('buy', '#7C3AED', 2, false, [6, 4]);"],["line('cur', '#7F93A6', 1.4);","line('cur', '#64748B', 1.8);"],["line('st', PAL.hydrogen, 1.4, true);","line('st', '#2563EB', 1.8, true);"]])code=once(code,before,after);
+  code=once(code,'    setMode, applyScenario, startTour,','    redrawTrend:drawTrend, trendSnapshot:()=>JSON.parse(JSON.stringify(trend)),\n    setMode, applyScenario, startTour,');
   code=code.replaceAll("g.fillStyle = 'rgba(156,179,197,.75)'", "g.fillStyle = '#456169'");
   return '<script>/* ===== presentation-modes.js ===== */\n'+fs.readFileSync(path.join(__dirname,'modes.js'),'utf8')+'\n</script>\n<script>/* ===== premium.js ===== */\n'+code+'\n</script>';
  });
+ page=page.replace(/<div class="tp-legend">[\s\S]*?<\/div>/,()=>'<div class="tp-legend">'+[['实际发电','#D97706',''],['已供负荷','#087D73',''],['购电','#7C3AED','trend-buy'],['弃电','#64748B',''],['储能充放','#2563EB','']].map(([name,color,cls])=>`<span class="${cls}"><i style="--trend-color:${color};background:${color}"></i>${name}</span>`).join('')+'</div>');
  return page.replace('</head>','<style>\n'+fs.readFileSync(path.join(__dirname,'modes.css'),'utf8')+'\n</style>\n</head>');
 };

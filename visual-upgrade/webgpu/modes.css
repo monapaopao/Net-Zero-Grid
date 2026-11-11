@@ -34,3 +34,17 @@ body.mode-run #infoCard,body.mode-run.dr-open #infoCard{right:0;width:410px;z-in
 @media(max-width:780px){body.mode-exhibit:not(.visitor-playing):has(#infoCard.open) #sceneFrame{right:0}body.mode-run #infoCard,body.mode-run.dr-open #infoCard{width:100%}}
 @media(max-width:780px){body.mode-run:not(.visitor-playing) #trendPanel{position:static;width:auto;max-height:none;flex:none;padding:8px 12px;margin:0;border:0;border-bottom:1px solid #dfe7e8;border-radius:0;box-shadow:none}#trendCanvas{height:90px}#trendPanel .tp-head{font-size:11px}}
 @media(max-width:780px){#simSummaryDisclosure>summary{display:list-item;margin:0 18px;padding:8px 0;font-size:12px;color:#087d73;cursor:pointer}body.mode-run #simSummaryDisclosure[open] #summary{display:block}}
+/* v21.1.1: the chart belongs to the analysis column, never the scene. */
+body.mode-run:not(.visitor-playing) #drawer{overflow-y:auto}
+body.mode-run #drawer .dr-body{flex:1 0 180px;min-height:180px}
+body.mode-run:not(.visitor-playing) #drawer #trendPanel{position:static;display:block;flex:none;width:auto;max-width:none;max-height:none;margin:0 18px 10px;padding:10px 0;border:0;border-top:1px solid #dfe7e8;border-bottom:1px solid #dfe7e8;border-radius:0;box-shadow:none}
+#drawer #trendPanel .tp-head{gap:8px;color:#26383c;font-size:12px;line-height:1.5;align-items:flex-start}
+#drawer #trendPanel .tp-head small{display:block;color:#456169;font-size:10px;font-weight:400}
+#drawer #trendClose{flex:none;border:0;background:none;color:#087d73;font-size:12px;padding:0 2px;cursor:pointer}
+#drawer #trendCanvas{height:110px!important;width:100%;display:block;margin:4px 0}
+#drawer #trendPanel .tp-legend{display:flex;flex-wrap:wrap;gap:5px 14px;color:#456169;font-size:11px;line-height:1.6}
+#drawer #trendPanel .tp-legend span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+#drawer #trendPanel .tp-legend i{width:16px;flex:none}
+#drawer #trendPanel .tp-legend .trend-buy i{background:none!important;border-top:2px dashed var(--trend-color);height:0}
+#drawer #trendPanel:not(.open) #trendCanvas,#drawer #trendPanel:not(.open) .tp-legend{display:none}
+@media(max-width:780px){body.mode-run:not(.visitor-playing) #drawer #trendPanel{margin:0 14px 6px}}

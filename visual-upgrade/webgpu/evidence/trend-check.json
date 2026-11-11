@@ -1,0 +1,101 @@
+{
+  "version": "21.1.1",
+  "layout": {
+    "summary": {
+      "x": 1511,
+      "y": 154.1875,
+      "width": 409,
+      "height": 235.59375,
+      "top": 154.1875,
+      "right": 1920,
+      "bottom": 389.78125,
+      "left": 1511
+    },
+    "trend": {
+      "x": 1529,
+      "y": 389.78125,
+      "width": 373,
+      "height": 194.59375,
+      "top": 389.78125,
+      "right": 1902,
+      "bottom": 584.375,
+      "left": 1529
+    },
+    "tabs": {
+      "x": 1511,
+      "y": 594.375,
+      "width": 409,
+      "height": 47,
+      "top": 594.375,
+      "right": 1920,
+      "bottom": 641.375,
+      "left": 1511
+    },
+    "scene": {
+      "x": 208,
+      "y": 76,
+      "width": 1302,
+      "height": 892,
+      "top": 76,
+      "right": 1510,
+      "bottom": 968,
+      "left": 208
+    },
+    "body": {
+      "x": 1511,
+      "y": 641.375,
+      "width": 409,
+      "height": 326.625,
+      "top": 641.375,
+      "right": 1920,
+      "bottom": 968,
+      "left": 1511
+    }
+  },
+  "strokes": [
+    {
+      "color": "rgba(110, 150, 185, 0.18)",
+      "dash": []
+    },
+    {
+      "color": "rgba(110, 150, 185, 0.18)",
+      "dash": []
+    },
+    {
+      "color": "rgba(110, 150, 185, 0.18)",
+      "dash": []
+    },
+    {
+      "color": "rgba(110, 150, 185, 0.3)",
+      "dash": []
+    },
+    {
+      "color": "#d97706",
+      "dash": []
+    },
+    {
+      "color": "#087d73",
+      "dash": []
+    },
+    {
+      "color": "#7c3aed",
+      "dash": [
+        6,
+        4
+      ]
+    },
+    {
+      "color": "#64748b",
+      "dash": []
+    },
+    {
+      "color": "#2563eb",
+      "dash": []
+    }
+  ],
+  "historyPreserved": true,
+  "modeFoldPreserved": true,
+  "visitorRestore": true,
+  "mobileDefaultCollapsed": true,
+  "errors": []
+}

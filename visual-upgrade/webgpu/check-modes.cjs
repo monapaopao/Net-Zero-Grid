@@ -1,6 +1,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {pathToFileURL}=require('node:url');
+const release=require('../../project-version.json').version;
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||path.join(process.env.USERPROFILE,'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright'));
 (async()=>{
  const browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--enable-gpu','--use-angle=d3d11']});
@@ -30,8 +31,8 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||path.join(process.env.US
   const modified=await snapshot();await page.click('#segMode [data-mode="exhibit"]');await settle();assert.deepEqual(await snapshot(),modified);
   await page.click('#segMode [data-mode="run"]');await page.click('#drTabs [data-tab="ledger"]');await page.evaluate(async()=>{await NZ_RECEPTION.start();await NZ_RECEPTION.stop();});await settle();assert.equal(await page.evaluate(()=>__NZ_TEST.S.mode),'run');assert(await page.locator('#drawer').isVisible());assert(await page.locator('.dr-page[data-page="ledger"]').isVisible());
   await page.evaluate(()=>__NZ_TEST.closeDrawer());await settle();assert(await page.locator('#drawer').evaluate(el=>el.classList.contains('open')));
-  const downloadPromise=page.waitForEvent('download');await page.click('#btnExport');const download=await downloadPromise;const output=JSON.parse(fs.readFileSync(await download.path(),'utf8'));assert.equal(output.projectVersion,'21.1.0');assert.notEqual(output.modelVersion,output.projectVersion);
-  assert(download.suggestedFilename().startsWith('Net-Zero-grid-v21.1.0-'));
+  const downloadPromise=page.waitForEvent('download');await page.click('#btnExport');const download=await downloadPromise;const output=JSON.parse(fs.readFileSync(await download.path(),'utf8'));assert.equal(output.projectVersion,release);assert.notEqual(output.modelVersion,output.projectVersion);
+  assert(download.suggestedFilename().startsWith('Net-Zero-grid-v'+release+'-'));
   await page.evaluate(()=>document.querySelectorAll('#toast .tmsg').forEach(el=>el.remove()));
   const responsive=[];
   for(const width of [1024,390]){

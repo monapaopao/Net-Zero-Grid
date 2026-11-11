@@ -1,7 +1,7 @@
 # Net-Zero Grid · 多园区共享综合能源系统
 
 <!-- project-release:start -->
-当前项目版本：**v21.1.0 · 参观与仿真双模式版**。版本规则见 [VERSIONING.md](VERSIONING.md)。
+当前项目版本：**v21.1.1 · 仿真趋势面板布局与配色修复**。版本规则见 [VERSIONING.md](VERSIONING.md)。
 <!-- project-release:end -->
 
 [![验证](https://github.com/monapaopao/Net-Zero-Grid/actions/workflows/verify.yml/badge.svg)](https://github.com/monapaopao/Net-Zero-Grid/actions/workflows/verify.yml)

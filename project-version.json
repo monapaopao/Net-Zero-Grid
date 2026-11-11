@@ -1,6 +1,6 @@
 {
-  "version": "21.1.0",
-  "name": "参观与仿真双模式版",
+  "version": "21.1.1",
+  "name": "仿真趋势面板布局与配色修复",
   "date": "2026-11-11",
   "modelBaseline": "v20",
   "visualBaseline": "d04ac10"

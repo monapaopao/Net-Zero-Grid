@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="MultiCampus VisitorPresentation build v20.0.0">
-<title>多园区共享综合能源系统 | 西比里能源 xibili energy · v21.1.0 · Three.js r187 原生模型 · WebGPU</title>
+<title>多园区共享综合能源系统 | 西比里能源 xibili energy · v21.1.1 · Three.js r187 原生模型 · WebGPU</title>
 <!--
   单文件离线交付：模型、脚本、样式、字形全部内嵌，无任何外部请求。
   原始版本（未被本文件改写）：original/Net-Zero-grid-simulation-20260722.html
@@ -903,7 +903,7 @@ body.strategy-pair-playing .strategy-final.strategy-single{grid-template-columns
     @media(max-width:780px){.scene-tools{top:76px;right:12px;width:calc(100% - 24px)}#flowLayers{top:120px;right:12px;width:calc(100% - 24px)}}
   
 </style>
-<script>window.NZ_PROJECT_VERSION=Object.freeze({"version":"21.1.0","name":"参观与仿真双模式版","date":"2026-11-11","modelBaseline":"v20","visualBaseline":"d04ac10"});</script>
+<script>window.NZ_PROJECT_VERSION=Object.freeze({"version":"21.1.1","name":"仿真趋势面板布局与配色修复","date":"2026-11-11","modelBaseline":"v20","visualBaseline":"d04ac10"});</script>
 <style>
 /* Scoped extension of the existing light engineering interface. */
 #modePurpose{font-size:11px;color:#456169;max-width:150px;line-height:1.4}
@@ -941,6 +941,20 @@ body.mode-run #infoCard,body.mode-run.dr-open #infoCard{right:0;width:410px;z-in
 @media(max-width:780px){body.mode-exhibit:not(.visitor-playing):has(#infoCard.open) #sceneFrame{right:0}body.mode-run #infoCard,body.mode-run.dr-open #infoCard{width:100%}}
 @media(max-width:780px){body.mode-run:not(.visitor-playing) #trendPanel{position:static;width:auto;max-height:none;flex:none;padding:8px 12px;margin:0;border:0;border-bottom:1px solid #dfe7e8;border-radius:0;box-shadow:none}#trendCanvas{height:90px}#trendPanel .tp-head{font-size:11px}}
 @media(max-width:780px){#simSummaryDisclosure>summary{display:list-item;margin:0 18px;padding:8px 0;font-size:12px;color:#087d73;cursor:pointer}body.mode-run #simSummaryDisclosure[open] #summary{display:block}}
+/* v21.1.1: the chart belongs to the analysis column, never the scene. */
+body.mode-run:not(.visitor-playing) #drawer{overflow-y:auto}
+body.mode-run #drawer .dr-body{flex:1 0 180px;min-height:180px}
+body.mode-run:not(.visitor-playing) #drawer #trendPanel{position:static;display:block;flex:none;width:auto;max-width:none;max-height:none;margin:0 18px 10px;padding:10px 0;border:0;border-top:1px solid #dfe7e8;border-bottom:1px solid #dfe7e8;border-radius:0;box-shadow:none}
+#drawer #trendPanel .tp-head{gap:8px;color:#26383c;font-size:12px;line-height:1.5;align-items:flex-start}
+#drawer #trendPanel .tp-head small{display:block;color:#456169;font-size:10px;font-weight:400}
+#drawer #trendClose{flex:none;border:0;background:none;color:#087d73;font-size:12px;padding:0 2px;cursor:pointer}
+#drawer #trendCanvas{height:110px!important;width:100%;display:block;margin:4px 0}
+#drawer #trendPanel .tp-legend{display:flex;flex-wrap:wrap;gap:5px 14px;color:#456169;font-size:11px;line-height:1.6}
+#drawer #trendPanel .tp-legend span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+#drawer #trendPanel .tp-legend i{width:16px;flex:none}
+#drawer #trendPanel .tp-legend .trend-buy i{background:none!important;border-top:2px dashed var(--trend-color);height:0}
+#drawer #trendPanel:not(.open) #trendCanvas,#drawer #trendPanel:not(.open) .tp-legend{display:none}
+@media(max-width:780px){body.mode-run:not(.visitor-playing) #drawer #trendPanel{margin:0 14px 6px}}
 
 </style>
 </head>
@@ -1085,17 +1099,11 @@ body.mode-run #infoCard,body.mode-run.dr-open #infoCard{right:0;width:410px;z-in
 
     <div id="trendPanel">
       <div class="tp-head">
-        <span>电力平衡趋势（近 24 分钟仿真时间 · 每点 1 分钟）</span>
+        <span>电力平衡趋势 <small>近 24 分钟仿真时间 · 每点 1 分钟</small></span>
         <button id="trendClose">×</button>
       </div>
       <canvas id="trendCanvas" height="150"></canvas>
-      <div class="tp-legend">
-        <span><i style="background:#d89737"></i>实际发电</span>
-        <span><i style="background:#087d73"></i>已供负荷</span>
-        <span><i style="background:#ad7424"></i>购电</span>
-        <span><i style="background:#7F93A6"></i>弃电</span>
-        <span><i style="background:#398ad1"></i>储能充放</span>
-      </div>
+      <div class="tp-legend"><span class=""><i style="--trend-color:#D97706;background:#D97706"></i>实际发电</span><span class=""><i style="--trend-color:#087D73;background:#087D73"></i>已供负荷</span><span class="trend-buy"><i style="--trend-color:#7C3AED;background:#7C3AED"></i>购电</span><span class=""><i style="--trend-color:#64748B;background:#64748B"></i>弃电</span><span class=""><i style="--trend-color:#2563EB;background:#2563EB"></i>储能充放</span></div>
     </div>
   </footer>
 
@@ -11416,6 +11424,7 @@ window.NZ_VEHICLES=(function(){
 'use strict';
 window.NZ_MODES=(function(){
  let api,lastTab='params',applying=false,wasPlaying=false,deviceKey=null;
+ const trendChoice={wide:true,narrow:false};
  const $=id=>document.getElementById(id),playing=()=>!!window.NZ_VISITOR_VIEW?.state().active;
  function button(text,id,action){const b=document.createElement('button');b.type='button';b.textContent=text;b.id=id;b.className='iconbtn';b.addEventListener('click',action);return b;}
  function ready(context){
@@ -11424,9 +11433,9 @@ window.NZ_MODES=(function(){
   const intro=document.createElement('div');intro.id='simIntro';intro.innerHTML='<h2>仿真工作区</h2><p>选择情景、调整条件，再查看供需与调度结果。</p>';
   $('drawer').prepend(intro);
   const report=document.createElement('details');report.id='simSummaryDisclosure';report.innerHTML='<summary>实时指标与运行摘要</summary>';intro.after(report);report.append($('summary'));
-  const trendHome=document.createComment('trend-desktop-home');$('trendPanel').before(trendHome);
+  report.after($('trendPanel'));
   const narrow=matchMedia('(max-width:780px)');
-  const placeTrend=()=>{report.open=!narrow.matches;if(narrow.matches){$('drawer').querySelector('.dr-head').after($('trendPanel'));$('trendPanel').classList.remove('open');$('btnTrend').textContent='平衡趋势 ▴';}else trendHome.after($('trendPanel'));};
+  const placeTrend=()=>{report.open=!narrow.matches;renderTrend();};
   narrow.addEventListener('change',placeTrend);placeTrend();
   const metrics=document.createElement('div');metrics.id='visitSummary';metrics.setAttribute('aria-label','园区关键指标');
   metrics.innerHTML='<div><span>园区实时总负荷</span><strong id="visitLoad"></strong></div><div><span>可再生电力消费占比</span><strong id="visitRenew"></strong></div><div><span>储能 SOC</span><strong id="visitSoc"></strong></div>';
@@ -11453,14 +11462,17 @@ window.NZ_MODES=(function(){
    $('modePurpose').textContent=run?'调整条件，观察调度结果':'观看园区与协同关系';
    for(const b of $('segMode').children)b.setAttribute('aria-pressed',String(b.dataset.mode===mode));
    $('btnDrawer').textContent=run?'返回参观':'仿真分析';$('btnDrawer').title=run?'收起工作区，返回参观':'进入仿真模式并调整参数';
-   if(run){api.drawer(lastTab);if(!matchMedia('(max-width:780px)').matches&&!$('trendPanel').classList.contains('open'))api.press('btnTrend');}
+   if(run){api.drawer(lastTab);renderTrend();}
    else{api.closeDrawer();$('trendPanel').classList.remove('open');$('btnTrend').textContent='平衡趋势 ▴';}
    if(deviceKey)device(deviceKey);api.resize();
   }finally{applying=false;}
  }
  function device(key){deviceKey=key;if($('modeDeviceAnalysis'))$('modeDeviceAnalysis').textContent=api?.S.mode==='run'?'返回仿真工作区':'查看参数与分析';}
- return {ready,apply,device,prepareWorkspace:()=>{if(api&&!applying)api.closeInfo();},rememberTab:tab=>{if(tab)lastTab=tab;},state:()=>({mode:api?.S.mode,tab:lastTab,playing:playing(),version:window.NZ_PROJECT_VERSION?.version})};
+ function renderTrend(){const open=trendChoice[matchMedia('(max-width:780px)').matches?'narrow':'wide'];$('trendPanel').classList.toggle('open',open);$('btnTrend').textContent=open?'平衡趋势 ▾':'平衡趋势 ▴';for(const id of ['btnTrend','trendClose']){$(id).setAttribute('aria-expanded',String(open));$(id).setAttribute('aria-controls','trendCanvas');}$('trendClose').textContent=open?'收起':'展开';$('trendClose').title=open?'收起趋势图':'展开趋势图';if(open&&api?.S.mode==='run')api.redrawTrend?.();}
+ function toggleTrend(){const key=matchMedia('(max-width:780px)').matches?'narrow':'wide';if(api.S.mode!=='run'){trendChoice[key]=true;api.setMode('run');}else{trendChoice[key]=!trendChoice[key];renderTrend();api.refreshPresentation();}}
+ return {ready,apply,device,toggleTrend,prepareWorkspace:()=>{if(api&&!applying)api.closeInfo();},rememberTab:tab=>{if(tab)lastTab=tab;},state:()=>({mode:api?.S.mode,tab:lastTab,playing:playing(),version:window.NZ_PROJECT_VERSION?.version})};
 })();
+
 
 </script>
 <script>/* ===== premium.js ===== */
@@ -12116,22 +12128,22 @@ window.NZ_MODES=(function(){
 
     const X = i => 4 + i / (trend.N - 1) * (W - 8);
     const Y = v => H - 6 - (v / mx) * (H - 18);
-    const line = (key, color, width, abs) => {
+    const line = (key, color, width, abs, dash = []) => {
       g.beginPath(); let started = false;
       for (let i = 0; i < d.length; i++) {
         const v = abs ? Math.abs(d[i][key]) : d[i][key];
         const x = X(i), y = Y(v);
         if (!started) { g.moveTo(x, y); started = true; } else g.lineTo(x, y);
       }
-      g.strokeStyle = color; g.lineWidth = width; g.stroke();
+      g.setLineDash(dash); g.strokeStyle = color; g.lineWidth = width; g.stroke(); g.setLineDash([]);
     };
     /* 零线（储能充放基线） */
     g.strokeStyle = 'rgba(110,150,185,.3)'; g.beginPath(); g.moveTo(0, Y(0)); g.lineTo(W, Y(0)); g.stroke();
-    line('gen', PAL.power, 1.6);
-    line('served', PAL.gold, 1.6);
-    line('buy', PAL.warn, 1.4);
-    line('cur', '#7F93A6', 1.4);
-    line('st', PAL.hydrogen, 1.4, true);
+    line('gen', '#D97706', 2);
+    line('served', '#087D73', 2);
+    line('buy', '#7C3AED', 2, false, [6, 4]);
+    line('cur', '#64748B', 1.8);
+    line('st', '#2563EB', 1.8, true);
   }
 
   function drawTimeline() {
@@ -12653,17 +12665,8 @@ window.NZ_MODES=(function(){
     $('infoClose').addEventListener('click', closeInfo);
 
     /* 趋势面板 */
-    $('btnTrend').addEventListener('click', () => {
-      if(S.mode!=='run'){setMode('run');return;}
-      const p = $('trendPanel');
-      p.classList.toggle('open');
-      $('btnTrend').textContent = p.classList.contains('open') ? '平衡趋势 ▾' : '平衡趋势 ▴';
-      if (p.classList.contains('open')) { sizeCanvas($('trendCanvas'), 150); drawTrend(); }
-    });
-    $('trendClose').addEventListener('click', () => {
-      $('trendPanel').classList.remove('open');
-      $('btnTrend').textContent = '平衡趋势 ▴';
-    });
+    $('btnTrend').addEventListener('click',()=>window.NZ_MODES.toggleTrend());
+    $('trendClose').addEventListener('click',()=>window.NZ_MODES.toggleTrend());
 
     /* 减少动态 */
     $('btnReduce').addEventListener('click', () => {
@@ -13060,6 +13063,7 @@ function paintNarration(){if(!tour.active)return;const c=TOUR[tour.chap],inside=
       $('btnAutoRot').classList.toggle('primary', !!controls.autoRotate);
       updateDash(); if (typeof updateLabels3D === 'function') updateLabels3D();
     },
+    redrawTrend:drawTrend, trendSnapshot:()=>JSON.parse(JSON.stringify(trend)),
     setMode, applyScenario, startTour, exitTour, tourJump, toggleTourPause,
     focus: focusDevice, exportData, cancelCamera: cancelTween,
     dcdt: window.GOBI_DCDT,

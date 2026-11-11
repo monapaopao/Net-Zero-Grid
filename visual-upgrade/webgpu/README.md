@@ -1,7 +1,7 @@
 # Three.js r187 / WebGPU · 原生模型版
 
 <!-- project-release:start -->
-当前项目版本：**v21.1.0 · 参观与仿真双模式版**。版本规则见 [VERSIONING.md](../../VERSIONING.md)。
+当前项目版本：**v21.1.1 · 仿真趋势面板布局与配色修复**。版本规则见 [VERSIONING.md](../../VERSIONING.md)。
 <!-- project-release:end -->
 
 基准回退标签为 `v21.0.0`。参观扩大画面并显示三项摘要；仿真展开参数、趋势及结果分析。模式切换保持业务状态与相机连续。布局说明见 [UI-MODES.md](../../docs/UI-MODES.md)。
@@ -65,3 +65,5 @@ node visual-upgrade/webgpu/build.cjs --rebuild-engine
 帧时间包括 CPU、GPU 和浏览器调度，并受垂直同步影响；该记录不是不同 API 的等算法基准，也不能证明所有设备或高 DPI 下均有 60 FPS。当前阶段以恢复确认的视觉基线和保留指定交互为目标。
 
 引擎采用 Three.js r187，许可见 [Three.js MIT 许可](../vendor/THREE-LICENSE.txt)。
+
+趋势图现嵌入仿真工作区实时指标下方，桌面展开、窄屏折叠；购电为紫色虚线。专项检查：node visual-upgrade/webgpu/check-trend.cjs，记录见 evidence/trend-check.json。
