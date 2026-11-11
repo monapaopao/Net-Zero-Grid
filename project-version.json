@@ -1,0 +1,7 @@
+{
+  "version": "21.0.0",
+  "name": "原生 WebGPU 基准版",
+  "date": "2026-11-11",
+  "modelBaseline": "v20",
+  "visualBaseline": "d04ac10"
+}

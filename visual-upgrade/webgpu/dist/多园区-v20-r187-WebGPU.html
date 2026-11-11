@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="MultiCampus VisitorPresentation build v20.0.0">
-<title>多园区共享综合能源系统 | 西比里能源 xibili energy · v20 · Three.js r187 原生模型 · WebGPU</title>
+<title>多园区共享综合能源系统 | 西比里能源 xibili energy · v21.0.0 · Three.js r187 原生模型 · WebGPU</title>
 <!--
   单文件离线交付：模型、脚本、样式、字形全部内嵌，无任何外部请求。
   原始版本（未被本文件改写）：original/Net-Zero-grid-simulation-20260722.html
@@ -903,6 +903,7 @@ body.strategy-pair-playing .strategy-final.strategy-single{grid-template-columns
     @media(max-width:780px){.scene-tools{top:76px;right:12px;width:calc(100% - 24px)}#flowLayers{top:120px;right:12px;width:calc(100% - 24px)}}
   
 </style>
+<script>window.NZ_PROJECT_VERSION=Object.freeze({"version":"21.0.0","name":"原生 WebGPU 基准版","date":"2026-11-11","modelBaseline":"v20","visualBaseline":"d04ac10"});</script>
 </head>
 <body class="mode-exhibit">
 <!-- =====================================================================
@@ -12759,6 +12760,8 @@ window.NZ_VEHICLES=(function(){
     const payload = {
       brand: CFG.BRAND,
       modelVersion: CFG.version,
+      projectVersion: window.NZ_PROJECT_VERSION.version,
+      projectRelease: window.NZ_PROJECT_VERSION.name,
       exportedAtSimTime: S.simTime,
       demoNote: '本导出为演示模型的运行状态与核算账本，不是实测数据，也不构成达标或投资结论。',
       scene: {
@@ -12993,6 +12996,7 @@ function paintNarration(){if(!tour.active)return;const c=TOUR[tour.chap],inside=
 
   boot().then(() => {
     window.NZ_GPU.ready = true;
+    const stamp=document.createElement('span');stamp.id='projectVersion';stamp.textContent='v'+NZ_PROJECT_VERSION.version;stamp.title=NZ_PROJECT_VERSION.name;stamp.style.cssText='font-size:11px;color:#526b70;margin-left:8px';document.querySelector('.brand-caption').append(stamp);
     document.title = '[' + NZ_GPU.backend + ' · ' + NZ_GPU.effect + '] ' + document.title;
   }).catch(error => {
     window.NZ_GPU.error = error.message;

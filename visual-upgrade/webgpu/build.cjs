@@ -5,6 +5,7 @@ const { spawnSync } = require('node:child_process');
 const vm = require('node:vm');
 const patchFlows = require('../shared/flow-build.cjs');
 const patchLabels = require('../shared/label-controls.cjs');
+const projectVersion = require('../../scripts/project-version.cjs');
 const root = path.resolve(__dirname, '../..');
 const pkg = path.join(root, 'tmp/three-r187-tools/r187/package');
 const vendor = path.join(__dirname, 'vendor');
@@ -65,6 +66,8 @@ html = html.replace(/<script>\/\* ===== ([\w.-]+) ===== \*\/\r?\n([\s\S]*?)\r?\n
   return '<script>/* ===== ' + name + ' ===== */\n' + code + '\n</script>';
 });
 html = html.replace('视觉升级</title>', '原生模型 · WebGPU</title>');
+html = projectVersion.patch(html);
+projectVersion.docs();
 const out = path.join(__dirname, 'dist');
 fs.mkdirSync(out, { recursive: true });
 fs.writeFileSync(path.join(out, '多园区-v20-r187-WebGPU.html'), html);
