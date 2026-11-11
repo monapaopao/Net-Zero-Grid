@@ -25,7 +25,7 @@ function patchOnce(code, from, to) {
 
 const html = original.replace(/<script>\/\* ===== ([\w.-]+) ===== \*\/\r?\n([\s\S]*?)\r?\n<\/script>/g, (script, name, source) => {
   seen.add(name);
-  let code = source;
+  let code = require('./vehicles/build.cjs')(name, source);
   if (name === 'three.js') code = bundle;
   else if (name === 'orbit.js') code = '// OrbitControls is bundled with the matching Three.js revision.';
   else if (name === 'color-management.js') code = 'THREE.ColorManagement.enabled = true;';

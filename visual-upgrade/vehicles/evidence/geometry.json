@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "kinds": [
+    "model3",
+    "yu7",
+    "li",
+    "ice",
+    "bus",
+    "fire",
+    "truck",
+    "tanker"
+  ],
+  "parts": {
+    "model3": 204,
+    "yu7": 206,
+    "li": 207,
+    "ice": 202,
+    "bus": 181,
+    "fire": 273,
+    "truck": 212,
+    "tanker": 189
+  },
+  "vehicleCount": 23,
+  "connections": 9,
+  "drawBatches": 125,
+  "finiteGeometry": true,
+  "realWheelOpenings": true,
+  "groundAndCanopyClear": true,
+  "noVehicleOverlap": true,
+  "distanceDetails": {
+    "near": 33,
+    "far": 0
+  },
+  "immutableEnergyState": true
+}

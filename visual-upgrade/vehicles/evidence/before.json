@@ -1,0 +1,1913 @@
+{
+  "version": "21.1.1",
+  "viewport": [
+    1440,
+    810
+  ],
+  "dpr": 1,
+  "quality": "high",
+  "audit": {
+    "vehicles": [
+      {
+        "id": "chemical-tanker",
+        "kind": "tanker",
+        "p": [
+          271,
+          0.21399999344348897,
+          -151.2
+        ],
+        "heading": 0,
+        "plate": "沪A10000",
+        "zone": "chemical",
+        "connectedBay": null,
+        "port": null
+      },
+      {
+        "id": "charge-N01",
+        "kind": "model3",
+        "p": [
+          47.5,
+          0.18899999679625035,
+          89
+        ],
+        "heading": 0,
+        "plate": "沪AD10001",
+        "zone": "charging",
+        "connectedBay": "N01",
+        "port": [
+          46.551,
+          1.0189999967962504,
+          87.466
+        ]
+      },
+      {
+        "id": "charge-N03",
+        "kind": "li",
+        "p": [
+          53.5,
+          0.18899999679625035,
+          89
+        ],
+        "heading": 0,
+        "plate": "沪AD10002",
+        "zone": "charging",
+        "connectedBay": "N03",
+        "port": [
+          52.475,
+          1.0189999967962504,
+          87.3035
+        ]
+      },
+      {
+        "id": "charge-N05",
+        "kind": "yu7",
+        "p": [
+          59.5,
+          0.18899999679625035,
+          89
+        ],
+        "heading": 0,
+        "plate": "沪AD10003",
+        "zone": "charging",
+        "connectedBay": "N05",
+        "port": [
+          58.477,
+          1.0189999967962504,
+          87.375
+        ]
+      },
+      {
+        "id": "charge-N08",
+        "kind": "yu7",
+        "p": [
+          68.5,
+          0.18899999679625035,
+          89
+        ],
+        "heading": 0,
+        "plate": "沪AD10004",
+        "zone": "charging",
+        "connectedBay": "N08",
+        "port": [
+          67.477,
+          1.0189999967962504,
+          87.375
+        ]
+      },
+      {
+        "id": "charge-N11",
+        "kind": "yu7",
+        "p": [
+          77.5,
+          0.18899999679625035,
+          89
+        ],
+        "heading": 0,
+        "plate": "沪AD10005",
+        "zone": "charging",
+        "connectedBay": "N11",
+        "port": [
+          76.477,
+          1.0189999967962504,
+          87.375
+        ]
+      },
+      {
+        "id": "charge-S06",
+        "kind": "model3",
+        "p": [
+          62.5,
+          0.18899999679625035,
+          107
+        ],
+        "heading": 3.141592653589793,
+        "plate": "沪AD10006",
+        "zone": "charging",
+        "connectedBay": "S06",
+        "port": [
+          63.449,
+          1.0189999967962504,
+          108.534
+        ]
+      },
+      {
+        "id": "charge-S08",
+        "kind": "li",
+        "p": [
+          68.5,
+          0.18899999679625035,
+          107
+        ],
+        "heading": 3.141592653589793,
+        "plate": "沪AD10007",
+        "zone": "charging",
+        "connectedBay": "S08",
+        "port": [
+          69.525,
+          1.0189999967962504,
+          108.6965
+        ]
+      },
+      {
+        "id": "charge-S10",
+        "kind": "yu7",
+        "p": [
+          74.5,
+          0.18899999679625035,
+          107
+        ],
+        "heading": 3.141592653589793,
+        "plate": "沪AD10008",
+        "zone": "charging",
+        "connectedBay": "S10",
+        "port": [
+          75.523,
+          1.0189999967962504,
+          108.625
+        ]
+      },
+      {
+        "id": "charge-bus",
+        "kind": "bus",
+        "p": [
+          52,
+          0.20650000059604656,
+          107
+        ],
+        "heading": 1.5707963267948966,
+        "plate": "沪AD10009",
+        "zone": "charging",
+        "connectedBay": "S01",
+        "port": [
+          48.165,
+          1.3265000005960466,
+          108.3
+        ]
+      },
+      {
+        "id": "park-0-2",
+        "kind": "li",
+        "p": [
+          41,
+          0.1590000011920929,
+          126.8
+        ],
+        "heading": 0,
+        "plate": "沪AD10010",
+        "zone": "parking",
+        "connectedBay": null,
+        "port": [
+          39.975,
+          0.9890000011920929,
+          125.1035
+        ]
+      },
+      {
+        "id": "park-0-4",
+        "kind": "yu7",
+        "p": [
+          49,
+          0.1590000011920929,
+          126.8
+        ],
+        "heading": 0,
+        "plate": "沪AD10011",
+        "zone": "parking",
+        "connectedBay": null,
+        "port": [
+          47.977,
+          0.9890000011920929,
+          125.175
+        ]
+      },
+      {
+        "id": "park-0-6",
+        "kind": "model3",
+        "p": [
+          57,
+          0.1590000011920929,
+          126.8
+        ],
+        "heading": 0,
+        "plate": "沪AD10012",
+        "zone": "parking",
+        "connectedBay": null,
+        "port": [
+          56.051,
+          0.9890000011920929,
+          125.26599999999999
+        ]
+      },
+      {
+        "id": "park-0-8",
+        "kind": "li",
+        "p": [
+          65,
+          0.1590000011920929,
+          126.8
+        ],
+        "heading": 0,
+        "plate": "沪AD10013",
+        "zone": "parking",
+        "connectedBay": null,
+        "port": [
+          63.975,
+          0.9890000011920929,
+          125.1035
+        ]
+      },
+      {
+        "id": "park-0-10",
+        "kind": "ice",
+        "p": [
+          73,
+          0.1590000011920929,
+          126.8
+        ],
+        "heading": 0,
+        "plate": "沪A10014",
+        "zone": "parking",
+        "connectedBay": null,
+        "port": null
+      },
+      {
+        "id": "park-1-1",
+        "kind": "li",
+        "p": [
+          37,
+          0.1590000011920929,
+          135.2
+        ],
+        "heading": 3.141592653589793,
+        "plate": "沪AD10015",
+        "zone": "parking",
+        "connectedBay": null,
+        "port": [
+          38.025,
+          0.9890000011920929,
+          136.89649999999997
+        ]
+      },
+      {
+        "id": "park-1-3",
+        "kind": "yu7",
+        "p": [
+          45,
+          0.1590000011920929,
+          135.2
+        ],
+        "heading": 3.141592653589793,
+        "plate": "沪AD10016",
+        "zone": "parking",
+        "connectedBay": null,
+        "port": [
+          46.022999999999996,
+          0.9890000011920929,
+          136.825
+        ]
+      },
+      {
+        "id": "park-1-5",
+        "kind": "model3",
+        "p": [
+          53,
+          0.1590000011920929,
+          135.2
+        ],
+        "heading": 3.141592653589793,
+        "plate": "沪AD10017",
+        "zone": "parking",
+        "connectedBay": null,
+        "port": [
+          53.949,
+          0.9890000011920929,
+          136.73399999999998
+        ]
+      },
+      {
+        "id": "park-1-7",
+        "kind": "li",
+        "p": [
+          61,
+          0.1590000011920929,
+          135.2
+        ],
+        "heading": 3.141592653589793,
+        "plate": "沪AD10018",
+        "zone": "parking",
+        "connectedBay": null,
+        "port": [
+          62.025,
+          0.9890000011920929,
+          136.89649999999997
+        ]
+      },
+      {
+        "id": "park-1-9",
+        "kind": "ice",
+        "p": [
+          69,
+          0.1590000011920929,
+          135.2
+        ],
+        "heading": 3.141592653589793,
+        "plate": "沪A10019",
+        "zone": "parking",
+        "connectedBay": null,
+        "port": null
+      },
+      {
+        "id": "fire-response",
+        "kind": "fire",
+        "p": [
+          144,
+          0.42399998688697815,
+          -60
+        ],
+        "heading": 1.5707963267948966,
+        "plate": "沪A10020",
+        "zone": "fire",
+        "connectedBay": null,
+        "port": null
+      },
+      {
+        "id": "compute-logistics",
+        "kind": "truck",
+        "p": [
+          145,
+          0.004000000000000111,
+          128
+        ],
+        "heading": 1.5707963267948966,
+        "plate": "沪A10021",
+        "zone": "logistics",
+        "connectedBay": null,
+        "port": null
+      },
+      {
+        "id": "factory-logistics",
+        "kind": "truck",
+        "p": [
+          314,
+          0.004,
+          93
+        ],
+        "heading": 0,
+        "plate": "沪A10022",
+        "zone": "factory",
+        "connectedBay": null,
+        "port": null
+      }
+    ],
+    "bays": [
+      {
+        "id": "N01",
+        "vehicle": "charge-N01",
+        "port": [
+          47.21,
+          1.42,
+          84.3
+        ]
+      },
+      {
+        "id": "N02",
+        "vehicle": null,
+        "port": [
+          50.21,
+          1.42,
+          84.3
+        ]
+      },
+      {
+        "id": "N03",
+        "vehicle": "charge-N03",
+        "port": [
+          53.21,
+          1.42,
+          84.3
+        ]
+      },
+      {
+        "id": "N04",
+        "vehicle": null,
+        "port": [
+          56.21,
+          1.42,
+          84.3
+        ]
+      },
+      {
+        "id": "N05",
+        "vehicle": "charge-N05",
+        "port": [
+          59.21,
+          1.42,
+          84.3
+        ]
+      },
+      {
+        "id": "N06",
+        "vehicle": null,
+        "port": [
+          62.21,
+          1.42,
+          84.3
+        ]
+      },
+      {
+        "id": "N07",
+        "vehicle": null,
+        "port": [
+          65.21,
+          1.42,
+          84.3
+        ]
+      },
+      {
+        "id": "N08",
+        "vehicle": "charge-N08",
+        "port": [
+          68.21,
+          1.42,
+          84.3
+        ]
+      },
+      {
+        "id": "N09",
+        "vehicle": null,
+        "port": [
+          71.21,
+          1.42,
+          84.3
+        ]
+      },
+      {
+        "id": "N10",
+        "vehicle": null,
+        "port": [
+          74.21,
+          1.42,
+          84.3
+        ]
+      },
+      {
+        "id": "N11",
+        "vehicle": "charge-N11",
+        "port": [
+          77.21,
+          1.42,
+          84.3
+        ]
+      },
+      {
+        "id": "N12",
+        "vehicle": null,
+        "port": [
+          80.21,
+          1.42,
+          84.3
+        ]
+      },
+      {
+        "id": "S01",
+        "vehicle": "charge-bus",
+        "port": [
+          47.21,
+          1.42,
+          111.7
+        ]
+      },
+      {
+        "id": "S02",
+        "vehicle": null,
+        "port": [
+          50.21,
+          1.42,
+          111.7
+        ]
+      },
+      {
+        "id": "S03",
+        "vehicle": null,
+        "port": [
+          53.21,
+          1.42,
+          111.7
+        ]
+      },
+      {
+        "id": "S04",
+        "vehicle": null,
+        "port": [
+          56.21,
+          1.42,
+          111.7
+        ]
+      },
+      {
+        "id": "S05",
+        "vehicle": null,
+        "port": [
+          59.21,
+          1.42,
+          111.7
+        ]
+      },
+      {
+        "id": "S06",
+        "vehicle": "charge-S06",
+        "port": [
+          62.21,
+          1.42,
+          111.7
+        ]
+      },
+      {
+        "id": "S07",
+        "vehicle": null,
+        "port": [
+          65.21,
+          1.42,
+          111.7
+        ]
+      },
+      {
+        "id": "S08",
+        "vehicle": "charge-S08",
+        "port": [
+          68.21,
+          1.42,
+          111.7
+        ]
+      },
+      {
+        "id": "S09",
+        "vehicle": null,
+        "port": [
+          71.21,
+          1.42,
+          111.7
+        ]
+      },
+      {
+        "id": "S10",
+        "vehicle": "charge-S10",
+        "port": [
+          74.21,
+          1.42,
+          111.7
+        ]
+      },
+      {
+        "id": "S11",
+        "vehicle": null,
+        "port": [
+          77.21,
+          1.42,
+          111.7
+        ]
+      },
+      {
+        "id": "S12",
+        "vehicle": null,
+        "port": [
+          80.21,
+          1.42,
+          111.7
+        ]
+      }
+    ],
+    "routes": [
+      {
+        "id": "charge-N01",
+        "points": [
+          [
+            47.21,
+            1.42,
+            84.3
+          ],
+          [
+            46.76,
+            1.17,
+            84.95
+          ],
+          [
+            46.321000000000005,
+            0.55,
+            85.883
+          ],
+          [
+            46.321000000000005,
+            1.0189999967962504,
+            87.466
+          ],
+          [
+            46.551,
+            1.0189999967962504,
+            87.466
+          ]
+        ],
+        "endpoint": [
+          46.551,
+          1.0189999967962504,
+          87.466
+        ]
+      },
+      {
+        "id": "charge-N03",
+        "points": [
+          [
+            53.21,
+            1.42,
+            84.3
+          ],
+          [
+            52.76,
+            1.17,
+            84.95
+          ],
+          [
+            52.245000000000005,
+            0.55,
+            85.80175
+          ],
+          [
+            52.245000000000005,
+            1.0189999967962504,
+            87.3035
+          ],
+          [
+            52.475,
+            1.0189999967962504,
+            87.3035
+          ]
+        ],
+        "endpoint": [
+          52.475,
+          1.0189999967962504,
+          87.3035
+        ]
+      },
+      {
+        "id": "charge-N05",
+        "points": [
+          [
+            59.21,
+            1.42,
+            84.3
+          ],
+          [
+            58.76,
+            1.17,
+            84.95
+          ],
+          [
+            58.247,
+            0.55,
+            85.8375
+          ],
+          [
+            58.247,
+            1.0189999967962504,
+            87.375
+          ],
+          [
+            58.477,
+            1.0189999967962504,
+            87.375
+          ]
+        ],
+        "endpoint": [
+          58.477,
+          1.0189999967962504,
+          87.375
+        ]
+      },
+      {
+        "id": "charge-N08",
+        "points": [
+          [
+            68.21,
+            1.42,
+            84.3
+          ],
+          [
+            67.75999999999999,
+            1.17,
+            84.95
+          ],
+          [
+            67.247,
+            0.55,
+            85.8375
+          ],
+          [
+            67.247,
+            1.0189999967962504,
+            87.375
+          ],
+          [
+            67.477,
+            1.0189999967962504,
+            87.375
+          ]
+        ],
+        "endpoint": [
+          67.477,
+          1.0189999967962504,
+          87.375
+        ]
+      },
+      {
+        "id": "charge-N11",
+        "points": [
+          [
+            77.21,
+            1.42,
+            84.3
+          ],
+          [
+            76.75999999999999,
+            1.17,
+            84.95
+          ],
+          [
+            76.247,
+            0.55,
+            85.8375
+          ],
+          [
+            76.247,
+            1.0189999967962504,
+            87.375
+          ],
+          [
+            76.477,
+            1.0189999967962504,
+            87.375
+          ]
+        ],
+        "endpoint": [
+          76.477,
+          1.0189999967962504,
+          87.375
+        ]
+      },
+      {
+        "id": "charge-bus",
+        "points": [
+          [
+            47.21,
+            1.42,
+            111.7
+          ],
+          [
+            46.76,
+            1.17,
+            111.05
+          ],
+          [
+            48.165,
+            0.55,
+            110.11500000000001
+          ],
+          [
+            48.165,
+            1.3265000005960466,
+            108.53
+          ],
+          [
+            48.165,
+            1.3265000005960466,
+            108.3
+          ]
+        ],
+        "endpoint": [
+          48.165,
+          1.3265000005960466,
+          108.3
+        ]
+      },
+      {
+        "id": "charge-S06",
+        "points": [
+          [
+            62.21,
+            1.42,
+            111.7
+          ],
+          [
+            61.76,
+            1.17,
+            111.05
+          ],
+          [
+            63.678999999999995,
+            0.55,
+            110.117
+          ],
+          [
+            63.678999999999995,
+            1.0189999967962504,
+            108.534
+          ],
+          [
+            63.449,
+            1.0189999967962504,
+            108.534
+          ]
+        ],
+        "endpoint": [
+          63.449,
+          1.0189999967962504,
+          108.534
+        ]
+      },
+      {
+        "id": "charge-S08",
+        "points": [
+          [
+            68.21,
+            1.42,
+            111.7
+          ],
+          [
+            67.75999999999999,
+            1.17,
+            111.05
+          ],
+          [
+            69.75500000000001,
+            0.55,
+            110.19825
+          ],
+          [
+            69.75500000000001,
+            1.0189999967962504,
+            108.6965
+          ],
+          [
+            69.525,
+            1.0189999967962504,
+            108.6965
+          ]
+        ],
+        "endpoint": [
+          69.525,
+          1.0189999967962504,
+          108.6965
+        ]
+      },
+      {
+        "id": "charge-S10",
+        "points": [
+          [
+            74.21,
+            1.42,
+            111.7
+          ],
+          [
+            73.75999999999999,
+            1.17,
+            111.05
+          ],
+          [
+            75.753,
+            0.55,
+            110.1625
+          ],
+          [
+            75.753,
+            1.0189999967962504,
+            108.625
+          ],
+          [
+            75.523,
+            1.0189999967962504,
+            108.625
+          ]
+        ],
+        "endpoint": [
+          75.523,
+          1.0189999967962504,
+          108.625
+        ]
+      }
+    ],
+    "retired": 26,
+    "drawBatches": 104,
+    "detailVisible": true,
+    "parkingPositions": 21,
+    "terminals": 24,
+    "capacityMW": 28.8,
+    "singleVehicleTelemetry": false,
+    "stationBoard": true,
+    "partCounts": {
+      "tanker": 92,
+      "model3": 78,
+      "li": 81,
+      "yu7": 80,
+      "bus": 109,
+      "ice": 76,
+      "fire": 174,
+      "truck": 128
+    }
+  },
+  "samples": [
+    {
+      "view": "campus",
+      "medianMs": 16.699999999999818,
+      "p95Ms": 33.399999999999636,
+      "perf": {
+        "fps": 43,
+        "worstFps": 6.39386189258312,
+        "samples": [
+          6,
+          45,
+          43
+        ],
+        "renderMs": 20.517419209686455,
+        "draws": 3382,
+        "triangles": 10295000,
+        "lastPassDraws": 3382,
+        "quality": "high",
+        "pixelRatio": 1,
+        "vw": 1440,
+        "vh": 810,
+        "ao": true,
+        "environment": {
+          "quality": "high",
+          "refinedVisible": true,
+          "basicVisible": true,
+          "night": false,
+          "localLights": 0,
+          "trees": 411,
+          "shrubs": 1868,
+          "roadLamps": 161,
+          "canopyLamps": 9,
+          "parkingSpaces": 24,
+          "benches": 1,
+          "boundary": {
+            "x0": -565,
+            "x1": 360,
+            "z0": -425,
+            "z1": 190
+          },
+          "sites": {
+            "compute": {
+              "name": "数据中心园区",
+              "x0": 84,
+              "x1": 214,
+              "z0": -36,
+              "z1": 150,
+              "gate": [
+                95,
+                150
+              ],
+              "polygon": [
+                [
+                  84,
+                  -36
+                ],
+                [
+                  214,
+                  -36
+                ],
+                [
+                  214,
+                  150
+                ],
+                [
+                  84,
+                  150
+                ],
+                [
+                  84,
+                  40
+                ],
+                [
+                  88,
+                  40
+                ],
+                [
+                  88,
+                  6
+                ],
+                [
+                  84,
+                  6
+                ]
+              ]
+            },
+            "chemical": {
+              "name": "化工与电冶金园区",
+              "x0": 90,
+              "x1": 310,
+              "z0": -275,
+              "z1": -125,
+              "gate": [
+                296,
+                -125
+              ]
+            },
+            "nuclear": {
+              "name": "独立 SMR 核电研究园区",
+              "x0": 227,
+              "x1": 333,
+              "z0": -392,
+              "z1": -318,
+              "gate": [
+                304,
+                -319
+              ]
+            },
+            "factory": {
+              "name": "智能制造与柔性用能区",
+              "x0": 238,
+              "x1": 326,
+              "z0": -90,
+              "z1": 135,
+              "gate": [
+                249,
+                135
+              ],
+              "westGate": [
+                238,
+                23
+              ]
+            },
+            "energy": {
+              "name": "共享能源枢纽",
+              "x0": -10,
+              "x1": 87,
+              "z0": -44,
+              "z1": 59,
+              "gate": [
+                2,
+                59
+              ],
+              "polygon": [
+                [
+                  -10,
+                  -44
+                ],
+                [
+                  82,
+                  -44
+                ],
+                [
+                  82,
+                  6
+                ],
+                [
+                  87,
+                  6
+                ],
+                [
+                  87,
+                  40
+                ],
+                [
+                  82,
+                  40
+                ],
+                [
+                  82,
+                  59
+                ],
+                [
+                  -10,
+                  59
+                ]
+              ]
+            },
+            "public": {
+              "name": "公共交通与充电服务区",
+              "x0": 24,
+              "x1": 86,
+              "z0": 75,
+              "z1": 142,
+              "gate": [
+                64,
+                142
+              ]
+            },
+            "emergency": {
+              "name": "消防站",
+              "x0": 118,
+              "x1": 182,
+              "z0": -99,
+              "z1": -47,
+              "gate": [
+                150,
+                -47
+              ],
+              "serviceGate": [
+                174,
+                -99
+              ]
+            }
+          },
+          "southRoad": {
+            "z0": 136,
+            "z1": 144
+          },
+          "postDetails": [],
+          "coverage": {
+            "energy": {
+              "roads": 5,
+              "trees": 14,
+              "shrubs": 52,
+              "lamps": 7
+            },
+            "compute": {
+              "roads": 9,
+              "trees": 46,
+              "shrubs": 217,
+              "lamps": 29
+            },
+            "public": {
+              "roads": 6,
+              "trees": 4,
+              "shrubs": 32,
+              "lamps": 2
+            },
+            "chemical": {
+              "roads": 7,
+              "trees": 88,
+              "shrubs": 474,
+              "lamps": 37
+            },
+            "factory": {
+              "roads": 5,
+              "trees": 35,
+              "shrubs": 189,
+              "lamps": 18
+            },
+            "regional": {
+              "roads": 12,
+              "trees": 211,
+              "shrubs": 756,
+              "lamps": 56
+            },
+            "nuclear": {
+              "roads": 4,
+              "trees": 12,
+              "shrubs": 103,
+              "lamps": 11
+            },
+            "logistics": {
+              "roads": 0,
+              "trees": 0,
+              "shrubs": 36,
+              "lamps": 1
+            },
+            "entrance": {
+              "roads": 0,
+              "trees": 0,
+              "shrubs": 2,
+              "lamps": 0
+            },
+            "industrial": {
+              "roads": 0,
+              "trees": 1,
+              "shrubs": 7,
+              "lamps": 0
+            }
+          },
+          "roadSegments": 48,
+          "activeLightZones": []
+        },
+        "bloom": false
+      },
+      "fleetVisibleMeshes": 180,
+      "fleetTriangles": 163734,
+      "detail": true
+    },
+    {
+      "view": "charge",
+      "medianMs": 16.69999999999891,
+      "p95Ms": 16.899999999999636,
+      "perf": {
+        "fps": 59,
+        "worstFps": 6.39386189258312,
+        "samples": [
+          6,
+          45,
+          43,
+          44,
+          57,
+          59
+        ],
+        "renderMs": 13.701536925162163,
+        "draws": 1609,
+        "triangles": 7166506,
+        "lastPassDraws": 1609,
+        "quality": "high",
+        "pixelRatio": 1,
+        "vw": 1440,
+        "vh": 810,
+        "ao": true,
+        "environment": {
+          "quality": "high",
+          "refinedVisible": true,
+          "basicVisible": true,
+          "night": false,
+          "localLights": 0,
+          "trees": 411,
+          "shrubs": 1868,
+          "roadLamps": 161,
+          "canopyLamps": 9,
+          "parkingSpaces": 24,
+          "benches": 1,
+          "boundary": {
+            "x0": -565,
+            "x1": 360,
+            "z0": -425,
+            "z1": 190
+          },
+          "sites": {
+            "compute": {
+              "name": "数据中心园区",
+              "x0": 84,
+              "x1": 214,
+              "z0": -36,
+              "z1": 150,
+              "gate": [
+                95,
+                150
+              ],
+              "polygon": [
+                [
+                  84,
+                  -36
+                ],
+                [
+                  214,
+                  -36
+                ],
+                [
+                  214,
+                  150
+                ],
+                [
+                  84,
+                  150
+                ],
+                [
+                  84,
+                  40
+                ],
+                [
+                  88,
+                  40
+                ],
+                [
+                  88,
+                  6
+                ],
+                [
+                  84,
+                  6
+                ]
+              ]
+            },
+            "chemical": {
+              "name": "化工与电冶金园区",
+              "x0": 90,
+              "x1": 310,
+              "z0": -275,
+              "z1": -125,
+              "gate": [
+                296,
+                -125
+              ]
+            },
+            "nuclear": {
+              "name": "独立 SMR 核电研究园区",
+              "x0": 227,
+              "x1": 333,
+              "z0": -392,
+              "z1": -318,
+              "gate": [
+                304,
+                -319
+              ]
+            },
+            "factory": {
+              "name": "智能制造与柔性用能区",
+              "x0": 238,
+              "x1": 326,
+              "z0": -90,
+              "z1": 135,
+              "gate": [
+                249,
+                135
+              ],
+              "westGate": [
+                238,
+                23
+              ]
+            },
+            "energy": {
+              "name": "共享能源枢纽",
+              "x0": -10,
+              "x1": 87,
+              "z0": -44,
+              "z1": 59,
+              "gate": [
+                2,
+                59
+              ],
+              "polygon": [
+                [
+                  -10,
+                  -44
+                ],
+                [
+                  82,
+                  -44
+                ],
+                [
+                  82,
+                  6
+                ],
+                [
+                  87,
+                  6
+                ],
+                [
+                  87,
+                  40
+                ],
+                [
+                  82,
+                  40
+                ],
+                [
+                  82,
+                  59
+                ],
+                [
+                  -10,
+                  59
+                ]
+              ]
+            },
+            "public": {
+              "name": "公共交通与充电服务区",
+              "x0": 24,
+              "x1": 86,
+              "z0": 75,
+              "z1": 142,
+              "gate": [
+                64,
+                142
+              ]
+            },
+            "emergency": {
+              "name": "消防站",
+              "x0": 118,
+              "x1": 182,
+              "z0": -99,
+              "z1": -47,
+              "gate": [
+                150,
+                -47
+              ],
+              "serviceGate": [
+                174,
+                -99
+              ]
+            }
+          },
+          "southRoad": {
+            "z0": 136,
+            "z1": 144
+          },
+          "postDetails": [],
+          "coverage": {
+            "energy": {
+              "roads": 5,
+              "trees": 14,
+              "shrubs": 52,
+              "lamps": 7
+            },
+            "compute": {
+              "roads": 9,
+              "trees": 46,
+              "shrubs": 217,
+              "lamps": 29
+            },
+            "public": {
+              "roads": 6,
+              "trees": 4,
+              "shrubs": 32,
+              "lamps": 2
+            },
+            "chemical": {
+              "roads": 7,
+              "trees": 88,
+              "shrubs": 474,
+              "lamps": 37
+            },
+            "factory": {
+              "roads": 5,
+              "trees": 35,
+              "shrubs": 189,
+              "lamps": 18
+            },
+            "regional": {
+              "roads": 12,
+              "trees": 211,
+              "shrubs": 756,
+              "lamps": 56
+            },
+            "nuclear": {
+              "roads": 4,
+              "trees": 12,
+              "shrubs": 103,
+              "lamps": 11
+            },
+            "logistics": {
+              "roads": 0,
+              "trees": 0,
+              "shrubs": 36,
+              "lamps": 1
+            },
+            "entrance": {
+              "roads": 0,
+              "trees": 0,
+              "shrubs": 2,
+              "lamps": 0
+            },
+            "industrial": {
+              "roads": 0,
+              "trees": 1,
+              "shrubs": 7,
+              "lamps": 0
+            }
+          },
+          "roadSegments": 48,
+          "activeLightZones": []
+        },
+        "bloom": false
+      },
+      "fleetVisibleMeshes": 180,
+      "fleetTriangles": 163734,
+      "detail": true
+    },
+    {
+      "view": "parking",
+      "medianMs": 16.69999999999709,
+      "p95Ms": 16.799999999999272,
+      "perf": {
+        "fps": 59.50609937518595,
+        "worstFps": 6.39386189258312,
+        "samples": [
+          6,
+          45,
+          43,
+          44,
+          57,
+          59,
+          59,
+          60
+        ],
+        "renderMs": 9.892031441211211,
+        "draws": 1434,
+        "triangles": 7153728,
+        "lastPassDraws": 1434,
+        "quality": "high",
+        "pixelRatio": 1,
+        "vw": 1440,
+        "vh": 810,
+        "ao": true,
+        "environment": {
+          "quality": "high",
+          "refinedVisible": true,
+          "basicVisible": true,
+          "night": false,
+          "localLights": 0,
+          "trees": 411,
+          "shrubs": 1868,
+          "roadLamps": 161,
+          "canopyLamps": 9,
+          "parkingSpaces": 24,
+          "benches": 1,
+          "boundary": {
+            "x0": -565,
+            "x1": 360,
+            "z0": -425,
+            "z1": 190
+          },
+          "sites": {
+            "compute": {
+              "name": "数据中心园区",
+              "x0": 84,
+              "x1": 214,
+              "z0": -36,
+              "z1": 150,
+              "gate": [
+                95,
+                150
+              ],
+              "polygon": [
+                [
+                  84,
+                  -36
+                ],
+                [
+                  214,
+                  -36
+                ],
+                [
+                  214,
+                  150
+                ],
+                [
+                  84,
+                  150
+                ],
+                [
+                  84,
+                  40
+                ],
+                [
+                  88,
+                  40
+                ],
+                [
+                  88,
+                  6
+                ],
+                [
+                  84,
+                  6
+                ]
+              ]
+            },
+            "chemical": {
+              "name": "化工与电冶金园区",
+              "x0": 90,
+              "x1": 310,
+              "z0": -275,
+              "z1": -125,
+              "gate": [
+                296,
+                -125
+              ]
+            },
+            "nuclear": {
+              "name": "独立 SMR 核电研究园区",
+              "x0": 227,
+              "x1": 333,
+              "z0": -392,
+              "z1": -318,
+              "gate": [
+                304,
+                -319
+              ]
+            },
+            "factory": {
+              "name": "智能制造与柔性用能区",
+              "x0": 238,
+              "x1": 326,
+              "z0": -90,
+              "z1": 135,
+              "gate": [
+                249,
+                135
+              ],
+              "westGate": [
+                238,
+                23
+              ]
+            },
+            "energy": {
+              "name": "共享能源枢纽",
+              "x0": -10,
+              "x1": 87,
+              "z0": -44,
+              "z1": 59,
+              "gate": [
+                2,
+                59
+              ],
+              "polygon": [
+                [
+                  -10,
+                  -44
+                ],
+                [
+                  82,
+                  -44
+                ],
+                [
+                  82,
+                  6
+                ],
+                [
+                  87,
+                  6
+                ],
+                [
+                  87,
+                  40
+                ],
+                [
+                  82,
+                  40
+                ],
+                [
+                  82,
+                  59
+                ],
+                [
+                  -10,
+                  59
+                ]
+              ]
+            },
+            "public": {
+              "name": "公共交通与充电服务区",
+              "x0": 24,
+              "x1": 86,
+              "z0": 75,
+              "z1": 142,
+              "gate": [
+                64,
+                142
+              ]
+            },
+            "emergency": {
+              "name": "消防站",
+              "x0": 118,
+              "x1": 182,
+              "z0": -99,
+              "z1": -47,
+              "gate": [
+                150,
+                -47
+              ],
+              "serviceGate": [
+                174,
+                -99
+              ]
+            }
+          },
+          "southRoad": {
+            "z0": 136,
+            "z1": 144
+          },
+          "postDetails": [],
+          "coverage": {
+            "energy": {
+              "roads": 5,
+              "trees": 14,
+              "shrubs": 52,
+              "lamps": 7
+            },
+            "compute": {
+              "roads": 9,
+              "trees": 46,
+              "shrubs": 217,
+              "lamps": 29
+            },
+            "public": {
+              "roads": 6,
+              "trees": 4,
+              "shrubs": 32,
+              "lamps": 2
+            },
+            "chemical": {
+              "roads": 7,
+              "trees": 88,
+              "shrubs": 474,
+              "lamps": 37
+            },
+            "factory": {
+              "roads": 5,
+              "trees": 35,
+              "shrubs": 189,
+              "lamps": 18
+            },
+            "regional": {
+              "roads": 12,
+              "trees": 211,
+              "shrubs": 756,
+              "lamps": 56
+            },
+            "nuclear": {
+              "roads": 4,
+              "trees": 12,
+              "shrubs": 103,
+              "lamps": 11
+            },
+            "logistics": {
+              "roads": 0,
+              "trees": 0,
+              "shrubs": 36,
+              "lamps": 1
+            },
+            "entrance": {
+              "roads": 0,
+              "trees": 0,
+              "shrubs": 2,
+              "lamps": 0
+            },
+            "industrial": {
+              "roads": 0,
+              "trees": 1,
+              "shrubs": 7,
+              "lamps": 0
+            }
+          },
+          "roadSegments": 48,
+          "activeLightZones": []
+        },
+        "bloom": false
+      },
+      "fleetVisibleMeshes": 180,
+      "fleetTriangles": 163734,
+      "detail": true
+    }
+  ],
+  "closeups": [
+    {
+      "kind": "model3",
+      "id": "charge-N01",
+      "parts": 78,
+      "picked": true,
+      "position": [
+        51.3704,
+        3.0235199967962507,
+        93.5312
+      ],
+      "target": [
+        47.5,
+        0.8523199967962504,
+        89
+      ]
+    },
+    {
+      "kind": "yu7",
+      "id": "charge-N05",
+      "parts": 80,
+      "picked": true,
+      "position": [
+        63.6,
+        3.2295999967962503,
+        93.8
+      ],
+      "target": [
+        59.5,
+        0.9295999967962504,
+        89
+      ]
+    },
+    {
+      "kind": "li",
+      "id": "charge-N03",
+      "parts": 81,
+      "picked": true,
+      "position": [
+        57.7804,
+        3.4181999967962513,
+        94.0112
+      ],
+      "target": [
+        53.5,
+        1.0169999967962504,
+        89
+      ]
+    },
+    {
+      "kind": "ice",
+      "id": "park-0-10",
+      "parts": 76,
+      "picked": true,
+      "position": [
+        76.854,
+        3.001800001192094,
+        131.31199999999998
+      ],
+      "target": [
+        73,
+        0.839800001192093,
+        126.8
+      ]
+    },
+    {
+      "kind": "bus",
+      "id": "charge-bus",
+      "parts": 109,
+      "picked": true,
+      "position": [
+        63.328,
+        7.198500000596049,
+        97.324
+      ],
+      "target": [
+        52,
+        1.7705000005960465,
+        107
+      ]
+    },
+    {
+      "kind": "truck",
+      "id": "compute-logistics",
+      "parts": 128,
+      "picked": true,
+      "position": [
+        154.984,
+        6.5360000000000005,
+        119.472
+      ],
+      "target": [
+        145,
+        1.752,
+        128
+      ]
+    },
+    {
+      "kind": "fire",
+      "id": "fire-response",
+      "parts": 174,
+      "picked": true,
+      "position": [
+        152.064,
+        5.713999986886978,
+        -66.888
+      ],
+      "target": [
+        144,
+        1.8499999868869783,
+        -60
+      ]
+    },
+    {
+      "kind": "tanker",
+      "id": "chemical-tanker",
+      "parts": 92,
+      "picked": true,
+      "position": [
+        279.2,
+        6.377999993443492,
+        -141.6
+      ],
+      "target": [
+        271,
+        1.7779999934434891,
+        -151.2
+      ]
+    }
+  ],
+  "interactions": {
+    "cards": true,
+    "statePreserved": true,
+    "ends": true,
+    "backend": "WebGPU"
+  },
+  "errors": []
+}

@@ -1,8 +1,10 @@
 # Three.js r187 / WebGPU · 原生模型版
 
 <!-- project-release:start -->
-当前项目版本：**v21.1.1 · 仿真趋势面板布局与配色修复**。版本规则见 [VERSIONING.md](../../VERSIONING.md)。
+当前项目版本：**v21.2.0 · 园区车辆结构与细节升级**。版本规则见 [VERSIONING.md](../../VERSIONING.md)。
 <!-- project-release:end -->
+
+v21.2.0 车辆升级保存在 [vehicles](../vehicles/README.md)，包含实际轮拱、分体车窗、特种车结构与按距离隐藏细节。沿用全站 WebGPU 通道、能源仿真和充电连接。
 
 基准回退标签为 `v21.0.0`。参观扩大画面并显示三项摘要；仿真展开参数、趋势及结果分析。模式切换保持业务状态与相机连续。布局说明见 [UI-MODES.md](../../docs/UI-MODES.md)。
 

@@ -1,8 +1,10 @@
 # Net-Zero Grid · 多园区共享综合能源系统
 
 <!-- project-release:start -->
-当前项目版本：**v21.1.1 · 仿真趋势面板布局与配色修复**。版本规则见 [VERSIONING.md](VERSIONING.md)。
+当前项目版本：**v21.2.0 · 园区车辆结构与细节升级**。版本规则见 [VERSIONING.md](VERSIONING.md)。
 <!-- project-release:end -->
+
+v21.2.0 重设计全园区 8 类、23 辆车辆，继续使用 Three.js / WebGPU。源码、车型清单及前后性能对照见 [车辆升级说明](visual-upgrade/vehicles/README.md)。
 
 [![验证](https://github.com/monapaopao/Net-Zero-Grid/actions/workflows/verify.yml/badge.svg)](https://github.com/monapaopao/Net-Zero-Grid/actions/workflows/verify.yml)
 ![版本](https://img.shields.io/badge/baseline-v20-146b60)

@@ -20,8 +20,12 @@ window.NZ_RENDER_POLISH = (function () {
     if (key === 'glass') {
       return new T.MeshPhysicalMaterial({ color, roughness: .21, metalness: .13, clearcoat: .29, clearcoatRoughness: .18 });
     }
-    return new T.MeshStandardMaterial({ color, roughness: key === 'alloy' ? .43 : .68,
-      metalness: key === 'alloy' ? .48 : key === 'trim' ? .27 : .04 });
+    const finish = {
+      rubber: [.92, 0], chassis: [.78, .12], alloy: [.36, .62],
+      trim: [.52, .30], tank: [.38, .58], lamp: [.24, .03],
+      redlamp: [.28, .03], amber: [.30, .03]
+    }[key] || [.68, .04];
+    return new T.MeshStandardMaterial({ color, roughness: finish[0], metalness: finish[1] });
   }
 
   function factoryMaterial(T, name, options) {

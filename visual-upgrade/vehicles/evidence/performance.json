@@ -1,0 +1,224 @@
+{
+  "viewport": [
+    1440,
+    810
+  ],
+  "dpr": 1,
+  "quality": "high",
+  "order": [
+    "before",
+    "after",
+    "after",
+    "before"
+  ],
+  "warmupFrames": 240,
+  "sampleFrames": 300,
+  "runs": [
+    {
+      "label": "before",
+      "samples": [
+        {
+          "view": "campus",
+          "medianMs": 16.700000000000728,
+          "p95Ms": 33.399999999999636,
+          "draws": 3381,
+          "triangles": 10294968,
+          "renderMs": 20.628909953302532,
+          "quality": "high",
+          "pixelRatio": 1,
+          "backend": "WebGPU"
+        },
+        {
+          "view": "charge",
+          "medianMs": 16.700000000000728,
+          "p95Ms": 16.799999999999272,
+          "draws": 1609,
+          "triangles": 7166506,
+          "renderMs": 11.719781775011388,
+          "quality": "high",
+          "pixelRatio": 1,
+          "backend": "WebGPU"
+        },
+        {
+          "view": "parking",
+          "medianMs": 16.69999999999709,
+          "p95Ms": 16.799999999999272,
+          "draws": 1434,
+          "triangles": 7153728,
+          "renderMs": 11.530879728547124,
+          "quality": "high",
+          "pixelRatio": 1,
+          "backend": "WebGPU"
+        }
+      ]
+    },
+    {
+      "label": "after",
+      "samples": [
+        {
+          "view": "campus",
+          "medianMs": 16.700000000000728,
+          "p95Ms": 33.399999999999636,
+          "draws": 3331,
+          "triangles": 10318756,
+          "renderMs": 18.12784296639435,
+          "quality": "high",
+          "pixelRatio": 1,
+          "backend": "WebGPU"
+        },
+        {
+          "view": "charge",
+          "medianMs": 16.700000000000728,
+          "p95Ms": 16.799999999999272,
+          "draws": 1558,
+          "triangles": 7226554,
+          "renderMs": 11.26960614608283,
+          "quality": "high",
+          "pixelRatio": 1,
+          "backend": "WebGPU"
+        },
+        {
+          "view": "parking",
+          "medianMs": 16.700000000000728,
+          "p95Ms": 16.799999999999272,
+          "draws": 1397,
+          "triangles": 7238320,
+          "renderMs": 13.10485079643751,
+          "quality": "high",
+          "pixelRatio": 1,
+          "backend": "WebGPU"
+        }
+      ]
+    },
+    {
+      "label": "after",
+      "samples": [
+        {
+          "view": "campus",
+          "medianMs": 16.700000000000728,
+          "p95Ms": 33.400000000001455,
+          "draws": 3331,
+          "triangles": 10318756,
+          "renderMs": 16.967084654396093,
+          "quality": "high",
+          "pixelRatio": 1,
+          "backend": "WebGPU"
+        },
+        {
+          "view": "charge",
+          "medianMs": 16.700000000000728,
+          "p95Ms": 16.80000000000291,
+          "draws": 1558,
+          "triangles": 7226554,
+          "renderMs": 11.47944021283802,
+          "quality": "high",
+          "pixelRatio": 1,
+          "backend": "WebGPU"
+        },
+        {
+          "view": "parking",
+          "medianMs": 16.69999999999709,
+          "p95Ms": 16.799999999999272,
+          "draws": 1396,
+          "triangles": 7238288,
+          "renderMs": 11.331907974353225,
+          "quality": "high",
+          "pixelRatio": 1,
+          "backend": "WebGPU"
+        }
+      ]
+    },
+    {
+      "label": "before",
+      "samples": [
+        {
+          "view": "campus",
+          "medianMs": 16.700000000000728,
+          "p95Ms": 33.400000000001455,
+          "draws": 3381,
+          "triangles": 10294968,
+          "renderMs": 23.038756336887943,
+          "quality": "high",
+          "pixelRatio": 1,
+          "backend": "WebGPU"
+        },
+        {
+          "view": "charge",
+          "medianMs": 16.700000000000728,
+          "p95Ms": 33.20000000000073,
+          "draws": 1609,
+          "triangles": 7166506,
+          "renderMs": 12.064382620120739,
+          "quality": "high",
+          "pixelRatio": 1,
+          "backend": "WebGPU"
+        },
+        {
+          "view": "parking",
+          "medianMs": 16.69999999999709,
+          "p95Ms": 33.20000000000073,
+          "draws": 1435,
+          "triangles": 7153760,
+          "renderMs": 13.478337107860865,
+          "quality": "high",
+          "pixelRatio": 1,
+          "backend": "WebGPU"
+        }
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "view": "campus",
+      "before": {
+        "medianMs": 16.700000000000728,
+        "p95Ms": 33.400000000000546,
+        "draws": 3381,
+        "triangles": 10294968
+      },
+      "after": {
+        "medianMs": 16.700000000000728,
+        "p95Ms": 33.400000000000546,
+        "draws": 3331,
+        "triangles": 10318756
+      },
+      "drawChange": -50,
+      "triangleChange": 23788
+    },
+    {
+      "view": "charge",
+      "before": {
+        "medianMs": 16.700000000000728,
+        "p95Ms": 25,
+        "draws": 1609,
+        "triangles": 7166506
+      },
+      "after": {
+        "medianMs": 16.700000000000728,
+        "p95Ms": 16.80000000000109,
+        "draws": 1558,
+        "triangles": 7226554
+      },
+      "drawChange": -51,
+      "triangleChange": 60048
+    },
+    {
+      "view": "parking",
+      "before": {
+        "medianMs": 16.69999999999709,
+        "p95Ms": 25,
+        "draws": 1434,
+        "triangles": 7153728
+      },
+      "after": {
+        "medianMs": 16.69999999999891,
+        "p95Ms": 16.799999999999272,
+        "draws": 1397,
+        "triangles": 7238320
+      },
+      "drawChange": -37,
+      "triangleChange": 84592
+    }
+  ],
+  "note": "RAF intervals include browser scheduling and vsync; local headless Chrome measurements, not an all-device FPS guarantee."
+}
