@@ -11,7 +11,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||path.join(process.env.US
   await page.waitForFunction(()=>window.NZ_GPU?.ready,null,{timeout:90000});await page.click('#segQuality [data-q="high"]');
   const result=await page.evaluate(async()=>{
    await NZ_RECEPTION.start();const start=performance.now(),samples=[],groups={};let previous=await new Promise(requestAnimationFrame),nextLog=30,buildingVisited=false,qualityStayedHigh=true;
-   while(NZ_RECEPTION.state().active&&performance.now()-start<240000){
+   while(NZ_RECEPTION.state().active&&performance.now()-start<(NZ_RECEPTION.model.duration+60)*1000){
     const now=await new Promise(requestAnimationFrame),state=NZ_RECEPTION.state(),key=(state.inside?'building/':'campus/')+state.cue;
     const dt=now-previous;previous=now;samples.push(dt);(groups[key]||=[]).push(dt);buildingVisited||=state.inside;qualityStayedHigh&&=__NZ_TEST.S.quality==='high';
     if((now-start)/1000>=nextLog){console.log('TOUR '+Math.round((now-start)/1000)+'s · '+state.cue+' · '+NZ_GPU.backend);nextLog+=30;}
@@ -21,7 +21,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||path.join(process.env.US
      overall:summary(samples),chapters:Object.fromEntries(Object.entries(groups).map(([key,values])=>[key,summary(values)]))};
   });
   fs.writeFileSync(path.join(__dirname,'evidence/tour-check.json'),JSON.stringify({viewport:[1440,810],deviceScaleFactor:1,result,errors},null,2)+'\n');
-  assert.equal(result.backend,'WebGPU');assert(!result.lost&&!result.final.active&&result.final.time>=179.9&&result.qualityStayedHigh&&result.buildingVisited&&!result.final.buildingFailed);assert.deepEqual(errors,[]);
+  assert.equal(result.backend,'WebGPU');assert(!result.lost&&!result.final.active&&result.final.time>=result.final.duration-.1&&result.qualityStayedHigh&&result.buildingVisited&&!result.final.buildingFailed);assert.deepEqual(errors,[]);
   console.log('PASS native WebGPU complete reception, building and restored campus; P95',result.overall.p95Ms);
  }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1});

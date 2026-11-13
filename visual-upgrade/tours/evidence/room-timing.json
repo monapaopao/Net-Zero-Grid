@@ -1,0 +1,223 @@
+[
+  {
+    "level": 0,
+    "system": "all",
+    "title": "建筑整体 · Campus overview",
+    "id": "building-01",
+    "start": 0,
+    "end": 8,
+    "duration": 8
+  },
+  {
+    "level": 0,
+    "system": "all",
+    "title": "建筑总览 · 园区设施",
+    "id": "building-02",
+    "start": 8,
+    "end": 9,
+    "duration": 1
+  },
+  {
+    "level": 0,
+    "system": "all",
+    "title": "外墙透视 · Reveal",
+    "reveal": true,
+    "id": "building-03",
+    "start": 9,
+    "end": 11,
+    "duration": 2
+  },
+  {
+    "level": 1,
+    "system": "all",
+    "title": "楼层分离 · Exploded view",
+    "id": "building-04",
+    "start": 11,
+    "end": 15,
+    "duration": 4
+  },
+  {
+    "level": 1,
+    "system": "compute",
+    "title": "选中 AI 机房层",
+    "id": "building-05",
+    "start": 15,
+    "end": 20,
+    "duration": 5
+  },
+  {
+    "level": 2,
+    "system": "all",
+    "title": "进入 AI 机房",
+    "id": "building-06",
+    "start": 20,
+    "end": 25,
+    "duration": 5
+  },
+  {
+    "level": 2,
+    "system": "all",
+    "title": "机柜与封闭通道",
+    "shot": "aisle",
+    "data": true,
+    "id": "building-07",
+    "start": 25,
+    "end": 31,
+    "duration": 6
+  },
+  {
+    "level": 3,
+    "system": "power",
+    "title": "外部电网 · 园区全景",
+    "node": 0,
+    "id": "building-08",
+    "start": 31,
+    "end": 34,
+    "duration": 3
+  },
+  {
+    "level": 3,
+    "system": "power",
+    "title": "220 kV 园区母线",
+    "node": 1,
+    "id": "building-09",
+    "start": 34,
+    "end": 37,
+    "duration": 3
+  },
+  {
+    "level": 3,
+    "system": "power",
+    "title": "220 kV → 主变压器 → 10.5 kV",
+    "node": 2,
+    "id": "building-10",
+    "start": 37,
+    "end": 40,
+    "duration": 3
+  },
+  {
+    "level": 3,
+    "system": "power",
+    "title": "园区燃机备用接口 · 10.5 kV 备用支路",
+    "node": 10,
+    "id": "building-11",
+    "start": 40,
+    "end": 43,
+    "duration": 3
+  },
+  {
+    "level": 3,
+    "system": "power",
+    "title": "10.5 kV 进线与中压开关柜",
+    "node": 4,
+    "id": "building-12",
+    "start": 43,
+    "end": 46,
+    "duration": 3
+  },
+  {
+    "level": 4,
+    "system": "power",
+    "title": "HVDC · 降压隔离与整流",
+    "detail": "hvdc",
+    "mode": "exploded",
+    "node": 5,
+    "id": "building-13",
+    "start": 46,
+    "end": 62,
+    "duration": 16
+  },
+  {
+    "level": 3,
+    "system": "power",
+    "title": "240 V DC 主母排",
+    "node": 6,
+    "id": "building-14",
+    "start": 62,
+    "end": 66,
+    "duration": 4
+  },
+  {
+    "level": 3,
+    "system": "power",
+    "title": "直流列头柜 · 配电上下文",
+    "node": 7,
+    "id": "building-15",
+    "start": 66,
+    "end": 70,
+    "duration": 4
+  },
+  {
+    "level": 4,
+    "system": "power",
+    "title": "PSU 供电 · 机柜整体",
+    "detail": "rack",
+    "mode": "whole",
+    "node": 8,
+    "id": "building-16",
+    "start": 70,
+    "end": 74,
+    "duration": 4
+  },
+  {
+    "level": 4,
+    "system": "power",
+    "title": "CPU / GPU · 机柜整体",
+    "detail": "rack",
+    "mode": "whole",
+    "node": 9,
+    "shot": "rack-orbit",
+    "id": "building-17",
+    "start": 74,
+    "end": 78,
+    "duration": 4
+  },
+  {
+    "level": 4,
+    "system": "power",
+    "title": "CPU / GPU · 爆炸拆解",
+    "detail": "rack",
+    "mode": "exploded",
+    "node": 9,
+    "id": "building-18",
+    "start": 78,
+    "end": 84,
+    "duration": 6
+  },
+  {
+    "level": 3,
+    "system": "cooling",
+    "title": "集中冷源 → CDU → 液冷 / 空气侧末端",
+    "id": "building-19",
+    "start": 84,
+    "end": 88,
+    "duration": 4
+  },
+  {
+    "level": 2,
+    "system": "all",
+    "title": "返回机房",
+    "id": "building-20",
+    "start": 88,
+    "end": 92,
+    "duration": 4
+  },
+  {
+    "level": 1,
+    "system": "all",
+    "title": "返回建筑楼层",
+    "id": "building-21",
+    "start": 92,
+    "end": 96,
+    "duration": 4
+  },
+  {
+    "level": 0,
+    "system": "all",
+    "title": "建筑合拢 · 完整闭环",
+    "id": "building-22",
+    "start": 96,
+    "end": 99,
+    "duration": 3
+  }
+]

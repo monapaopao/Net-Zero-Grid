@@ -1,0 +1,356 @@
+{
+  "version": "21.4.0",
+  "duration": 347,
+  "rows": [
+    {
+      "id": "full-refine-0-0",
+      "chapter": 1,
+      "title": "园区全景",
+      "start": 0,
+      "end": 9,
+      "shot": "home",
+      "scope": "campus",
+      "text": "未来，一座工厂可能会有两个“自己”。一个在现实中生产，另一个在虚拟世界里，提前推演不同条件下的运行。"
+    },
+    {
+      "id": "full-refine-0-1",
+      "chapter": 1,
+      "title": "园区全景",
+      "start": 9,
+      "end": 17,
+      "shot": "home",
+      "scope": "campus",
+      "text": "当风光出力变化、订单调整、用电需求增加，能源该怎么分配？那么可以先在虚拟系统里试一试。"
+    },
+    {
+      "id": "full-refine-0-2",
+      "chapter": 1,
+      "title": "园区全景",
+      "start": 17,
+      "end": 25,
+      "shot": "home",
+      "scope": "campus",
+      "text": "欢迎来到西比里展厅。眼前这套多园区融合能源系统，把这样的探索，从一座工厂延伸到了多个园区。"
+    },
+    {
+      "id": "full-refine-1-0",
+      "chapter": 2,
+      "title": "风力与光伏发电",
+      "start": 25,
+      "end": 34,
+      "shot": "solar",
+      "scope": "campus",
+      "text": "先看风力发电和光伏阵列，一个交流，一个直流，各自升压汇流，走到同一条线上。"
+    },
+    {
+      "id": "full-refine-1-1",
+      "chapter": 2,
+      "title": "风力与光伏发电",
+      "start": 34,
+      "end": 59,
+      "shot": "windClose",
+      "scope": "campus",
+      "text": "走进这台风机内部，西比里的新型复合绝缘干式变压器，针对风机宽频谐波与电晕侵蚀工况，采用铝绕组设计和新一代高导热、耐电晕复合绝缘材料，延缓绝缘长期老化、局部放电等关键问题，减少机舱结构负荷与后期运维成本。"
+    },
+    {
+      "id": "full-refine-2-0",
+      "chapter": 3,
+      "title": "输电与共享能源枢纽",
+      "start": 59,
+      "end": 75,
+      "shot": "line",
+      "scope": "campus",
+      "text": "沿着架空线路，电力来到共享能源枢纽，再分配到各个园区。线路在偏远户外要面对风沙、紫外线和覆冰，西比里陶瓷架空线正是为了应对这些特殊复杂工况而开发的新产品。"
+    },
+    {
+      "id": "full-refine-2-1",
+      "chapter": 3,
+      "title": "输电与共享能源枢纽",
+      "start": 75,
+      "end": 88,
+      "shot": "hub",
+      "scope": "campus",
+      "text": "风和阳光随时在变，用电需求却未必同步变化。储能装得下电，装不下所有富余——哪个园区先让一步、哪些设备可以等一等，才是真正值得算的账。"
+    },
+    {
+      "id": "full-refine-2-2",
+      "chapter": 3,
+      "title": "输电与共享能源枢纽",
+      "start": 88,
+      "end": 97,
+      "shot": "hub",
+      "scope": "campus",
+      "text": "所以在这套演示中，我们既看电从哪里来，也看它什么时候被使用、还有多少调节余地。"
+    },
+    {
+      "id": "dc-enter",
+      "chapter": 4,
+      "title": "数据中心与直流供电",
+      "start": 97,
+      "end": 105,
+      "shot": "dcCampus",
+      "scope": "campus",
+      "text": "数据园区由数据中心、集中冷站、后备电源与网络运维设施共同支撑。"
+    },
+    {
+      "id": "entry-new",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 105,
+      "end": 112,
+      "shot": "building:00:00–00:07",
+      "scope": "building",
+      "text": "现在进入数据中心，沿供电链路探索直流配电、机柜与冷却设施。"
+    },
+    {
+      "id": "building-caption-01",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 112,
+      "end": 116,
+      "shot": "building:00:07–00:11",
+      "scope": "building",
+      "text": "从建筑整体进入楼层，认识机房与供电布局。"
+    },
+    {
+      "id": "building-caption-02",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 116,
+      "end": 120,
+      "shot": "building:00:11–00:15",
+      "scope": "building",
+      "text": "楼层展开后，观察各层功能与设备位置。"
+    },
+    {
+      "id": "building-caption-03",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 120,
+      "end": 125,
+      "shot": "building:00:15–00:20",
+      "scope": "building",
+      "text": "进入 AI 机房层，沿电力通道查看直流供电设施。"
+    },
+    {
+      "id": "building-caption-04",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 125,
+      "end": 130,
+      "shot": "building:00:20–00:25",
+      "scope": "building",
+      "text": "机柜、通道与液冷配套共同组成代表机房。"
+    },
+    {
+      "id": "building-caption-05",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 130,
+      "end": 136,
+      "shot": "building:00:25–00:31",
+      "scope": "building",
+      "text": "机架连接电力、数据与制冷路径。下面沿供电链路查看设备。"
+    },
+    {
+      "id": "building-caption-06",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 136,
+      "end": 142,
+      "shot": "building:00:31–00:37",
+      "scope": "building",
+      "text": "外部电网经园区母线送电，为后续降压配电提供电源。"
+    },
+    {
+      "id": "building-caption-07",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 142,
+      "end": 148,
+      "shot": "building:00:37–00:43",
+      "scope": "building",
+      "text": "主变降压至中压等级；燃机通过独立备用支路参与保供。"
+    },
+    {
+      "id": "building-caption-08",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 148,
+      "end": 151,
+      "shot": "building:00:43–00:46",
+      "scope": "building",
+      "text": "中压进线经开关柜接入变换设备。"
+    },
+    {
+      "id": "building-caption-09",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 151,
+      "end": 167,
+      "shot": "building:00:46–01:02",
+      "scope": "building",
+      "text": "西比里高效直流供电，通过缩短链路、减少重复转换，降低供电损耗，让能源系统与算力高效衔接。"
+    },
+    {
+      "id": "building-caption-10",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 167,
+      "end": 175,
+      "shot": "building:01:02–01:10",
+      "scope": "building",
+      "text": "直流电经母排和列头柜分配至机架，输出保护与后备电源保持各自职责。"
+    },
+    {
+      "id": "building-caption-11",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 175,
+      "end": 189,
+      "shot": "building:01:10–01:24",
+      "scope": "building",
+      "text": "电力经服务器电源到达 CPU 与 GPU。随后展开机架与芯片结构，认识算力用电端。"
+    },
+    {
+      "id": "building-caption-12",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 189,
+      "end": 193,
+      "shot": "building:01:24–01:28",
+      "scope": "building",
+      "text": "液冷循环带走热量，维持设备稳定运行。"
+    },
+    {
+      "id": "building-caption-13",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 193,
+      "end": 197,
+      "shot": "building:01:28–01:32",
+      "scope": "building",
+      "text": "回到机房，供电与制冷共同支撑运行。"
+    },
+    {
+      "id": "building-caption-14",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 197,
+      "end": 201,
+      "shot": "building:01:32–01:36",
+      "scope": "building",
+      "text": "收起楼层，恢复进入时的观察方位。"
+    },
+    {
+      "id": "building-caption-15",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 201,
+      "end": 204,
+      "shot": "building:01:36–01:39",
+      "scope": "building",
+      "text": "建筑合拢，返回园区继续参观。"
+    },
+    {
+      "id": "dc-next",
+      "chapter": 4,
+      "title": "数据中心与直流供电",
+      "start": 204,
+      "end": 206,
+      "shot": "dcEntry",
+      "scope": "campus",
+      "text": ""
+    },
+    {
+      "id": "full-refine-4-0",
+      "chapter": 5,
+      "title": "绿解化工",
+      "start": 206,
+      "end": 216,
+      "shot": "zincWide",
+      "scope": "campus",
+      "text": "工业园区的用电特点又有所不同。这里是绿解化工的生产场景，包含了电解锌和氢—氨—合成蛋白产业园区。"
+    },
+    {
+      "id": "full-refine-4-1",
+      "chapter": 5,
+      "title": "绿解化工",
+      "start": 216,
+      "end": 232,
+      "shot": "zincWide",
+      "scope": "campus",
+      "text": "电解锌持续使用大功率直流电，供电环节的损耗会进入生产用电成本。西比里直流方案在这一场景中，重点展示高效整流、大电流连接和输出控制，目标是降低供电损耗与吨锌电耗。"
+    },
+    {
+      "id": "full-refine-5-0",
+      "chapter": 6,
+      "title": "区外核电基荷研究场景",
+      "start": 232,
+      "end": 254,
+      "shot": "nuclear",
+      "scope": "campus",
+      "text": "这一侧是区外核电基荷，一个小型模块化反应堆 SMR 的前沿研究场景，通过给算力设施匹配独立的核能发电来保障长期的稳定供电，研究比较不同电源组合下的供能与协调。"
+    },
+    {
+      "id": "full-refine-6-0",
+      "chapter": 7,
+      "title": "智能工厂与新能源超充",
+      "start": 254,
+      "end": 277,
+      "shot": "factoryDemand",
+      "scope": "campus",
+      "text": "现在，我们看到的是西比里的智能新型导线工厂。作为多园区融合系统中参与柔性消纳的关键主体，工厂在满足订单交付和生产工艺要求的前提下，灵活安排可调负荷，优先消纳富余的新能源电力。"
+    },
+    {
+      "id": "full-refine-6-1",
+      "chapter": 7,
+      "title": "智能工厂与新能源超充",
+      "start": 277,
+      "end": 290,
+      "shot": "charge",
+      "scope": "campus",
+      "text": "最后是新能源超充与光储一体化场景。西比里 3.2MW 的中压直转高压直流电源，已在这类场站开展示范运行。"
+    },
+    {
+      "id": "full-refine-6-2",
+      "chapter": 7,
+      "title": "智能工厂与新能源超充",
+      "start": 290,
+      "end": 313,
+      "shot": "chargePower",
+      "scope": "campus",
+      "text": "它把传统“降压—配电—整流—DC/DC”的多级链路，压缩为中压一次整流、末端一级 DC/DC，整站效率提升到 94–96%；再配一条公共直流母线，光伏、储能与充电终端可以直接并联，负荷冲击就地吸收。"
+    },
+    {
+      "id": "full-refine-6-3",
+      "chapter": 7,
+      "title": "智能工厂与新能源超充",
+      "start": 313,
+      "end": 321,
+      "shot": "chargePower",
+      "scope": "campus",
+      "text": "新一代 2.0 系统拓扑原生双向，为 V2G 和储能回馈提供原生接口。"
+    },
+    {
+      "id": "full-refine-7-0",
+      "chapter": 8,
+      "title": "回到全景",
+      "start": 321,
+      "end": 344,
+      "shot": "gate",
+      "scope": "campus",
+      "text": "这就是多园区融合能源系统——从风光储发电，到配电、储能与就地消纳，源网荷储全链路协同，可推演、可调度、可复制。我们致力于科研成果转化与多平台融合，期待与合作伙伴一起，构建高效能、低碳的新质生产力。"
+    },
+    {
+      "id": "full-gate-hold",
+      "chapter": 8,
+      "title": "回到全景",
+      "start": 344,
+      "end": 347,
+      "shot": "gate",
+      "scope": "campus",
+      "text": ""
+    }
+  ]
+}

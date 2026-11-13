@@ -1,10 +1,10 @@
 # Three.js r187 / WebGPU · 原生模型版
 
 <!-- project-release:start -->
-当前项目版本：**v21.3.0 · 展厅五分钟导览与三分钟快速预览**。版本规则见 [VERSIONING.md](../../VERSIONING.md)。
+当前项目版本：**v21.4.0 · 导览宽景构图与完整楼内参观**。版本规则见 [VERSIONING.md](../../VERSIONING.md)。
 <!-- project-release:end -->
 
-展厅导览现采用独立的 300 秒和 180 秒时间轴。文案、镜头表及完整播放检查见 [tours](../tours/README.md)。楼内加载时暂停叙述时钟，尚未生成配音。
+展厅完整导览与快速预览分别约 347 秒、268 秒，均包含终场大门机位的 3 秒停留，结束后自动进入自由探索。文案、镜头表及完整播放检查见 [tours](../tours/README.md)。楼内加载时暂停叙述时钟，尚未生成配音。
 
 v21.2.0 车辆升级保存在 [vehicles](../vehicles/README.md)，包含实际轮拱、分体车窗、特种车结构与按距离隐藏细节。沿用全站 WebGPU 通道、能源仿真和充电连接。
 

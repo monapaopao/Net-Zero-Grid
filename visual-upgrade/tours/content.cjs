@@ -35,3 +35,4 @@ const compiled=require(path.join(legacy,'src/tour-narrative.js')).compile(base);
 assert.equal(compiled.totalSeconds,300);assert.equal(compact(compiled.captionTimeline.map(c=>c.text).join('')),compact(full.flatMap(c=>c.paragraphs).join('')));
 assert.equal(compact(fast.chapters.flatMap(c=>c.cues.map(x=>x.text)).join('')),compact(quick.flatMap(c=>c.paragraphs).join('')));
 module.exports={full:base,quick:fast,approved:{full,longText,quick,quickText},count};
+module.exports=require('./refinement.cjs')(module.exports);

@@ -16,10 +16,10 @@
         "fps": 0,
         "worstFps": null,
         "samples": [],
-        "renderMs": 28.61319999994338,
-        "draws": 2766,
-        "triangles": 5608081,
-        "lastPassDraws": 2766,
+        "renderMs": 31.155999998897318,
+        "draws": 2767,
+        "triangles": 5608085,
+        "lastPassDraws": 2767,
         "quality": "standard",
         "pixelRatio": 1,
         "vw": 1256,
@@ -271,20 +271,20 @@
         "bloom": false
       }
     },
-    "loadMs": 2583,
+    "loadMs": 2523,
     "shots": [
       {
         "view": "campus",
         "medianMs": 16.699999999999818,
-        "p95Ms": 33.400000000000546,
+        "p95Ms": 16.800000000000182,
         "perf": {
-          "fps": 43.14192204700983,
-          "worstFps": 9.499525023748811,
+          "fps": 60.001983536645845,
+          "worstFps": 8.999550022498875,
           "samples": [
             9,
-            43
+            60
           ],
-          "renderMs": 18.526541757752128,
+          "renderMs": 13.37993527186861,
           "draws": 3330,
           "triangles": 10318752,
           "lastPassDraws": 3330,
@@ -548,18 +548,17 @@
       },
       {
         "view": "charge",
-        "medianMs": 16.69999999999891,
-        "p95Ms": 16.80000000000109,
+        "medianMs": 16.699999999999818,
+        "p95Ms": 16.799999999999272,
         "perf": {
-          "fps": 57.5,
-          "worstFps": 9.499525023748811,
+          "fps": 60,
+          "worstFps": 8.999550022498875,
           "samples": [
             9,
-            43,
-            45,
-            58
+            60,
+            60
           ],
-          "renderMs": 12.967614497875687,
+          "renderMs": 8.334127495414387,
           "draws": 1557,
           "triangles": 7226550,
           "lastPassDraws": 1557,
@@ -824,19 +823,18 @@
       {
         "view": "factory",
         "medianMs": 16.69999999999891,
-        "p95Ms": 16.80000000000109,
+        "p95Ms": 16.799999999999272,
         "perf": {
-          "fps": 59.01021521372606,
-          "worstFps": 9.499525023748811,
+          "fps": 59.999008280854895,
+          "worstFps": 8.999550022498875,
           "samples": [
             9,
-            43,
-            45,
-            58,
-            59,
-            59
+            60,
+            60,
+            60,
+            60
           ],
-          "renderMs": 7.55279370422632,
+          "renderMs": 4.537928189038555,
           "draws": 497,
           "triangles": 7266504,
           "lastPassDraws": 497,

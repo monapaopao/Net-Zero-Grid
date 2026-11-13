@@ -41,7 +41,8 @@ module.exports=html=>{
    code+="\nObject.assign(window.NZ_CLOUD_CONTENT.tour,{title:'五分钟完整导览',summary:'从虚拟工厂出发，沿源网荷储链路认识多园区融合能源系统。',action:'开始五分钟完整导览',note:'字幕与镜头独立编排，配音尚未生成；产品介绍参数与模型读数分别呈现。'});";
   }
   code=code.replaceAll('三分钟快速认识','三分钟快速预览').replaceAll('完整园区导览','五分钟完整导览');
+  code=require('./refinement-build.cjs')(name,code);
   new vm.Script(code,{filename:'exhibition-'+name});return '<script>/* ===== '+name+' ===== */\n'+code+'\n</script>';
  });
- return html.replace('</head>','<style>#tourText,#receptionText{min-height:3.2em;line-height:1.65}#visitorDock.visitor-guide .ttext{white-space:normal;overflow-wrap:anywhere}@media(max-width:780px){#visitorDock.visitor-guide .ttext{font-size:14px;max-height:8.4em;overflow-y:auto}}</style></head>');
+ return html.replace('</head>','<style>.visitor-playing #visitorDock.visitor-guide .ttext{white-space:normal;overflow-wrap:anywhere}.visitor-playing.tour-gate-hold #visitorDock{opacity:0;pointer-events:none;transition:opacity .25s}</style></head>');
 };

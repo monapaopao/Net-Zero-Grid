@@ -2,5 +2,5 @@
   "ready": false,
   "error": "当前浏览器未能启用 WebGPU。请使用支持 WebGPU 的 Chrome 或 Edge、开启硬件加速，并通过本地文件、localhost 或 HTTPS 打开。未启动 WebGL 回退展示。",
   "message": "WebGPU 启动失败：当前浏览器未能启用 WebGPU。请使用支持 WebGPU 的 Chrome 或 Edge、开启硬件加速，并通过本地文件、localhost 或 HTTPS 打开。未启动 WebGL 回退展示。",
-  "title": "[WebGPU 不可用] 多园区共享综合能源系统 | 西比里能源 xibili energy · v21.3.0 · Three.js r187 原生模型 · WebGPU"
+  "title": "[WebGPU 不可用] 多园区共享综合能源系统 | 西比里能源 xibili energy · v21.4.0 · Three.js r187 原生模型 · WebGPU"
 }
