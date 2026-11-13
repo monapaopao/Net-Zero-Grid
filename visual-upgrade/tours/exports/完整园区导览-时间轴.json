@@ -1,5 +1,5 @@
 {
-  "version": "21.4.1",
+  "version": "21.4.2",
   "duration": 347,
   "rows": [
     {
@@ -93,97 +93,57 @@
       "text": "数据园区由数据中心、集中冷站、后备电源与网络运维设施共同支撑。"
     },
     {
-      "id": "entry-new",
+      "id": "full-room-approved-01",
       "chapter": 4,
       "title": "数据中心与直流供电 · 楼内",
       "start": 105,
-      "end": 112,
-      "shot": "building:00:00–00:07",
-      "scope": "building",
-      "text": "现在进入数据中心，沿供电链路探索直流配电、机柜与冷却设施。"
-    },
-    {
-      "id": "building-caption-01",
-      "chapter": 4,
-      "title": "数据中心与直流供电 · 楼内",
-      "start": 112,
-      "end": 116,
-      "shot": "building:00:07–00:11",
-      "scope": "building",
-      "text": "从建筑整体进入楼层，认识机房与供电布局。"
-    },
-    {
-      "id": "building-caption-02",
-      "chapter": 4,
-      "title": "数据中心与直流供电 · 楼内",
-      "start": 116,
       "end": 120,
-      "shot": "building:00:11–00:15",
+      "shot": "building:00:00–00:15",
       "scope": "building",
-      "text": "楼层展开后，观察各层功能与设备位置。"
+      "text": "这里是数据中心。从楼层到机房，计算设备、供电和冷却设施各有位置，又彼此连接，共同支撑这里的运行。"
     },
     {
-      "id": "building-caption-03",
+      "id": "full-room-approved-02",
       "chapter": 4,
       "title": "数据中心与直流供电 · 楼内",
       "start": 120,
-      "end": 125,
-      "shot": "building:00:15–00:20",
-      "scope": "building",
-      "text": "进入 AI 机房层，沿电力通道查看直流供电设施。"
-    },
-    {
-      "id": "building-caption-04",
-      "chapter": 4,
-      "title": "数据中心与直流供电 · 楼内",
-      "start": 125,
-      "end": 130,
-      "shot": "building:00:20–00:25",
-      "scope": "building",
-      "text": "机柜、通道与液冷配套共同组成代表机房。"
-    },
-    {
-      "id": "building-caption-05",
-      "chapter": 4,
-      "title": "数据中心与直流供电 · 楼内",
-      "start": 130,
       "end": 136,
-      "shot": "building:00:25–00:31",
+      "shot": "building:00:15–00:31",
       "scope": "building",
-      "text": "机架连接电力、数据与制冷路径。下面沿供电链路查看设备。"
+      "text": "一排排机柜里，是持续运行的计算设备。电力沿配电通道送到机架，冷却设施则负责带走热量。先从它们的供电来源说起。"
     },
     {
-      "id": "building-caption-06",
+      "id": "full-room-approved-03",
       "chapter": 4,
       "title": "数据中心与直流供电 · 楼内",
       "start": 136,
-      "end": 142,
-      "shot": "building:00:31–00:37",
+      "end": 145,
+      "shot": "building:00:31–00:40",
       "scope": "building",
-      "text": "外部电网经园区母线送电，为后续降压配电提供电源。"
+      "text": "外部电网接入园区母线，再经主变降压，送往中压配电系统。"
     },
     {
-      "id": "building-caption-07",
+      "id": "full-room-approved-04",
       "chapter": 4,
       "title": "数据中心与直流供电 · 楼内",
-      "start": 142,
+      "start": 145,
       "end": 148,
-      "shot": "building:00:37–00:43",
+      "shot": "building:00:40–00:43",
       "scope": "building",
-      "text": "主变降压至中压等级；燃机通过独立备用支路参与保供。"
+      "text": "燃机通过独立支路参与保供。"
     },
     {
-      "id": "building-caption-08",
+      "id": "full-room-approved-05",
       "chapter": 4,
       "title": "数据中心与直流供电 · 楼内",
       "start": 148,
       "end": 151,
       "shot": "building:00:43–00:46",
       "scope": "building",
-      "text": "中压进线经开关柜接入变换设备。"
+      "text": "中压开关柜连接后续变换设备。"
     },
     {
-      "id": "building-caption-09",
+      "id": "full-room-approved-06",
       "chapter": 4,
       "title": "数据中心与直流供电 · 楼内",
       "start": 151,
@@ -193,64 +153,54 @@
       "text": "西比里高效直流供电，通过缩短链路、减少重复转换，降低供电损耗，让能源系统与算力高效衔接。"
     },
     {
-      "id": "building-caption-10",
+      "id": "full-room-approved-07",
       "chapter": 4,
       "title": "数据中心与直流供电 · 楼内",
       "start": 167,
       "end": 175,
       "shot": "building:01:02–01:10",
       "scope": "building",
-      "text": "直流电经母排和列头柜分配至机架，输出保护与后备电源保持各自职责。"
+      "text": "直流电经母排和列头柜分配到机架，保护设备与后备电源各自承担保障任务。"
     },
     {
-      "id": "building-caption-11",
+      "id": "full-room-approved-08",
       "chapter": 4,
       "title": "数据中心与直流供电 · 楼内",
       "start": 175,
-      "end": 189,
-      "shot": "building:01:10–01:24",
+      "end": 183,
+      "shot": "building:01:10–01:18",
       "scope": "building",
-      "text": "电力经服务器电源到达 CPU 与 GPU。随后展开机架与芯片结构，认识算力用电端。"
+      "text": "到了机柜，服务器电源把电力送达核心计算单元，支撑计算任务。"
     },
     {
-      "id": "building-caption-12",
+      "id": "full-room-approved-09",
+      "chapter": 4,
+      "title": "数据中心与直流供电 · 楼内",
+      "start": 183,
+      "end": 189,
+      "shot": "building:01:18–01:24",
+      "scope": "building",
+      "text": "机架内部，供电连接着计算设备，散热结构与它们紧密配合。"
+    },
+    {
+      "id": "full-room-approved-10",
       "chapter": 4,
       "title": "数据中心与直流供电 · 楼内",
       "start": 189,
-      "end": 193,
-      "shot": "building:01:24–01:28",
-      "scope": "building",
-      "text": "液冷循环带走热量，维持设备稳定运行。"
-    },
-    {
-      "id": "building-caption-13",
-      "chapter": 4,
-      "title": "数据中心与直流供电 · 楼内",
-      "start": 193,
       "end": 197,
-      "shot": "building:01:28–01:32",
+      "shot": "building:01:24–01:32",
       "scope": "building",
-      "text": "回到机房，供电与制冷共同支撑运行。"
+      "text": "计算产生的热量，经冷却系统带走。供电与冷却在机房里配合，维持设备稳定运行。"
     },
     {
-      "id": "building-caption-14",
+      "id": "full-room-approved-11",
       "chapter": 4,
       "title": "数据中心与直流供电 · 楼内",
       "start": 197,
-      "end": 201,
-      "shot": "building:01:32–01:36",
-      "scope": "building",
-      "text": "收起楼层，恢复进入时的观察方位。"
-    },
-    {
-      "id": "building-caption-15",
-      "chapter": 4,
-      "title": "数据中心与直流供电 · 楼内",
-      "start": 201,
       "end": 204,
-      "shot": "building:01:36–01:39",
+      "shot": "building:01:32–01:39",
       "scope": "building",
-      "text": "建筑合拢，返回园区继续参观。"
+      "text": "从园区来电到核心计算单元，这条链路把能源与算力连接起来。"
     },
     {
       "id": "dc-next",

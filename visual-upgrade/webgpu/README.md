@@ -1,7 +1,7 @@
 # Three.js r187 / WebGPU · 原生模型版
 
 <!-- project-release:start -->
-当前项目版本：**v21.4.1 · 导览结束后显示仿真工作区**。版本规则见 [VERSIONING.md](../../VERSIONING.md)。
+当前项目版本：**v21.4.2 · 完整导览楼内讲解词更新**。版本规则见 [VERSIONING.md](../../VERSIONING.md)。
 <!-- project-release:end -->
 
 展厅完整导览与快速预览分别约 347 秒、268 秒，均包含终场大门机位的 3 秒停留，结束后自动进入自由探索。文案、镜头表及完整播放检查见 [tours](../tours/README.md)。楼内加载时暂停叙述时钟，尚未生成配音。

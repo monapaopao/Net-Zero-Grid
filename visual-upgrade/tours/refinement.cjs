@@ -27,5 +27,10 @@ module.exports=c=>{
  });
  fast.chapters.at(-1).cues.push({id:'quick-gate-hold',text:'',duration:3,move:0,shot:'gate'});fast.chapters.at(-1).duration+=3;
  let qt=0;fast.chapters.forEach(ch=>{if(ch.id==='compute')fast.building={at:qt+8,until:qt+8+time,from:0,to:time};qt+=ch.duration;});fast.duration=qt;fast.title='快速预览';
+ // Apply the approved room narration to the full route only, after quick cues are copied.
+ const md=fs.readFileSync(path.join(__dirname,'../../docs/导览文案/数据中心楼内讲解词-99秒-润色稿.md'),'utf8');
+ const captions=[...md.matchAll(/^## (\d+)｜(\d\d):(\d\d)–(\d\d):(\d\d)\r?\n\s*对应画面：[^\n]+\r?\n\s*([^\n]+)(?=\r?\n|$)/gm)].map(m=>({id:'full-room-approved-'+m[1],start:+m[2]*60+(+m[3]),end:+m[4]*60+(+m[5]),text:m[6].trim()}));
+ const assert=require('node:assert/strict');assert.equal(captions.length,11);assert.equal(captions[0].start,0);assert.equal(captions.at(-1).end,time);captions.forEach((s,i)=>{if(i)assert.equal(s.start,captions[i-1].end);assert(s.end>s.start);});
+ b.buildingCaptions=captions;b.version=require('../../project-version.json').version;
  c.buildingDuration=time;return c;
 };
