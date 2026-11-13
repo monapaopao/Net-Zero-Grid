@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "full": 300,
+    "quick": 180,
+    "chapterCounts": [
+      8,
+      9
+    ],
+    "backend": "WebGPU"
+  },
+  "pauseAndRestore": true,
+  "mobile": true,
+  "errors": [],
+  "external": []
+}

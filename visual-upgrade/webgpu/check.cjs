@@ -71,7 +71,7 @@ const modes = process.argv.includes('--ssgi') ? ['ssgi'] : process.argv.includes
           await GOBI_DCDT.close();
           a.S.lightPreset='night';
           for(let i=0;i<30;i++) await new Promise(requestAnimationFrame);
-          return {vehicleCard,connections:NZ_VEHICLES.audit().routes.length,roofClosed:NZ_FACTORY.snapshot().roof===0,sst,reception:reception.active&&reception.computed&&!NZ_RECEPTION.state().active,building,nightBloom:a.perf().bloom};
+          return {vehicleCard,connections:NZ_VEHICLES.audit().routes.length,roofClosed:NZ_FACTORY.snapshot().roof===0,sst,reception:reception.active&&reception.narrationOnly&&!NZ_RECEPTION.state().active,building,nightBloom:a.perf().bloom};
         });
         const particles = mode === 'webgl' ? null : await page.evaluate(async () => {
           const sources=[]; __NZ_TEST.scene.traverse(o=>{if(o.isPoints)sources.push(o);});

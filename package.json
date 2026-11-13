@@ -1,6 +1,6 @@
 {
   "name": "net-zero-grid",
-  "version": "21.2.0",
+  "version": "21.3.0",
   "private": true,
   "description": "多园区共享综合能源系统：能源仿真、协同调度、SST 对比与三维客户参观",
   "repository": {
@@ -15,7 +15,7 @@
     "build": "node NetZero-GridToChip-v20-VisitorPresentation/build.cjs --verify && npm run build:webgpu",
     "build:webgpu": "node visual-upgrade/build.cjs && node visual-upgrade/webgpu/build.cjs",
     "check:version": "node scripts/project-version.cjs check",
-    "check:webgpu": "node visual-upgrade/webgpu/check.cjs && node visual-upgrade/shared/check-labels.cjs && node visual-upgrade/webgpu/check-unavailable.cjs && node visual-upgrade/webgpu/check-modes.cjs && node scripts/project-version.cjs check",
+    "check:webgpu": "node visual-upgrade/webgpu/check.cjs && node visual-upgrade/shared/check-labels.cjs && node visual-upgrade/webgpu/check-unavailable.cjs && node visual-upgrade/webgpu/check-modes.cjs && node scripts/project-version.cjs check && node visual-upgrade/tours/export.cjs && node visual-upgrade/tours/check.cjs",
     "test": "npm run test:engine && npm run test:dispatch && npm run test:sst && npm run test:startup",
     "test:engine": "cd NetZero-GridToChip-v20-VisitorPresentation && node tests/engine.test.cjs",
     "test:dispatch": "cd NetZero-GridToChip-v20-VisitorPresentation && node tests/dispatch-v18.test.cjs",
@@ -23,6 +23,8 @@
     "test:startup": "cd NetZero-GridToChip-v20-VisitorPresentation && node tests/vehicles-startup.test.cjs",
     "check:offline": "cd NetZero-GridToChip-v20-VisitorPresentation && node tests/offline-source-v20.cjs",
     "check:trend": "node visual-upgrade/webgpu/check-trend.cjs",
-    "check:vehicles": "node visual-upgrade/vehicles/test.cjs && node visual-upgrade/vehicles/check.cjs"
+    "check:vehicles": "node visual-upgrade/vehicles/test.cjs && node visual-upgrade/vehicles/check.cjs",
+    "check:tours": "node visual-upgrade/tours/export.cjs && node visual-upgrade/tours/check.cjs",
+    "check:tours:play": "node visual-upgrade/tours/check.cjs --full-play"
   }
 }

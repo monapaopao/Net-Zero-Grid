@@ -1,7 +1,7 @@
 {
-  "version": "21.2.0",
-  "name": "园区车辆结构与细节升级",
-  "date": "2026-11-11",
+  "version": "21.3.0",
+  "name": "展厅五分钟导览与三分钟快速预览",
+  "date": "2026-11-13",
   "modelBaseline": "v20",
   "visualBaseline": "d04ac10"
 }

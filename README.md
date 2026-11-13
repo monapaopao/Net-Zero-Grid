@@ -1,8 +1,10 @@
 # Net-Zero Grid · 多园区共享综合能源系统
 
 <!-- project-release:start -->
-当前项目版本：**v21.2.0 · 园区车辆结构与细节升级**。版本规则见 [VERSIONING.md](VERSIONING.md)。
+当前项目版本：**v21.3.0 · 展厅五分钟导览与三分钟快速预览**。版本规则见 [VERSIONING.md](VERSIONING.md)。
 <!-- project-release:end -->
+
+展厅入口现提供“五分钟完整导览”和“三分钟快速预览”，按确认文案重新编排字幕与镜头。讲解稿、镜头表与验证说明见 [展厅导览](visual-upgrade/tours/README.md)。本版尚未生成配音音频。
 
 v21.2.0 重设计全园区 8 类、23 辆车辆，继续使用 Three.js / WebGPU。源码、车型清单及前后性能对照见 [车辆升级说明](visual-upgrade/vehicles/README.md)。
 
