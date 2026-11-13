@@ -69,6 +69,7 @@ html = html.replace('视觉升级</title>', '原生模型 · WebGPU</title>');
 html = projectVersion.patch(html);
 html = require('./modes-build.cjs')(html);
 html = require('../tours/build.cjs')(html);
+html = require('../tours/audio-build.cjs')(html);
 projectVersion.docs();
 const out = path.join(__dirname, 'dist');
 fs.mkdirSync(out, { recursive: true });

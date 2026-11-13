@@ -6,7 +6,7 @@ const rows={full:full.captionTimeline.map(x=>({id:x.id,chapter:x.chapter,title:x
 for(const [key,list]of Object.entries(rows)){
  const duration=key==='full'?full.totalSeconds:quick.duration;assert.equal(list[0].start,0);assert.equal(list.at(-1).end,duration);list.forEach((r,i)=>{if(i)assert.equal(r.start,list[i-1].end);});
  const title=key==='full'?'完整园区导览':'快速预览';
- const md=[`# ${title} · 接入稿与镜头时间表`,'','文案来源为已确认的 Markdown；时间表由网页实际使用的时间轴生成。没有音频文件，以下为配音制作参考。楼内起止标记为独立楼内应用的原时间；进入、关闭的加载过渡会让墙钟总时长略长于叙述时间轴。',''];
+ const md=[`# ${title} · 接入稿与镜头时间表`,'','文案来源为已确认的 Markdown；时间表由网页实际使用的时间轴生成。完整导览已接入云扬男声配音，快速预览暂不配音。楼内起止标记为独立楼内应用的时间；进入、关闭的加载过渡会让墙钟总时长略长于叙述时间轴。',''];
  for(const r of list){md.push(`## ${N.clock(r.start)}–${N.clock(r.end)} · ${r.title}`,`镜头：${r.shot}｜段落：${r.id}｜${r.scope==='building'?'楼内正常速度':'园区镜头'}`,'',r.text||'（无口播，留出返回园区的观察时间。）','');}
  fs.writeFileSync(path.join(dir,title+'-接入稿.md'),md.join('\n'));
  fs.writeFileSync(path.join(dir,title+'-时间轴.json'),JSON.stringify({version:require('../../project-version.json').version,duration,rows:list},null,2)+'\n');

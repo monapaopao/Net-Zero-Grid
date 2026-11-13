@@ -32,5 +32,5 @@ module.exports=c=>{
  const captions=[...md.matchAll(/^## (\d+)｜(\d\d):(\d\d)–(\d\d):(\d\d)\r?\n\s*对应画面：[^\n]+\r?\n\s*([^\n]+)(?=\r?\n|$)/gm)].map(m=>({id:'full-room-approved-'+m[1],start:+m[2]*60+(+m[3]),end:+m[4]*60+(+m[5]),text:m[6].trim()}));
  const assert=require('node:assert/strict');assert.equal(captions.length,11);assert.equal(captions[0].start,0);assert.equal(captions.at(-1).end,time);captions.forEach((s,i)=>{if(i)assert.equal(s.start,captions[i-1].end);assert(s.end>s.start);});
  b.buildingCaptions=captions;b.version=require('../../project-version.json').version;
- c.buildingDuration=time;return c;
+ c.buildingDuration=time;return require('./audio-timing.cjs')(c);
 };

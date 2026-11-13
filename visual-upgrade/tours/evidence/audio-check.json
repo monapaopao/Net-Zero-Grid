@@ -1,0 +1,53 @@
+{
+  "first": {
+    "audio": {
+      "active": true,
+      "muted": false,
+      "pending": false,
+      "error": "",
+      "context": "running",
+      "decoded": 28,
+      "clips": 28,
+      "current": "full-refine-0-0",
+      "position": 0.2106666666666667,
+      "starts": 1,
+      "generation": 1,
+      "playing": true,
+      "frame": {
+        "time": 0.17866666666666667,
+        "paused": false
+      },
+      "peak": 0.0012337113730609417
+    },
+    "tour": {
+      "active": true,
+      "chap": 0,
+      "t": 0.17866666666666667,
+      "paused": false,
+      "dcWait": false,
+      "dcDone": false,
+      "insideTime": 0,
+      "closing": false,
+      "cue": "full-refine-0-0",
+      "lastTo": [
+        480,
+        385,
+        515
+      ]
+    }
+  },
+  "fullPlay": false,
+  "heardClips": [],
+  "seenClips": [],
+  "pause": true,
+  "mute": true,
+  "jump": true,
+  "roomLoading": true,
+  "roomPause": true,
+  "roomNativePause": true,
+  "exit": true,
+  "quickSilent": true,
+  "errors": [],
+  "external": [],
+  "samples": []
+}

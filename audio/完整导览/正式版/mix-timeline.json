@@ -1,0 +1,173 @@
+{
+  "duration": 364,
+  "rows": [
+    {
+      "file": "full-refine-0-0.mp3",
+      "start": 0,
+      "end": 11,
+      "audioDuration": 10.2
+    },
+    {
+      "file": "full-refine-0-1.mp3",
+      "start": 11,
+      "end": 21,
+      "audioDuration": 9.456
+    },
+    {
+      "file": "full-refine-0-2.mp3",
+      "start": 21,
+      "end": 32,
+      "audioDuration": 9.912
+    },
+    {
+      "file": "full-refine-1-0.mp3",
+      "start": 32,
+      "end": 41,
+      "audioDuration": 8.136
+    },
+    {
+      "file": "full-refine-1-1.mp3",
+      "start": 41,
+      "end": 66,
+      "audioDuration": 22.152
+    },
+    {
+      "file": "full-refine-2-0.mp3",
+      "start": 66,
+      "end": 84,
+      "audioDuration": 17.352
+    },
+    {
+      "file": "full-refine-2-1.mp3",
+      "start": 84,
+      "end": 99,
+      "audioDuration": 14.424
+    },
+    {
+      "file": "full-refine-2-2.mp3",
+      "start": 99,
+      "end": 108,
+      "audioDuration": 8.184
+    },
+    {
+      "file": "dc-enter.mp3",
+      "start": 108,
+      "end": 116,
+      "audioDuration": 7.416
+    },
+    {
+      "file": "full-room-approved-01.mp3",
+      "start": 116,
+      "end": 131,
+      "audioDuration": 11.16
+    },
+    {
+      "file": "full-room-approved-02.mp3",
+      "start": 131,
+      "end": 147,
+      "audioDuration": 12.672
+    },
+    {
+      "file": "full-room-approved-03.mp3",
+      "start": 147,
+      "end": 155.39,
+      "audioDuration": 6.12
+    },
+    {
+      "file": "full-room-approved-04.mp3",
+      "start": 155.39,
+      "end": 159,
+      "audioDuration": 3.36
+    },
+    {
+      "file": "full-room-approved-05.mp3",
+      "start": 159,
+      "end": 162.85,
+      "audioDuration": 3.6
+    },
+    {
+      "file": "full-room-approved-06.mp3",
+      "start": 162.85,
+      "end": 177.486,
+      "audioDuration": 10.128
+    },
+    {
+      "file": "full-room-approved-07.mp3",
+      "start": 177.486,
+      "end": 185.848,
+      "audioDuration": 8.112
+    },
+    {
+      "file": "full-room-approved-08.mp3",
+      "start": 185.848,
+      "end": 192.554,
+      "audioDuration": 6.456
+    },
+    {
+      "file": "full-room-approved-09.mp3",
+      "start": 192.554,
+      "end": 198.97199999999998,
+      "audioDuration": 6.168
+    },
+    {
+      "file": "full-room-approved-10.mp3",
+      "start": 198.97199999999998,
+      "end": 207.886,
+      "audioDuration": 8.664
+    },
+    {
+      "file": "full-room-approved-11.mp3",
+      "start": 207.886,
+      "end": 215,
+      "audioDuration": 6.864
+    },
+    {
+      "file": "full-refine-4-0.mp3",
+      "start": 217,
+      "end": 229,
+      "audioDuration": 11.496
+    },
+    {
+      "file": "full-refine-4-1.mp3",
+      "start": 229,
+      "end": 248,
+      "audioDuration": 18.024
+    },
+    {
+      "file": "full-refine-5-0.mp3",
+      "start": 248,
+      "end": 270,
+      "audioDuration": 16.656
+    },
+    {
+      "file": "full-refine-6-0.mp3",
+      "start": 270,
+      "end": 293,
+      "audioDuration": 18.72
+    },
+    {
+      "file": "full-refine-6-1.mp3",
+      "start": 293,
+      "end": 306,
+      "audioDuration": 11.448
+    },
+    {
+      "file": "full-refine-6-2.mp3",
+      "start": 306,
+      "end": 330,
+      "audioDuration": 22.776
+    },
+    {
+      "file": "full-refine-6-3.mp3",
+      "start": 330,
+      "end": 338,
+      "audioDuration": 7.296
+    },
+    {
+      "file": "full-refine-7-0.mp3",
+      "start": 338,
+      "end": 361,
+      "audioDuration": 21.816
+    }
+  ]
+}

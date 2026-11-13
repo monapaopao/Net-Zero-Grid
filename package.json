@@ -1,6 +1,6 @@
 {
   "name": "net-zero-grid",
-  "version": "21.4.2",
+  "version": "21.5.0",
   "private": true,
   "description": "多园区共享综合能源系统：能源仿真、协同调度、SST 对比与三维客户参观",
   "repository": {
@@ -25,6 +25,8 @@
     "check:trend": "node visual-upgrade/webgpu/check-trend.cjs",
     "check:vehicles": "node visual-upgrade/vehicles/test.cjs && node visual-upgrade/vehicles/check.cjs",
     "check:tours": "node visual-upgrade/tours/export.cjs && node visual-upgrade/tours/check.cjs",
-    "check:tours:play": "node visual-upgrade/tours/check.cjs --full-play"
+    "check:tours:play": "node visual-upgrade/tours/check.cjs --full-play",
+    "check:voice": "node visual-upgrade/tours/check-audio.cjs",
+    "check:voice:play": "node visual-upgrade/tours/check-audio.cjs --full-play"
   }
 }
