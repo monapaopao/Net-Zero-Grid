@@ -1,6 +1,6 @@
 {
   "name": "net-zero-grid",
-  "version": "21.4.0",
+  "version": "21.4.1",
   "private": true,
   "description": "多园区共享综合能源系统：能源仿真、协同调度、SST 对比与三维客户参观",
   "repository": {

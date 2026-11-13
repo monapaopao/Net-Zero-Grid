@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="MultiCampus VisitorPresentation build v20.0.0">
-<title>多园区共享综合能源系统 | 西比里能源 xibili energy · v21.4.0 · Three.js r187 原生模型 · WebGPU</title>
+<title>多园区共享综合能源系统 | 西比里能源 xibili energy · v21.4.1 · Three.js r187 原生模型 · WebGPU</title>
 <!--
   单文件离线交付：模型、脚本、样式、字形全部内嵌，无任何外部请求。
   原始版本（未被本文件改写）：original/Net-Zero-grid-simulation-20260722.html
@@ -903,7 +903,7 @@ body.strategy-pair-playing .strategy-final.strategy-single{grid-template-columns
     @media(max-width:780px){.scene-tools{top:76px;right:12px;width:calc(100% - 24px)}#flowLayers{top:120px;right:12px;width:calc(100% - 24px)}}
   
 </style>
-<script>window.NZ_PROJECT_VERSION=Object.freeze({"version":"21.4.0","name":"导览宽景构图与完整楼内参观","date":"2026-11-13","modelBaseline":"v20","visualBaseline":"d04ac10"});</script>
+<script>window.NZ_PROJECT_VERSION=Object.freeze({"version":"21.4.1","name":"导览结束后显示仿真工作区","date":"2026-11-13","modelBaseline":"v20","visualBaseline":"d04ac10"});</script>
 <style>
 /* Scoped extension of the existing light engineering interface. */
 #modePurpose{font-size:11px;color:#456169;max-width:150px;line-height:1.4}
@@ -10215,7 +10215,7 @@ window.NZ_VISITOR_VIEW=(function(){
     Object.assign(api.controls,was.controls);api.camera.position.fromArray(was.camera);api.controls.target.fromArray(was.target);
     if(was.view?.enabled)api.camera.setViewOffset(was.view.fullWidth,was.view.fullHeight,was.view.offsetX,was.view.offsetY,was.view.width,was.view.height);else api.camera.clearViewOffset();
     if(was.factory)window.NZ_FACTORY?.restore?.(was.factory);window.NZ_LAYOUT.setMode(was.zincMode);
-    api.resize();api.refreshPresentation();if(finish)api.setMode('exhibit');current={};lastLabels='';
+    api.resize();api.refreshPresentation();if(finish)api.setMode('run');current={};lastLabels='';
   }
   function endPage(options={}){
     if(!ending)return;ending.dataset.kind=options.kind;ending.innerHTML=`<article class="visitor-end-card"><div class="visitor-scope">${options.kind==='full'?'完整园区导览':'快速预览'} · 参观完成</div><h2 id="visitorEndingTitle">从关键产品，走向多园区能源协同</h2><p>按您的项目需求，继续了解装备结构、供电关系或协同方案。</p><div class="visitor-end-columns"><div><b>关键产品</b><p>新型复合绝缘干式变压器<br>陶瓷架空线<br>高效直流供电装备</p></div><div><b>系统方案能力</b><p>能源共享与柔性调度<br>算电协同<br>用量计量与交付核验框架</p></div><div><b>下一代演进</b><p>SST 能源路由<br>原位替代与保留边界<br>方案／前瞻研究演示</p></div></div><p class="visitor-end-note">场景参数与推演结果为模型示意；项目性能与交付范围需结合具体条件确认。</p><div class="visitor-end-actions"><button data-visitor-action="equipment">查看关键装备</button><button data-visitor-action="scenarios">观看协同情境</button><button data-visitor-action="sst">了解 SST 方案</button><button data-visitor-action="replay">${options.kind==='full'?'五分钟再看一次':'三分钟再看一次'}</button><button data-visitor-action="free">返回自由探索</button></div></article>`;ending.hidden=false;ending.querySelector('button').focus();

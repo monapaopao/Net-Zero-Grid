@@ -27,7 +27,7 @@ module.exports=(name,s)=>{
   s=once(s,'const was=saved;saved=null;','const was=saved,finish=window.NZ_TOUR_FINISH.take();if(finish){was.camera=finish.camera;was.target=finish.target;was.controls.autoRotate=false;}saved=null;');
   s=once(s,'if(was.factory)window.NZ_FACTORY?.restore?.(was.factory);','if(was.factory)window.NZ_FACTORY?.restore?.(was.factory);window.NZ_LAYOUT.setMode(was.zincMode);');
   s=s.replace("classList.remove('visitor-playing','visitor-building')","classList.remove('visitor-playing','visitor-building','tour-gate-hold')");
-  s=once(s,"api.resize();api.refreshPresentation();current={};lastLabels='';","api.resize();api.refreshPresentation();if(finish)api.setMode('exhibit');current={};lastLabels='';");
+  s=once(s,"api.resize();api.refreshPresentation();current={};lastLabels='';","api.resize();api.refreshPresentation();if(finish)api.setMode('run');current={};lastLabels='';");
  }
  if(name==='cloud-visit.js')s=s.replace('约 03:00','约 '+require('../../NetZero-GridToChip-v20-VisitorPresentation/src/tour-narrative.js').clock(c.quick.duration)).replaceAll('开始三分钟快速预览','开始快速预览');
  if(name==='cloud-visit-content.js')s=s.replace("title:'五分钟完整导览'","title:'完整园区导览｜从能源到算力'").replace("action:'开始五分钟完整导览'","action:'开始园区导览'");

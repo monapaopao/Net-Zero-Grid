@@ -1,6 +1,6 @@
 {
-  "version": "21.4.0",
-  "name": "导览宽景构图与完整楼内参观",
+  "version": "21.4.1",
+  "name": "导览结束后显示仿真工作区",
   "date": "2026-11-13",
   "modelBaseline": "v20",
   "visualBaseline": "d04ac10"
